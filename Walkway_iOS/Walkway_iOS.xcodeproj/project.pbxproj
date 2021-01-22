@@ -334,21 +334,20 @@
 		ED16C88F25BA7441003DD0F0 /* CVC */ = {
 			isa = PBXGroup;
 			children = (
-				ED16C89725BA7AAF003DD0F0 /* HomeBannerCVC.swift */,
-				ED16C89825BA7AAF003DD0F0 /* HomeBannerCVC.xib */,
-				ED16C8A125BA9478003DD0F0 /* HomeFollowerCVC.swift */,
-				ED16C8A225BA9478003DD0F0 /* HomeFollowerCVC.xib */,
-				ED16C8AB25BA9E1E003DD0F0 /* HomePopularCourseCVC.swift */,
-				ED16C8AC25BA9E1E003DD0F0 /* HomePopularCourseCVC.xib */,
-				ED16C8B525BAA68F003DD0F0 /* HomeBookmarkCourseCVC.swift */,
-				ED16C8B625BAA68F003DD0F0 /* HomeBookmarkCourseCVC.xib */,
-				ED16C8BF25BAAB90003DD0F0 /* HomeLatestCourseCVC.swift */,
-				ED16C8C025BAAB90003DD0F0 /* HomeLatestCourseCVC.xib */,
+				ED94370A25BABC9F009642E5 /* Home */,
 			);
 			path = CVC;
 			sourceTree = "<group>";
 		};
 		ED16C89025BA7445003DD0F0 /* TVC */ = {
+			isa = PBXGroup;
+			children = (
+				ED94370925BABC94009642E5 /* Home */,
+			);
+			path = TVC;
+			sourceTree = "<group>";
+		};
+		ED94370925BABC94009642E5 /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				ED16C89125BA7471003DD0F0 /* HomeBannerTVC.swift */,
@@ -362,7 +361,24 @@
 				ED16C8BA25BAA95F003DD0F0 /* HomeLatestCourseTVC.swift */,
 				ED16C8BB25BAA95F003DD0F0 /* HomeLatestCourseTVC.xib */,
 			);
-			path = TVC;
+			path = Home;
+			sourceTree = "<group>";
+		};
+		ED94370A25BABC9F009642E5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				ED16C89725BA7AAF003DD0F0 /* HomeBannerCVC.swift */,
+				ED16C89825BA7AAF003DD0F0 /* HomeBannerCVC.xib */,
+				ED16C8A125BA9478003DD0F0 /* HomeFollowerCVC.swift */,
+				ED16C8A225BA9478003DD0F0 /* HomeFollowerCVC.xib */,
+				ED16C8AB25BA9E1E003DD0F0 /* HomePopularCourseCVC.swift */,
+				ED16C8AC25BA9E1E003DD0F0 /* HomePopularCourseCVC.xib */,
+				ED16C8B525BAA68F003DD0F0 /* HomeBookmarkCourseCVC.swift */,
+				ED16C8B625BAA68F003DD0F0 /* HomeBookmarkCourseCVC.xib */,
+				ED16C8BF25BAAB90003DD0F0 /* HomeLatestCourseCVC.swift */,
+				ED16C8C025BAAB90003DD0F0 /* HomeLatestCourseCVC.xib */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
