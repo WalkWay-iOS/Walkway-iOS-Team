@@ -23,6 +23,26 @@
 		ED16C86825B7FE7A003DD0F0 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED16C86725B7FE7A003DD0F0 /* HomeVC.swift */; };
 		ED16C86E25B80136003DD0F0 /* CreateCourse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED16C86D25B80136003DD0F0 /* CreateCourse.storyboard */; };
 		ED16C87125B80150003DD0F0 /* CreateCourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED16C87025B80150003DD0F0 /* CreateCourseVC.swift */; };
+		ED16C89325BA7471003DD0F0 /* HomeBannerTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED16C89125BA7471003DD0F0 /* HomeBannerTVC.swift */; };
+		ED16C89425BA7471003DD0F0 /* HomeBannerTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED16C89225BA7471003DD0F0 /* HomeBannerTVC.xib */; };
+		ED16C89925BA7AAF003DD0F0 /* HomeBannerCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED16C89725BA7AAF003DD0F0 /* HomeBannerCVC.swift */; };
+		ED16C89A25BA7AAF003DD0F0 /* HomeBannerCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED16C89825BA7AAF003DD0F0 /* HomeBannerCVC.xib */; };
+		ED16C89E25BA8D05003DD0F0 /* HomeFollowerTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED16C89C25BA8D05003DD0F0 /* HomeFollowerTVC.swift */; };
+		ED16C89F25BA8D05003DD0F0 /* HomeFollowerTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED16C89D25BA8D05003DD0F0 /* HomeFollowerTVC.xib */; };
+		ED16C8A325BA9478003DD0F0 /* HomeFollowerCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED16C8A125BA9478003DD0F0 /* HomeFollowerCVC.swift */; };
+		ED16C8A425BA9478003DD0F0 /* HomeFollowerCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED16C8A225BA9478003DD0F0 /* HomeFollowerCVC.xib */; };
+		ED16C8A825BA9BB4003DD0F0 /* HomePopularCourseTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED16C8A625BA9BB4003DD0F0 /* HomePopularCourseTVC.swift */; };
+		ED16C8A925BA9BB4003DD0F0 /* HomePopularCourseTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED16C8A725BA9BB4003DD0F0 /* HomePopularCourseTVC.xib */; };
+		ED16C8AD25BA9E1E003DD0F0 /* HomePopularCourseCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED16C8AB25BA9E1E003DD0F0 /* HomePopularCourseCVC.swift */; };
+		ED16C8AE25BA9E1E003DD0F0 /* HomePopularCourseCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED16C8AC25BA9E1E003DD0F0 /* HomePopularCourseCVC.xib */; };
+		ED16C8B225BAA4FD003DD0F0 /* HomeBookmarkCourseTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED16C8B025BAA4FD003DD0F0 /* HomeBookmarkCourseTVC.swift */; };
+		ED16C8B325BAA4FD003DD0F0 /* HomeBookmarkCourseTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED16C8B125BAA4FD003DD0F0 /* HomeBookmarkCourseTVC.xib */; };
+		ED16C8B725BAA68F003DD0F0 /* HomeBookmarkCourseCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED16C8B525BAA68F003DD0F0 /* HomeBookmarkCourseCVC.swift */; };
+		ED16C8B825BAA68F003DD0F0 /* HomeBookmarkCourseCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED16C8B625BAA68F003DD0F0 /* HomeBookmarkCourseCVC.xib */; };
+		ED16C8BC25BAA95F003DD0F0 /* HomeLatestCourseTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED16C8BA25BAA95F003DD0F0 /* HomeLatestCourseTVC.swift */; };
+		ED16C8BD25BAA95F003DD0F0 /* HomeLatestCourseTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED16C8BB25BAA95F003DD0F0 /* HomeLatestCourseTVC.xib */; };
+		ED16C8C125BAAB90003DD0F0 /* HomeLatestCourseCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED16C8BF25BAAB90003DD0F0 /* HomeLatestCourseCVC.swift */; };
+		ED16C8C225BAAB90003DD0F0 /* HomeLatestCourseCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED16C8C025BAAB90003DD0F0 /* HomeLatestCourseCVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +64,26 @@
 		ED16C86725B7FE7A003DD0F0 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		ED16C86D25B80136003DD0F0 /* CreateCourse.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateCourse.storyboard; sourceTree = "<group>"; };
 		ED16C87025B80150003DD0F0 /* CreateCourseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCourseVC.swift; sourceTree = "<group>"; };
+		ED16C89125BA7471003DD0F0 /* HomeBannerTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerTVC.swift; sourceTree = "<group>"; };
+		ED16C89225BA7471003DD0F0 /* HomeBannerTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeBannerTVC.xib; sourceTree = "<group>"; };
+		ED16C89725BA7AAF003DD0F0 /* HomeBannerCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerCVC.swift; sourceTree = "<group>"; };
+		ED16C89825BA7AAF003DD0F0 /* HomeBannerCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeBannerCVC.xib; sourceTree = "<group>"; };
+		ED16C89C25BA8D05003DD0F0 /* HomeFollowerTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFollowerTVC.swift; sourceTree = "<group>"; };
+		ED16C89D25BA8D05003DD0F0 /* HomeFollowerTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeFollowerTVC.xib; sourceTree = "<group>"; };
+		ED16C8A125BA9478003DD0F0 /* HomeFollowerCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFollowerCVC.swift; sourceTree = "<group>"; };
+		ED16C8A225BA9478003DD0F0 /* HomeFollowerCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeFollowerCVC.xib; sourceTree = "<group>"; };
+		ED16C8A625BA9BB4003DD0F0 /* HomePopularCourseTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePopularCourseTVC.swift; sourceTree = "<group>"; };
+		ED16C8A725BA9BB4003DD0F0 /* HomePopularCourseTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePopularCourseTVC.xib; sourceTree = "<group>"; };
+		ED16C8AB25BA9E1E003DD0F0 /* HomePopularCourseCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePopularCourseCVC.swift; sourceTree = "<group>"; };
+		ED16C8AC25BA9E1E003DD0F0 /* HomePopularCourseCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePopularCourseCVC.xib; sourceTree = "<group>"; };
+		ED16C8B025BAA4FD003DD0F0 /* HomeBookmarkCourseTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBookmarkCourseTVC.swift; sourceTree = "<group>"; };
+		ED16C8B125BAA4FD003DD0F0 /* HomeBookmarkCourseTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeBookmarkCourseTVC.xib; sourceTree = "<group>"; };
+		ED16C8B525BAA68F003DD0F0 /* HomeBookmarkCourseCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBookmarkCourseCVC.swift; sourceTree = "<group>"; };
+		ED16C8B625BAA68F003DD0F0 /* HomeBookmarkCourseCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeBookmarkCourseCVC.xib; sourceTree = "<group>"; };
+		ED16C8BA25BAA95F003DD0F0 /* HomeLatestCourseTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLatestCourseTVC.swift; sourceTree = "<group>"; };
+		ED16C8BB25BAA95F003DD0F0 /* HomeLatestCourseTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeLatestCourseTVC.xib; sourceTree = "<group>"; };
+		ED16C8BF25BAAB90003DD0F0 /* HomeLatestCourseCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLatestCourseCVC.swift; sourceTree = "<group>"; };
+		ED16C8C025BAAB90003DD0F0 /* HomeLatestCourseCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeLatestCourseCVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +276,7 @@
 		ED16C86525B7FE62003DD0F0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ED16C88E25BA742F003DD0F0 /* Cell */,
 				ED16C86625B7FE6E003DD0F0 /* VC */,
 			);
 			path = View;
@@ -279,6 +320,49 @@
 			children = (
 			);
 			path = GeneralExtensions;
+			sourceTree = "<group>";
+		};
+		ED16C88E25BA742F003DD0F0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				ED16C89025BA7445003DD0F0 /* TVC */,
+				ED16C88F25BA7441003DD0F0 /* CVC */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		ED16C88F25BA7441003DD0F0 /* CVC */ = {
+			isa = PBXGroup;
+			children = (
+				ED16C89725BA7AAF003DD0F0 /* HomeBannerCVC.swift */,
+				ED16C89825BA7AAF003DD0F0 /* HomeBannerCVC.xib */,
+				ED16C8A125BA9478003DD0F0 /* HomeFollowerCVC.swift */,
+				ED16C8A225BA9478003DD0F0 /* HomeFollowerCVC.xib */,
+				ED16C8AB25BA9E1E003DD0F0 /* HomePopularCourseCVC.swift */,
+				ED16C8AC25BA9E1E003DD0F0 /* HomePopularCourseCVC.xib */,
+				ED16C8B525BAA68F003DD0F0 /* HomeBookmarkCourseCVC.swift */,
+				ED16C8B625BAA68F003DD0F0 /* HomeBookmarkCourseCVC.xib */,
+				ED16C8BF25BAAB90003DD0F0 /* HomeLatestCourseCVC.swift */,
+				ED16C8C025BAAB90003DD0F0 /* HomeLatestCourseCVC.xib */,
+			);
+			path = CVC;
+			sourceTree = "<group>";
+		};
+		ED16C89025BA7445003DD0F0 /* TVC */ = {
+			isa = PBXGroup;
+			children = (
+				ED16C89125BA7471003DD0F0 /* HomeBannerTVC.swift */,
+				ED16C89225BA7471003DD0F0 /* HomeBannerTVC.xib */,
+				ED16C89C25BA8D05003DD0F0 /* HomeFollowerTVC.swift */,
+				ED16C89D25BA8D05003DD0F0 /* HomeFollowerTVC.xib */,
+				ED16C8A625BA9BB4003DD0F0 /* HomePopularCourseTVC.swift */,
+				ED16C8A725BA9BB4003DD0F0 /* HomePopularCourseTVC.xib */,
+				ED16C8B025BAA4FD003DD0F0 /* HomeBookmarkCourseTVC.swift */,
+				ED16C8B125BAA4FD003DD0F0 /* HomeBookmarkCourseTVC.xib */,
+				ED16C8BA25BAA95F003DD0F0 /* HomeLatestCourseTVC.swift */,
+				ED16C8BB25BAA95F003DD0F0 /* HomeLatestCourseTVC.xib */,
+			);
+			path = TVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,14 +422,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED16C8A925BA9BB4003DD0F0 /* HomePopularCourseTVC.xib in Resources */,
 				ED16C83B25B7FAE9003DD0F0 /* Tabbar.storyboard in Resources */,
+				ED16C89A25BA7AAF003DD0F0 /* HomeBannerCVC.xib in Resources */,
+				ED16C8C225BAAB90003DD0F0 /* HomeLatestCourseCVC.xib in Resources */,
 				ED16C86E25B80136003DD0F0 /* CreateCourse.storyboard in Resources */,
+				ED16C89F25BA8D05003DD0F0 /* HomeFollowerTVC.xib in Resources */,
 				ED16C84B25B7FCA0003DD0F0 /* Mypage.storyboard in Resources */,
+				ED16C8B825BAA68F003DD0F0 /* HomeBookmarkCourseCVC.xib in Resources */,
 				ED16C84825B7FC8F003DD0F0 /* Home.storyboard in Resources */,
 				ED16C82425B7F92F003DD0F0 /* LaunchScreen.storyboard in Resources */,
+				ED16C8AE25BA9E1E003DD0F0 /* HomePopularCourseCVC.xib in Resources */,
+				ED16C8A425BA9478003DD0F0 /* HomeFollowerCVC.xib in Resources */,
+				ED16C89425BA7471003DD0F0 /* HomeBannerTVC.xib in Resources */,
 				ED16C85125B7FCB4003DD0F0 /* CourseSearch.storyboard in Resources */,
+				ED16C8BD25BAA95F003DD0F0 /* HomeLatestCourseTVC.xib in Resources */,
 				ED16C84E25B7FCA9003DD0F0 /* Alert.storyboard in Resources */,
 				ED16C82125B7F92F003DD0F0 /* Assets.xcassets in Resources */,
+				ED16C8B325BAA4FD003DD0F0 /* HomeBookmarkCourseTVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,14 +450,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED16C8BC25BAA95F003DD0F0 /* HomeLatestCourseTVC.swift in Sources */,
+				ED16C89E25BA8D05003DD0F0 /* HomeFollowerTVC.swift in Sources */,
 				ED16C81825B7F92F003DD0F0 /* AppDelegate.swift in Sources */,
+				ED16C8B725BAA68F003DD0F0 /* HomeBookmarkCourseCVC.swift in Sources */,
 				ED16C86825B7FE7A003DD0F0 /* HomeVC.swift in Sources */,
 				ED16C85625B7FDE9003DD0F0 /* MypageVC.swift in Sources */,
+				ED16C8AD25BA9E1E003DD0F0 /* HomePopularCourseCVC.swift in Sources */,
+				ED16C89925BA7AAF003DD0F0 /* HomeBannerCVC.swift in Sources */,
+				ED16C89325BA7471003DD0F0 /* HomeBannerTVC.swift in Sources */,
 				ED16C84525B7FC1D003DD0F0 /* TabbarController.swift in Sources */,
 				ED16C85C25B7FE1B003DD0F0 /* AlertVC.swift in Sources */,
 				ED16C87125B80150003DD0F0 /* CreateCourseVC.swift in Sources */,
 				ED16C81A25B7F92F003DD0F0 /* SceneDelegate.swift in Sources */,
+				ED16C8C125BAAB90003DD0F0 /* HomeLatestCourseCVC.swift in Sources */,
 				ED16C86225B7FE50003DD0F0 /* CourseSearchVC.swift in Sources */,
+				ED16C8A825BA9BB4003DD0F0 /* HomePopularCourseTVC.swift in Sources */,
+				ED16C8B225BAA4FD003DD0F0 /* HomeBookmarkCourseTVC.swift in Sources */,
+				ED16C8A325BA9478003DD0F0 /* HomeFollowerCVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
