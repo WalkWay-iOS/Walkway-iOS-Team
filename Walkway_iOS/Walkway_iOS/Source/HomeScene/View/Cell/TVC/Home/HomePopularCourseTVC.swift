@@ -41,7 +41,7 @@ extension HomePopularCourseTVC: UICollectionViewDataSource {
 extension HomePopularCourseTVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = UIScreen.main.bounds.size.width - 14 - 100
-        let height = collectionView.frame.size.height - 11
+        let height = collectionView.frame.size.height - 11 - 11
         return CGSize(width: width, height: height)
     }
     
@@ -54,7 +54,7 @@ extension HomePopularCourseTVC: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 11, left: 14, bottom: 0, right: 14)
+        return UIEdgeInsets(top: 11, left: 14, bottom: 11, right: 14)
     }
 }
 

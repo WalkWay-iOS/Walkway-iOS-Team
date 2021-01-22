@@ -40,7 +40,7 @@ extension HomeFollowerTVC: UICollectionViewDataSource {
 
 extension HomeFollowerTVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (UIScreen.main.bounds.size.width - 14 - 33 - 24) / 3
+        let width = (UIScreen.main.bounds.size.width - 14 - 50 - 24) / 3
         let height = collectionView.frame.size.height - 11
         return CGSize(width: width, height: height)
     }

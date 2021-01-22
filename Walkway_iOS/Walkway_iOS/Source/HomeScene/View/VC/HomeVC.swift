@@ -32,26 +32,31 @@ extension HomeVC: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeBannerTVC.identifier) as? HomeBannerTVC else {
                 return UITableViewCell()
             }
+            cell.selectionStyle = .none
             return cell
         } else if indexPath.section == 1 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeFollowerTVC.identifier) as? HomeFollowerTVC else {
                 return UITableViewCell()
             }
+            cell.selectionStyle = .none
             return cell
         } else if indexPath.section == 2 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: HomePopularCourseTVC.identifier) as? HomePopularCourseTVC else {
                 return UITableViewCell()
             }
+            cell.selectionStyle = .none
             return cell
         } else if indexPath.section == 3 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeBookmarkCourseTVC.identifier) as? HomeBookmarkCourseTVC else {
                 return UITableViewCell()
             }
+            cell.selectionStyle = .none
             return cell
         } else if indexPath.section == 4 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeLatestCourseTVC.identifier) as? HomeLatestCourseTVC else {
                 return UITableViewCell()
             }
+            cell.selectionStyle = .none
             return cell
         }
         return UITableViewCell()
@@ -64,10 +69,10 @@ extension HomeVC: UITableViewDelegate {
             return 187
         } else if indexPath.section == 1 {
             return 221
-        } else if indexPath.section == 4 {
-            return 252
+        } else if indexPath.section == 3 {
+            return 231
         }
-        return 230
+        return 241
     }
 }
 
@@ -82,6 +87,8 @@ extension HomeVC {
     private func setTableView() {
         homeTableView.delegate = self
         homeTableView.dataSource = self
+        
+        homeTableView.separatorColor = .clear
     }
     
     private func setTableViewNib() {

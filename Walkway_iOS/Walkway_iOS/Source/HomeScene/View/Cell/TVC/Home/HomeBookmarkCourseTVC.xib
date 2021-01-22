@@ -18,17 +18,17 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rx-eo-lau">
-                        <rect key="frame" x="14" y="40" width="42" height="21"/>
+                        <rect key="frame" x="14" y="29" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgl-wc-gGH">
-                        <rect key="frame" x="310" y="35.5" width="46" height="30"/>
+                        <rect key="frame" x="310" y="24.5" width="46" height="30"/>
                         <state key="normal" title="Button"/>
                     </button>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="n7I-CJ-260">
-                        <rect key="frame" x="0.0" y="61" width="367" height="175"/>
+                        <rect key="frame" x="0.0" y="50" width="367" height="186"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="m9R-Xs-Fse">
                             <size key="itemSize" width="128" height="128"/>
@@ -43,7 +43,7 @@
                     <constraint firstItem="n7I-CJ-260" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="CRS-1t-K3t"/>
                     <constraint firstItem="pgl-wc-gGH" firstAttribute="centerY" secondItem="6rx-eo-lau" secondAttribute="centerY" id="Kc9-jG-LU4"/>
                     <constraint firstAttribute="trailing" secondItem="pgl-wc-gGH" secondAttribute="trailing" constant="11" id="M8p-yn-DlW"/>
-                    <constraint firstItem="6rx-eo-lau" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="40" id="R0h-QK-u8B"/>
+                    <constraint firstItem="6rx-eo-lau" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="29" id="R0h-QK-u8B"/>
                     <constraint firstAttribute="trailing" secondItem="n7I-CJ-260" secondAttribute="trailing" id="fiq-hP-PUA"/>
                     <constraint firstAttribute="bottom" secondItem="n7I-CJ-260" secondAttribute="bottom" id="vEa-9Q-4q5"/>
                     <constraint firstItem="6rx-eo-lau" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="vkR-vA-Gau"/>

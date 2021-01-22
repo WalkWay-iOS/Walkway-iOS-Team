@@ -43,6 +43,7 @@
 		ED16C8BD25BAA95F003DD0F0 /* HomeLatestCourseTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED16C8BB25BAA95F003DD0F0 /* HomeLatestCourseTVC.xib */; };
 		ED16C8C125BAAB90003DD0F0 /* HomeLatestCourseCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED16C8BF25BAAB90003DD0F0 /* HomeLatestCourseCVC.swift */; };
 		ED16C8C225BAAB90003DD0F0 /* HomeLatestCourseCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED16C8C025BAAB90003DD0F0 /* HomeLatestCourseCVC.xib */; };
+		ED7622BA25BAFC88007E1C98 /* Extensions+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7622B925BAFC88007E1C98 /* Extensions+UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		ED16C8BB25BAA95F003DD0F0 /* HomeLatestCourseTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeLatestCourseTVC.xib; sourceTree = "<group>"; };
 		ED16C8BF25BAAB90003DD0F0 /* HomeLatestCourseCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLatestCourseCVC.swift; sourceTree = "<group>"; };
 		ED16C8C025BAAB90003DD0F0 /* HomeLatestCourseCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeLatestCourseCVC.xib; sourceTree = "<group>"; };
+		ED7622B925BAFC88007E1C98 /* Extensions+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIColor.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 		ED16C82D25B7F942003DD0F0 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				ED7622B825BAFC75007E1C98 /* Extensions */,
 				ED16C87425B801D3003DD0F0 /* GeneralExtensions */,
 				ED16C86A25B8011A003DD0F0 /* CreateCourseScene */,
 				ED16C83925B7FAD4003DD0F0 /* MypageScene */,
@@ -347,6 +350,14 @@
 			path = TVC;
 			sourceTree = "<group>";
 		};
+		ED7622B825BAFC75007E1C98 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ED7622B925BAFC88007E1C98 /* Extensions+UIColor.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		ED94370925BABC94009642E5 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,6 +479,7 @@
 			files = (
 				ED16C8BC25BAA95F003DD0F0 /* HomeLatestCourseTVC.swift in Sources */,
 				ED16C89E25BA8D05003DD0F0 /* HomeFollowerTVC.swift in Sources */,
+				ED7622BA25BAFC88007E1C98 /* Extensions+UIColor.swift in Sources */,
 				ED16C81825B7F92F003DD0F0 /* AppDelegate.swift in Sources */,
 				ED16C8B725BAA68F003DD0F0 /* HomeBookmarkCourseCVC.swift in Sources */,
 				ED16C86825B7FE7A003DD0F0 /* HomeVC.swift in Sources */,

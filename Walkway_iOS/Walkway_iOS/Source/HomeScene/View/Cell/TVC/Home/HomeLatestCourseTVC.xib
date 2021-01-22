@@ -18,17 +18,17 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBg-4A-JLj">
-                        <rect key="frame" x="14" y="40" width="42" height="21"/>
+                        <rect key="frame" x="14" y="29" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sk3-FF-u2T">
-                        <rect key="frame" x="226" y="35.5" width="46" height="30"/>
+                        <rect key="frame" x="226" y="24.5" width="46" height="30"/>
                         <state key="normal" title="Button"/>
                     </button>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="bQL-cU-EGo">
-                        <rect key="frame" x="0.0" y="61" width="283" height="160"/>
+                        <rect key="frame" x="0.0" y="50" width="283" height="171"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="F2P-Fg-DAv">
                             <size key="itemSize" width="128" height="128"/>
@@ -46,7 +46,7 @@
                     <constraint firstAttribute="bottom" secondItem="bQL-cU-EGo" secondAttribute="bottom" id="VPK-I9-U6o"/>
                     <constraint firstItem="rBg-4A-JLj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="VS1-Yb-5WS"/>
                     <constraint firstItem="bQL-cU-EGo" firstAttribute="top" secondItem="rBg-4A-JLj" secondAttribute="bottom" id="Xt6-j3-yy7"/>
-                    <constraint firstItem="rBg-4A-JLj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="40" id="sja-0Y-Ugp"/>
+                    <constraint firstItem="rBg-4A-JLj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="29" id="sja-0Y-Ugp"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
