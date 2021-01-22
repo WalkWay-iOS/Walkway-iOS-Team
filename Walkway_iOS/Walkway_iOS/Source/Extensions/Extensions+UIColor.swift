@@ -88,6 +88,26 @@ extension UIColor {
     @nonobjc class var bookmarkNude: UIColor {
         return UIColor(red: 217.0 / 255.0, green: 187.0 / 255.0, blue: 169.0 / 255.0, alpha: 1.0)
     }
+    
+    @nonobjc class var latestBlue: UIColor {
+        return UIColor(red: 96.0 / 255.0, green: 146.0 / 255.0, blue: 166.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var latestBrownRed: UIColor {
+        return UIColor(red: 191.0 / 255.0, green: 120.0 / 255.0, blue: 94.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var latestPink: UIColor {
+        return UIColor(red: 242.0 / 255.0, green: 203.0 / 255.0, blue: 189.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var latestBurgundy: UIColor {
+        return UIColor(red: 166.0 / 255.0, green: 90.0 / 255.0, blue: 73.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var latestDarkBrownRed: UIColor {
+        return UIColor(red: 115.0 / 255.0, green: 57.0 / 255.0, blue: 52.0 / 255.0, alpha: 1.0)
+    }
 }
 
 extension UIColor {
