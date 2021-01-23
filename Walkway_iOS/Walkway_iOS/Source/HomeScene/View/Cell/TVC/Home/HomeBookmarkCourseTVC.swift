@@ -14,6 +14,8 @@ class HomeBookmarkCourseTVC: UITableViewCell {
     @IBOutlet weak var viewAllButton: UIButton!
     @IBOutlet weak var bookmarkCollectionView: UICollectionView!
     
+    var delegate: cellPresentDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setUI()
@@ -86,5 +88,13 @@ extension HomeBookmarkCourseTVC {
         viewAllButton.setTitle("전체보기", for: .normal)
         viewAllButton.titleLabel?.font = .systemFont(ofSize: 13, weight: .semibold)
         viewAllButton.setTitleColor(.black, for: .normal)
+        viewAllButton.addTarget(self, action: #selector(touchUpViewAll), for: .touchUpInside)
+    }
+}
+
+// MARK: - Action
+extension HomeBookmarkCourseTVC {
+    @objc func touchUpViewAll() {
+        delegate?.cellTapedBookmarkCourse()
     }
 }

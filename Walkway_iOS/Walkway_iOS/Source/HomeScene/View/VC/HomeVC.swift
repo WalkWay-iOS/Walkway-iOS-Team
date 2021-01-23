@@ -51,6 +51,7 @@ extension HomeVC: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeBookmarkCourseTVC.identifier) as? HomeBookmarkCourseTVC else {
                 return UITableViewCell()
             }
+            cell.delegate = self
             cell.selectionStyle = .none
             return cell
         } else if indexPath.section == 4 {
@@ -121,7 +122,15 @@ extension HomeVC {
 // MARK: - Protocol
 extension HomeVC: cellPresentDelegate {
     func cellTapedPopularCourse() {
-        guard let dvc = storyboard?.instantiateViewController(identifier: "popularCourseVC") as? PopularCourseVC else {
+        guard let dvc = storyboard?.instantiateViewController(identifier: "PopularCourseVC") as? PopularCourseVC else {
+            return
+        }
+        dvc.modalPresentationStyle = .fullScreen
+        present(dvc, animated: true, completion: nil)
+    }
+    
+    func cellTapedBookmarkCourse() {
+        guard let dvc = storyboard?.instantiateViewController(identifier: "BookmarkCourseVC") as? BookmarkCourseVC else {
             return
         }
         dvc.modalPresentationStyle = .fullScreen
