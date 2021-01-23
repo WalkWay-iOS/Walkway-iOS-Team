@@ -10,4 +10,5 @@ import Foundation
 protocol cellPresentDelegate: class {
     func cellTapedPopularCourse()
     func cellTapedBookmarkCourse()
+    func cellTapedLatestCourse()
 }

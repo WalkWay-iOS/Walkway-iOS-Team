@@ -58,6 +58,7 @@ extension HomeVC: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeLatestCourseTVC.identifier) as? HomeLatestCourseTVC else {
                 return UITableViewCell()
             }
+            cell.delegate = self
             cell.selectionStyle = .none
             return cell
         }
@@ -131,6 +132,14 @@ extension HomeVC: cellPresentDelegate {
     
     func cellTapedBookmarkCourse() {
         guard let dvc = storyboard?.instantiateViewController(identifier: "BookmarkCourseVC") as? BookmarkCourseVC else {
+            return
+        }
+        dvc.modalPresentationStyle = .fullScreen
+        present(dvc, animated: true, completion: nil)
+    }
+    
+    func cellTapedLatestCourse() {
+        guard let dvc = storyboard?.instantiateViewController(identifier: "LatestCourseVC") as? LatestCourseVC else {
             return
         }
         dvc.modalPresentationStyle = .fullScreen

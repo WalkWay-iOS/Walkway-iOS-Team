@@ -52,6 +52,9 @@
 		EDD055B925BBF402009FA3FB /* BookmarkCourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD055B825BBF402009FA3FB /* BookmarkCourseVC.swift */; };
 		EDD055BD25BBFB70009FA3FB /* BookmarkCourseTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD055BB25BBFB70009FA3FB /* BookmarkCourseTVC.swift */; };
 		EDD055BE25BBFB70009FA3FB /* BookmarkCourseTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDD055BC25BBFB70009FA3FB /* BookmarkCourseTVC.xib */; };
+		EDD055C125BC282F009FA3FB /* LatestCourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD055C025BC282F009FA3FB /* LatestCourseVC.swift */; };
+		EDD055C525BC2AFA009FA3FB /* LatestCourseTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD055C325BC2AFA009FA3FB /* LatestCourseTVC.swift */; };
+		EDD055C625BC2AFA009FA3FB /* LatestCourseTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDD055C425BC2AFA009FA3FB /* LatestCourseTVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +105,9 @@
 		EDD055B825BBF402009FA3FB /* BookmarkCourseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCourseVC.swift; sourceTree = "<group>"; };
 		EDD055BB25BBFB70009FA3FB /* BookmarkCourseTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCourseTVC.swift; sourceTree = "<group>"; };
 		EDD055BC25BBFB70009FA3FB /* BookmarkCourseTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarkCourseTVC.xib; sourceTree = "<group>"; };
+		EDD055C025BC282F009FA3FB /* LatestCourseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestCourseVC.swift; sourceTree = "<group>"; };
+		EDD055C325BC2AFA009FA3FB /* LatestCourseTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestCourseTVC.swift; sourceTree = "<group>"; };
+		EDD055C425BC2AFA009FA3FB /* LatestCourseTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LatestCourseTVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,6 +315,7 @@
 				ED16C86725B7FE7A003DD0F0 /* HomeVC.swift */,
 				ED7622BC25BB12D1007E1C98 /* PopularCourseVC.swift */,
 				EDD055B825BBF402009FA3FB /* BookmarkCourseVC.swift */,
+				EDD055C025BC282F009FA3FB /* LatestCourseVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -394,6 +401,8 @@
 				ED7622C525BB25D0007E1C98 /* PopularCourseTVC.xib */,
 				EDD055BB25BBFB70009FA3FB /* BookmarkCourseTVC.swift */,
 				EDD055BC25BBFB70009FA3FB /* BookmarkCourseTVC.xib */,
+				EDD055C325BC2AFA009FA3FB /* LatestCourseTVC.swift */,
+				EDD055C425BC2AFA009FA3FB /* LatestCourseTVC.xib */,
 			);
 			path = ViewAll;
 			sourceTree = "<group>";
@@ -505,6 +514,7 @@
 				ED16C89F25BA8D05003DD0F0 /* HomeFollowerTVC.xib in Resources */,
 				ED16C84B25B7FCA0003DD0F0 /* Mypage.storyboard in Resources */,
 				ED16C8B825BAA68F003DD0F0 /* HomeBookmarkCourseCVC.xib in Resources */,
+				EDD055C625BC2AFA009FA3FB /* LatestCourseTVC.xib in Resources */,
 				ED16C84825B7FC8F003DD0F0 /* Home.storyboard in Resources */,
 				ED16C82425B7F92F003DD0F0 /* LaunchScreen.storyboard in Resources */,
 				EDD055BE25BBFB70009FA3FB /* BookmarkCourseTVC.xib in Resources */,
@@ -529,6 +539,8 @@
 			files = (
 				EDD055BD25BBFB70009FA3FB /* BookmarkCourseTVC.swift in Sources */,
 				ED16C8BC25BAA95F003DD0F0 /* HomeLatestCourseTVC.swift in Sources */,
+				EDD055C525BC2AFA009FA3FB /* LatestCourseTVC.swift in Sources */,
+				EDD055C125BC282F009FA3FB /* LatestCourseVC.swift in Sources */,
 				EDD055B925BBF402009FA3FB /* BookmarkCourseVC.swift in Sources */,
 				ED16C89E25BA8D05003DD0F0 /* HomeFollowerTVC.swift in Sources */,
 				ED7622BA25BAFC88007E1C98 /* Extensions+UIColor.swift in Sources */,
