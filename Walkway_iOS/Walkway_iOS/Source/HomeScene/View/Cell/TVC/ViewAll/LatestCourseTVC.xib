@@ -37,7 +37,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZP-OG-aiZ">
-                        <rect key="frame" x="153" y="43" width="42" height="21"/>
+                        <rect key="frame" x="146" y="43" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -51,7 +51,7 @@
                     <constraint firstItem="JFC-ZJ-RaY" firstAttribute="leading" secondItem="u8o-MO-7XH" secondAttribute="trailing" constant="14" id="33i-uT-z8q"/>
                     <constraint firstItem="fZP-OG-aiZ" firstAttribute="top" secondItem="jFq-Qg-5iF" secondAttribute="top" id="NZv-aR-KIj"/>
                     <constraint firstItem="u8o-MO-7XH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="22" id="NtE-dr-mQP"/>
-                    <constraint firstItem="fZP-OG-aiZ" firstAttribute="leading" secondItem="jFq-Qg-5iF" secondAttribute="trailing" constant="15" id="bbE-X8-lv1"/>
+                    <constraint firstItem="fZP-OG-aiZ" firstAttribute="leading" secondItem="jFq-Qg-5iF" secondAttribute="trailing" constant="8" id="bbE-X8-lv1"/>
                     <constraint firstItem="jFq-Qg-5iF" firstAttribute="top" secondItem="JFC-ZJ-RaY" secondAttribute="bottom" constant="3" id="eIT-jg-ca0"/>
                     <constraint firstAttribute="trailing" secondItem="rV3-cd-FeM" secondAttribute="trailing" constant="10" id="hkQ-Me-S5H"/>
                     <constraint firstItem="JFC-ZJ-RaY" firstAttribute="top" secondItem="u8o-MO-7XH" secondAttribute="top" id="jIa-a7-bX3"/>

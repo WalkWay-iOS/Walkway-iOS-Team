@@ -15,6 +15,7 @@ class BookmarkCourseTVC: UITableViewCell {
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var rateLabel: UILabel!
+    @IBOutlet weak var bookmarkLabel: UILabel!
     @IBOutlet weak var courseImage: UIImageView!
     @IBOutlet weak var bookmarkButton: UIButton!
     
@@ -45,6 +46,7 @@ extension BookmarkCourseTVC {
         distanceLabel.font = .systemFont(ofSize: 13, weight: .medium)
         timeLabel.font = .systemFont(ofSize: 13, weight: .medium)
         rateLabel.font = .systemFont(ofSize: 13, weight: .medium)
+        bookmarkLabel.font = .systemFont(ofSize: 13, weight: .medium)
     }
     
     private func setImage() {
@@ -83,6 +85,7 @@ extension BookmarkCourseTVC {
         distanceLabel.text = "\(course.distance)km"
         timeLabel.text = course.time
         rateLabel.text = "\(course.rate)"
+        bookmarkLabel.text = "\(course.bookmark)"
         
         if course.isBookmark {
             bookmarkEnable()
