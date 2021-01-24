@@ -67,20 +67,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJb-xO-qUF">
-                                <rect key="frame" x="164.5" y="318.5" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5tC-wF-ChN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJb-xO-qUF">
+                                        <rect key="frame" x="15" y="0.0" width="54" height="34"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="eJb-xO-qUF" secondAttribute="bottom" constant="10" id="eQo-l2-Tgx"/>
+                                    <constraint firstItem="eJb-xO-qUF" firstAttribute="leading" secondItem="5tC-wF-ChN" secondAttribute="leading" constant="15" id="p9Z-Vo-Gne"/>
+                                    <constraint firstAttribute="height" constant="44" id="rnT-OC-DHe"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PVE-Ya-OBL">
+                                <rect key="frame" x="0.0" y="44" width="375" height="563"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TBD-AV-u81"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="eJb-xO-qUF" firstAttribute="centerY" secondItem="9n1-f3-L9r" secondAttribute="centerY" id="EHs-6T-hrj"/>
-                            <constraint firstItem="eJb-xO-qUF" firstAttribute="centerX" secondItem="9n1-f3-L9r" secondAttribute="centerX" id="J92-pz-1dB"/>
+                            <constraint firstItem="TBD-AV-u81" firstAttribute="trailing" secondItem="5tC-wF-ChN" secondAttribute="trailing" id="1cd-nP-bHP"/>
+                            <constraint firstItem="TBD-AV-u81" firstAttribute="trailing" secondItem="PVE-Ya-OBL" secondAttribute="trailing" id="8dF-qg-TVo"/>
+                            <constraint firstItem="5tC-wF-ChN" firstAttribute="leading" secondItem="TBD-AV-u81" secondAttribute="leading" id="CLs-HR-l3R"/>
+                            <constraint firstItem="PVE-Ya-OBL" firstAttribute="top" secondItem="5tC-wF-ChN" secondAttribute="bottom" id="U4c-ad-uFF"/>
+                            <constraint firstItem="5tC-wF-ChN" firstAttribute="top" secondItem="TBD-AV-u81" secondAttribute="top" id="bIS-47-bKa"/>
+                            <constraint firstItem="TBD-AV-u81" firstAttribute="bottom" secondItem="PVE-Ya-OBL" secondAttribute="bottom" constant="60" id="fFB-qD-PEv"/>
+                            <constraint firstItem="PVE-Ya-OBL" firstAttribute="leading" secondItem="TBD-AV-u81" secondAttribute="leading" id="jmA-hZ-zxC"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="closeButton" destination="eJb-xO-qUF" id="v4D-IG-H2N"/>
+                        <outlet property="detailTableView" destination="PVE-Ya-OBL" id="rXM-W0-ph2"/>
+                        <outlet property="navigationBarView" destination="5tC-wF-ChN" id="Y5f-Su-pGq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RBx-SW-0qE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
