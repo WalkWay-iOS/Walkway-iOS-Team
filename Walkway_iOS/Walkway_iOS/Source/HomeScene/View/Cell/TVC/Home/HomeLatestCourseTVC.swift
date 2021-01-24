@@ -60,6 +60,12 @@ extension HomeLatestCourseTVC: UICollectionViewDelegateFlowLayout {
     }
 }
 
+extension HomeLatestCourseTVC: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.collectionViewCellTapedCourse()
+    }
+}
+
 // MARK: - UI
 extension HomeLatestCourseTVC {
     private func setUI() {

@@ -145,4 +145,13 @@ extension HomeVC: cellPresentDelegate {
         dvc.modalPresentationStyle = .fullScreen
         present(dvc, animated: true, completion: nil)
     }
+    
+    func collectionViewCellTapedCourse() {
+        guard let dvc = storyboard?.instantiateViewController(identifier: "CourseDetailVC") as? CourseDetailVC else {
+            return
+        }
+        dvc.modalPresentationStyle = .fullScreen
+        dvc.modalTransitionStyle = .crossDissolve
+        present(dvc, animated: true, completion: nil)
+    }
 }

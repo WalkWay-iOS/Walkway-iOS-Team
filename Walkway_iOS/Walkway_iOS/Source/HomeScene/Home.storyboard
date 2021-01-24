@@ -59,6 +59,34 @@
             </objects>
             <point key="canvasLocation" x="-299" y="89"/>
         </scene>
+        <!--Course DetailVC-->
+        <scene sceneID="5TX-FW-U9B">
+            <objects>
+                <viewController storyboardIdentifier="CourseDetailVC" id="tkw-Pr-T9w" customClass="CourseDetailVC" customModule="Walkway_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9n1-f3-L9r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJb-xO-qUF">
+                                <rect key="frame" x="164.5" y="318.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TBD-AV-u81"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eJb-xO-qUF" firstAttribute="centerY" secondItem="9n1-f3-L9r" secondAttribute="centerY" id="EHs-6T-hrj"/>
+                            <constraint firstItem="eJb-xO-qUF" firstAttribute="centerX" secondItem="9n1-f3-L9r" secondAttribute="centerX" id="J92-pz-1dB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="eJb-xO-qUF" id="v4D-IG-H2N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RBx-SW-0qE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-300" y="813"/>
+        </scene>
         <!--Popular CourseVC-->
         <scene sceneID="atS-0v-Cy5">
             <objects>

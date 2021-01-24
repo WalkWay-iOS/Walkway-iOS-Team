@@ -60,6 +60,12 @@ extension HomeBookmarkCourseTVC: UICollectionViewDelegateFlowLayout {
     }
 }
 
+extension HomeBookmarkCourseTVC: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.collectionViewCellTapedCourse()
+    }
+}
+
 // MARK: - UI
 extension HomeBookmarkCourseTVC {
     private func setUI() {

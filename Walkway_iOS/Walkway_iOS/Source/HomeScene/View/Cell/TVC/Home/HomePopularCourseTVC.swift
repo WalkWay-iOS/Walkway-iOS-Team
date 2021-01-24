@@ -60,6 +60,12 @@ extension HomePopularCourseTVC: UICollectionViewDelegateFlowLayout {
     }
 }
 
+extension HomePopularCourseTVC: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.collectionViewCellTapedCourse()
+    }
+}
+
 // MARK: - UI
 extension HomePopularCourseTVC {
     private func setUI() {
