@@ -146,10 +146,11 @@ extension HomeVC: cellPresentDelegate {
         present(dvc, animated: true, completion: nil)
     }
     
-    func collectionViewCellTapedCourse() {
-        guard let dvc = storyboard?.instantiateViewController(identifier: "CourseDetailVC") as? CourseDetailVC else {
-            return
-        }
+    func collectionViewCellTapedCourse(dvc: CourseDetailVC) {
+        dvc.cellTitle = "북악산 달려라 달려 달려라!!"
+        dvc.cellTime = "시간 1시간 30분"
+        dvc.cellDistance = "거리 6.0km"
+        dvc.isHomeCell = true
         dvc.modalPresentationStyle = .fullScreen
         dvc.modalTransitionStyle = .crossDissolve
         present(dvc, animated: true, completion: nil)

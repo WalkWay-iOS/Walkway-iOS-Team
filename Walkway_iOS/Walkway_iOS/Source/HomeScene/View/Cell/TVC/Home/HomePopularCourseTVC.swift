@@ -62,7 +62,10 @@ extension HomePopularCourseTVC: UICollectionViewDelegateFlowLayout {
 
 extension HomePopularCourseTVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.collectionViewCellTapedCourse()
+        guard let dvc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(identifier: "CourseDetailVC") as? CourseDetailVC else {
+            return
+        }
+        delegate?.collectionViewCellTapedCourse(dvc: dvc)
     }
 }
 

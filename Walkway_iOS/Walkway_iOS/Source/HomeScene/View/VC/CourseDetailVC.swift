@@ -12,6 +12,11 @@ class CourseDetailVC: UIViewController {
     @IBOutlet weak var navigationBarView: UIView!
     @IBOutlet weak var detailTableView: UITableView!
     
+    var cellTitle: String?
+    var cellDistance: String?
+    var cellTime: String?
+    var isHomeCell: Bool?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -31,13 +36,15 @@ extension CourseDetailVC: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: DetailHeaderTVC.identifier) as? DetailHeaderTVC else {
             return UITableViewCell()
         }
+        cell.setCellData(title: cellTitle ?? "", time: cellTime ?? "", distance: cellDistance ?? "", hashtags: ["#풍경풍경풍", "#영구영구영", "#걷기가자가","#어린린린리", "#대공원원원", "#큰공원", "#작은공원"], isHome: isHomeCell ?? false)
+        cell.selectionStyle = .none
         return cell
     }
 }
 
 extension CourseDetailVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 555
+        return 465
     }
 }
 
@@ -54,6 +61,8 @@ extension CourseDetailVC {
     private func setTableView() {
         detailTableView.delegate = self
         detailTableView.dataSource = self
+        
+        detailTableView.separatorStyle = .none
     }
     
     private func setTableViewNib() {

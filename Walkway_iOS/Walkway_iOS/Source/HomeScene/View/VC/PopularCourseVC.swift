@@ -47,6 +47,10 @@ extension PopularCourseVC: UITableViewDelegate {
         guard let dvc = storyboard?.instantiateViewController(identifier: "CourseDetailVC") as? CourseDetailVC else {
             return
         }
+        dvc.cellTitle = data[indexPath.row].title
+        dvc.cellTime = data[indexPath.row].time
+        dvc.cellDistance = "\(data[indexPath.row].distance)"
+        dvc.isHomeCell = false
         dvc.modalPresentationStyle = .fullScreen
         dvc.modalTransitionStyle = .crossDissolve
         present(dvc, animated: true, completion: nil)
