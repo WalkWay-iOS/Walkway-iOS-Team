@@ -549,7 +549,7 @@
 				ED16C81025B7F92F003DD0F0 /* Sources */,
 				ED16C81125B7F92F003DD0F0 /* Frameworks */,
 				ED16C81225B7F92F003DD0F0 /* Resources */,
-				B3A257BF68B0492F3DDD81DA /* [CP] Embed Pods Frameworks */,
+				96D59AD66704741256809C77 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -652,21 +652,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B3A257BF68B0492F3DDD81DA /* [CP] Embed Pods Frameworks */ = {
+		96D59AD66704741256809C77 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Walkway_iOS/Pods-Walkway_iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Walkway_iOS/Pods-Walkway_iOS-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Walkway_iOS/Pods-Walkway_iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Walkway_iOS/Pods-Walkway_iOS-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Walkway_iOS/Pods-Walkway_iOS-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Walkway_iOS/Pods-Walkway_iOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

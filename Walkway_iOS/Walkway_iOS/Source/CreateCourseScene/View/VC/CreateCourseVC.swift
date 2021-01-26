@@ -6,13 +6,25 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class CreateCourseVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            
+        let camera = GMSCameraPosition.camera(withLatitude: 37.54643, longitude: 126.96482, zoom: 17.0)
+        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+            
+        view = mapView
+            
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: 37.54643, longitude: 126.96482)
+        marker.title = "Korea"
+        marker.snippet = "Sookmyung Womens University"
+        marker.map = mapView
     }
     
 
