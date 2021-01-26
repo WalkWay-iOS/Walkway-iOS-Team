@@ -12,6 +12,7 @@ class DetailHeaderTVC: UITableViewCell {
 
     @IBOutlet weak var courseImage: UIImageView!
     @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var middleView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
@@ -71,7 +72,6 @@ extension DetailHeaderTVC {
         strengthLabel.text = "🔥10/100"
         strengthLabel.font = .systemFont(ofSize: 11, weight: .semibold)
         
-        rateLabel.text = "⭐️4.89/5.0"
         rateLabel.font = .systemFont(ofSize: 11, weight: .semibold)
     }
     
@@ -82,7 +82,6 @@ extension DetailHeaderTVC {
         strengthProgressBar.layer.cornerRadius = 3
         strengthProgressBar.tintColor = .bookmarkDarkBlue
         
-        rateProgressBar.progress = 4.89/5.0
         rateProgressBar.transform = rateProgressBar.transform.scaledBy(x: 1, y: 2)
         rateProgressBar.layer.masksToBounds = true
         rateProgressBar.layer.cornerRadius = 3
@@ -90,14 +89,17 @@ extension DetailHeaderTVC {
     }
     
     private func setView() {
-        bottomView.backgroundColor = .gray50
+        middleView.backgroundColor = .gray50
+        bottomView.backgroundColor = .gray40
     }
 }
 
 // MARK: - Data
 extension DetailHeaderTVC {
-    func setCellData(title: String, time: String, distance: String, hashtags: [String], isHome: Bool) {
+    func setCellData(title: String, time: String, distance: String, hashtags: [String], isHome: Bool, rate: Float) {
         titleLabel.text = title
+        rateLabel.text = "⭐️\(rate)/5.0"
+        rateProgressBar.progress = rate/5.0
         
         if isHome {
             timeLabel.text = time

@@ -130,6 +130,7 @@
                 <outlet property="courseRateLabel" destination="cay-ad-FvH" id="obU-rJ-ehq"/>
                 <outlet property="courseStrengthLabel" destination="YEx-hz-Z8O" id="gPW-Lm-CGP"/>
                 <outlet property="distanceLabel" destination="2BZ-ad-zpi" id="xn6-se-xwd"/>
+                <outlet property="middleView" destination="cob-kx-0ce" id="j28-cZ-Vig"/>
                 <outlet property="rateLabel" destination="fg2-LX-C7Z" id="DwA-kq-Rax"/>
                 <outlet property="rateProgressBar" destination="Kxb-Zv-a3V" id="T0d-Qt-Dic"/>
                 <outlet property="strengthLabel" destination="LJL-X6-Ko5" id="1W3-GO-vck"/>

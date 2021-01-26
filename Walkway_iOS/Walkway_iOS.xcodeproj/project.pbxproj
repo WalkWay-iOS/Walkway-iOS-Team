@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED01F4CF25BFBFCB00B9AD43 /* DetailReviewTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED01F4CD25BFBFCB00B9AD43 /* DetailReviewTVC.swift */; };
+		ED01F4D025BFBFCB00B9AD43 /* DetailReviewTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED01F4CE25BFBFCB00B9AD43 /* DetailReviewTVC.xib */; };
+		ED01F4D425BFDB1000B9AD43 /* ReviewTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED01F4D225BFDB1000B9AD43 /* ReviewTVC.swift */; };
+		ED01F4D525BFDB1000B9AD43 /* ReviewTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED01F4D325BFDB1000B9AD43 /* ReviewTVC.xib */; };
+		ED01F4D825BFF88900B9AD43 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED01F4D725BFF88900B9AD43 /* Review.swift */; };
+		ED01F4DC25C0076B00B9AD43 /* DetailPhotoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED01F4DA25C0076B00B9AD43 /* DetailPhotoTVC.swift */; };
+		ED01F4DD25C0076B00B9AD43 /* DetailPhotoTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED01F4DB25C0076B00B9AD43 /* DetailPhotoTVC.xib */; };
+		ED01F4E225C0144D00B9AD43 /* PhotoCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED01F4E025C0144D00B9AD43 /* PhotoCVC.swift */; };
+		ED01F4E325C0144D00B9AD43 /* PhotoCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED01F4E125C0144D00B9AD43 /* PhotoCVC.xib */; };
 		ED16C81825B7F92F003DD0F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED16C81725B7F92F003DD0F0 /* AppDelegate.swift */; };
 		ED16C81A25B7F92F003DD0F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED16C81925B7F92F003DD0F0 /* SceneDelegate.swift */; };
 		ED16C82125B7F92F003DD0F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED16C82025B7F92F003DD0F0 /* Assets.xcassets */; };
@@ -59,9 +68,20 @@
 		EDE0BDED25BD9B9500ADE8D1 /* Extensions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDEC25BD9B9500ADE8D1 /* Extensions+UIViewController.swift */; };
 		EDE0BDF225BD9E9900ADE8D1 /* DetailHeaderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDF025BD9E9900ADE8D1 /* DetailHeaderTVC.swift */; };
 		EDE0BDF325BD9E9900ADE8D1 /* DetailHeaderTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDE0BDF125BD9E9900ADE8D1 /* DetailHeaderTVC.xib */; };
+		EDF3716125BFAD680000A1F6 /* DetailExplanationTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF3715F25BFAD680000A1F6 /* DetailExplanationTVC.swift */; };
+		EDF3716225BFAD680000A1F6 /* DetailExplanationTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDF3716025BFAD680000A1F6 /* DetailExplanationTVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED01F4CD25BFBFCB00B9AD43 /* DetailReviewTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailReviewTVC.swift; sourceTree = "<group>"; };
+		ED01F4CE25BFBFCB00B9AD43 /* DetailReviewTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailReviewTVC.xib; sourceTree = "<group>"; };
+		ED01F4D225BFDB1000B9AD43 /* ReviewTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTVC.swift; sourceTree = "<group>"; };
+		ED01F4D325BFDB1000B9AD43 /* ReviewTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewTVC.xib; sourceTree = "<group>"; };
+		ED01F4D725BFF88900B9AD43 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		ED01F4DA25C0076B00B9AD43 /* DetailPhotoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoTVC.swift; sourceTree = "<group>"; };
+		ED01F4DB25C0076B00B9AD43 /* DetailPhotoTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailPhotoTVC.xib; sourceTree = "<group>"; };
+		ED01F4E025C0144D00B9AD43 /* PhotoCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCVC.swift; sourceTree = "<group>"; };
+		ED01F4E125C0144D00B9AD43 /* PhotoCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCVC.xib; sourceTree = "<group>"; };
 		ED16C81425B7F92F003DD0F0 /* Walkway_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Walkway_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED16C81725B7F92F003DD0F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED16C81925B7F92F003DD0F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +136,8 @@
 		EDE0BDEC25BD9B9500ADE8D1 /* Extensions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIViewController.swift"; sourceTree = "<group>"; };
 		EDE0BDF025BD9E9900ADE8D1 /* DetailHeaderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderTVC.swift; sourceTree = "<group>"; };
 		EDE0BDF125BD9E9900ADE8D1 /* DetailHeaderTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailHeaderTVC.xib; sourceTree = "<group>"; };
+		EDF3715F25BFAD680000A1F6 /* DetailExplanationTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailExplanationTVC.swift; sourceTree = "<group>"; };
+		EDF3716025BFAD680000A1F6 /* DetailExplanationTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailExplanationTVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +151,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED01F4DF25C0141A00B9AD43 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				ED01F4E025C0144D00B9AD43 /* PhotoCVC.swift */,
+				ED01F4E125C0144D00B9AD43 /* PhotoCVC.xib */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		ED16C80B25B7F92F003DD0F0 = {
 			isa = PBXGroup;
 			children = (
@@ -373,6 +404,7 @@
 		ED16C88F25BA7441003DD0F0 /* CVC */ = {
 			isa = PBXGroup;
 			children = (
+				ED01F4DF25C0141A00B9AD43 /* Detail */,
 				ED94370A25BABC9F009642E5 /* Home */,
 			);
 			path = CVC;
@@ -456,6 +488,7 @@
 			isa = PBXGroup;
 			children = (
 				EDD055AE25BBBE9C009FA3FB /* Course.swift */,
+				ED01F4D725BFF88900B9AD43 /* Review.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -465,6 +498,14 @@
 			children = (
 				EDE0BDF025BD9E9900ADE8D1 /* DetailHeaderTVC.swift */,
 				EDE0BDF125BD9E9900ADE8D1 /* DetailHeaderTVC.xib */,
+				EDF3715F25BFAD680000A1F6 /* DetailExplanationTVC.swift */,
+				EDF3716025BFAD680000A1F6 /* DetailExplanationTVC.xib */,
+				ED01F4CD25BFBFCB00B9AD43 /* DetailReviewTVC.swift */,
+				ED01F4CE25BFBFCB00B9AD43 /* DetailReviewTVC.xib */,
+				ED01F4D225BFDB1000B9AD43 /* ReviewTVC.swift */,
+				ED01F4D325BFDB1000B9AD43 /* ReviewTVC.xib */,
+				ED01F4DA25C0076B00B9AD43 /* DetailPhotoTVC.swift */,
+				ED01F4DB25C0076B00B9AD43 /* DetailPhotoTVC.xib */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -526,12 +567,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED01F4D525BFDB1000B9AD43 /* ReviewTVC.xib in Resources */,
 				ED16C8A925BA9BB4003DD0F0 /* HomePopularCourseTVC.xib in Resources */,
 				ED16C83B25B7FAE9003DD0F0 /* Tabbar.storyboard in Resources */,
 				ED16C89A25BA7AAF003DD0F0 /* HomeBannerCVC.xib in Resources */,
 				ED16C8C225BAAB90003DD0F0 /* HomeLatestCourseCVC.xib in Resources */,
 				ED16C86E25B80136003DD0F0 /* CreateCourse.storyboard in Resources */,
+				EDF3716225BFAD680000A1F6 /* DetailExplanationTVC.xib in Resources */,
 				ED16C89F25BA8D05003DD0F0 /* HomeFollowerTVC.xib in Resources */,
+				ED01F4E325C0144D00B9AD43 /* PhotoCVC.xib in Resources */,
 				ED16C84B25B7FCA0003DD0F0 /* Mypage.storyboard in Resources */,
 				ED16C8B825BAA68F003DD0F0 /* HomeBookmarkCourseCVC.xib in Resources */,
 				EDD055C625BC2AFA009FA3FB /* LatestCourseTVC.xib in Resources */,
@@ -539,11 +583,13 @@
 				ED16C82425B7F92F003DD0F0 /* LaunchScreen.storyboard in Resources */,
 				EDD055BE25BBFB70009FA3FB /* BookmarkCourseTVC.xib in Resources */,
 				ED16C8AE25BA9E1E003DD0F0 /* HomePopularCourseCVC.xib in Resources */,
+				ED01F4D025BFBFCB00B9AD43 /* DetailReviewTVC.xib in Resources */,
 				ED7622C725BB25D0007E1C98 /* PopularCourseTVC.xib in Resources */,
 				ED16C8A425BA9478003DD0F0 /* HomeFollowerCVC.xib in Resources */,
 				EDE0BDF325BD9E9900ADE8D1 /* DetailHeaderTVC.xib in Resources */,
 				ED16C89425BA7471003DD0F0 /* HomeBannerTVC.xib in Resources */,
 				ED16C85125B7FCB4003DD0F0 /* CourseSearch.storyboard in Resources */,
+				ED01F4DD25C0076B00B9AD43 /* DetailPhotoTVC.xib in Resources */,
 				ED16C8BD25BAA95F003DD0F0 /* HomeLatestCourseTVC.xib in Resources */,
 				ED16C84E25B7FCA9003DD0F0 /* Alert.storyboard in Resources */,
 				ED16C82125B7F92F003DD0F0 /* Assets.xcassets in Resources */,
@@ -559,7 +605,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDD055BD25BBFB70009FA3FB /* BookmarkCourseTVC.swift in Sources */,
+				ED01F4DC25C0076B00B9AD43 /* DetailPhotoTVC.swift in Sources */,
 				ED16C8BC25BAA95F003DD0F0 /* HomeLatestCourseTVC.swift in Sources */,
+				ED01F4CF25BFBFCB00B9AD43 /* DetailReviewTVC.swift in Sources */,
+				EDF3716125BFAD680000A1F6 /* DetailExplanationTVC.swift in Sources */,
 				EDD055C525BC2AFA009FA3FB /* LatestCourseTVC.swift in Sources */,
 				EDD055C125BC282F009FA3FB /* LatestCourseVC.swift in Sources */,
 				EDD055B925BBF402009FA3FB /* BookmarkCourseVC.swift in Sources */,
@@ -569,10 +618,12 @@
 				EDE0BDEA25BD912F00ADE8D1 /* CourseDetailVC.swift in Sources */,
 				ED16C8B725BAA68F003DD0F0 /* HomeBookmarkCourseCVC.swift in Sources */,
 				ED16C86825B7FE7A003DD0F0 /* HomeVC.swift in Sources */,
+				ED01F4D825BFF88900B9AD43 /* Review.swift in Sources */,
 				ED16C85625B7FDE9003DD0F0 /* MypageVC.swift in Sources */,
 				ED16C8AD25BA9E1E003DD0F0 /* HomePopularCourseCVC.swift in Sources */,
 				EDE0BDF225BD9E9900ADE8D1 /* DetailHeaderTVC.swift in Sources */,
 				ED16C89925BA7AAF003DD0F0 /* HomeBannerCVC.swift in Sources */,
+				ED01F4E225C0144D00B9AD43 /* PhotoCVC.swift in Sources */,
 				ED7622BD25BB12D1007E1C98 /* PopularCourseVC.swift in Sources */,
 				ED16C89325BA7471003DD0F0 /* HomeBannerTVC.swift in Sources */,
 				ED16C84525B7FC1D003DD0F0 /* TabbarController.swift in Sources */,
@@ -583,6 +634,7 @@
 				ED16C81A25B7F92F003DD0F0 /* SceneDelegate.swift in Sources */,
 				ED7622C625BB25D0007E1C98 /* PopularCourseTVC.swift in Sources */,
 				ED16C8C125BAAB90003DD0F0 /* HomeLatestCourseCVC.swift in Sources */,
+				ED01F4D425BFDB1000B9AD43 /* ReviewTVC.swift in Sources */,
 				ED16C86225B7FE50003DD0F0 /* CourseSearchVC.swift in Sources */,
 				ED16C8A825BA9BB4003DD0F0 /* HomePopularCourseTVC.swift in Sources */,
 				ED16C8B225BAA4FD003DD0F0 /* HomeBookmarkCourseTVC.swift in Sources */,

@@ -45,6 +45,7 @@ extension LatestCourseVC: UITableViewDelegate {
         guard let dvc = storyboard?.instantiateViewController(identifier: "CourseDetailVC") as? CourseDetailVC else {
             return
         }
+        dvc.cellRate = data[indexPath.row].rate
         dvc.cellTitle = data[indexPath.row].title
         dvc.cellTime = data[indexPath.row].time
         dvc.cellDistance = "\(data[indexPath.row].distance)"
