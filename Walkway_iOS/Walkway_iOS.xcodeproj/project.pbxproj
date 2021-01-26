@@ -16,6 +16,7 @@
 		ED01F4DD25C0076B00B9AD43 /* DetailPhotoTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED01F4DB25C0076B00B9AD43 /* DetailPhotoTVC.xib */; };
 		ED01F4E225C0144D00B9AD43 /* PhotoCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED01F4E025C0144D00B9AD43 /* PhotoCVC.swift */; };
 		ED01F4E325C0144D00B9AD43 /* PhotoCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED01F4E125C0144D00B9AD43 /* PhotoCVC.xib */; };
+		ED01F4E625C02E4300B9AD43 /* Extensions+UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED01F4E525C02E4300B9AD43 /* Extensions+UIScrollView.swift */; };
 		ED16C81825B7F92F003DD0F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED16C81725B7F92F003DD0F0 /* AppDelegate.swift */; };
 		ED16C81A25B7F92F003DD0F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED16C81925B7F92F003DD0F0 /* SceneDelegate.swift */; };
 		ED16C82125B7F92F003DD0F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED16C82025B7F92F003DD0F0 /* Assets.xcassets */; };
@@ -82,6 +83,7 @@
 		ED01F4DB25C0076B00B9AD43 /* DetailPhotoTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailPhotoTVC.xib; sourceTree = "<group>"; };
 		ED01F4E025C0144D00B9AD43 /* PhotoCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCVC.swift; sourceTree = "<group>"; };
 		ED01F4E125C0144D00B9AD43 /* PhotoCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCVC.xib; sourceTree = "<group>"; };
+		ED01F4E525C02E4300B9AD43 /* Extensions+UIScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIScrollView.swift"; sourceTree = "<group>"; };
 		ED16C81425B7F92F003DD0F0 /* Walkway_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Walkway_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED16C81725B7F92F003DD0F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED16C81925B7F92F003DD0F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -425,6 +427,7 @@
 			children = (
 				ED7622B925BAFC88007E1C98 /* Extensions+UIColor.swift */,
 				EDE0BDEC25BD9B9500ADE8D1 /* Extensions+UIViewController.swift */,
+				ED01F4E525C02E4300B9AD43 /* Extensions+UIScrollView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -619,6 +622,7 @@
 				ED16C8B725BAA68F003DD0F0 /* HomeBookmarkCourseCVC.swift in Sources */,
 				ED16C86825B7FE7A003DD0F0 /* HomeVC.swift in Sources */,
 				ED01F4D825BFF88900B9AD43 /* Review.swift in Sources */,
+				ED01F4E625C02E4300B9AD43 /* Extensions+UIScrollView.swift in Sources */,
 				ED16C85625B7FDE9003DD0F0 /* MypageVC.swift in Sources */,
 				ED16C8AD25BA9E1E003DD0F0 /* HomePopularCourseCVC.swift in Sources */,
 				EDE0BDF225BD9E9900ADE8D1 /* DetailHeaderTVC.swift in Sources */,

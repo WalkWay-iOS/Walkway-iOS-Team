@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xh5-1s-PMf">
-                        <rect key="frame" x="20" y="10" width="280" height="60"/>
+                        <rect key="frame" x="20" y="15" width="280" height="60"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V2C-oC-nvU">
                                 <rect key="frame" x="0.0" y="29.5" width="280" height="1"/>
@@ -98,7 +98,7 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axa-Xt-0ck">
-                        <rect key="frame" x="20" y="80" width="280" height="21"/>
+                        <rect key="frame" x="20" y="85" width="280" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="XIo-rV-r47"/>
                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="240" id="a8R-KR-HBx"/>
@@ -116,7 +116,7 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="xh5-1s-PMf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="DV8-NU-FbW"/>
+                    <constraint firstItem="xh5-1s-PMf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="DV8-NU-FbW"/>
                     <constraint firstItem="axa-Xt-0ck" firstAttribute="top" secondItem="xh5-1s-PMf" secondAttribute="bottom" constant="10" id="F2C-9F-QS2"/>
                     <constraint firstItem="xh5-1s-PMf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="H7s-V2-0hD"/>
                     <constraint firstAttribute="trailing" secondItem="axa-Xt-0ck" secondAttribute="trailing" constant="20" id="Ky2-QM-9vI"/>
