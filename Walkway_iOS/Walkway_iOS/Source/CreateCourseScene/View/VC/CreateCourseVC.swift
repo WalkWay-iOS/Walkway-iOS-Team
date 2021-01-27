@@ -7,10 +7,12 @@
 
 import UIKit
 import GoogleMaps
+import GooglePlaces
 
 class CreateCourseVC: UIViewController {
     let infoViewButton = UIButton()
     let infoView = UIView()
+    let hiddenView = UIView()
     let startTitleLabel = UILabel()
     let destinationTitleLabel = UILabel()
     let startLocalLabel = UILabel()
@@ -19,12 +21,19 @@ class CreateCourseVC: UIViewController {
     let destinationButton = UIButton()
     let makeCourseButton = UIButton()
     let drawCourseButton = UIButton()
+    let searchButton = UIButton()
     
-    let marker = GMSMarker()
-    let mapView = GMSMapView()
+    var mapView = GMSMapView()
+    var camera = GMSCameraPosition()
+    let startMarker = GMSMarker()
+    let destinationMarker = GMSMarker()
     let geocoder = GMSGeocoder()
     
-    var zoomValue: Float = 0.0
+    var zoomValue: Float = 17.0
+    var isStart: Bool = true
+    var isFirstStart = false
+    var isFirstDestination = false
+    var isFirstSearch = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,9 +45,8 @@ class CreateCourseVC: UIViewController {
 // MARK: - MAP
 extension CreateCourseVC: GMSMapViewDelegate {
     private func setMap() {
-        zoomValue = 17.0
-        let camera = GMSCameraPosition.camera(withLatitude: 37.54643, longitude: 126.96482, zoom: zoomValue)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        camera = GMSCameraPosition.camera(withLatitude: 37.54643, longitude: 126.96482, zoom: zoomValue)
+        mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         mapView.settings.compassButton = true
         mapView.settings.myLocationButton = true
         mapView.settings.scrollGestures = true
@@ -46,14 +54,13 @@ extension CreateCourseVC: GMSMapViewDelegate {
         mapView.delegate = self
         
         view = mapView
-            
-        marker.position = CLLocationCoordinate2D(latitude: 37.54643, longitude: 126.96482)
-        marker.icon = GMSMarker.markerImage(with: .bookmarkDarkBlue)
-        marker.title = "Korea"
-        marker.snippet = "Sookmyung Womens University"
-        marker.map = mapView
+                
+        startMarker.icon = GMSMarker.markerImage(with: .bookmarkDarkBlue)
+        startMarker.map = mapView
         
-        
+        destinationMarker.icon = GMSMarker.markerImage(with: .latestBurgundy)
+        destinationMarker.map = mapView
+        geocoder.accessibilityLanguage = "Ko-kr"
     }
     
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
@@ -65,64 +72,67 @@ extension CreateCourseVC: GMSMapViewDelegate {
         
         mapView.camera = location
         mapView.animate(to: location)
-        marker.position = CLLocationCoordinate2D(latitude: lat, longitude: long)
         print("Latitude: \(lat), Longitude: \(long)")
         
-        geocoder.reverseGeocodeCoordinate(marker.position) { response, error in
-            if error != nil {
-                print("reverse geodcode fail: \(error!.localizedDescription)")
-            } else {
-                if let places = response?.results() {
-                    if let place = places.first {
-                        if let lines = place.lines {
-                            self.startLocalLabel.text = "\(lines)"
-                            print("GEOCODE: Formatted Address: \(lines)")
+        if isStart {
+            startMarker.position = CLLocationCoordinate2D(latitude: lat, longitude: long)
+            
+            geocoder.reverseGeocodeCoordinate(startMarker.position) { response, error in
+                if error != nil {
+                    print("reverse geodcode fail: \(error!.localizedDescription)")
+                } else {
+                    if let places = response?.results() {
+                        if let place = places.first {
+                            if let lines = place.lines {
+                                var str: String = ""
+                                var strs: [String] = lines[0].components(separatedBy: " ")
+                                for s in strs[1...] {
+                                    str += s
+                                    str += " "
+                                }
+                                self.startMarker.snippet = str
+                                self.startButton.setTitle(str, for: .normal)
+                                self.startLocalLabel.text = str
+                                print("GEOCODE: Formatted Address: \(lines)")
+                            } else {
+                                print("GEOCODE: nil first in places")
+                            }
                         } else {
-                            print("GEOCODE: nil first in places")
+                        print("GEOCODE: nil in places")
                         }
-                    } else {
-                    print("GEOCODE: nil in places")
+                    }
+                }
+            }
+        } else {
+            destinationMarker.position = CLLocationCoordinate2D(latitude: lat, longitude: long)
+            
+            geocoder.reverseGeocodeCoordinate(destinationMarker.position) { response, error in
+                if error != nil {
+                    print("reverse geodcode fail: \(error!.localizedDescription)")
+                } else {
+                    if let places = response?.results() {
+                        if let place = places.first {
+                            if let lines = place.lines {
+                                var str: String = ""
+                                var strs: [String] = lines[0].components(separatedBy: " ")
+                                for s in strs[1...] {
+                                    str += s
+                                    str += " "
+                                }
+                                self.destinationMarker.snippet = str
+                                self.destinationButton.setTitle(str, for: .normal)
+                                self.destinationLocalLabel.text = str
+                                print("GEOCODE: Formatted Address: \(lines)")
+                            } else {
+                                print("GEOCODE: nil first in places")
+                            }
+                        } else {
+                        print("GEOCODE: nil in places")
+                        }
                     }
                 }
             }
         }
-    }
-    
-    func performGoogleSearch(for string: String) {
-        var components = URLComponents(string: "https://maps.googleapis.com/maps/api/geocode/json")!
-        let key = URLQueryItem(name: "key", value: "...") // use your key
-        let address = URLQueryItem(name: "address", value: string)
-        components.queryItems = [key, address]
-
-        let task = URLSession.shared.dataTask(with: components.url!) { data, response, error in
-            guard let data = data, let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200, error == nil else {
-                print(String(describing: response))
-                print(String(describing: error))
-                return
-            }
-
-            guard let json = (try? JSONSerialization.jsonObject(with: data)) as? [String: Any] else {
-                print("not JSON format expected")
-                print(String(data: data, encoding: .utf8) ?? "Not string?!?")
-                return
-            }
-
-            guard let results = json["results"] as? [[String: Any]],
-                let status = json["status"] as? String,
-                status == "OK" else {
-                    print("no results")
-                    print(String(describing: json))
-                    return
-            }
-
-            DispatchQueue.main.async {
-                // now do something with the results, e.g. grab `formatted_address`:
-                let strings = results.compactMap { $0["formatted_address"] as? String }
-                print(strings)
-            }
-        }
-
-        task.resume()
     }
 }
 
@@ -132,6 +142,7 @@ extension CreateCourseVC {
         setView()
         setLabel()
         setButton()
+        setSearchButton()
     }
     
     private func setView() {
@@ -144,6 +155,24 @@ extension CreateCourseVC {
         infoView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         infoView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         infoView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.size.height/2.8).isActive = true
+        
+        hiddenView.backgroundColor = UIColor.bookmarkGray.withAlphaComponent(0.5)
+        hiddenView.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(hiddenView)
+        hiddenView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        hiddenView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        hiddenView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        hiddenView.bottomAnchor.constraint(equalTo: infoView.topAnchor).isActive = true
+        
+        let infoLabel = UILabel()
+        infoLabel.numberOfLines = 2
+        infoLabel.text = "Walkway와 함께\n원하는 길을 찾아봐요🏃🏻‍♀️"
+        infoLabel.textColor = .white
+        infoLabel.font = .systemFont(ofSize: 25, weight: .bold)
+        infoLabel.translatesAutoresizingMaskIntoConstraints = false
+        hiddenView.addSubview(infoLabel)
+        infoLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 80).isActive = true
+        infoLabel.leadingAnchor.constraint(equalTo: hiddenView.leadingAnchor, constant: 20).isActive = true
     }
     
     private func setLabel() {
@@ -165,11 +194,19 @@ extension CreateCourseVC {
         
         startLocalLabel.text = ""
         startLocalLabel.font = .systemFont(ofSize: 11)
-        startLocalLabel.textColor = .gray50
+        startLocalLabel.textColor = .gray90
         startLocalLabel.translatesAutoresizingMaskIntoConstraints = false
         infoView.addSubview(startLocalLabel)
         startLocalLabel.topAnchor.constraint(equalTo: startTitleLabel.bottomAnchor, constant: 30).isActive = true
         startLocalLabel.leadingAnchor.constraint(equalTo: startTitleLabel.leadingAnchor, constant: 20).isActive = true
+        
+        destinationLocalLabel.text = ""
+        destinationLocalLabel.font = .systemFont(ofSize: 11)
+        destinationLocalLabel.textColor = .gray90
+        destinationLocalLabel.translatesAutoresizingMaskIntoConstraints = false
+        infoView.addSubview(destinationLocalLabel)
+        destinationLocalLabel.topAnchor.constraint(equalTo: destinationTitleLabel.bottomAnchor, constant: 30).isActive = true
+        destinationLocalLabel.leadingAnchor.constraint(equalTo: startTitleLabel.leadingAnchor, constant: 20).isActive = true
     }
     
     private func setButton() {
@@ -188,7 +225,7 @@ extension CreateCourseVC {
         infoViewButton.widthAnchor.constraint(equalToConstant: 53).isActive = true
         infoViewButton.heightAnchor.constraint(equalToConstant: 53).isActive = true
         
-        startButton.setTitle("출발 위치 설정하기", for: .normal)
+        startButton.setTitle("출발 위치 설정", for: .normal)
         startButton.setTitleColor(.black, for: .normal)
         startButton.titleLabel?.font = .boldSystemFont(ofSize: 16)
         startButton.translatesAutoresizingMaskIntoConstraints = false
@@ -197,7 +234,7 @@ extension CreateCourseVC {
         startButton.topAnchor.constraint(equalTo: startTitleLabel.bottomAnchor, constant: 3).isActive = true
         startButton.leadingAnchor.constraint(equalTo: startTitleLabel.leadingAnchor, constant: 20).isActive = true
         
-        destinationButton.setTitle("도착 위치 설정하기", for: .normal)
+        destinationButton.setTitle("도착 위치 설정", for: .normal)
         destinationButton.setTitleColor(.black, for: .normal)
         destinationButton.titleLabel?.font = .boldSystemFont(ofSize: 16)
         destinationButton.translatesAutoresizingMaskIntoConstraints = false
@@ -235,6 +272,69 @@ extension CreateCourseVC {
         makeCourseButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
         makeCourseButton.widthAnchor.constraint(equalToConstant: 150).isActive = true
     }
+    
+    private func setSearchButton() {
+        searchButton.setTitle("", for: .normal)
+        searchButton.backgroundColor = UIColor.white.withAlphaComponent(0.5)
+        searchButton.layer.cornerRadius = 10
+        searchButton.layer.borderWidth = 1
+        searchButton.layer.borderColor = UIColor.gray50.cgColor
+        searchButton.addTarget(self, action: #selector(touchUpSearchCourse), for: .touchUpInside)
+        searchButton.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(searchButton)
+        searchButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        searchButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40).isActive = true
+        searchButton.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.size.width/1.1).isActive = true
+        
+        let label = UILabel()
+        label.text = "길찾기"
+        label.font = .systemFont(ofSize: 14)
+        label.textColor = .gray60
+        label.translatesAutoresizingMaskIntoConstraints = false
+        searchButton.addSubview(label)
+        label.centerYAnchor.constraint(equalTo: searchButton.centerYAnchor).isActive = true
+        label.leadingAnchor.constraint(equalTo: searchButton.leadingAnchor, constant: 10).isActive = true
+    }
+}
+
+// MARK: - Search Course(Delegate)
+extension CreateCourseVC: GMSAutocompleteViewControllerDelegate {
+    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+        hiddenView.isHidden = true
+        
+        guard let name = place.name else {return}
+        guard let address = place.formattedAddress else {return}
+        if isFirstSearch == false {
+            isFirstSearch = true
+            isFirstStart = true
+            startButton.setTitle(name, for: .normal)
+            startLocalLabel.text = address
+            startMarker.snippet = name
+            startMarker.position = CLLocationCoordinate2D(latitude: place.coordinate.latitude, longitude: place.coordinate.longitude)
+            
+            let location = GMSCameraPosition.camera(withLatitude: place.coordinate.latitude, longitude: place.coordinate.longitude, zoom: zoomValue)
+            mapView.camera = location
+        } else {
+            isFirstSearch = false
+            isFirstDestination = true
+            destinationButton.setTitle(name, for: .normal)
+            destinationLocalLabel.text = address
+            destinationMarker.snippet = name
+            destinationMarker.position = CLLocationCoordinate2D(latitude: place.coordinate.latitude, longitude: place.coordinate.longitude)
+            
+            let location = GMSCameraPosition.camera(withLatitude: place.coordinate.latitude, longitude: place.coordinate.longitude, zoom: zoomValue)
+            mapView.camera = location
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+        print(error.localizedDescription)//에러났을 때 출력
+    }
 }
 
 // MARK: - Action
@@ -242,17 +342,52 @@ extension CreateCourseVC {
     @objc func touchUpInfoButton() {
         if infoView.isHidden {
             infoView.isHidden = false
-        } else {
+            searchButton.isHidden = false
+        } else if infoView.isHidden == false && (isFirstStart || isFirstDestination) {
             infoView.isHidden = true
+            searchButton.isHidden = true
         }
     }
     
     @objc func touchUpGetStartPoint() {
         print("출발")
+        hiddenView.isHidden = true
+        isStart = true
+        
+        if isFirstStart == false {
+            let location = GMSCameraPosition.camera(withLatitude: 37.54643, longitude: 126.96482, zoom: zoomValue)
+            mapView.camera = location
+            isFirstStart = true
+        }
+        
+        startMarker.position = CLLocationCoordinate2D(latitude: 37.54643, longitude: 126.96482)
+        startMarker.snippet = "Sookmyung Womens University"
+        startMarker.map = mapView
     }
     
     @objc func touchUpGetDestinationPoint() {
         print("도착")
+        hiddenView.isHidden = true
+        isStart = false
+        
+        if isFirstDestination == false {
+            let location = GMSCameraPosition.camera(withLatitude: 37.54643, longitude: 126.96482, zoom: zoomValue)
+            mapView.camera = location
+            isFirstDestination = true
+        }
+        
+        destinationMarker.position = CLLocationCoordinate2D(latitude: 37.54643, longitude: 126.96482)
+        destinationMarker.snippet = "Sookmyung Womens University"
+        destinationMarker.map = mapView
+    }
+    
+    @objc func touchUpSearchCourse() {
+        print("길찾기")
+        let controller = GMSAutocompleteViewController()
+        controller.delegate = self //딜리게이트
+        controller.modalPresentationStyle = .fullScreen
+        controller.modalTransitionStyle = .crossDissolve
+        present(controller, animated: true, completion: nil)
     }
     
     @objc func touchUpDraw() {
