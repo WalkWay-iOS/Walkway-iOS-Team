@@ -33,7 +33,10 @@ class CreateCourseVC: UIViewController {
     var isStart: Bool = true
     var isFirstStart = false
     var isFirstDestination = false
-    var isFirstSearch = false
+    var isWhoseButton = false
+    
+    var startLocation: [CLLocationDegrees] = [37.54643, 126.96482]
+    var destinLocation: [CLLocationDegrees] = [37.54643, 126.96482]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +63,7 @@ extension CreateCourseVC: GMSMapViewDelegate {
         
         destinationMarker.icon = GMSMarker.markerImage(with: .latestBurgundy)
         destinationMarker.map = mapView
+        
         geocoder.accessibilityLanguage = "Ko-kr"
     }
     
@@ -76,6 +80,8 @@ extension CreateCourseVC: GMSMapViewDelegate {
         
         if isStart {
             startMarker.position = CLLocationCoordinate2D(latitude: lat, longitude: long)
+            startLocation[0] = lat
+            startLocation[1] = long
             
             geocoder.reverseGeocodeCoordinate(startMarker.position) { response, error in
                 if error != nil {
@@ -105,6 +111,8 @@ extension CreateCourseVC: GMSMapViewDelegate {
             }
         } else {
             destinationMarker.position = CLLocationCoordinate2D(latitude: lat, longitude: long)
+            destinLocation[0] = lat
+            destinLocation[1] = lat
             
             geocoder.reverseGeocodeCoordinate(destinationMarker.position) { response, error in
                 if error != nil {
@@ -308,23 +316,23 @@ extension CreateCourseVC: GMSAutocompleteViewControllerDelegate {
         
         guard let name = place.name else {return}
         guard let address = place.formattedAddress else {return}
-        if isFirstSearch == false {
-            isFirstSearch = true
-            isFirstStart = true
+        if isWhoseButton == false {
             startButton.setTitle(name, for: .normal)
             startLocalLabel.text = address
             startMarker.snippet = name
             startMarker.position = CLLocationCoordinate2D(latitude: place.coordinate.latitude, longitude: place.coordinate.longitude)
+            startLocation[0] = place.coordinate.latitude
+            startLocation[1] = place.coordinate.longitude
             
             let location = GMSCameraPosition.camera(withLatitude: place.coordinate.latitude, longitude: place.coordinate.longitude, zoom: zoomValue)
             mapView.camera = location
         } else {
-            isFirstSearch = false
-            isFirstDestination = true
             destinationButton.setTitle(name, for: .normal)
             destinationLocalLabel.text = address
             destinationMarker.snippet = name
             destinationMarker.position = CLLocationCoordinate2D(latitude: place.coordinate.latitude, longitude: place.coordinate.longitude)
+            destinLocation[0] = place.coordinate.latitude
+            destinLocation[1] = place.coordinate.longitude
             
             let location = GMSCameraPosition.camera(withLatitude: place.coordinate.latitude, longitude: place.coordinate.longitude, zoom: zoomValue)
             mapView.camera = location
@@ -353,15 +361,17 @@ extension CreateCourseVC {
         print("출발")
         hiddenView.isHidden = true
         isStart = true
-        
+        isWhoseButton = false
         if isFirstStart == false {
-            let location = GMSCameraPosition.camera(withLatitude: 37.54643, longitude: 126.96482, zoom: zoomValue)
-            mapView.camera = location
             isFirstStart = true
         }
         
-        startMarker.position = CLLocationCoordinate2D(latitude: 37.54643, longitude: 126.96482)
-        startMarker.snippet = "Sookmyung Womens University"
+        startButton.setTitleColor(.bookmarkDarkBlue, for: .normal)
+        destinationButton.setTitleColor(.black, for: .normal)
+        
+        let location = GMSCameraPosition.camera(withLatitude: startLocation[0], longitude: startLocation[1], zoom: zoomValue)
+        mapView.camera = location
+        startMarker.position = CLLocationCoordinate2D(latitude: startLocation[0], longitude: startLocation[1])
         startMarker.map = mapView
     }
     
@@ -369,25 +379,29 @@ extension CreateCourseVC {
         print("도착")
         hiddenView.isHidden = true
         isStart = false
-        
+        isWhoseButton = true
         if isFirstDestination == false {
-            let location = GMSCameraPosition.camera(withLatitude: 37.54643, longitude: 126.96482, zoom: zoomValue)
-            mapView.camera = location
             isFirstDestination = true
         }
         
-        destinationMarker.position = CLLocationCoordinate2D(latitude: 37.54643, longitude: 126.96482)
-        destinationMarker.snippet = "Sookmyung Womens University"
+        startButton.setTitleColor(.black, for: .normal)
+        destinationButton.setTitleColor(.latestBurgundy, for: .normal)
+        
+        let location = GMSCameraPosition.camera(withLatitude: destinLocation[0], longitude: destinLocation[1], zoom: zoomValue)
+        mapView.camera = location
+        destinationMarker.position = CLLocationCoordinate2D(latitude: destinLocation[0], longitude: destinLocation[1])
         destinationMarker.map = mapView
     }
     
     @objc func touchUpSearchCourse() {
         print("길찾기")
-        let controller = GMSAutocompleteViewController()
-        controller.delegate = self //딜리게이트
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .crossDissolve
-        present(controller, animated: true, completion: nil)
+        if isFirstStart || isFirstDestination {
+            let controller = GMSAutocompleteViewController()
+            controller.delegate = self 
+            controller.modalPresentationStyle = .fullScreen
+            controller.modalTransitionStyle = .crossDissolve
+            present(controller, animated: true, completion: nil)
+        }
     }
     
     @objc func touchUpDraw() {
