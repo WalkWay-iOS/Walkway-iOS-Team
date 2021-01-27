@@ -429,6 +429,13 @@ extension CreateCourseVC {
     }
     
     @objc func touchUpDraw() {
-        
+        guard let dvc = storyboard?.instantiateViewController(identifier: "MakeCourseVC") as? MakeCourseVC else {
+            return
+        }
+        dvc.lat = startLocation[0]
+        dvc.long = startLocation[1]
+        dvc.coordinates.append(CLLocationCoordinate2D(latitude: startLocation[0], longitude: startLocation[1]))
+        dvc.modalPresentationStyle = .fullScreen
+        present(dvc, animated: true, completion: nil)
     }
 }
