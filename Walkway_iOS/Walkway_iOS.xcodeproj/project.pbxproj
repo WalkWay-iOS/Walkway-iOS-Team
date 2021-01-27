@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74FDE74725C17CF2002EF553 /* CourseListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FDE74525C17CF2002EF553 /* CourseListTVC.swift */; };
+		74FDE74825C17CF2002EF553 /* CourseListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74FDE74625C17CF2002EF553 /* CourseListTVC.xib */; };
 		ED16C81825B7F92F003DD0F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED16C81725B7F92F003DD0F0 /* AppDelegate.swift */; };
 		ED16C81A25B7F92F003DD0F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED16C81925B7F92F003DD0F0 /* SceneDelegate.swift */; };
 		ED16C82125B7F92F003DD0F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED16C82025B7F92F003DD0F0 /* Assets.xcassets */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		74FDE74525C17CF2002EF553 /* CourseListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListTVC.swift; sourceTree = "<group>"; };
+		74FDE74625C17CF2002EF553 /* CourseListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseListTVC.xib; sourceTree = "<group>"; };
 		ED16C81425B7F92F003DD0F0 /* Walkway_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Walkway_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED16C81725B7F92F003DD0F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED16C81925B7F92F003DD0F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -221,6 +225,8 @@
 			isa = PBXGroup;
 			children = (
 				ED16C86025B7FE3B003DD0F0 /* VC */,
+				74FDE74525C17CF2002EF553 /* CourseListTVC.swift */,
+				74FDE74625C17CF2002EF553 /* CourseListTVC.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -343,6 +349,7 @@
 				ED16C84B25B7FCA0003DD0F0 /* Mypage.storyboard in Resources */,
 				ED16C84825B7FC8F003DD0F0 /* Home.storyboard in Resources */,
 				ED16C82425B7F92F003DD0F0 /* LaunchScreen.storyboard in Resources */,
+				74FDE74825C17CF2002EF553 /* CourseListTVC.xib in Resources */,
 				ED16C85125B7FCB4003DD0F0 /* CourseSearch.storyboard in Resources */,
 				ED16C84E25B7FCA9003DD0F0 /* Alert.storyboard in Resources */,
 				ED16C82125B7F92F003DD0F0 /* Assets.xcassets in Resources */,
@@ -363,6 +370,7 @@
 				ED16C85C25B7FE1B003DD0F0 /* AlertVC.swift in Sources */,
 				ED16C87125B80150003DD0F0 /* CreateCourseVC.swift in Sources */,
 				ED16C81A25B7F92F003DD0F0 /* SceneDelegate.swift in Sources */,
+				74FDE74725C17CF2002EF553 /* CourseListTVC.swift in Sources */,
 				ED16C86225B7FE50003DD0F0 /* CourseSearchVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
