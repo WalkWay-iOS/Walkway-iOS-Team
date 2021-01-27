@@ -27,6 +27,8 @@ class CreateCourseVC: UIViewController {
     var camera = GMSCameraPosition()
     let startMarker = GMSMarker()
     let destinationMarker = GMSMarker()
+    let anotherStartMarker = GMSMarker()
+    let anotherDestinationMarker = GMSMarker()
     let geocoder = GMSGeocoder()
     
     var zoomValue: Float = 17.0
@@ -61,8 +63,14 @@ extension CreateCourseVC: GMSMapViewDelegate {
         startMarker.icon = GMSMarker.markerImage(with: .bookmarkDarkBlue)
         startMarker.map = mapView
         
+        anotherStartMarker.icon = GMSMarker.markerImage(with: .bookmarkDarkBlue)
+        anotherStartMarker.map = mapView
+        
         destinationMarker.icon = GMSMarker.markerImage(with: .latestBurgundy)
         destinationMarker.map = mapView
+        
+        anotherDestinationMarker.icon = GMSMarker.markerImage(with: .latestBurgundy)
+        anotherDestinationMarker.map = mapView
         
         geocoder.accessibilityLanguage = "Ko-kr"
     }
@@ -79,6 +87,7 @@ extension CreateCourseVC: GMSMapViewDelegate {
         print("Latitude: \(lat), Longitude: \(long)")
         
         if isStart {
+            startMarker.map = mapView
             startMarker.position = CLLocationCoordinate2D(latitude: lat, longitude: long)
             startLocation[0] = lat
             startLocation[1] = long
@@ -110,6 +119,7 @@ extension CreateCourseVC: GMSMapViewDelegate {
                 }
             }
         } else {
+            destinationMarker.map = mapView
             destinationMarker.position = CLLocationCoordinate2D(latitude: lat, longitude: long)
             destinLocation[0] = lat
             destinLocation[1] = lat
@@ -305,7 +315,7 @@ extension CreateCourseVC {
     }
 }
 
-// MARK: - Search Course(Delegate)
+// MARK: - 문제가 많은 부분!! Search Course(Delegate)
 extension CreateCourseVC: GMSAutocompleteViewControllerDelegate {
     func wasCancelled(_ viewController: GMSAutocompleteViewController) {
         dismiss(animated: true, completion: nil)
@@ -314,29 +324,41 @@ extension CreateCourseVC: GMSAutocompleteViewControllerDelegate {
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
         hiddenView.isHidden = true
         
-        guard let name = place.name else {return}
-        guard let address = place.formattedAddress else {return}
-        if isWhoseButton == false {
-            startButton.setTitle(name, for: .normal)
-            startLocalLabel.text = address
-            startMarker.snippet = name
-            startMarker.position = CLLocationCoordinate2D(latitude: place.coordinate.latitude, longitude: place.coordinate.longitude)
-            startLocation[0] = place.coordinate.latitude
-            startLocation[1] = place.coordinate.longitude
-            
-            let location = GMSCameraPosition.camera(withLatitude: place.coordinate.latitude, longitude: place.coordinate.longitude, zoom: zoomValue)
-            mapView.camera = location
-        } else {
-            destinationButton.setTitle(name, for: .normal)
-            destinationLocalLabel.text = address
-            destinationMarker.snippet = name
-            destinationMarker.position = CLLocationCoordinate2D(latitude: place.coordinate.latitude, longitude: place.coordinate.longitude)
-            destinLocation[0] = place.coordinate.latitude
-            destinLocation[1] = place.coordinate.longitude
-            
-            let location = GMSCameraPosition.camera(withLatitude: place.coordinate.latitude, longitude: place.coordinate.longitude, zoom: zoomValue)
-            mapView.camera = location
+        DispatchQueue.global().sync {
+            guard let name = place.name else {return}
+            guard let address = place.formattedAddress else {return}
+            if isWhoseButton == false {
+                startButton.setTitle(name, for: .normal)
+                startLocalLabel.text = address
+                
+                startMarker.map = nil
+                
+                anotherStartMarker.map = mapView
+                anotherStartMarker.snippet = name
+                anotherStartMarker.position = CLLocationCoordinate2D(latitude: place.coordinate.latitude, longitude: place.coordinate.longitude)
+                startLocation[0] = place.coordinate.latitude
+                startLocation[1] = place.coordinate.longitude
+                
+                let location = GMSCameraPosition.camera(withLatitude: place.coordinate.latitude, longitude: place.coordinate.longitude, zoom: zoomValue)
+                mapView.camera = location
+            } else {
+                destinationButton.setTitle(name, for: .normal)
+                destinationLocalLabel.text = address
+                
+                destinationMarker.map = nil
+                
+                anotherDestinationMarker.map = mapView
+                anotherDestinationMarker.snippet = name
+                anotherDestinationMarker.position = CLLocationCoordinate2D(latitude: place.coordinate.latitude, longitude: place.coordinate.longitude)
+                destinLocation[0] = place.coordinate.latitude
+                destinLocation[1] = place.coordinate.longitude
+                
+                let location = GMSCameraPosition.camera(withLatitude: place.coordinate.latitude, longitude: place.coordinate.longitude, zoom: zoomValue)
+                mapView.camera = location
+            }
         }
+        
+        
         dismiss(animated: true, completion: nil)
     }
     
@@ -369,10 +391,11 @@ extension CreateCourseVC {
         startButton.setTitleColor(.bookmarkDarkBlue, for: .normal)
         destinationButton.setTitleColor(.black, for: .normal)
         
+        anotherStartMarker.map = nil
+        startMarker.map = mapView
         let location = GMSCameraPosition.camera(withLatitude: startLocation[0], longitude: startLocation[1], zoom: zoomValue)
         mapView.camera = location
         startMarker.position = CLLocationCoordinate2D(latitude: startLocation[0], longitude: startLocation[1])
-        startMarker.map = mapView
     }
     
     @objc func touchUpGetDestinationPoint() {
@@ -387,10 +410,11 @@ extension CreateCourseVC {
         startButton.setTitleColor(.black, for: .normal)
         destinationButton.setTitleColor(.latestBurgundy, for: .normal)
         
+        anotherDestinationMarker.map = nil
+        destinationMarker.map = mapView
         let location = GMSCameraPosition.camera(withLatitude: destinLocation[0], longitude: destinLocation[1], zoom: zoomValue)
         mapView.camera = location
         destinationMarker.position = CLLocationCoordinate2D(latitude: destinLocation[0], longitude: destinLocation[1])
-        destinationMarker.map = mapView
     }
     
     @objc func touchUpSearchCourse() {
