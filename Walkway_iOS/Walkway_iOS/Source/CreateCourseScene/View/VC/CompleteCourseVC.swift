@@ -22,12 +22,14 @@ class CompleteCourseVC: UIViewController {
     @IBOutlet weak var hashtagLabel: UILabel!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var infoView: UIView!
+    @IBOutlet var hashtagButtons: [UIButton]!
     
     var mapView = GMSMapView()
     var camera = GMSCameraPosition()
     
     var coordinates: [CLLocationCoordinate2D] = []
     var isMakeCourse = false
+    var hashIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +59,7 @@ extension CompleteCourseVC: UITextFieldDelegate {
 extension CompleteCourseVC {
     private func setUI() {
         setView()
+        setButtons()
         setLabel()
         setButton()
         setTextField()
@@ -64,6 +67,20 @@ extension CompleteCourseVC {
     
     private func setView() {
         infoView.backgroundColor = UIColor.bookmarkDarkBlue.withAlphaComponent(0.5)
+    }
+    
+    private func setButtons() {
+        var ind = 0
+        for hash in hashtagButtons {
+            hash.setTitle("", for: .normal)
+            hash.setTitleColor(.white, for: .normal)
+            hash.titleLabel?.font = .boldSystemFont(ofSize: 11)
+            hash.backgroundColor = .bookmarkDarkBlue
+            hash.layer.cornerRadius = 13
+            hash.tag = ind
+        
+            ind += 1
+        }
     }
     
     private func setLabel() {
@@ -118,7 +135,7 @@ extension CompleteCourseVC {
         border.backgroundColor = UIColor.bookmarkGray.cgColor
         titleTextField.layer.addSublayer(border)
         titleTextField.setLeftPaddingPoints(10)
-        titleTextField.placeholder = "Walkway 경로명 입력"
+        titleTextField.placeholder = "Walkway"
         titleTextField.borderStyle = .none
         titleTextField.delegate = self
     }
@@ -192,7 +209,16 @@ extension CompleteCourseVC {
         guard let dvc = storyboard?.instantiateViewController(identifier: "HashtagPopUpVC") as? HashtagPopUpVC else {
             return
         }
+        dvc.saveHashtag = { text in
+            self.hashtagButtons[self.hashIndex].setTitle("#\(text)", for: .normal)
+            self.hashIndex += 1
+        }
         dvc.modalPresentationStyle = .overCurrentContext
+        dvc.modalTransitionStyle = .crossDissolve
         present(dvc, animated: true, completion: nil)
+    }
+    
+    @objc func touchUpButton() {
+        
     }
 }
