@@ -127,11 +127,10 @@ extension CourseSearchVC: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        /*
         cell.courseNameLabel.text = courseName[(indexPath as NSIndexPath).row]
         cell.courseDistanceLabel.text = courseDistance[(indexPath as NSIndexPath).row]
         cell.courseTimeLabel.text = courseTime[(indexPath as NSIndexPath).row]
-        cell.courseStarLabel.text = courseStar[(indexPath as NSIndexPath).row]*/
+        cell.courseStarLabel.text = courseStar[(indexPath as NSIndexPath).row]
         return cell
     }
 }
