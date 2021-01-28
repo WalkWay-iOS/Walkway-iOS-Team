@@ -552,6 +552,7 @@
 				ED16C81125B7F92F003DD0F0 /* Frameworks */,
 				ED16C81225B7F92F003DD0F0 /* Resources */,
 				96D59AD66704741256809C77 /* [CP] Copy Pods Resources */,
+				03F3202A1A478F3F48CEA4FE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -632,6 +633,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		03F3202A1A478F3F48CEA4FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Walkway_iOS/Pods-Walkway_iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Walkway_iOS/Pods-Walkway_iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Walkway_iOS/Pods-Walkway_iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		95942F27CEC8CABF80D68CEB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
