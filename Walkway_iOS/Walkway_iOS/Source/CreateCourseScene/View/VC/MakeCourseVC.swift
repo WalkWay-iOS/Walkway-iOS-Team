@@ -17,6 +17,7 @@ class MakeCourseVC: UIViewController {
     var saveButton = UIButton()
     var hiddenView = UIButton()
     var hiddenLabel = UILabel()
+    var warningLabel = UILabel()
     var centerLabel = UILabel()
     
     var marker = GMSMarker()
@@ -77,7 +78,7 @@ extension MakeCourseVC: GMSMapViewDelegate {
         line.map = self.mapView
     }
     
-    func getRoute(from: CLLocationCoordinate2D, to: CLLocationCoordinate2D) {
+    private func getRoute(from: CLLocationCoordinate2D, to: CLLocationCoordinate2D) {
         let sourceLocation = "\(from.latitude),\(from.longitude)"
         let destinationLocation = "\(to.latitude),\(to.longitude)"
         // MARK: Create URL
@@ -191,12 +192,20 @@ extension MakeCourseVC {
     private func setLabel() {
         hiddenLabel.text = "자신만의 Walkway를 만들어봐요.\n원하는 길을 탭해보세요👆🏼"
         hiddenLabel.numberOfLines = 2
-        hiddenLabel.font = .systemFont(ofSize: 20, weight: .semibold)
+        hiddenLabel.font = .systemFont(ofSize: 20, weight: .bold)
         hiddenLabel.textColor = .white
         hiddenLabel.translatesAutoresizingMaskIntoConstraints = false
         hiddenView.addSubview(hiddenLabel)
         hiddenLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 60).isActive = true
         hiddenLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15).isActive = true
+        
+        warningLabel.text = "걸을 수 있는 길을 따라서 탭해주세요"
+        warningLabel.font = .systemFont(ofSize: 13, weight: .semibold)
+        warningLabel.textColor = .white
+        warningLabel.translatesAutoresizingMaskIntoConstraints = false
+        hiddenView.addSubview(warningLabel)
+        warningLabel.topAnchor.constraint(equalTo: hiddenLabel.bottomAnchor, constant: 5).isActive = true
+        warningLabel.leadingAnchor.constraint(equalTo: hiddenLabel.leadingAnchor).isActive = true
         
         centerLabel.text = "📍"
         centerLabel.font = .systemFont(ofSize: 20, weight: .semibold)

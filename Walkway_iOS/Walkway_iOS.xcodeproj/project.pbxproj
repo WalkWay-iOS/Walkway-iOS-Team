@@ -60,6 +60,7 @@
 		ED7622C625BB25D0007E1C98 /* PopularCourseTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7622C425BB25D0007E1C98 /* PopularCourseTVC.swift */; };
 		ED7622C725BB25D0007E1C98 /* PopularCourseTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED7622C525BB25D0007E1C98 /* PopularCourseTVC.xib */; };
 		ED8A8C9025C1EE9D00E2BD7B /* MakeCourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A8C8F25C1EE9D00E2BD7B /* MakeCourseVC.swift */; };
+		EDCC755325C2A68600EF435A /* MakeCreateCourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC755225C2A68600EF435A /* MakeCreateCourseVC.swift */; };
 		EDD055AF25BBBE9C009FA3FB /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD055AE25BBBE9C009FA3FB /* Course.swift */; };
 		EDD055B925BBF402009FA3FB /* BookmarkCourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD055B825BBF402009FA3FB /* BookmarkCourseVC.swift */; };
 		EDD055BD25BBFB70009FA3FB /* BookmarkCourseTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD055BB25BBFB70009FA3FB /* BookmarkCourseTVC.swift */; };
@@ -133,6 +134,7 @@
 		ED7622C425BB25D0007E1C98 /* PopularCourseTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCourseTVC.swift; sourceTree = "<group>"; };
 		ED7622C525BB25D0007E1C98 /* PopularCourseTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCourseTVC.xib; sourceTree = "<group>"; };
 		ED8A8C8F25C1EE9D00E2BD7B /* MakeCourseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeCourseVC.swift; sourceTree = "<group>"; };
+		EDCC755225C2A68600EF435A /* MakeCreateCourseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeCreateCourseVC.swift; sourceTree = "<group>"; };
 		EDD055AE25BBBE9C009FA3FB /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		EDD055B825BBF402009FA3FB /* BookmarkCourseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCourseVC.swift; sourceTree = "<group>"; };
 		EDD055BB25BBFB70009FA3FB /* BookmarkCourseTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCourseTVC.swift; sourceTree = "<group>"; };
@@ -410,6 +412,7 @@
 			children = (
 				ED16C87025B80150003DD0F0 /* CreateCourseVC.swift */,
 				ED8A8C8F25C1EE9D00E2BD7B /* MakeCourseVC.swift */,
+				EDCC755225C2A68600EF435A /* MakeCreateCourseVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -708,6 +711,7 @@
 				ED7622BA25BAFC88007E1C98 /* Extensions+UIColor.swift in Sources */,
 				ED16C81825B7F92F003DD0F0 /* AppDelegate.swift in Sources */,
 				EDE0BDEA25BD912F00ADE8D1 /* CourseDetailVC.swift in Sources */,
+				EDCC755325C2A68600EF435A /* MakeCreateCourseVC.swift in Sources */,
 				ED16C8B725BAA68F003DD0F0 /* HomeBookmarkCourseCVC.swift in Sources */,
 				ED16C86825B7FE7A003DD0F0 /* HomeVC.swift in Sources */,
 				ED01F4D825BFF88900B9AD43 /* Review.swift in Sources */,

@@ -122,7 +122,7 @@ extension CreateCourseVC: GMSMapViewDelegate {
             destinationMarker.map = mapView
             destinationMarker.position = CLLocationCoordinate2D(latitude: lat, longitude: long)
             destinLocation[0] = lat
-            destinLocation[1] = lat
+            destinLocation[1] = long
             
             geocoder.reverseGeocodeCoordinate(destinationMarker.position) { response, error in
                 if error != nil {
@@ -286,6 +286,7 @@ extension CreateCourseVC {
         makeCourseButton.titleLabel?.font = .boldSystemFont(ofSize: 15)
         makeCourseButton.backgroundColor = .black
         makeCourseButton.layer.cornerRadius = 15
+        makeCourseButton.addTarget(self, action: #selector(touchUpCreateCourse), for: .touchUpInside)
         stackView.addArrangedSubview(makeCourseButton)
         makeCourseButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
         makeCourseButton.widthAnchor.constraint(equalToConstant: 150).isActive = true
@@ -437,5 +438,18 @@ extension CreateCourseVC {
         dvc.coordinates.append(CLLocationCoordinate2D(latitude: startLocation[0], longitude: startLocation[1]))
         dvc.modalPresentationStyle = .fullScreen
         present(dvc, animated: true, completion: nil)
+    }
+    
+    @objc func touchUpCreateCourse() {
+        if isFirstStart && isFirstDestination {
+            guard let dvc = storyboard?.instantiateViewController(identifier: "MakeCreateCourseVC") as? MakeCreateCourseVC else {
+                return
+            }
+            dvc.source.append(CLLocationCoordinate2D(latitude: startLocation[0], longitude: startLocation[1]))
+            dvc.destination.append(CLLocationCoordinate2D(latitude: destinLocation[0], longitude: destinLocation[1]))
+            dvc.modalPresentationStyle = .fullScreen
+            dvc.modalTransitionStyle = .crossDissolve
+            present(dvc, animated: true, completion: nil)
+        }
     }
 }
