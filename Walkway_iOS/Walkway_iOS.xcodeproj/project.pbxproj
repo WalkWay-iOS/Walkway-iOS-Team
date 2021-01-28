@@ -61,6 +61,9 @@
 		ED7622C725BB25D0007E1C98 /* PopularCourseTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED7622C525BB25D0007E1C98 /* PopularCourseTVC.xib */; };
 		ED8A8C9025C1EE9D00E2BD7B /* MakeCourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A8C8F25C1EE9D00E2BD7B /* MakeCourseVC.swift */; };
 		EDCC755325C2A68600EF435A /* MakeCreateCourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC755225C2A68600EF435A /* MakeCreateCourseVC.swift */; };
+		EDCC755625C2BA1900EF435A /* CompleteCourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC755525C2BA1900EF435A /* CompleteCourseVC.swift */; };
+		EDCC755925C2CADA00EF435A /* Extensions+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC755825C2CAD900EF435A /* Extensions+UITextField.swift */; };
+		EDCC755D25C2ECDA00EF435A /* HashtagPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC755C25C2ECDA00EF435A /* HashtagPopUpVC.swift */; };
 		EDD055AF25BBBE9C009FA3FB /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD055AE25BBBE9C009FA3FB /* Course.swift */; };
 		EDD055B925BBF402009FA3FB /* BookmarkCourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD055B825BBF402009FA3FB /* BookmarkCourseVC.swift */; };
 		EDD055BD25BBFB70009FA3FB /* BookmarkCourseTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD055BB25BBFB70009FA3FB /* BookmarkCourseTVC.swift */; };
@@ -135,6 +138,9 @@
 		ED7622C525BB25D0007E1C98 /* PopularCourseTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCourseTVC.xib; sourceTree = "<group>"; };
 		ED8A8C8F25C1EE9D00E2BD7B /* MakeCourseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeCourseVC.swift; sourceTree = "<group>"; };
 		EDCC755225C2A68600EF435A /* MakeCreateCourseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeCreateCourseVC.swift; sourceTree = "<group>"; };
+		EDCC755525C2BA1900EF435A /* CompleteCourseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteCourseVC.swift; sourceTree = "<group>"; };
+		EDCC755825C2CAD900EF435A /* Extensions+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UITextField.swift"; sourceTree = "<group>"; };
+		EDCC755C25C2ECDA00EF435A /* HashtagPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashtagPopUpVC.swift; sourceTree = "<group>"; };
 		EDD055AE25BBBE9C009FA3FB /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		EDD055B825BBF402009FA3FB /* BookmarkCourseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCourseVC.swift; sourceTree = "<group>"; };
 		EDD055BB25BBFB70009FA3FB /* BookmarkCourseTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCourseTVC.swift; sourceTree = "<group>"; };
@@ -413,6 +419,8 @@
 				ED16C87025B80150003DD0F0 /* CreateCourseVC.swift */,
 				ED8A8C8F25C1EE9D00E2BD7B /* MakeCourseVC.swift */,
 				EDCC755225C2A68600EF435A /* MakeCreateCourseVC.swift */,
+				EDCC755525C2BA1900EF435A /* CompleteCourseVC.swift */,
+				EDCC755C25C2ECDA00EF435A /* HashtagPopUpVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -458,6 +466,7 @@
 				ED7622B925BAFC88007E1C98 /* Extensions+UIColor.swift */,
 				EDE0BDEC25BD9B9500ADE8D1 /* Extensions+UIViewController.swift */,
 				ED01F4E525C02E4300B9AD43 /* Extensions+UIScrollView.swift */,
+				EDCC755825C2CAD900EF435A /* Extensions+UITextField.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -705,6 +714,7 @@
 				ED01F4CF25BFBFCB00B9AD43 /* DetailReviewTVC.swift in Sources */,
 				EDF3716125BFAD680000A1F6 /* DetailExplanationTVC.swift in Sources */,
 				EDD055C525BC2AFA009FA3FB /* LatestCourseTVC.swift in Sources */,
+				EDCC755925C2CADA00EF435A /* Extensions+UITextField.swift in Sources */,
 				EDD055C125BC282F009FA3FB /* LatestCourseVC.swift in Sources */,
 				EDD055B925BBF402009FA3FB /* BookmarkCourseVC.swift in Sources */,
 				ED16C89E25BA8D05003DD0F0 /* HomeFollowerTVC.swift in Sources */,
@@ -714,11 +724,13 @@
 				EDCC755325C2A68600EF435A /* MakeCreateCourseVC.swift in Sources */,
 				ED16C8B725BAA68F003DD0F0 /* HomeBookmarkCourseCVC.swift in Sources */,
 				ED16C86825B7FE7A003DD0F0 /* HomeVC.swift in Sources */,
+				EDCC755D25C2ECDA00EF435A /* HashtagPopUpVC.swift in Sources */,
 				ED01F4D825BFF88900B9AD43 /* Review.swift in Sources */,
 				ED01F4E625C02E4300B9AD43 /* Extensions+UIScrollView.swift in Sources */,
 				ED16C85625B7FDE9003DD0F0 /* MypageVC.swift in Sources */,
 				ED8A8C9025C1EE9D00E2BD7B /* MakeCourseVC.swift in Sources */,
 				ED16C8AD25BA9E1E003DD0F0 /* HomePopularCourseCVC.swift in Sources */,
+				EDCC755625C2BA1900EF435A /* CompleteCourseVC.swift in Sources */,
 				EDE0BDF225BD9E9900ADE8D1 /* DetailHeaderTVC.swift in Sources */,
 				ED16C89925BA7AAF003DD0F0 /* HomeBannerCVC.swift in Sources */,
 				ED01F4E225C0144D00B9AD43 /* PhotoCVC.swift in Sources */,

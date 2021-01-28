@@ -167,5 +167,13 @@ extension MakeCreateCourseVC {
     
     @objc func touchUpSave() {
         print("저장")
+        guard let dvc = storyboard?.instantiateViewController(identifier: "CompleteCourseVC") as? CompleteCourseVC else {
+            return
+        }
+        dvc.coordinates.append(contentsOf: source)
+        dvc.coordinates.append(contentsOf: destination)
+        dvc.isMakeCourse = false
+        dvc.modalPresentationStyle = .fullScreen
+        present(dvc, animated: true, completion: nil)
     }
 }

@@ -113,8 +113,10 @@ extension MakeCourseVC: GMSMapViewDelegate {
                 destinationMarker.position = CLLocationCoordinate2D(latitude: to.latitude, longitude: to.longitude)
                 destinationMarker.map = self.mapView
                 
-                let camera = GMSCameraPosition(latitude: from.latitude, longitude: from.longitude, zoom: 15.0)
-                self.mapView.animate(to: camera)
+                var bounds = GMSCoordinateBounds()
+                bounds = bounds.includingCoordinate(from)
+                bounds = bounds.includingCoordinate(to)
+                self.mapView.moveCamera(GMSCameraUpdate.fit(bounds, with: UIEdgeInsets(top: 100, left: 100, bottom: 100, right: 100)))
             }
                 catch let error {
                 print(error.localizedDescription)
@@ -246,5 +248,12 @@ extension MakeCourseVC {
     
     @objc func touchUpSave() {
         print("저장")
+        guard let dvc = storyboard?.instantiateViewController(identifier: "CompleteCourseVC") as? CompleteCourseVC else {
+            return
+        }
+        dvc.isMakeCourse = true
+        dvc.coordinates.append(contentsOf: coordinates)
+        dvc.modalPresentationStyle = .fullScreen
+        present(dvc, animated: true, completion: nil)
     }
 }

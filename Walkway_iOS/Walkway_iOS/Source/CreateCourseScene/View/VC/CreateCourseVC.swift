@@ -163,6 +163,14 @@ extension CreateCourseVC {
         setSearchButton()
     }
     
+    private func setBools() {
+        zoomValue = 17.0
+        isStart = true
+        isFirstStart = false
+        isFirstDestination = false
+        isWhoseButton = false
+    }
+    
     private func setView() {
         self.view.backgroundColor = .white
         
@@ -175,6 +183,7 @@ extension CreateCourseVC {
         infoView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.size.height/2.8).isActive = true
         
         hiddenView.backgroundColor = UIColor.bookmarkGray.withAlphaComponent(0.5)
+        hiddenView.isHidden = false
         hiddenView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(hiddenView)
         hiddenView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
