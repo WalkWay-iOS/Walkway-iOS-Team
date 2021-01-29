@@ -412,7 +412,7 @@
 		ED16C86B25B80126003DD0F0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EDD2606E25C3B99500619E8E /* TVC */,
+				EDD2607A25C3CABA00619E8E /* Cell */,
 				ED16C86C25B8012B003DD0F0 /* VC */,
 			);
 			path = View;
@@ -547,6 +547,14 @@
 				EDD2607025C3B9AE00619E8E /* HashtagTVC.xib */,
 			);
 			path = TVC;
+			sourceTree = "<group>";
+		};
+		EDD2607A25C3CABA00619E8E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EDD2606E25C3B99500619E8E /* TVC */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		EDE0BDEF25BD9E6300ADE8D1 /* Detail */ = {
