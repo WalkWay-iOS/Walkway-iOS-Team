@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1766393A52A4BD11CD141885 /* Pods_Walkway_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA9CA972E2FCA8C7F9A8776 /* Pods_Walkway_iOS.framework */; };
 		ED01F4CF25BFBFCB00B9AD43 /* DetailReviewTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED01F4CD25BFBFCB00B9AD43 /* DetailReviewTVC.swift */; };
 		ED01F4D025BFBFCB00B9AD43 /* DetailReviewTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED01F4CE25BFBFCB00B9AD43 /* DetailReviewTVC.xib */; };
 		ED01F4D425BFDB1000B9AD43 /* ReviewTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED01F4D225BFDB1000B9AD43 /* ReviewTVC.swift */; };
@@ -58,6 +59,11 @@
 		ED7622C125BB13DC007E1C98 /* cellPresentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7622C025BB13DC007E1C98 /* cellPresentDelegate.swift */; };
 		ED7622C625BB25D0007E1C98 /* PopularCourseTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7622C425BB25D0007E1C98 /* PopularCourseTVC.swift */; };
 		ED7622C725BB25D0007E1C98 /* PopularCourseTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED7622C525BB25D0007E1C98 /* PopularCourseTVC.xib */; };
+		ED8A8C9025C1EE9D00E2BD7B /* MakeCourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A8C8F25C1EE9D00E2BD7B /* MakeCourseVC.swift */; };
+		EDCC755325C2A68600EF435A /* MakeCreateCourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC755225C2A68600EF435A /* MakeCreateCourseVC.swift */; };
+		EDCC755625C2BA1900EF435A /* CompleteCourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC755525C2BA1900EF435A /* CompleteCourseVC.swift */; };
+		EDCC755925C2CADA00EF435A /* Extensions+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC755825C2CAD900EF435A /* Extensions+UITextField.swift */; };
+		EDCC755D25C2ECDA00EF435A /* HashtagPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC755C25C2ECDA00EF435A /* HashtagPopUpVC.swift */; };
 		EDD055AF25BBBE9C009FA3FB /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD055AE25BBBE9C009FA3FB /* Course.swift */; };
 		EDD055B925BBF402009FA3FB /* BookmarkCourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD055B825BBF402009FA3FB /* BookmarkCourseVC.swift */; };
 		EDD055BD25BBFB70009FA3FB /* BookmarkCourseTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD055BB25BBFB70009FA3FB /* BookmarkCourseTVC.swift */; };
@@ -65,6 +71,8 @@
 		EDD055C125BC282F009FA3FB /* LatestCourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD055C025BC282F009FA3FB /* LatestCourseVC.swift */; };
 		EDD055C525BC2AFA009FA3FB /* LatestCourseTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD055C325BC2AFA009FA3FB /* LatestCourseTVC.swift */; };
 		EDD055C625BC2AFA009FA3FB /* LatestCourseTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDD055C425BC2AFA009FA3FB /* LatestCourseTVC.xib */; };
+		EDD2607125C3B9AE00619E8E /* HashtagTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2606F25C3B9AE00619E8E /* HashtagTVC.swift */; };
+		EDD2607225C3B9AE00619E8E /* HashtagTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDD2607025C3B9AE00619E8E /* HashtagTVC.xib */; };
 		EDE0BDEA25BD912F00ADE8D1 /* CourseDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDE925BD912F00ADE8D1 /* CourseDetailVC.swift */; };
 		EDE0BDED25BD9B9500ADE8D1 /* Extensions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDEC25BD9B9500ADE8D1 /* Extensions+UIViewController.swift */; };
 		EDE0BDF225BD9E9900ADE8D1 /* DetailHeaderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDF025BD9E9900ADE8D1 /* DetailHeaderTVC.swift */; };
@@ -74,6 +82,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1438CA5AD824FFC830D71151 /* Pods-Walkway_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Walkway_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Walkway_iOS/Pods-Walkway_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		A4E36DDEE106831C5696941A /* Pods-Walkway_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Walkway_iOS.release.xcconfig"; path = "Target Support Files/Pods-Walkway_iOS/Pods-Walkway_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		DBA9CA972E2FCA8C7F9A8776 /* Pods_Walkway_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Walkway_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED01F4CD25BFBFCB00B9AD43 /* DetailReviewTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailReviewTVC.swift; sourceTree = "<group>"; };
 		ED01F4CE25BFBFCB00B9AD43 /* DetailReviewTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailReviewTVC.xib; sourceTree = "<group>"; };
 		ED01F4D225BFDB1000B9AD43 /* ReviewTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTVC.swift; sourceTree = "<group>"; };
@@ -127,6 +138,11 @@
 		ED7622C025BB13DC007E1C98 /* cellPresentDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellPresentDelegate.swift; sourceTree = "<group>"; };
 		ED7622C425BB25D0007E1C98 /* PopularCourseTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCourseTVC.swift; sourceTree = "<group>"; };
 		ED7622C525BB25D0007E1C98 /* PopularCourseTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCourseTVC.xib; sourceTree = "<group>"; };
+		ED8A8C8F25C1EE9D00E2BD7B /* MakeCourseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeCourseVC.swift; sourceTree = "<group>"; };
+		EDCC755225C2A68600EF435A /* MakeCreateCourseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeCreateCourseVC.swift; sourceTree = "<group>"; };
+		EDCC755525C2BA1900EF435A /* CompleteCourseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteCourseVC.swift; sourceTree = "<group>"; };
+		EDCC755825C2CAD900EF435A /* Extensions+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UITextField.swift"; sourceTree = "<group>"; };
+		EDCC755C25C2ECDA00EF435A /* HashtagPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashtagPopUpVC.swift; sourceTree = "<group>"; };
 		EDD055AE25BBBE9C009FA3FB /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		EDD055B825BBF402009FA3FB /* BookmarkCourseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCourseVC.swift; sourceTree = "<group>"; };
 		EDD055BB25BBFB70009FA3FB /* BookmarkCourseTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCourseTVC.swift; sourceTree = "<group>"; };
@@ -134,6 +150,8 @@
 		EDD055C025BC282F009FA3FB /* LatestCourseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestCourseVC.swift; sourceTree = "<group>"; };
 		EDD055C325BC2AFA009FA3FB /* LatestCourseTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestCourseTVC.swift; sourceTree = "<group>"; };
 		EDD055C425BC2AFA009FA3FB /* LatestCourseTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LatestCourseTVC.xib; sourceTree = "<group>"; };
+		EDD2606F25C3B9AE00619E8E /* HashtagTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashtagTVC.swift; sourceTree = "<group>"; };
+		EDD2607025C3B9AE00619E8E /* HashtagTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HashtagTVC.xib; sourceTree = "<group>"; };
 		EDE0BDE925BD912F00ADE8D1 /* CourseDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailVC.swift; sourceTree = "<group>"; };
 		EDE0BDEC25BD9B9500ADE8D1 /* Extensions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIViewController.swift"; sourceTree = "<group>"; };
 		EDE0BDF025BD9E9900ADE8D1 /* DetailHeaderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderTVC.swift; sourceTree = "<group>"; };
@@ -147,12 +165,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1766393A52A4BD11CD141885 /* Pods_Walkway_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58FC074F9732CE6BEA89B350 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1438CA5AD824FFC830D71151 /* Pods-Walkway_iOS.debug.xcconfig */,
+				A4E36DDEE106831C5696941A /* Pods-Walkway_iOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E8777F2FF776D513FBC49364 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBA9CA972E2FCA8C7F9A8776 /* Pods_Walkway_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ED01F4DF25C0141A00B9AD43 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +203,8 @@
 			children = (
 				ED16C81625B7F92F003DD0F0 /* Walkway_iOS */,
 				ED16C81525B7F92F003DD0F0 /* Products */,
+				58FC074F9732CE6BEA89B350 /* Pods */,
+				E8777F2FF776D513FBC49364 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -374,6 +412,7 @@
 		ED16C86B25B80126003DD0F0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EDD2606E25C3B99500619E8E /* TVC */,
 				ED16C86C25B8012B003DD0F0 /* VC */,
 			);
 			path = View;
@@ -383,6 +422,10 @@
 			isa = PBXGroup;
 			children = (
 				ED16C87025B80150003DD0F0 /* CreateCourseVC.swift */,
+				ED8A8C8F25C1EE9D00E2BD7B /* MakeCourseVC.swift */,
+				EDCC755225C2A68600EF435A /* MakeCreateCourseVC.swift */,
+				EDCC755525C2BA1900EF435A /* CompleteCourseVC.swift */,
+				EDCC755C25C2ECDA00EF435A /* HashtagPopUpVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -428,6 +471,7 @@
 				ED7622B925BAFC88007E1C98 /* Extensions+UIColor.swift */,
 				EDE0BDEC25BD9B9500ADE8D1 /* Extensions+UIViewController.swift */,
 				ED01F4E525C02E4300B9AD43 /* Extensions+UIScrollView.swift */,
+				EDCC755825C2CAD900EF435A /* Extensions+UITextField.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -496,6 +540,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		EDD2606E25C3B99500619E8E /* TVC */ = {
+			isa = PBXGroup;
+			children = (
+				EDD2606F25C3B9AE00619E8E /* HashtagTVC.swift */,
+				EDD2607025C3B9AE00619E8E /* HashtagTVC.xib */,
+			);
+			path = TVC;
+			sourceTree = "<group>";
+		};
 		EDE0BDEF25BD9E6300ADE8D1 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -520,9 +573,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED16C82825B7F92F003DD0F0 /* Build configuration list for PBXNativeTarget "Walkway_iOS" */;
 			buildPhases = (
+				95942F27CEC8CABF80D68CEB /* [CP] Check Pods Manifest.lock */,
 				ED16C81025B7F92F003DD0F0 /* Sources */,
 				ED16C81125B7F92F003DD0F0 /* Frameworks */,
 				ED16C81225B7F92F003DD0F0 /* Resources */,
+				96D59AD66704741256809C77 /* [CP] Copy Pods Resources */,
+				03F3202A1A478F3F48CEA4FE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -582,6 +638,7 @@
 				ED16C84B25B7FCA0003DD0F0 /* Mypage.storyboard in Resources */,
 				ED16C8B825BAA68F003DD0F0 /* HomeBookmarkCourseCVC.xib in Resources */,
 				EDD055C625BC2AFA009FA3FB /* LatestCourseTVC.xib in Resources */,
+				EDD2607225C3B9AE00619E8E /* HashtagTVC.xib in Resources */,
 				ED16C84825B7FC8F003DD0F0 /* Home.storyboard in Resources */,
 				ED16C82425B7F92F003DD0F0 /* LaunchScreen.storyboard in Resources */,
 				EDD055BE25BBFB70009FA3FB /* BookmarkCourseTVC.xib in Resources */,
@@ -602,6 +659,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		03F3202A1A478F3F48CEA4FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Walkway_iOS/Pods-Walkway_iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Walkway_iOS/Pods-Walkway_iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Walkway_iOS/Pods-Walkway_iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95942F27CEC8CABF80D68CEB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Walkway_iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96D59AD66704741256809C77 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Walkway_iOS/Pods-Walkway_iOS-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Walkway_iOS/Pods-Walkway_iOS-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Walkway_iOS/Pods-Walkway_iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ED16C81025B7F92F003DD0F0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -613,23 +729,29 @@
 				ED01F4CF25BFBFCB00B9AD43 /* DetailReviewTVC.swift in Sources */,
 				EDF3716125BFAD680000A1F6 /* DetailExplanationTVC.swift in Sources */,
 				EDD055C525BC2AFA009FA3FB /* LatestCourseTVC.swift in Sources */,
+				EDCC755925C2CADA00EF435A /* Extensions+UITextField.swift in Sources */,
 				EDD055C125BC282F009FA3FB /* LatestCourseVC.swift in Sources */,
 				EDD055B925BBF402009FA3FB /* BookmarkCourseVC.swift in Sources */,
 				ED16C89E25BA8D05003DD0F0 /* HomeFollowerTVC.swift in Sources */,
 				ED7622BA25BAFC88007E1C98 /* Extensions+UIColor.swift in Sources */,
 				ED16C81825B7F92F003DD0F0 /* AppDelegate.swift in Sources */,
 				EDE0BDEA25BD912F00ADE8D1 /* CourseDetailVC.swift in Sources */,
+				EDCC755325C2A68600EF435A /* MakeCreateCourseVC.swift in Sources */,
 				ED16C8B725BAA68F003DD0F0 /* HomeBookmarkCourseCVC.swift in Sources */,
 				ED16C86825B7FE7A003DD0F0 /* HomeVC.swift in Sources */,
+				EDCC755D25C2ECDA00EF435A /* HashtagPopUpVC.swift in Sources */,
 				ED01F4D825BFF88900B9AD43 /* Review.swift in Sources */,
 				ED01F4E625C02E4300B9AD43 /* Extensions+UIScrollView.swift in Sources */,
 				ED16C85625B7FDE9003DD0F0 /* MypageVC.swift in Sources */,
+				ED8A8C9025C1EE9D00E2BD7B /* MakeCourseVC.swift in Sources */,
 				ED16C8AD25BA9E1E003DD0F0 /* HomePopularCourseCVC.swift in Sources */,
+				EDCC755625C2BA1900EF435A /* CompleteCourseVC.swift in Sources */,
 				EDE0BDF225BD9E9900ADE8D1 /* DetailHeaderTVC.swift in Sources */,
 				ED16C89925BA7AAF003DD0F0 /* HomeBannerCVC.swift in Sources */,
 				ED01F4E225C0144D00B9AD43 /* PhotoCVC.swift in Sources */,
 				ED7622BD25BB12D1007E1C98 /* PopularCourseVC.swift in Sources */,
 				ED16C89325BA7471003DD0F0 /* HomeBannerTVC.swift in Sources */,
+				EDD2607125C3B9AE00619E8E /* HashtagTVC.swift in Sources */,
 				ED16C84525B7FC1D003DD0F0 /* TabbarController.swift in Sources */,
 				ED16C85C25B7FE1B003DD0F0 /* AlertVC.swift in Sources */,
 				ED16C87125B80150003DD0F0 /* CreateCourseVC.swift in Sources */,
@@ -779,6 +901,7 @@
 		};
 		ED16C82925B7F92F003DD0F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1438CA5AD824FFC830D71151 /* Pods-Walkway_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -797,6 +920,7 @@
 		};
 		ED16C82A25B7F92F003DD0F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4E36DDEE106831C5696941A /* Pods-Walkway_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
