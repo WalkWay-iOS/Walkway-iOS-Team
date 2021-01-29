@@ -73,6 +73,12 @@
 		EDD055C625BC2AFA009FA3FB /* LatestCourseTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDD055C425BC2AFA009FA3FB /* LatestCourseTVC.xib */; };
 		EDD2607125C3B9AE00619E8E /* HashtagTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2606F25C3B9AE00619E8E /* HashtagTVC.swift */; };
 		EDD2607225C3B9AE00619E8E /* HashtagTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDD2607025C3B9AE00619E8E /* HashtagTVC.xib */; };
+		EDD2607D25C3CB2D00619E8E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD2607C25C3CB2D00619E8E /* Login.storyboard */; };
+		EDD2608225C3CB7D00619E8E /* WelcomeLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2608125C3CB7D00619E8E /* WelcomeLoginVC.swift */; };
+		EDD2608525C3E9C200619E8E /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2608425C3E9C200619E8E /* SignUpVC.swift */; };
+		EDD2608825C401F500619E8E /* Extensions+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2608725C401F500619E8E /* Extensions+String.swift */; };
+		EDD2608B25C44D5A00619E8E /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2608A25C44D5A00619E8E /* SignInVC.swift */; };
+		EDD2608E25C4546700619E8E /* FindIdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2608D25C4546700619E8E /* FindIdVC.swift */; };
 		EDE0BDEA25BD912F00ADE8D1 /* CourseDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDE925BD912F00ADE8D1 /* CourseDetailVC.swift */; };
 		EDE0BDED25BD9B9500ADE8D1 /* Extensions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDEC25BD9B9500ADE8D1 /* Extensions+UIViewController.swift */; };
 		EDE0BDF225BD9E9900ADE8D1 /* DetailHeaderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDF025BD9E9900ADE8D1 /* DetailHeaderTVC.swift */; };
@@ -152,6 +158,12 @@
 		EDD055C425BC2AFA009FA3FB /* LatestCourseTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LatestCourseTVC.xib; sourceTree = "<group>"; };
 		EDD2606F25C3B9AE00619E8E /* HashtagTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashtagTVC.swift; sourceTree = "<group>"; };
 		EDD2607025C3B9AE00619E8E /* HashtagTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HashtagTVC.xib; sourceTree = "<group>"; };
+		EDD2607C25C3CB2D00619E8E /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		EDD2608125C3CB7D00619E8E /* WelcomeLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeLoginVC.swift; sourceTree = "<group>"; };
+		EDD2608425C3E9C200619E8E /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		EDD2608725C401F500619E8E /* Extensions+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+String.swift"; sourceTree = "<group>"; };
+		EDD2608A25C44D5A00619E8E /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		EDD2608D25C4546700619E8E /* FindIdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindIdVC.swift; sourceTree = "<group>"; };
 		EDE0BDE925BD912F00ADE8D1 /* CourseDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailVC.swift; sourceTree = "<group>"; };
 		EDE0BDEC25BD9B9500ADE8D1 /* Extensions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIViewController.swift"; sourceTree = "<group>"; };
 		EDE0BDF025BD9E9900ADE8D1 /* DetailHeaderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderTVC.swift; sourceTree = "<group>"; };
@@ -273,6 +285,8 @@
 		ED16C83525B7FA83003DD0F0 /* LoginScene */ = {
 			isa = PBXGroup;
 			children = (
+				EDD2607C25C3CB2D00619E8E /* Login.storyboard */,
+				EDD2607F25C3CB3100619E8E /* View */,
 			);
 			path = LoginScene;
 			sourceTree = "<group>";
@@ -412,7 +426,7 @@
 		ED16C86B25B80126003DD0F0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EDD2607625C3C9FE00619E8E /* Cell */,
+				EDD2607A25C3CABA00619E8E /* Cell */,
 				ED16C86C25B8012B003DD0F0 /* VC */,
 			);
 			path = View;
@@ -472,6 +486,7 @@
 				EDE0BDEC25BD9B9500ADE8D1 /* Extensions+UIViewController.swift */,
 				ED01F4E525C02E4300B9AD43 /* Extensions+UIScrollView.swift */,
 				EDCC755825C2CAD900EF435A /* Extensions+UITextField.swift */,
+				EDD2608725C401F500619E8E /* Extensions+String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -549,12 +564,31 @@
 			path = TVC;
 			sourceTree = "<group>";
 		};
-		EDD2607625C3C9FE00619E8E /* Cell */ = {
+		EDD2607A25C3CABA00619E8E /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				EDD2606E25C3B99500619E8E /* TVC */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		EDD2607F25C3CB3100619E8E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EDD2608025C3CB3A00619E8E /* VC */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EDD2608025C3CB3A00619E8E /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				EDD2608125C3CB7D00619E8E /* WelcomeLoginVC.swift */,
+				EDD2608425C3E9C200619E8E /* SignUpVC.swift */,
+				EDD2608A25C44D5A00619E8E /* SignInVC.swift */,
+				EDD2608D25C4546700619E8E /* FindIdVC.swift */,
+			);
+			path = VC;
 			sourceTree = "<group>";
 		};
 		EDE0BDEF25BD9E6300ADE8D1 /* Detail */ = {
@@ -658,6 +692,7 @@
 				ED16C89425BA7471003DD0F0 /* HomeBannerTVC.xib in Resources */,
 				ED16C85125B7FCB4003DD0F0 /* CourseSearch.storyboard in Resources */,
 				ED01F4DD25C0076B00B9AD43 /* DetailPhotoTVC.xib in Resources */,
+				EDD2607D25C3CB2D00619E8E /* Login.storyboard in Resources */,
 				ED16C8BD25BAA95F003DD0F0 /* HomeLatestCourseTVC.xib in Resources */,
 				ED16C84E25B7FCA9003DD0F0 /* Alert.storyboard in Resources */,
 				ED16C82125B7F92F003DD0F0 /* Assets.xcassets in Resources */,
@@ -732,6 +767,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDD055BD25BBFB70009FA3FB /* BookmarkCourseTVC.swift in Sources */,
+				EDD2608225C3CB7D00619E8E /* WelcomeLoginVC.swift in Sources */,
 				ED01F4DC25C0076B00B9AD43 /* DetailPhotoTVC.swift in Sources */,
 				ED16C8BC25BAA95F003DD0F0 /* HomeLatestCourseTVC.swift in Sources */,
 				ED01F4CF25BFBFCB00B9AD43 /* DetailReviewTVC.swift in Sources */,
@@ -746,6 +782,7 @@
 				EDE0BDEA25BD912F00ADE8D1 /* CourseDetailVC.swift in Sources */,
 				EDCC755325C2A68600EF435A /* MakeCreateCourseVC.swift in Sources */,
 				ED16C8B725BAA68F003DD0F0 /* HomeBookmarkCourseCVC.swift in Sources */,
+				EDD2608E25C4546700619E8E /* FindIdVC.swift in Sources */,
 				ED16C86825B7FE7A003DD0F0 /* HomeVC.swift in Sources */,
 				EDCC755D25C2ECDA00EF435A /* HashtagPopUpVC.swift in Sources */,
 				ED01F4D825BFF88900B9AD43 /* Review.swift in Sources */,
@@ -758,8 +795,10 @@
 				ED16C89925BA7AAF003DD0F0 /* HomeBannerCVC.swift in Sources */,
 				ED01F4E225C0144D00B9AD43 /* PhotoCVC.swift in Sources */,
 				ED7622BD25BB12D1007E1C98 /* PopularCourseVC.swift in Sources */,
+				EDD2608525C3E9C200619E8E /* SignUpVC.swift in Sources */,
 				ED16C89325BA7471003DD0F0 /* HomeBannerTVC.swift in Sources */,
 				EDD2607125C3B9AE00619E8E /* HashtagTVC.swift in Sources */,
+				EDD2608B25C44D5A00619E8E /* SignInVC.swift in Sources */,
 				ED16C84525B7FC1D003DD0F0 /* TabbarController.swift in Sources */,
 				ED16C85C25B7FE1B003DD0F0 /* AlertVC.swift in Sources */,
 				ED16C87125B80150003DD0F0 /* CreateCourseVC.swift in Sources */,
@@ -769,6 +808,7 @@
 				ED7622C625BB25D0007E1C98 /* PopularCourseTVC.swift in Sources */,
 				ED16C8C125BAAB90003DD0F0 /* HomeLatestCourseCVC.swift in Sources */,
 				ED01F4D425BFDB1000B9AD43 /* ReviewTVC.swift in Sources */,
+				EDD2608825C401F500619E8E /* Extensions+String.swift in Sources */,
 				ED16C86225B7FE50003DD0F0 /* CourseSearchVC.swift in Sources */,
 				ED16C8A825BA9BB4003DD0F0 /* HomePopularCourseTVC.swift in Sources */,
 				ED16C8B225BAA4FD003DD0F0 /* HomeBookmarkCourseTVC.swift in Sources */,
