@@ -15,6 +15,7 @@ class CompleteCourseVC: UIViewController {
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var hashInfoLabel: UILabel!
     @IBOutlet weak var distanceTitleLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var timeTitleLabel: UILabel!
@@ -22,19 +23,56 @@ class CompleteCourseVC: UIViewController {
     @IBOutlet weak var hashtagLabel: UILabel!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var infoView: UIView!
-    @IBOutlet var hashtagButtons: [UIButton]!
+    @IBOutlet weak var hashtagTableView: UITableView!
     
     var mapView = GMSMapView()
     var camera = GMSCameraPosition()
     
+    var hashtags: [String] = []
     var coordinates: [CLLocationCoordinate2D] = []
     var isMakeCourse = false
-    var hashIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
         getDistanceAndTime()
+    }
+}
+
+// MARK: - TableView
+extension CompleteCourseVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return hashtags.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: HashtagTVC.identifier) as? HashtagTVC else {
+            return UITableViewCell()
+        }
+        cell.setText(text: hashtags[indexPath.row])
+        cell.selectionStyle = .none
+        return cell
+    }
+}
+
+extension CompleteCourseVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 37
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            hashtags.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "삭제"
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
     }
 }
 
@@ -58,29 +96,28 @@ extension CompleteCourseVC: UITextFieldDelegate {
 // MARK: - UI
 extension CompleteCourseVC {
     private func setUI() {
+        setTableView()
+        setTableViewNib()
         setView()
-        setButtons()
         setLabel()
         setButton()
         setTextField()
     }
     
-    private func setView() {
-        infoView.backgroundColor = UIColor.bookmarkDarkBlue.withAlphaComponent(0.5)
+    private func setTableView() {
+        hashtagTableView.delegate = self
+        hashtagTableView.dataSource = self
+        hashtagTableView.separatorInset.left = 0
+        hashtagTableView.separatorColor = .clear
     }
     
-    private func setButtons() {
-        var ind = 0
-        for hash in hashtagButtons {
-            hash.setTitle("", for: .normal)
-            hash.setTitleColor(.white, for: .normal)
-            hash.titleLabel?.font = .boldSystemFont(ofSize: 11)
-            hash.backgroundColor = .bookmarkDarkBlue
-            hash.layer.cornerRadius = 13
-            hash.tag = ind
-        
-            ind += 1
-        }
+    private func setTableViewNib() {
+        let nibName = UINib(nibName: "HashtagTVC", bundle: nil)
+        hashtagTableView.register(nibName, forCellReuseIdentifier: HashtagTVC.identifier)
+    }
+    
+    private func setView() {
+        infoView.backgroundColor = UIColor.bookmarkDarkBlue.withAlphaComponent(0.5)
     }
     
     private func setLabel() {
@@ -109,6 +146,10 @@ extension CompleteCourseVC {
         hashtagLabel.text = "#해시태그 설정하기"
         hashtagLabel.font = .systemFont(ofSize: 18, weight: .semibold)
         hashtagLabel.textColor = .black
+        
+        hashInfoLabel.text = "나만의 해시태그는 버튼을 눌러서 추가하고 해시태그를 밀어서 삭제하세요"
+        hashInfoLabel.font = .systemFont(ofSize: 9, weight: .semibold)
+        hashInfoLabel.textColor = .bookmarkGray
     }
     
     private func setButton() {
@@ -206,19 +247,19 @@ extension CompleteCourseVC {
     
     @objc func touchUpAdd() {
         print("add")
-        guard let dvc = storyboard?.instantiateViewController(identifier: "HashtagPopUpVC") as? HashtagPopUpVC else {
-            return
+        if hashtags.count <= 6 {
+            guard let dvc = storyboard?.instantiateViewController(identifier: "HashtagPopUpVC") as? HashtagPopUpVC else {
+                return
+            }
+            dvc.saveHashtag = { text in
+                self.hashtags.append(text)
+                self.hashtagTableView.reloadData()
+            }
+            dvc.modalPresentationStyle = .overCurrentContext
+            dvc.modalTransitionStyle = .crossDissolve
+            present(dvc, animated: true, completion: nil)
+        } else {
+            // Alert
         }
-        dvc.saveHashtag = { text in
-            self.hashtagButtons[self.hashIndex].setTitle("#\(text)", for: .normal)
-            self.hashIndex += 1
-        }
-        dvc.modalPresentationStyle = .overCurrentContext
-        dvc.modalTransitionStyle = .crossDissolve
-        present(dvc, animated: true, completion: nil)
-    }
-    
-    @objc func touchUpButton() {
-        
     }
 }

@@ -10,6 +10,7 @@ import UIKit
 class HashtagPopUpVC: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var warningLabel: UILabel!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var hashtagTextField: UITextField!
@@ -50,6 +51,13 @@ extension HashtagPopUpVC: UITextFieldDelegate {
             return false
         }
         
+        if string == " " {
+            warningLabel.text = "공백은 입력할 수 없어요"
+            return false
+        } else {
+            warningLabel.text = ""
+        }
+        
         return newLength <= 6
     }
 }
@@ -69,6 +77,10 @@ extension HashtagPopUpVC {
         infoLabel.text = "돋보이는 5글자 이하의 해시태그를 넣어주세요✨"
         infoLabel.font = .systemFont(ofSize: 9, weight: .semibold)
         infoLabel.textColor = .gray70
+        
+        warningLabel.text = ""
+        warningLabel.font = .systemFont(ofSize: 9, weight: .semibold)
+        warningLabel.textColor = .latestBurgundy
     }
     
     private func setButton() {

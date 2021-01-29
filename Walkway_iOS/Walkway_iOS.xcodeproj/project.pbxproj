@@ -71,6 +71,8 @@
 		EDD055C125BC282F009FA3FB /* LatestCourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD055C025BC282F009FA3FB /* LatestCourseVC.swift */; };
 		EDD055C525BC2AFA009FA3FB /* LatestCourseTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD055C325BC2AFA009FA3FB /* LatestCourseTVC.swift */; };
 		EDD055C625BC2AFA009FA3FB /* LatestCourseTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDD055C425BC2AFA009FA3FB /* LatestCourseTVC.xib */; };
+		EDD2607125C3B9AE00619E8E /* HashtagTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2606F25C3B9AE00619E8E /* HashtagTVC.swift */; };
+		EDD2607225C3B9AE00619E8E /* HashtagTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDD2607025C3B9AE00619E8E /* HashtagTVC.xib */; };
 		EDE0BDEA25BD912F00ADE8D1 /* CourseDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDE925BD912F00ADE8D1 /* CourseDetailVC.swift */; };
 		EDE0BDED25BD9B9500ADE8D1 /* Extensions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDEC25BD9B9500ADE8D1 /* Extensions+UIViewController.swift */; };
 		EDE0BDF225BD9E9900ADE8D1 /* DetailHeaderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDF025BD9E9900ADE8D1 /* DetailHeaderTVC.swift */; };
@@ -148,6 +150,8 @@
 		EDD055C025BC282F009FA3FB /* LatestCourseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestCourseVC.swift; sourceTree = "<group>"; };
 		EDD055C325BC2AFA009FA3FB /* LatestCourseTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestCourseTVC.swift; sourceTree = "<group>"; };
 		EDD055C425BC2AFA009FA3FB /* LatestCourseTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LatestCourseTVC.xib; sourceTree = "<group>"; };
+		EDD2606F25C3B9AE00619E8E /* HashtagTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashtagTVC.swift; sourceTree = "<group>"; };
+		EDD2607025C3B9AE00619E8E /* HashtagTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HashtagTVC.xib; sourceTree = "<group>"; };
 		EDE0BDE925BD912F00ADE8D1 /* CourseDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailVC.swift; sourceTree = "<group>"; };
 		EDE0BDEC25BD9B9500ADE8D1 /* Extensions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIViewController.swift"; sourceTree = "<group>"; };
 		EDE0BDF025BD9E9900ADE8D1 /* DetailHeaderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderTVC.swift; sourceTree = "<group>"; };
@@ -408,6 +412,7 @@
 		ED16C86B25B80126003DD0F0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EDD2606E25C3B99500619E8E /* TVC */,
 				ED16C86C25B8012B003DD0F0 /* VC */,
 			);
 			path = View;
@@ -535,6 +540,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		EDD2606E25C3B99500619E8E /* TVC */ = {
+			isa = PBXGroup;
+			children = (
+				EDD2606F25C3B9AE00619E8E /* HashtagTVC.swift */,
+				EDD2607025C3B9AE00619E8E /* HashtagTVC.xib */,
+			);
+			path = TVC;
+			sourceTree = "<group>";
+		};
 		EDE0BDEF25BD9E6300ADE8D1 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -624,6 +638,7 @@
 				ED16C84B25B7FCA0003DD0F0 /* Mypage.storyboard in Resources */,
 				ED16C8B825BAA68F003DD0F0 /* HomeBookmarkCourseCVC.xib in Resources */,
 				EDD055C625BC2AFA009FA3FB /* LatestCourseTVC.xib in Resources */,
+				EDD2607225C3B9AE00619E8E /* HashtagTVC.xib in Resources */,
 				ED16C84825B7FC8F003DD0F0 /* Home.storyboard in Resources */,
 				ED16C82425B7F92F003DD0F0 /* LaunchScreen.storyboard in Resources */,
 				EDD055BE25BBFB70009FA3FB /* BookmarkCourseTVC.xib in Resources */,
@@ -736,6 +751,7 @@
 				ED01F4E225C0144D00B9AD43 /* PhotoCVC.swift in Sources */,
 				ED7622BD25BB12D1007E1C98 /* PopularCourseVC.swift in Sources */,
 				ED16C89325BA7471003DD0F0 /* HomeBannerTVC.swift in Sources */,
+				EDD2607125C3B9AE00619E8E /* HashtagTVC.swift in Sources */,
 				ED16C84525B7FC1D003DD0F0 /* TabbarController.swift in Sources */,
 				ED16C85C25B7FE1B003DD0F0 /* AlertVC.swift in Sources */,
 				ED16C87125B80150003DD0F0 /* CreateCourseVC.swift in Sources */,
