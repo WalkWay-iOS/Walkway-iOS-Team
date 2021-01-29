@@ -104,6 +104,9 @@ extension SignInVC {
     }
     
     @objc func touchUpFind() {
-        print("찾기")
+        guard let dvc = storyboard?.instantiateViewController(identifier: "FindIdVC") as? FindIdVC else {
+            return
+        }
+        navigationController?.pushViewController(dvc, animated: true)
     }
 }
