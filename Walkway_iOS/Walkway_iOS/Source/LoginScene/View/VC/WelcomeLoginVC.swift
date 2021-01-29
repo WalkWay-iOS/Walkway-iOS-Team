@@ -50,6 +50,7 @@ extension WelcomeLoginVC {
         signInButton.titleLabel?.font = .boldSystemFont(ofSize: 15)
         signInButton.backgroundColor = .bookmarkGray
         signInButton.layer.cornerRadius = 19
+        signInButton.addTarget(self, action: #selector(touchUpSignIn), for: .touchUpInside)
     }
 }
 
@@ -60,5 +61,13 @@ extension WelcomeLoginVC {
             return
         }
         navigationController?.pushViewController(dvc, animated: true)
+    }
+    
+    @objc func touchUpSignIn() {
+        guard let dvc = storyboard?.instantiateViewController(identifier: "LoginNavi") else {
+            return
+        }
+        dvc.modalPresentationStyle = .fullScreen
+        present(dvc, animated: true, completion: nil)
     }
 }
