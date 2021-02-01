@@ -65,6 +65,7 @@
 		ED8A965725C81FE40088EFBA /* MessageTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A965525C81FE40088EFBA /* MessageTVC.swift */; };
 		ED8A965825C81FE40088EFBA /* MessageTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED8A965625C81FE40088EFBA /* MessageTVC.xib */; };
 		ED8A965C25C822DE0088EFBA /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A965B25C822DE0088EFBA /* Message.swift */; };
+		ED8A965F25C8260C0088EFBA /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A965E25C8260C0088EFBA /* ChatVC.swift */; };
 		EDCC755325C2A68600EF435A /* MakeCreateCourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC755225C2A68600EF435A /* MakeCreateCourseVC.swift */; };
 		EDCC755625C2BA1900EF435A /* CompleteCourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC755525C2BA1900EF435A /* CompleteCourseVC.swift */; };
 		EDCC755925C2CADA00EF435A /* Extensions+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC755825C2CAD900EF435A /* Extensions+UITextField.swift */; };
@@ -155,6 +156,7 @@
 		ED8A965525C81FE40088EFBA /* MessageTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTVC.swift; sourceTree = "<group>"; };
 		ED8A965625C81FE40088EFBA /* MessageTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageTVC.xib; sourceTree = "<group>"; };
 		ED8A965B25C822DE0088EFBA /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		ED8A965E25C8260C0088EFBA /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		EDCC755225C2A68600EF435A /* MakeCreateCourseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeCreateCourseVC.swift; sourceTree = "<group>"; };
 		EDCC755525C2BA1900EF435A /* CompleteCourseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteCourseVC.swift; sourceTree = "<group>"; };
 		EDCC755825C2CAD900EF435A /* Extensions+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UITextField.swift"; sourceTree = "<group>"; };
@@ -384,6 +386,7 @@
 			isa = PBXGroup;
 			children = (
 				ED16C85B25B7FE1B003DD0F0 /* AlertVC.swift */,
+				ED8A965E25C8260C0088EFBA /* ChatVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -831,6 +834,7 @@
 				ED01F4D825BFF88900B9AD43 /* Review.swift in Sources */,
 				ED01F4E625C02E4300B9AD43 /* Extensions+UIScrollView.swift in Sources */,
 				ED16C85625B7FDE9003DD0F0 /* MypageVC.swift in Sources */,
+				ED8A965F25C8260C0088EFBA /* ChatVC.swift in Sources */,
 				ED8A8C9025C1EE9D00E2BD7B /* MakeCourseVC.swift in Sources */,
 				ED16C8AD25BA9E1E003DD0F0 /* HomePopularCourseCVC.swift in Sources */,
 				EDCC755625C2BA1900EF435A /* CompleteCourseVC.swift in Sources */,

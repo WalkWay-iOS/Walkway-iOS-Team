@@ -57,6 +57,15 @@ extension AlertVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if isAlert == false {
+            guard let dvc = storyboard?.instantiateViewController(identifier: "ChatVC") as? ChatVC else {
+                return
+            }
+            present(dvc, animated: true, completion: nil)
+        }
+    }
 }
 
 // MARK: - UI
