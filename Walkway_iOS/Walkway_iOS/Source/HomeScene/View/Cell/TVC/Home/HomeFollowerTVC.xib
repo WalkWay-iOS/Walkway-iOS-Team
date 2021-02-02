@@ -33,15 +33,9 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                     </collectionView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBS-Bq-edJ">
-                        <rect key="frame" x="414" y="45.5" width="46" height="30"/>
-                        <state key="normal" title="Button"/>
-                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="kBS-Bq-edJ" secondAttribute="trailing" constant="11" id="3cw-rF-GcW"/>
                     <constraint firstItem="14r-o7-IpO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="C65-1R-BzQ"/>
-                    <constraint firstItem="kBS-Bq-edJ" firstAttribute="centerY" secondItem="OGd-Wi-QLG" secondAttribute="centerY" id="V1W-7a-slq"/>
                     <constraint firstAttribute="trailing" secondItem="14r-o7-IpO" secondAttribute="trailing" id="aA7-52-YIp"/>
                     <constraint firstItem="OGd-Wi-QLG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="gqu-Zp-4gq"/>
                     <constraint firstAttribute="bottom" secondItem="14r-o7-IpO" secondAttribute="bottom" id="oVp-aq-yGh"/>
@@ -53,7 +47,6 @@
             <connections>
                 <outlet property="followerCollectionView" destination="14r-o7-IpO" id="Trs-q0-Veh"/>
                 <outlet property="titleLabel" destination="OGd-Wi-QLG" id="iIP-3I-bdL"/>
-                <outlet property="viewAllButton" destination="kBS-Bq-edJ" id="VVN-CU-a4C"/>
             </connections>
             <point key="canvasLocation" x="239.85507246376812" y="216.62946428571428"/>
         </tableViewCell>
