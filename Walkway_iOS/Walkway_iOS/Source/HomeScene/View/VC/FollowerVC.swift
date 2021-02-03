@@ -12,6 +12,8 @@ class FollowerVC: UIViewController {
     
     let closeButton = UIButton()
     
+    var followerName: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -33,6 +35,7 @@ extension FollowerVC: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: FollowerHeaderTVC.identifier) as? FollowerHeaderTVC else {
                 return UITableViewCell()
             }
+            cell.setName(name: followerName ?? "")
             cell.selectionStyle = .none
             return cell
         } else if indexPath.section == 1 {
@@ -45,18 +48,21 @@ extension FollowerVC: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: FollowerKeywordTVC.identifier) as? FollowerKeywordTVC else {
                 return UITableViewCell()
             }
+            cell.setName(name: followerName ?? "")
             cell.selectionStyle = .none
             return cell
         } else if indexPath.section == 3 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: FollowerCourseTVC.identifier) as? FollowerCourseTVC else {
                 return UITableViewCell()
             }
+            cell.setName(name: followerName ?? "")
             cell.selectionStyle = .none
             return cell
         } else if indexPath.section == 4 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: FollowerLatestTVC.identifier) as? FollowerLatestTVC else {
                 return UITableViewCell()
             }
+            cell.setName(name: followerName ?? "")
             cell.selectionStyle = .none
             return cell
         }
@@ -80,17 +86,7 @@ extension FollowerVC: UITableViewDelegate {
         return 50
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        UIView.animate(withDuration: 0.5, animations: {
-            self.closeButton.isHidden = true
-        })
-    }
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        UIView.animate(withDuration: 0.5, animations: {
-            self.closeButton.isHidden = false
-        })
-    }
+
 }
 
 // MARK: - UI
@@ -141,11 +137,10 @@ extension FollowerVC {
         closeButton.tintColor = .black
         closeButton.setPreferredSymbolConfiguration(.init(pointSize: 18, weight: .regular, scale: .large), forImageIn: .normal)
         closeButton.translatesAutoresizingMaskIntoConstraints = false
-        closeButton.isHidden = false
         closeButton.addTarget(self, action: #selector(touchUpClose), for: .touchUpInside)
-        view.addSubview(closeButton)
-        closeButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15).isActive = true
-        closeButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        followerTableView.addSubview(closeButton)
+        closeButton.topAnchor.constraint(equalTo: followerTableView.topAnchor, constant: 15).isActive = true
+        closeButton.leadingAnchor.constraint(equalTo: followerTableView.leadingAnchor, constant: 20).isActive = true
     }
 }
 

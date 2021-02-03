@@ -14,6 +14,8 @@ class HomeFollowerTVC: UITableViewCell {
     @IBOutlet weak var followerCollectionView: UICollectionView!
     
     var delegate: cellPresentDelegate?
+    
+    var follower: [String] = ["하늘을향해", "Emily", "작은마음", "코로나아웃", "아이스아메", "밝은웃음", "WalkWalk", "팔로우해줘", "코스종결자", "화이팅하자"]
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,13 +30,14 @@ class HomeFollowerTVC: UITableViewCell {
 // MARK: - CollectionViewDelegate
 extension HomeFollowerTVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return follower.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeFollowerCVC.identifier, for: indexPath) as? HomeFollowerCVC else {
             return UICollectionViewCell()
         }
+        cell.setLabelText(text: follower[indexPath.row])
         return cell
     }
 }
@@ -64,6 +67,7 @@ extension HomeFollowerTVC: UICollectionViewDelegate {
         guard let dvc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(identifier: "FollowerVC") as? FollowerVC else {
             return
         }
+        dvc.followerName = follower[indexPath.row]
         delegate?.collectionViewCellTapedFollower(dvc: dvc)
     }
 }

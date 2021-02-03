@@ -83,7 +83,13 @@ extension FollowerKeywordTVC {
     }
     
     private func setLabel() {
-        titleLabel.text = "따릉이 님의 대표키워드"
         titleLabel.font = .boldSystemFont(ofSize: 16)
+    }
+}
+
+// MARK: - Data
+extension FollowerKeywordTVC {
+    func setName(name: String) {
+        titleLabel.text = "\(name) 님의 대표키워드"
     }
 }

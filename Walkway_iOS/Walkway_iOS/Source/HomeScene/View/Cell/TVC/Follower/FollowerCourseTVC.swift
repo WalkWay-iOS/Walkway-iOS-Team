@@ -83,7 +83,13 @@ extension FollowerCourseTVC {
     }
     
     private func setLabel() {
-        titleLabel.text = "따릉이 님의 코스"
         titleLabel.font = .boldSystemFont(ofSize: 16)
+    }
+}
+
+// MARK: - Data
+extension FollowerCourseTVC {
+    func setName(name: String) {
+        titleLabel.text = "\(name) 님의 코스"
     }
 }

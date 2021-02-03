@@ -111,3 +111,10 @@ extension FollowerHeaderTVC {
         }
     }
 }
+
+// MARK: - Data
+extension FollowerHeaderTVC {
+    func setName(name: String) {
+        nameLabel.text = name
+    }
+}

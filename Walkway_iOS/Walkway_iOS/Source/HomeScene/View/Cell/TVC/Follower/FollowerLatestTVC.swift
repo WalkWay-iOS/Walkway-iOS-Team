@@ -67,7 +67,13 @@ extension FollowerLatestTVC {
     }
     
     private func setLabel() {
-        titleLabel.text = "따릉이 님의 최근기록"
         titleLabel.font = .boldSystemFont(ofSize: 16)
+    }
+}
+
+// MARK: - Data
+extension FollowerLatestTVC {
+    func setName(name: String) {
+        titleLabel.text = "\(name) 님의 최근기록"
     }
 }
