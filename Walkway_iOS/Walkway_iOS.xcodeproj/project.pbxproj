@@ -98,6 +98,10 @@
 		EDDF9A4A25CA4F5D00F5F7FD /* FollowerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A4925CA4F5D00F5F7FD /* FollowerVC.swift */; };
 		EDDF9A5A25CA67C300F5F7FD /* FollowerHeaderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A5825CA67C300F5F7FD /* FollowerHeaderTVC.swift */; };
 		EDDF9A5B25CA67C300F5F7FD /* FollowerHeaderTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDF9A5925CA67C300F5F7FD /* FollowerHeaderTVC.xib */; };
+		EDDF9A6025CA74F300F5F7FD /* FollowerBadgeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A5E25CA74F300F5F7FD /* FollowerBadgeTVC.swift */; };
+		EDDF9A6125CA74F300F5F7FD /* FollowerBadgeTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDF9A5F25CA74F300F5F7FD /* FollowerBadgeTVC.xib */; };
+		EDDF9A6625CA784E00F5F7FD /* FollowerBadgeCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A6425CA784E00F5F7FD /* FollowerBadgeCVC.swift */; };
+		EDDF9A6725CA784E00F5F7FD /* FollowerBadgeCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDF9A6525CA784E00F5F7FD /* FollowerBadgeCVC.xib */; };
 		EDE0BDEA25BD912F00ADE8D1 /* CourseDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDE925BD912F00ADE8D1 /* CourseDetailVC.swift */; };
 		EDE0BDED25BD9B9500ADE8D1 /* Extensions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDEC25BD9B9500ADE8D1 /* Extensions+UIViewController.swift */; };
 		EDE0BDF225BD9E9900ADE8D1 /* DetailHeaderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDF025BD9E9900ADE8D1 /* DetailHeaderTVC.swift */; };
@@ -202,6 +206,10 @@
 		EDDF9A4925CA4F5D00F5F7FD /* FollowerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerVC.swift; sourceTree = "<group>"; };
 		EDDF9A5825CA67C300F5F7FD /* FollowerHeaderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerHeaderTVC.swift; sourceTree = "<group>"; };
 		EDDF9A5925CA67C300F5F7FD /* FollowerHeaderTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowerHeaderTVC.xib; sourceTree = "<group>"; };
+		EDDF9A5E25CA74F300F5F7FD /* FollowerBadgeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerBadgeTVC.swift; sourceTree = "<group>"; };
+		EDDF9A5F25CA74F300F5F7FD /* FollowerBadgeTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowerBadgeTVC.xib; sourceTree = "<group>"; };
+		EDDF9A6425CA784E00F5F7FD /* FollowerBadgeCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerBadgeCVC.swift; sourceTree = "<group>"; };
+		EDDF9A6525CA784E00F5F7FD /* FollowerBadgeCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowerBadgeCVC.xib; sourceTree = "<group>"; };
 		EDE0BDE925BD912F00ADE8D1 /* CourseDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailVC.swift; sourceTree = "<group>"; };
 		EDE0BDEC25BD9B9500ADE8D1 /* Extensions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIViewController.swift"; sourceTree = "<group>"; };
 		EDE0BDF025BD9E9900ADE8D1 /* DetailHeaderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderTVC.swift; sourceTree = "<group>"; };
@@ -579,6 +587,7 @@
 		ED16C88F25BA7441003DD0F0 /* CVC */ = {
 			isa = PBXGroup;
 			children = (
+				EDDF9A6325CA783500F5F7FD /* Follower */,
 				ED01F4DF25C0141A00B9AD43 /* Detail */,
 				ED94370A25BABC9F009642E5 /* Home */,
 			);
@@ -740,6 +749,17 @@
 			children = (
 				EDDF9A5825CA67C300F5F7FD /* FollowerHeaderTVC.swift */,
 				EDDF9A5925CA67C300F5F7FD /* FollowerHeaderTVC.xib */,
+				EDDF9A5E25CA74F300F5F7FD /* FollowerBadgeTVC.swift */,
+				EDDF9A5F25CA74F300F5F7FD /* FollowerBadgeTVC.xib */,
+			);
+			path = Follower;
+			sourceTree = "<group>";
+		};
+		EDDF9A6325CA783500F5F7FD /* Follower */ = {
+			isa = PBXGroup;
+			children = (
+				EDDF9A6425CA784E00F5F7FD /* FollowerBadgeCVC.swift */,
+				EDDF9A6525CA784E00F5F7FD /* FollowerBadgeCVC.xib */,
 			);
 			path = Follower;
 			sourceTree = "<group>";
@@ -852,10 +872,12 @@
 				ED16C85125B7FCB4003DD0F0 /* CourseSearch.storyboard in Resources */,
 				74685F5F25C3C6DC004EDFEC /* CourseRunningTab.storyboard in Resources */,
 				ED01F4DD25C0076B00B9AD43 /* DetailPhotoTVC.xib in Resources */,
+				EDDF9A6725CA784E00F5F7FD /* FollowerBadgeCVC.xib in Resources */,
 				ED8A965325C8189D0088EFBA /* AlertTVC.xib in Resources */,
 				EDD2607D25C3CB2D00619E8E /* Login.storyboard in Resources */,
 				ED16C8BD25BAA95F003DD0F0 /* HomeLatestCourseTVC.xib in Resources */,
 				ED16C84E25B7FCA9003DD0F0 /* Alert.storyboard in Resources */,
+				EDDF9A6125CA74F300F5F7FD /* FollowerBadgeTVC.xib in Resources */,
 				ED16C82125B7F92F003DD0F0 /* Assets.xcassets in Resources */,
 				ED16C8B325BAA4FD003DD0F0 /* HomeBookmarkCourseTVC.xib in Resources */,
 			);
@@ -950,6 +972,7 @@
 				EDD2608E25C4546700619E8E /* FindIdVC.swift in Sources */,
 				ED16C86825B7FE7A003DD0F0 /* HomeVC.swift in Sources */,
 				EDCC755D25C2ECDA00EF435A /* HashtagPopUpVC.swift in Sources */,
+				EDDF9A6025CA74F300F5F7FD /* FollowerBadgeTVC.swift in Sources */,
 				ED01F4D825BFF88900B9AD43 /* Review.swift in Sources */,
 				ED01F4E625C02E4300B9AD43 /* Extensions+UIScrollView.swift in Sources */,
 				ED16C85625B7FDE9003DD0F0 /* MypageVC.swift in Sources */,
@@ -979,6 +1002,7 @@
 				74FDE74725C17CF2002EF553 /* CourseListTVC.swift in Sources */,
 				ED7622C625BB25D0007E1C98 /* PopularCourseTVC.swift in Sources */,
 				ED16C8C125BAAB90003DD0F0 /* HomeLatestCourseCVC.swift in Sources */,
+				EDDF9A6625CA784E00F5F7FD /* FollowerBadgeCVC.swift in Sources */,
 				ED01F4D425BFDB1000B9AD43 /* ReviewTVC.swift in Sources */,
 				EDD2608825C401F500619E8E /* Extensions+String.swift in Sources */,
 				ED16C86225B7FE50003DD0F0 /* CourseSearchVC.swift in Sources */,

@@ -29,7 +29,14 @@ extension FollowerVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: FollowerHeaderTVC.identifier) as? FollowerHeaderTVC else {
+        if indexPath.section == 0 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: FollowerHeaderTVC.identifier) as? FollowerHeaderTVC else {
+                return UITableViewCell()
+            }
+            cell.selectionStyle = .none
+            return cell
+        }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: FollowerBadgeTVC.identifier) as? FollowerBadgeTVC else {
             return UITableViewCell()
         }
         cell.selectionStyle = .none
@@ -41,6 +48,8 @@ extension FollowerVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
             return 376
+        } else if indexPath.section == 1 {
+            return 111
         }
         return 0
     }
@@ -80,6 +89,9 @@ extension FollowerVC {
     private func setTableViewNib() {
         let headerNib = UINib(nibName: "FollowerHeaderTVC", bundle: nil)
         followerTableView.register(headerNib, forCellReuseIdentifier: FollowerHeaderTVC.identifier)
+        
+        let badgeNib = UINib(nibName: "FollowerBadgeTVC", bundle: nil)
+        followerTableView.register(badgeNib, forCellReuseIdentifier: FollowerBadgeTVC.identifier)
     }
     
     private func setButton() {
