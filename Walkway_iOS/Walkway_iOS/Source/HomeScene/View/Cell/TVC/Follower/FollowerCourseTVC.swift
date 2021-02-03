@@ -14,6 +14,8 @@ class FollowerCourseTVC: UITableViewCell {
     @IBOutlet weak var courseCollectionView: UICollectionView!
     @IBOutlet weak var bottomView: UIView!
     
+    var delegate: followerDelegate?
+    
     var courses: [String] = ["남산 한바퀴", "남산 두바퀴", "룰루리랄라리 신나는북악산여행", "북악산가자", "집뒤에 숨어있는 보물"]
     
     override func awakeFromNib() {
@@ -56,6 +58,15 @@ extension FollowerCourseTVC: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 10, left: 16, bottom: 22, right: 16)
+    }
+}
+
+extension FollowerCourseTVC: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let dvc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(identifier: "CourseDetailVC") as? CourseDetailVC else {
+            return
+        }
+        delegate?.cellTapedUserCourses(dvc: dvc)
     }
 }
 

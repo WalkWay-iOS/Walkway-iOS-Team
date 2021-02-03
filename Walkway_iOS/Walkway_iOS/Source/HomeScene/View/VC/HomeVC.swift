@@ -32,6 +32,7 @@ extension HomeVC: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeBannerTVC.identifier) as? HomeBannerTVC else {
                 return UITableViewCell()
             }
+            cell.delegate = self
             cell.selectionStyle = .none
             return cell
         } else if indexPath.section == 1 {
@@ -158,6 +159,12 @@ extension HomeVC: cellPresentDelegate {
     }
     
     func collectionViewCellTapedFollower(dvc: FollowerVC) {
+        dvc.modalPresentationStyle = .fullScreen
+        dvc.modalTransitionStyle = .crossDissolve
+        present(dvc, animated: true, completion: nil)
+    }
+    
+    func collectionViewCellTapedBanner(dvc: BannerVC) {
         dvc.modalPresentationStyle = .fullScreen
         dvc.modalTransitionStyle = .crossDissolve
         present(dvc, animated: true, completion: nil)

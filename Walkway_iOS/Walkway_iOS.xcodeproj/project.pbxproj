@@ -114,6 +114,11 @@
 		EDDF9A8125CA90EC00F5F7FD /* FollowerLatestTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDF9A7F25CA90EC00F5F7FD /* FollowerLatestTVC.xib */; };
 		EDDF9A8B25CA9AD300F5F7FD /* FollowerLatestCourseTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A8925CA9AD300F5F7FD /* FollowerLatestCourseTVC.swift */; };
 		EDDF9A8C25CA9AD300F5F7FD /* FollowerLatestCourseTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDF9A8A25CA9AD300F5F7FD /* FollowerLatestCourseTVC.xib */; };
+		EDDF9A8F25CAB7D500F5F7FD /* BannerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A8E25CAB7D500F5F7FD /* BannerVC.swift */; };
+		EDDF9A9425CABC7300F5F7FD /* BannerHeaderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A9225CABC7300F5F7FD /* BannerHeaderTVC.swift */; };
+		EDDF9A9525CABC7300F5F7FD /* BannerHeaderTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDF9A9325CABC7300F5F7FD /* BannerHeaderTVC.xib */; };
+		EDDF9A9825CABFD700F5F7FD /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A9725CABFD700F5F7FD /* Country.swift */; };
+		EDDF9A9B25CAC5DD00F5F7FD /* followerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A9A25CAC5DD00F5F7FD /* followerDelegate.swift */; };
 		EDE0BDEA25BD912F00ADE8D1 /* CourseDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDE925BD912F00ADE8D1 /* CourseDetailVC.swift */; };
 		EDE0BDED25BD9B9500ADE8D1 /* Extensions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDEC25BD9B9500ADE8D1 /* Extensions+UIViewController.swift */; };
 		EDE0BDF225BD9E9900ADE8D1 /* DetailHeaderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDF025BD9E9900ADE8D1 /* DetailHeaderTVC.swift */; };
@@ -234,6 +239,11 @@
 		EDDF9A7F25CA90EC00F5F7FD /* FollowerLatestTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowerLatestTVC.xib; sourceTree = "<group>"; };
 		EDDF9A8925CA9AD300F5F7FD /* FollowerLatestCourseTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerLatestCourseTVC.swift; sourceTree = "<group>"; };
 		EDDF9A8A25CA9AD300F5F7FD /* FollowerLatestCourseTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowerLatestCourseTVC.xib; sourceTree = "<group>"; };
+		EDDF9A8E25CAB7D500F5F7FD /* BannerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerVC.swift; sourceTree = "<group>"; };
+		EDDF9A9225CABC7300F5F7FD /* BannerHeaderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerHeaderTVC.swift; sourceTree = "<group>"; };
+		EDDF9A9325CABC7300F5F7FD /* BannerHeaderTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerHeaderTVC.xib; sourceTree = "<group>"; };
+		EDDF9A9725CABFD700F5F7FD /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		EDDF9A9A25CAC5DD00F5F7FD /* followerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = followerDelegate.swift; sourceTree = "<group>"; };
 		EDE0BDE925BD912F00ADE8D1 /* CourseDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailVC.swift; sourceTree = "<group>"; };
 		EDE0BDEC25BD9B9500ADE8D1 /* Extensions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIViewController.swift"; sourceTree = "<group>"; };
 		EDE0BDF025BD9E9900ADE8D1 /* DetailHeaderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderTVC.swift; sourceTree = "<group>"; };
@@ -558,6 +568,7 @@
 				EDD055C025BC282F009FA3FB /* LatestCourseVC.swift */,
 				EDE0BDE925BD912F00ADE8D1 /* CourseDetailVC.swift */,
 				EDDF9A4925CA4F5D00F5F7FD /* FollowerVC.swift */,
+				EDDF9A8E25CAB7D500F5F7FD /* BannerVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -621,6 +632,7 @@
 		ED16C89025BA7445003DD0F0 /* TVC */ = {
 			isa = PBXGroup;
 			children = (
+				EDDF9A9125CABC5900F5F7FD /* Banner */,
 				EDDF9A5725CA67A300F5F7FD /* Follower */,
 				EDE0BDEF25BD9E6300ADE8D1 /* Detail */,
 				ED7622C325BB259A007E1C98 /* ViewAll */,
@@ -645,6 +657,7 @@
 			isa = PBXGroup;
 			children = (
 				ED7622C025BB13DC007E1C98 /* cellPresentDelegate.swift */,
+				EDDF9A9A25CAC5DD00F5F7FD /* followerDelegate.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -728,6 +741,7 @@
 			children = (
 				EDD055AE25BBBE9C009FA3FB /* Course.swift */,
 				ED01F4D725BFF88900B9AD43 /* Review.swift */,
+				EDDF9A9725CABFD700F5F7FD /* Country.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -798,6 +812,15 @@
 				EDDF9A7A25CA8C2E00F5F7FD /* FollowerCourseCVC.xib */,
 			);
 			path = Follower;
+			sourceTree = "<group>";
+		};
+		EDDF9A9125CABC5900F5F7FD /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				EDDF9A9225CABC7300F5F7FD /* BannerHeaderTVC.swift */,
+				EDDF9A9325CABC7300F5F7FD /* BannerHeaderTVC.xib */,
+			);
+			path = Banner;
 			sourceTree = "<group>";
 		};
 		EDE0BDEF25BD9E6300ADE8D1 /* Detail */ = {
@@ -883,6 +906,7 @@
 				ED16C8A925BA9BB4003DD0F0 /* HomePopularCourseTVC.xib in Resources */,
 				EDDF9A6D25CA7F4600F5F7FD /* FollowerKeywordTVC.xib in Resources */,
 				ED16C83B25B7FAE9003DD0F0 /* Tabbar.storyboard in Resources */,
+				EDDF9A9525CABC7300F5F7FD /* BannerHeaderTVC.xib in Resources */,
 				ED16C89A25BA7AAF003DD0F0 /* HomeBannerCVC.xib in Resources */,
 				EDDF9A7725CA897400F5F7FD /* FollowerCourseTVC.xib in Resources */,
 				ED16C8C225BAAB90003DD0F0 /* HomeLatestCourseCVC.xib in Resources */,
@@ -1008,6 +1032,7 @@
 				EDDF9A8025CA90EC00F5F7FD /* FollowerLatestTVC.swift in Sources */,
 				ED16C89E25BA8D05003DD0F0 /* HomeFollowerTVC.swift in Sources */,
 				ED7622BA25BAFC88007E1C98 /* Extensions+UIColor.swift in Sources */,
+				EDDF9A9B25CAC5DD00F5F7FD /* followerDelegate.swift in Sources */,
 				ED16C81825B7F92F003DD0F0 /* AppDelegate.swift in Sources */,
 				EDDF9A7125CA83C700F5F7FD /* FollowerKeywordCVC.swift in Sources */,
 				74685F6525C3C72D004EDFEC /* CourseRunningTabVC.swift in Sources */,
@@ -1019,6 +1044,7 @@
 				EDCC755D25C2ECDA00EF435A /* HashtagPopUpVC.swift in Sources */,
 				EDDF9A6025CA74F300F5F7FD /* FollowerBadgeTVC.swift in Sources */,
 				ED01F4D825BFF88900B9AD43 /* Review.swift in Sources */,
+				EDDF9A9825CABFD700F5F7FD /* Country.swift in Sources */,
 				EDDF9A7625CA897400F5F7FD /* FollowerCourseTVC.swift in Sources */,
 				ED01F4E625C02E4300B9AD43 /* Extensions+UIScrollView.swift in Sources */,
 				ED16C85625B7FDE9003DD0F0 /* MypageVC.swift in Sources */,
@@ -1041,8 +1067,10 @@
 				EDDF9A4A25CA4F5D00F5F7FD /* FollowerVC.swift in Sources */,
 				ED16C85C25B7FE1B003DD0F0 /* AlertVC.swift in Sources */,
 				74F5D81825C64829003EA002 /* CourseRunningSettingCVC.swift in Sources */,
+				EDDF9A9425CABC7300F5F7FD /* BannerHeaderTVC.swift in Sources */,
 				ED16C87125B80150003DD0F0 /* CreateCourseVC.swift in Sources */,
 				EDE0BDED25BD9B9500ADE8D1 /* Extensions+UIViewController.swift in Sources */,
+				EDDF9A8F25CAB7D500F5F7FD /* BannerVC.swift in Sources */,
 				ED7622C125BB13DC007E1C98 /* cellPresentDelegate.swift in Sources */,
 				ED16C81A25B7F92F003DD0F0 /* SceneDelegate.swift in Sources */,
 				74F5D82525C649F2003EA002 /* RunningDetailInfoCVC.swift in Sources */,

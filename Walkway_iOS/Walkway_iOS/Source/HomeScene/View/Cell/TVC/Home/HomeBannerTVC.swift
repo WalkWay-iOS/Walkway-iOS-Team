@@ -13,6 +13,8 @@ class HomeBannerTVC: UITableViewCell {
     @IBOutlet weak var bannerCollectionView: UICollectionView!
     @IBOutlet weak var pageController: UIPageControl!
     
+    var delegate: cellPresentDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setUI()
@@ -25,8 +27,12 @@ class HomeBannerTVC: UITableViewCell {
 
 // MARK: - CollectionViewDelegate
 extension HomeBannerTVC: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -52,6 +58,24 @@ extension HomeBannerTVC: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+}
+
+extension HomeBannerTVC: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.section == 0 || indexPath.section == 1 {
+            guard let dvc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(identifier: "BannerVC") as? BannerVC else {
+                return
+            }
+            
+            if indexPath.section == 0 {
+                dvc.isSeoul = true
+            } else {
+                dvc.isSeoul = false
+            }
+            
+            delegate?.collectionViewCellTapedBanner(dvc: dvc)
+        }
     }
 }
  

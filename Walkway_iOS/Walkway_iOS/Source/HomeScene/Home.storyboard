@@ -138,6 +138,53 @@
             </objects>
             <point key="canvasLocation" x="465" y="813"/>
         </scene>
+        <!--BannerVC-->
+        <scene sceneID="70d-gp-BjL">
+            <objects>
+                <viewController storyboardIdentifier="BannerVC" id="fK7-ok-cuc" customClass="BannerVC" customModule="Walkway_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kUk-gN-a98">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gQh-pY-qRg">
+                                <rect key="frame" x="0.0" y="2" width="194" height="43"/>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.40784313729999999" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="G6z-C0-HC9"/>
+                                    <constraint firstAttribute="width" constant="194" id="Kc2-xh-kfO"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYy-YW-ibO">
+                                <rect key="frame" x="313" y="8.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lTe-GO-xrj">
+                                <rect key="frame" x="0.0" y="53" width="375" height="614"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zfF-tP-XaS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lTe-GO-xrj" firstAttribute="top" secondItem="gQh-pY-qRg" secondAttribute="bottom" constant="8" id="6q3-1g-3gf"/>
+                            <constraint firstItem="lTe-GO-xrj" firstAttribute="leading" secondItem="zfF-tP-XaS" secondAttribute="leading" id="Cp1-7u-wTL"/>
+                            <constraint firstAttribute="bottom" secondItem="lTe-GO-xrj" secondAttribute="bottom" id="OwN-mX-KNH"/>
+                            <constraint firstItem="zfF-tP-XaS" firstAttribute="trailing" secondItem="JYy-YW-ibO" secondAttribute="trailing" constant="16" id="Qc3-LZ-ZSo"/>
+                            <constraint firstItem="zfF-tP-XaS" firstAttribute="trailing" secondItem="lTe-GO-xrj" secondAttribute="trailing" id="e8d-QZ-vI9"/>
+                            <constraint firstItem="gQh-pY-qRg" firstAttribute="leading" secondItem="zfF-tP-XaS" secondAttribute="leading" id="gwr-V7-xZw"/>
+                            <constraint firstItem="JYy-YW-ibO" firstAttribute="centerY" secondItem="gQh-pY-qRg" secondAttribute="centerY" id="jfC-9y-yCB"/>
+                            <constraint firstItem="gQh-pY-qRg" firstAttribute="top" secondItem="zfF-tP-XaS" secondAttribute="top" constant="2" id="rId-t5-5j8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bannerTableView" destination="lTe-GO-xrj" id="6VC-Xp-kEk"/>
+                        <outlet property="closeButton" destination="JYy-YW-ibO" id="MCo-pI-zwF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U45-DL-3lC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1225" y="813"/>
+        </scene>
         <!--Popular CourseVC-->
         <scene sceneID="atS-0v-Cy5">
             <objects>

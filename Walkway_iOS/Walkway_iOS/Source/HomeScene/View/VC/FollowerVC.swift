@@ -55,6 +55,7 @@ extension FollowerVC: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: FollowerCourseTVC.identifier) as? FollowerCourseTVC else {
                 return UITableViewCell()
             }
+            cell.delegate = self
             cell.setName(name: followerName ?? "")
             cell.selectionStyle = .none
             return cell
@@ -146,5 +147,18 @@ extension FollowerVC {
 extension FollowerVC {
     @objc func touchUpClose() {
         dismiss(animated: true, completion: nil)
+    }
+}
+
+// MARK: - Delegate
+extension FollowerVC: followerDelegate {
+    func cellTapedUserCourses(dvc: CourseDetailVC) {
+        dvc.cellTitle = "남산 한바퀴"
+        dvc.cellTime = "시간 1시간 30분"
+        dvc.cellDistance = "거리 6.0km"
+        dvc.isHomeCell = true
+        dvc.modalPresentationStyle = .fullScreen
+        dvc.modalTransitionStyle = .crossDissolve
+        present(dvc, animated: true, completion: nil)
     }
 }
