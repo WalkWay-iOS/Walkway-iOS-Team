@@ -110,6 +110,10 @@
 		EDDF9A7725CA897400F5F7FD /* FollowerCourseTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDF9A7525CA897400F5F7FD /* FollowerCourseTVC.xib */; };
 		EDDF9A7B25CA8C2E00F5F7FD /* FollowerCourseCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A7925CA8C2E00F5F7FD /* FollowerCourseCVC.swift */; };
 		EDDF9A7C25CA8C2E00F5F7FD /* FollowerCourseCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDF9A7A25CA8C2E00F5F7FD /* FollowerCourseCVC.xib */; };
+		EDDF9A8025CA90EC00F5F7FD /* FollowerLatestTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A7E25CA90EC00F5F7FD /* FollowerLatestTVC.swift */; };
+		EDDF9A8125CA90EC00F5F7FD /* FollowerLatestTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDF9A7F25CA90EC00F5F7FD /* FollowerLatestTVC.xib */; };
+		EDDF9A8B25CA9AD300F5F7FD /* FollowerLatestCourseTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A8925CA9AD300F5F7FD /* FollowerLatestCourseTVC.swift */; };
+		EDDF9A8C25CA9AD300F5F7FD /* FollowerLatestCourseTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDF9A8A25CA9AD300F5F7FD /* FollowerLatestCourseTVC.xib */; };
 		EDE0BDEA25BD912F00ADE8D1 /* CourseDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDE925BD912F00ADE8D1 /* CourseDetailVC.swift */; };
 		EDE0BDED25BD9B9500ADE8D1 /* Extensions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDEC25BD9B9500ADE8D1 /* Extensions+UIViewController.swift */; };
 		EDE0BDF225BD9E9900ADE8D1 /* DetailHeaderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDF025BD9E9900ADE8D1 /* DetailHeaderTVC.swift */; };
@@ -226,6 +230,10 @@
 		EDDF9A7525CA897400F5F7FD /* FollowerCourseTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowerCourseTVC.xib; sourceTree = "<group>"; };
 		EDDF9A7925CA8C2E00F5F7FD /* FollowerCourseCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCourseCVC.swift; sourceTree = "<group>"; };
 		EDDF9A7A25CA8C2E00F5F7FD /* FollowerCourseCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowerCourseCVC.xib; sourceTree = "<group>"; };
+		EDDF9A7E25CA90EC00F5F7FD /* FollowerLatestTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerLatestTVC.swift; sourceTree = "<group>"; };
+		EDDF9A7F25CA90EC00F5F7FD /* FollowerLatestTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowerLatestTVC.xib; sourceTree = "<group>"; };
+		EDDF9A8925CA9AD300F5F7FD /* FollowerLatestCourseTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerLatestCourseTVC.swift; sourceTree = "<group>"; };
+		EDDF9A8A25CA9AD300F5F7FD /* FollowerLatestCourseTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowerLatestCourseTVC.xib; sourceTree = "<group>"; };
 		EDE0BDE925BD912F00ADE8D1 /* CourseDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailVC.swift; sourceTree = "<group>"; };
 		EDE0BDEC25BD9B9500ADE8D1 /* Extensions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIViewController.swift"; sourceTree = "<group>"; };
 		EDE0BDF025BD9E9900ADE8D1 /* DetailHeaderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderTVC.swift; sourceTree = "<group>"; };
@@ -771,6 +779,10 @@
 				EDDF9A6B25CA7F4600F5F7FD /* FollowerKeywordTVC.xib */,
 				EDDF9A7425CA897400F5F7FD /* FollowerCourseTVC.swift */,
 				EDDF9A7525CA897400F5F7FD /* FollowerCourseTVC.xib */,
+				EDDF9A7E25CA90EC00F5F7FD /* FollowerLatestTVC.swift */,
+				EDDF9A7F25CA90EC00F5F7FD /* FollowerLatestTVC.xib */,
+				EDDF9A8925CA9AD300F5F7FD /* FollowerLatestCourseTVC.swift */,
+				EDDF9A8A25CA9AD300F5F7FD /* FollowerLatestCourseTVC.xib */,
 			);
 			path = Follower;
 			sourceTree = "<group>";
@@ -865,6 +877,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDDF9A8C25CA9AD300F5F7FD /* FollowerLatestCourseTVC.xib in Resources */,
 				74F5D81425C64813003EA002 /* CourseRunningMapCVC.xib in Resources */,
 				ED01F4D525BFDB1000B9AD43 /* ReviewTVC.xib in Resources */,
 				ED16C8A925BA9BB4003DD0F0 /* HomePopularCourseTVC.xib in Resources */,
@@ -879,6 +892,7 @@
 				ED16C89F25BA8D05003DD0F0 /* HomeFollowerTVC.xib in Resources */,
 				ED01F4E325C0144D00B9AD43 /* PhotoCVC.xib in Resources */,
 				ED16C84B25B7FCA0003DD0F0 /* Mypage.storyboard in Resources */,
+				EDDF9A8125CA90EC00F5F7FD /* FollowerLatestTVC.xib in Resources */,
 				ED16C8B825BAA68F003DD0F0 /* HomeBookmarkCourseCVC.xib in Resources */,
 				EDD055C625BC2AFA009FA3FB /* LatestCourseTVC.xib in Resources */,
 				EDDF9A7225CA83C700F5F7FD /* FollowerKeywordCVC.xib in Resources */,
@@ -991,6 +1005,7 @@
 				EDCC755925C2CADA00EF435A /* Extensions+UITextField.swift in Sources */,
 				EDD055C125BC282F009FA3FB /* LatestCourseVC.swift in Sources */,
 				EDD055B925BBF402009FA3FB /* BookmarkCourseVC.swift in Sources */,
+				EDDF9A8025CA90EC00F5F7FD /* FollowerLatestTVC.swift in Sources */,
 				ED16C89E25BA8D05003DD0F0 /* HomeFollowerTVC.swift in Sources */,
 				ED7622BA25BAFC88007E1C98 /* Extensions+UIColor.swift in Sources */,
 				ED16C81825B7F92F003DD0F0 /* AppDelegate.swift in Sources */,
@@ -1039,6 +1054,7 @@
 				EDD2608825C401F500619E8E /* Extensions+String.swift in Sources */,
 				ED16C86225B7FE50003DD0F0 /* CourseSearchVC.swift in Sources */,
 				ED16C8A825BA9BB4003DD0F0 /* HomePopularCourseTVC.swift in Sources */,
+				EDDF9A8B25CA9AD300F5F7FD /* FollowerLatestCourseTVC.swift in Sources */,
 				ED16C8B225BAA4FD003DD0F0 /* HomeBookmarkCourseTVC.swift in Sources */,
 				ED16C8A325BA9478003DD0F0 /* HomeFollowerCVC.swift in Sources */,
 				EDD055AF25BBBE9C009FA3FB /* Course.swift in Sources */,
