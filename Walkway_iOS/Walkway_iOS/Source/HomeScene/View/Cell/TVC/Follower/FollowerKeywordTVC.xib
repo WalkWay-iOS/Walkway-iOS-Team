@@ -25,13 +25,13 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07h-sI-DYy">
-                        <rect key="frame" x="16" y="13" width="42" height="21"/>
+                        <rect key="frame" x="16" y="23" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="EKe-0E-Jbr">
-                        <rect key="frame" x="0.0" y="34" width="320" height="51"/>
+                        <rect key="frame" x="0.0" y="54" width="320" height="31"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="i5E-RB-U0Q">
                             <size key="itemSize" width="128" height="128"/>
@@ -47,8 +47,8 @@
                     <constraint firstItem="tTs-Zk-FCd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="3x2-bZ-3Fo"/>
                     <constraint firstItem="EKe-0E-Jbr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="48G-OR-oeC"/>
                     <constraint firstAttribute="trailing" secondItem="EKe-0E-Jbr" secondAttribute="trailing" id="AVw-Kb-bTz"/>
-                    <constraint firstItem="07h-sI-DYy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="mos-nB-AES"/>
-                    <constraint firstItem="EKe-0E-Jbr" firstAttribute="top" secondItem="07h-sI-DYy" secondAttribute="bottom" id="o2G-84-hXa"/>
+                    <constraint firstItem="07h-sI-DYy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="23" id="mos-nB-AES"/>
+                    <constraint firstItem="EKe-0E-Jbr" firstAttribute="top" secondItem="07h-sI-DYy" secondAttribute="bottom" constant="10" id="o2G-84-hXa"/>
                     <constraint firstItem="tTs-Zk-FCd" firstAttribute="top" secondItem="EKe-0E-Jbr" secondAttribute="bottom" id="qhs-OW-XhG"/>
                     <constraint firstAttribute="trailing" secondItem="tTs-Zk-FCd" secondAttribute="trailing" id="yG7-t3-WZy"/>
                 </constraints>
@@ -59,7 +59,7 @@
                 <outlet property="keywordCollectionView" destination="EKe-0E-Jbr" id="gw5-U0-mSO"/>
                 <outlet property="titleLabel" destination="07h-sI-DYy" id="WhU-0v-O7t"/>
             </connections>
-            <point key="canvasLocation" x="-68.115942028985515" y="187.16517857142856"/>
+            <point key="canvasLocation" x="-68.115942028985515" y="186.83035714285714"/>
         </tableViewCell>
     </objects>
     <resources>

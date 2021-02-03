@@ -18,17 +18,17 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wb9-dE-smy">
-                        <rect key="frame" x="16" y="13" width="42" height="21"/>
+                        <rect key="frame" x="16" y="23" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQG-GR-T4K">
-                        <rect key="frame" x="250" y="6.5" width="54" height="34"/>
+                        <rect key="frame" x="250" y="16.5" width="54" height="34"/>
                         <state key="normal" title="Button"/>
                     </button>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="kOM-Z2-VwT">
-                        <rect key="frame" x="0.0" y="34" width="320" height="70"/>
+                        <rect key="frame" x="0.0" y="44" width="320" height="60"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lmZ-c7-387">
                             <size key="itemSize" width="128" height="128"/>
@@ -46,7 +46,7 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="wb9-dE-smy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="4oK-aZ-S6b"/>
+                    <constraint firstItem="wb9-dE-smy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="23" id="4oK-aZ-S6b"/>
                     <constraint firstItem="kOM-Z2-VwT" firstAttribute="top" secondItem="wb9-dE-smy" secondAttribute="bottom" id="6lc-ij-vNe"/>
                     <constraint firstAttribute="trailing" secondItem="y0o-ZJ-cPY" secondAttribute="trailing" id="Aff-gB-Ojf"/>
                     <constraint firstItem="gQG-GR-T4K" firstAttribute="centerY" secondItem="wb9-dE-smy" secondAttribute="centerY" id="I00-r9-gvI"/>

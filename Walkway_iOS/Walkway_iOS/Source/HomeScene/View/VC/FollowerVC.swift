@@ -75,18 +75,16 @@ extension FollowerVC: UITableViewDelegate {
         if indexPath.section == 0 {
             return 376
         } else if indexPath.section == 1 {
-            return 111
+            return 121
         } else if indexPath.section == 2 {
-            return 92
+            return 112
         } else if indexPath.section == 3 {
-            return 156
+            return 176
         } else if indexPath.section == 4 {
-            return 408
+            return 418
         }
         return 50
     }
-    
-
 }
 
 // MARK: - UI

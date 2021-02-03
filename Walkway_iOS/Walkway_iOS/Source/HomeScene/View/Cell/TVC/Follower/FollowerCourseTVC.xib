@@ -18,13 +18,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vp0-j8-ARY">
-                        <rect key="frame" x="16" y="13" width="42" height="21"/>
+                        <rect key="frame" x="16" y="23" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Hb3-EN-NkD">
-                        <rect key="frame" x="0.0" y="34" width="320" height="115"/>
+                        <rect key="frame" x="0.0" y="54" width="320" height="95"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AMU-0v-dvQ">
                             <size key="itemSize" width="128" height="128"/>
@@ -45,10 +45,10 @@
                     <constraint firstAttribute="bottom" secondItem="6Z5-2l-wUI" secondAttribute="bottom" id="1RZ-Jc-ofs"/>
                     <constraint firstItem="Hb3-EN-NkD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="4HW-oH-IAH"/>
                     <constraint firstAttribute="trailing" secondItem="6Z5-2l-wUI" secondAttribute="trailing" id="4kf-kk-27W"/>
-                    <constraint firstItem="Hb3-EN-NkD" firstAttribute="top" secondItem="Vp0-j8-ARY" secondAttribute="bottom" id="9Cs-N2-MDh"/>
+                    <constraint firstItem="Hb3-EN-NkD" firstAttribute="top" secondItem="Vp0-j8-ARY" secondAttribute="bottom" constant="10" id="9Cs-N2-MDh"/>
                     <constraint firstAttribute="trailing" secondItem="Hb3-EN-NkD" secondAttribute="trailing" id="F5w-km-6Gq"/>
                     <constraint firstItem="6Z5-2l-wUI" firstAttribute="top" secondItem="Hb3-EN-NkD" secondAttribute="bottom" id="HTO-ag-3Hv"/>
-                    <constraint firstItem="Vp0-j8-ARY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="INR-QE-mhA"/>
+                    <constraint firstItem="Vp0-j8-ARY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="23" id="INR-QE-mhA"/>
                     <constraint firstItem="Vp0-j8-ARY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="dZR-v7-DvA"/>
                     <constraint firstItem="6Z5-2l-wUI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="mEg-BE-CyF"/>
                 </constraints>

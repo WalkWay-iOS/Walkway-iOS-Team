@@ -55,7 +55,7 @@ extension FollowerKeywordTVC: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 13, left: 16, bottom: 13, right: 16)
+        return UIEdgeInsets(top: 8, left: 16, bottom: 18, right: 16)
     }
 }
 
