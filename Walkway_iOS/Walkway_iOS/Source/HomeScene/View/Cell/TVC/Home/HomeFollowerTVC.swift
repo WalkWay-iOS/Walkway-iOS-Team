@@ -12,6 +12,8 @@ class HomeFollowerTVC: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var followerCollectionView: UICollectionView!
+    
+    var delegate: cellPresentDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -54,6 +56,15 @@ extension HomeFollowerTVC: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 11, left: 14, bottom: 0, right: 14)
+    }
+}
+
+extension HomeFollowerTVC: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let dvc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(identifier: "FollowerVC") as? FollowerVC else {
+            return
+        }
+        delegate?.collectionViewCellTapedFollower(dvc: dvc)
     }
 }
 

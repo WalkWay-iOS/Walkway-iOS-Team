@@ -108,6 +108,33 @@
             </objects>
             <point key="canvasLocation" x="-300" y="813"/>
         </scene>
+        <!--FollowerVC-->
+        <scene sceneID="XTZ-3D-D6g">
+            <objects>
+                <viewController storyboardIdentifier="FollowerVC" id="ycz-rX-M7V" customClass="FollowerVC" customModule="Walkway_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wNt-pX-dPJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qmb-eI-JXJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5LM-Km-Rgq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5LM-Km-Rgq" firstAttribute="trailing" secondItem="qmb-eI-JXJ" secondAttribute="trailing" id="QRx-x7-ZUC"/>
+                            <constraint firstItem="qmb-eI-JXJ" firstAttribute="top" secondItem="5LM-Km-Rgq" secondAttribute="top" id="YPa-A5-NtP"/>
+                            <constraint firstItem="5LM-Km-Rgq" firstAttribute="bottom" secondItem="qmb-eI-JXJ" secondAttribute="bottom" id="ma6-Y2-EDw"/>
+                            <constraint firstItem="qmb-eI-JXJ" firstAttribute="leading" secondItem="5LM-Km-Rgq" secondAttribute="leading" id="mv7-qW-ve2"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YAB-pp-Scc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="465" y="813"/>
+        </scene>
         <!--Popular CourseVC-->
         <scene sceneID="atS-0v-Cy5">
             <objects>

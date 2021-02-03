@@ -85,6 +85,7 @@
 		EDD2608825C401F500619E8E /* Extensions+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2608725C401F500619E8E /* Extensions+String.swift */; };
 		EDD2608B25C44D5A00619E8E /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2608A25C44D5A00619E8E /* SignInVC.swift */; };
 		EDD2608E25C4546700619E8E /* FindIdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2608D25C4546700619E8E /* FindIdVC.swift */; };
+		EDDF9A4A25CA4F5D00F5F7FD /* FollowerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A4925CA4F5D00F5F7FD /* FollowerVC.swift */; };
 		EDE0BDEA25BD912F00ADE8D1 /* CourseDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDE925BD912F00ADE8D1 /* CourseDetailVC.swift */; };
 		EDE0BDED25BD9B9500ADE8D1 /* Extensions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDEC25BD9B9500ADE8D1 /* Extensions+UIViewController.swift */; };
 		EDE0BDF225BD9E9900ADE8D1 /* DetailHeaderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDF025BD9E9900ADE8D1 /* DetailHeaderTVC.swift */; };
@@ -176,6 +177,7 @@
 		EDD2608725C401F500619E8E /* Extensions+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+String.swift"; sourceTree = "<group>"; };
 		EDD2608A25C44D5A00619E8E /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		EDD2608D25C4546700619E8E /* FindIdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindIdVC.swift; sourceTree = "<group>"; };
+		EDDF9A4925CA4F5D00F5F7FD /* FollowerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerVC.swift; sourceTree = "<group>"; };
 		EDE0BDE925BD912F00ADE8D1 /* CourseDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailVC.swift; sourceTree = "<group>"; };
 		EDE0BDEC25BD9B9500ADE8D1 /* Extensions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIViewController.swift"; sourceTree = "<group>"; };
 		EDE0BDF025BD9E9900ADE8D1 /* DetailHeaderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderTVC.swift; sourceTree = "<group>"; };
@@ -425,6 +427,7 @@
 				EDD055B825BBF402009FA3FB /* BookmarkCourseVC.swift */,
 				EDD055C025BC282F009FA3FB /* LatestCourseVC.swift */,
 				EDE0BDE925BD912F00ADE8D1 /* CourseDetailVC.swift */,
+				EDDF9A4925CA4F5D00F5F7FD /* FollowerVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -848,6 +851,7 @@
 				EDD2607125C3B9AE00619E8E /* HashtagTVC.swift in Sources */,
 				EDD2608B25C44D5A00619E8E /* SignInVC.swift in Sources */,
 				ED16C84525B7FC1D003DD0F0 /* TabbarController.swift in Sources */,
+				EDDF9A4A25CA4F5D00F5F7FD /* FollowerVC.swift in Sources */,
 				ED16C85C25B7FE1B003DD0F0 /* AlertVC.swift in Sources */,
 				ED16C87125B80150003DD0F0 /* CreateCourseVC.swift in Sources */,
 				EDE0BDED25BD9B9500ADE8D1 /* Extensions+UIViewController.swift in Sources */,
