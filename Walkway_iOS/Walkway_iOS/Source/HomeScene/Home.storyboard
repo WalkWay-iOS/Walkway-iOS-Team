@@ -130,6 +130,9 @@
                             <constraint firstItem="qmb-eI-JXJ" firstAttribute="leading" secondItem="5LM-Km-Rgq" secondAttribute="leading" id="mv7-qW-ve2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="followerTableView" destination="qmb-eI-JXJ" id="9Sg-kx-JWP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YAB-pp-Scc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
