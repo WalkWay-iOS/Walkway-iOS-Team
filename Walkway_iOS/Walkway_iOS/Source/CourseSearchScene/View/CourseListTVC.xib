@@ -62,14 +62,49 @@
                             <constraint firstAttribute="height" constant="22" id="JEU-md-cTn"/>
                             <constraint firstAttribute="width" constant="22" id="gDM-go-MdT"/>
                         </constraints>
-                        <state key="normal" title="Button" image="bookmark.fill" catalog="system"/>
+                        <state key="normal" title="Button" image="hear"/>
+                        <connections>
+                            <action selector="courseBookmarkOnOff:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Xye-cH-hMP"/>
+                        </connections>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2w-OB-dd2">
+                        <rect key="frame" x="106" y="78" width="22" height="10"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3U-Kk-TaN">
+                        <rect key="frame" x="148" y="78" width="22" height="10"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6h-oN-STh">
+                        <rect key="frame" x="190" y="78" width="22" height="10"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEX-6a-wPd">
+                        <rect key="frame" x="232" y="78" width="22" height="10"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHi-Xb-yyg">
+                        <rect key="frame" x="274" y="78" width="22" height="10"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="ThX-Zv-SIy" firstAttribute="top" secondItem="QhB-tG-L4o" secondAttribute="bottom" constant="5" id="0b4-Yh-vzz"/>
                     <constraint firstItem="QhB-tG-L4o" firstAttribute="top" secondItem="d1H-Ye-G2W" secondAttribute="top" id="2dH-t8-xBM"/>
                     <constraint firstItem="d1H-Ye-G2W" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="36j-h6-u7s"/>
+                    <constraint firstItem="oEX-6a-wPd" firstAttribute="bottom" secondItem="m6h-oN-STh" secondAttribute="bottom" id="3fG-DG-8su"/>
                     <constraint firstItem="2vc-UQ-gn6" firstAttribute="leading" secondItem="ThX-Zv-SIy" secondAttribute="trailing" constant="20" id="4bW-wF-Ukx"/>
+                    <constraint firstItem="m6h-oN-STh" firstAttribute="leading" secondItem="A3U-Kk-TaN" secondAttribute="trailing" constant="20" id="7y2-wk-FTk"/>
                     <constraint firstItem="QhB-tG-L4o" firstAttribute="leading" secondItem="d1H-Ye-G2W" secondAttribute="trailing" constant="20" id="A4K-3e-wLq"/>
                     <constraint firstAttribute="trailing" secondItem="eLr-aT-6an" secondAttribute="trailing" constant="10" id="Add-US-rJ1"/>
                     <constraint firstAttribute="bottom" secondItem="d1H-Ye-G2W" secondAttribute="bottom" constant="10" id="BjN-zA-I2W"/>
@@ -77,12 +112,20 @@
                     <constraint firstAttribute="trailing" secondItem="eLr-aT-6an" secondAttribute="trailing" constant="10" id="JdA-SV-D70"/>
                     <constraint firstItem="D8P-E3-Lo0" firstAttribute="top" secondItem="2vc-UQ-gn6" secondAttribute="top" id="Jpx-aF-rZT"/>
                     <constraint firstItem="d1H-Ye-G2W" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="KOu-fW-ooV"/>
+                    <constraint firstItem="A3U-Kk-TaN" firstAttribute="leading" secondItem="U2w-OB-dd2" secondAttribute="trailing" constant="20" id="MFe-ik-495"/>
+                    <constraint firstItem="oEX-6a-wPd" firstAttribute="leading" secondItem="m6h-oN-STh" secondAttribute="trailing" constant="20" id="PNV-PK-jYu"/>
+                    <constraint firstItem="cHi-Xb-yyg" firstAttribute="leading" secondItem="oEX-6a-wPd" secondAttribute="trailing" constant="20" id="PlJ-Sb-qBR"/>
                     <constraint firstItem="ThX-Zv-SIy" firstAttribute="leading" secondItem="QhB-tG-L4o" secondAttribute="leading" id="R8j-kb-LzK"/>
+                    <constraint firstItem="cHi-Xb-yyg" firstAttribute="bottom" secondItem="oEX-6a-wPd" secondAttribute="bottom" id="RFf-NS-DMc"/>
                     <constraint firstItem="2vc-UQ-gn6" firstAttribute="top" secondItem="ThX-Zv-SIy" secondAttribute="top" id="V79-2S-Jx1"/>
                     <constraint firstAttribute="trailing" secondItem="eLr-aT-6an" secondAttribute="trailing" constant="10" id="dCV-IV-tIf"/>
                     <constraint firstItem="eLr-aT-6an" firstAttribute="centerY" secondItem="D8P-E3-Lo0" secondAttribute="centerY" id="fTJ-9T-p5y"/>
+                    <constraint firstItem="m6h-oN-STh" firstAttribute="bottom" secondItem="A3U-Kk-TaN" secondAttribute="bottom" id="hKS-uX-V5h"/>
+                    <constraint firstItem="U2w-OB-dd2" firstAttribute="bottom" secondItem="d1H-Ye-G2W" secondAttribute="bottom" id="hbM-V8-3xL"/>
+                    <constraint firstItem="A3U-Kk-TaN" firstAttribute="bottom" secondItem="U2w-OB-dd2" secondAttribute="bottom" id="lF6-Ta-wSZ"/>
                     <constraint firstItem="t4Z-48-57U" firstAttribute="leading" secondItem="2vc-UQ-gn6" secondAttribute="trailing" constant="20" id="n56-hC-k2m"/>
                     <constraint firstItem="D8P-E3-Lo0" firstAttribute="leading" secondItem="t4Z-48-57U" secondAttribute="trailing" constant="2" id="vjx-Oc-yMw"/>
+                    <constraint firstItem="U2w-OB-dd2" firstAttribute="leading" secondItem="QhB-tG-L4o" secondAttribute="leading" id="zuR-Vs-eaB"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -94,11 +137,11 @@
                 <outlet property="courseStarLabel" destination="D8P-E3-Lo0" id="hkk-XL-BKU"/>
                 <outlet property="courseTimeLabel" destination="2vc-UQ-gn6" id="aH8-Kh-6d7"/>
             </connections>
-            <point key="canvasLocation" x="28.985507246376812" y="81.696428571428569"/>
+            <point key="canvasLocation" x="-9" y="-31"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="bookmark.fill" catalog="system" width="112" height="128"/>
+        <image name="hear" width="128" height="128"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
