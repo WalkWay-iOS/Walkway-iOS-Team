@@ -96,6 +96,8 @@
 		EDD2608B25C44D5A00619E8E /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2608A25C44D5A00619E8E /* SignInVC.swift */; };
 		EDD2608E25C4546700619E8E /* FindIdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2608D25C4546700619E8E /* FindIdVC.swift */; };
 		EDDF9A4A25CA4F5D00F5F7FD /* FollowerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A4925CA4F5D00F5F7FD /* FollowerVC.swift */; };
+		EDDF9A5A25CA67C300F5F7FD /* FollowerHeaderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A5825CA67C300F5F7FD /* FollowerHeaderTVC.swift */; };
+		EDDF9A5B25CA67C300F5F7FD /* FollowerHeaderTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDF9A5925CA67C300F5F7FD /* FollowerHeaderTVC.xib */; };
 		EDE0BDEA25BD912F00ADE8D1 /* CourseDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDE925BD912F00ADE8D1 /* CourseDetailVC.swift */; };
 		EDE0BDED25BD9B9500ADE8D1 /* Extensions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDEC25BD9B9500ADE8D1 /* Extensions+UIViewController.swift */; };
 		EDE0BDF225BD9E9900ADE8D1 /* DetailHeaderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDF025BD9E9900ADE8D1 /* DetailHeaderTVC.swift */; };
@@ -198,6 +200,8 @@
 		EDD2608A25C44D5A00619E8E /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		EDD2608D25C4546700619E8E /* FindIdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindIdVC.swift; sourceTree = "<group>"; };
 		EDDF9A4925CA4F5D00F5F7FD /* FollowerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerVC.swift; sourceTree = "<group>"; };
+		EDDF9A5825CA67C300F5F7FD /* FollowerHeaderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerHeaderTVC.swift; sourceTree = "<group>"; };
+		EDDF9A5925CA67C300F5F7FD /* FollowerHeaderTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowerHeaderTVC.xib; sourceTree = "<group>"; };
 		EDE0BDE925BD912F00ADE8D1 /* CourseDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailVC.swift; sourceTree = "<group>"; };
 		EDE0BDEC25BD9B9500ADE8D1 /* Extensions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIViewController.swift"; sourceTree = "<group>"; };
 		EDE0BDF025BD9E9900ADE8D1 /* DetailHeaderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderTVC.swift; sourceTree = "<group>"; };
@@ -584,6 +588,7 @@
 		ED16C89025BA7445003DD0F0 /* TVC */ = {
 			isa = PBXGroup;
 			children = (
+				EDDF9A5725CA67A300F5F7FD /* Follower */,
 				EDE0BDEF25BD9E6300ADE8D1 /* Detail */,
 				ED7622C325BB259A007E1C98 /* ViewAll */,
 				ED94370925BABC94009642E5 /* Home */,
@@ -730,6 +735,15 @@
 			path = VC;
 			sourceTree = "<group>";
 		};
+		EDDF9A5725CA67A300F5F7FD /* Follower */ = {
+			isa = PBXGroup;
+			children = (
+				EDDF9A5825CA67C300F5F7FD /* FollowerHeaderTVC.swift */,
+				EDDF9A5925CA67C300F5F7FD /* FollowerHeaderTVC.xib */,
+			);
+			path = Follower;
+			sourceTree = "<group>";
+		};
 		EDE0BDEF25BD9E6300ADE8D1 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -815,6 +829,7 @@
 				ED16C8C225BAAB90003DD0F0 /* HomeLatestCourseCVC.xib in Resources */,
 				ED16C86E25B80136003DD0F0 /* CreateCourse.storyboard in Resources */,
 				EDF3716225BFAD680000A1F6 /* DetailExplanationTVC.xib in Resources */,
+				EDDF9A5B25CA67C300F5F7FD /* FollowerHeaderTVC.xib in Resources */,
 				ED16C89F25BA8D05003DD0F0 /* HomeFollowerTVC.xib in Resources */,
 				ED01F4E325C0144D00B9AD43 /* PhotoCVC.xib in Resources */,
 				ED16C84B25B7FCA0003DD0F0 /* Mypage.storyboard in Resources */,
@@ -951,6 +966,7 @@
 				ED16C89325BA7471003DD0F0 /* HomeBannerTVC.swift in Sources */,
 				EDD2607125C3B9AE00619E8E /* HashtagTVC.swift in Sources */,
 				EDD2608B25C44D5A00619E8E /* SignInVC.swift in Sources */,
+				EDDF9A5A25CA67C300F5F7FD /* FollowerHeaderTVC.swift in Sources */,
 				ED16C84525B7FC1D003DD0F0 /* TabbarController.swift in Sources */,
 				EDDF9A4A25CA4F5D00F5F7FD /* FollowerVC.swift in Sources */,
 				ED16C85C25B7FE1B003DD0F0 /* AlertVC.swift in Sources */,
