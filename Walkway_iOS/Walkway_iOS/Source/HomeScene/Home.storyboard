@@ -125,7 +125,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="5LM-Km-Rgq" firstAttribute="trailing" secondItem="qmb-eI-JXJ" secondAttribute="trailing" id="QRx-x7-ZUC"/>
-                            <constraint firstItem="qmb-eI-JXJ" firstAttribute="top" secondItem="5LM-Km-Rgq" secondAttribute="top" id="YPa-A5-NtP"/>
+                            <constraint firstItem="qmb-eI-JXJ" firstAttribute="top" secondItem="wNt-pX-dPJ" secondAttribute="top" id="YPa-A5-NtP"/>
                             <constraint firstAttribute="bottom" secondItem="qmb-eI-JXJ" secondAttribute="bottom" id="ma6-Y2-EDw"/>
                             <constraint firstItem="qmb-eI-JXJ" firstAttribute="leading" secondItem="5LM-Km-Rgq" secondAttribute="leading" id="mv7-qW-ve2"/>
                         </constraints>

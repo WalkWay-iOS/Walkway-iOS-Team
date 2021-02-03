@@ -35,12 +35,20 @@ extension FollowerVC: UITableViewDataSource {
             }
             cell.selectionStyle = .none
             return cell
+        } else if indexPath.section == 1 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: FollowerBadgeTVC.identifier) as? FollowerBadgeTVC else {
+                return UITableViewCell()
+            }
+            cell.selectionStyle = .none
+            return cell
+        } else if indexPath.section == 2 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: FollowerKeywordTVC.identifier) as? FollowerKeywordTVC else {
+                return UITableViewCell()
+            }
+            cell.selectionStyle = .none
+            return cell
         }
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: FollowerBadgeTVC.identifier) as? FollowerBadgeTVC else {
-            return UITableViewCell()
-        }
-        cell.selectionStyle = .none
-        return cell
+        return UITableViewCell()
     }
 }
 
@@ -50,6 +58,8 @@ extension FollowerVC: UITableViewDelegate {
             return 376
         } else if indexPath.section == 1 {
             return 111
+        } else if indexPath.section == 2 {
+            return 92
         }
         return 0
     }
@@ -92,6 +102,9 @@ extension FollowerVC {
         
         let badgeNib = UINib(nibName: "FollowerBadgeTVC", bundle: nil)
         followerTableView.register(badgeNib, forCellReuseIdentifier: FollowerBadgeTVC.identifier)
+        
+        let keywordNib = UINib(nibName: "FollowerKeywordTVC", bundle: nil)
+        followerTableView.register(keywordNib, forCellReuseIdentifier: FollowerKeywordTVC.identifier)
     }
     
     private func setButton() {
