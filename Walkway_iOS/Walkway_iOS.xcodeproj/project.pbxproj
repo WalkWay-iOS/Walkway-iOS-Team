@@ -10,12 +10,12 @@
 		1766393A52A4BD11CD141885 /* Pods_Walkway_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA9CA972E2FCA8C7F9A8776 /* Pods_Walkway_iOS.framework */; };
 		74685F5F25C3C6DC004EDFEC /* CourseRunningTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74685F5E25C3C6DC004EDFEC /* CourseRunningTab.storyboard */; };
 		74685F6525C3C72D004EDFEC /* CourseRunningTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74685F6425C3C72D004EDFEC /* CourseRunningTabVC.swift */; };
+		748C63B625CA81F70072B8AE /* CourseRunningInfoCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748C63B525CA81F70072B8AE /* CourseRunningInfoCVC.swift */; };
+		748C63BA25CA912F0072B8AE /* RunningInfoHotPlaceCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748C63B925CA912F0072B8AE /* RunningInfoHotPlaceCVC.swift */; };
 		74F5D81325C64813003EA002 /* CourseRunningMapCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F5D81125C64813003EA002 /* CourseRunningMapCVC.swift */; };
 		74F5D81425C64813003EA002 /* CourseRunningMapCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74F5D81225C64813003EA002 /* CourseRunningMapCVC.xib */; };
 		74F5D81825C64829003EA002 /* CourseRunningSettingCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F5D81625C64829003EA002 /* CourseRunningSettingCVC.swift */; };
 		74F5D81925C64829003EA002 /* CourseRunningSettingCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74F5D81725C64829003EA002 /* CourseRunningSettingCVC.xib */; };
-		74F5D82525C649F2003EA002 /* RunningDetailInfoCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F5D82325C649F2003EA002 /* RunningDetailInfoCVC.swift */; };
-		74F5D82625C649F2003EA002 /* RunningDetailInfoCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74F5D82425C649F2003EA002 /* RunningDetailInfoCVC.xib */; };
 		74FDE74725C17CF2002EF553 /* CourseListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FDE74525C17CF2002EF553 /* CourseListTVC.swift */; };
 		74FDE74825C17CF2002EF553 /* CourseListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74FDE74625C17CF2002EF553 /* CourseListTVC.xib */; };
 		ED01F4CF25BFBFCB00B9AD43 /* DetailReviewTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED01F4CD25BFBFCB00B9AD43 /* DetailReviewTVC.swift */; };
@@ -108,12 +108,12 @@
 		1438CA5AD824FFC830D71151 /* Pods-Walkway_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Walkway_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Walkway_iOS/Pods-Walkway_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		74685F5E25C3C6DC004EDFEC /* CourseRunningTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CourseRunningTab.storyboard; sourceTree = "<group>"; };
 		74685F6425C3C72D004EDFEC /* CourseRunningTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRunningTabVC.swift; sourceTree = "<group>"; };
+		748C63B525CA81F70072B8AE /* CourseRunningInfoCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRunningInfoCVC.swift; sourceTree = "<group>"; };
+		748C63B925CA912F0072B8AE /* RunningInfoHotPlaceCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningInfoHotPlaceCVC.swift; sourceTree = "<group>"; };
 		74F5D81125C64813003EA002 /* CourseRunningMapCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRunningMapCVC.swift; sourceTree = "<group>"; };
 		74F5D81225C64813003EA002 /* CourseRunningMapCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseRunningMapCVC.xib; sourceTree = "<group>"; };
 		74F5D81625C64829003EA002 /* CourseRunningSettingCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRunningSettingCVC.swift; sourceTree = "<group>"; };
 		74F5D81725C64829003EA002 /* CourseRunningSettingCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseRunningSettingCVC.xib; sourceTree = "<group>"; };
-		74F5D82325C649F2003EA002 /* RunningDetailInfoCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningDetailInfoCVC.swift; sourceTree = "<group>"; };
-		74F5D82425C649F2003EA002 /* RunningDetailInfoCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunningDetailInfoCVC.xib; sourceTree = "<group>"; };
 		74FDE74525C17CF2002EF553 /* CourseListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListTVC.swift; sourceTree = "<group>"; };
 		74FDE74625C17CF2002EF553 /* CourseListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseListTVC.xib; sourceTree = "<group>"; };
 		A4E36DDEE106831C5696941A /* Pods-Walkway_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Walkway_iOS.release.xcconfig"; path = "Target Support Files/Pods-Walkway_iOS/Pods-Walkway_iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -239,7 +239,6 @@
 		74685F6125C3C6E7004EDFEC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				74F5D82125C649B1003EA002 /* Detail */,
 				74F5D81D25C6485C003EA002 /* CC */,
 				74F5D81C25C6483E003EA002 /* CVC */,
 				74685F6225C3C6ED004EDFEC /* VC */,
@@ -268,6 +267,8 @@
 			children = (
 				74F5D81125C64813003EA002 /* CourseRunningMapCVC.swift */,
 				74F5D81625C64829003EA002 /* CourseRunningSettingCVC.swift */,
+				748C63B525CA81F70072B8AE /* CourseRunningInfoCVC.swift */,
+				748C63B925CA912F0072B8AE /* RunningInfoHotPlaceCVC.swift */,
 			);
 			path = CVC;
 			sourceTree = "<group>";
@@ -279,23 +280,6 @@
 				74F5D81725C64829003EA002 /* CourseRunningSettingCVC.xib */,
 			);
 			path = CC;
-			sourceTree = "<group>";
-		};
-		74F5D82125C649B1003EA002 /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-				74F5D82225C649C9003EA002 /* CVC */,
-			);
-			path = Detail;
-			sourceTree = "<group>";
-		};
-		74F5D82225C649C9003EA002 /* CVC */ = {
-			isa = PBXGroup;
-			children = (
-				74F5D82325C649F2003EA002 /* RunningDetailInfoCVC.swift */,
-				74F5D82425C649F2003EA002 /* RunningDetailInfoCVC.xib */,
-			);
-			path = CVC;
 			sourceTree = "<group>";
 		};
 		E8777F2FF776D513FBC49364 /* Frameworks */ = {
@@ -822,7 +806,6 @@
 				EDD055C625BC2AFA009FA3FB /* LatestCourseTVC.xib in Resources */,
 				EDD2607225C3B9AE00619E8E /* HashtagTVC.xib in Resources */,
 				ED16C84825B7FC8F003DD0F0 /* Home.storyboard in Resources */,
-				74F5D82625C649F2003EA002 /* RunningDetailInfoCVC.xib in Resources */,
 				ED16C82425B7F92F003DD0F0 /* LaunchScreen.storyboard in Resources */,
 				74FDE74825C17CF2002EF553 /* CourseListTVC.xib in Resources */,
 				74F5D81925C64829003EA002 /* CourseRunningSettingCVC.xib in Resources */,
@@ -931,6 +914,7 @@
 				74685F6525C3C72D004EDFEC /* CourseRunningTabVC.swift in Sources */,
 				EDE0BDEA25BD912F00ADE8D1 /* CourseDetailVC.swift in Sources */,
 				EDCC755325C2A68600EF435A /* MakeCreateCourseVC.swift in Sources */,
+				748C63B625CA81F70072B8AE /* CourseRunningInfoCVC.swift in Sources */,
 				ED16C8B725BAA68F003DD0F0 /* HomeBookmarkCourseCVC.swift in Sources */,
 				EDD2608E25C4546700619E8E /* FindIdVC.swift in Sources */,
 				ED16C86825B7FE7A003DD0F0 /* HomeVC.swift in Sources */,
@@ -959,12 +943,12 @@
 				EDE0BDED25BD9B9500ADE8D1 /* Extensions+UIViewController.swift in Sources */,
 				ED7622C125BB13DC007E1C98 /* cellPresentDelegate.swift in Sources */,
 				ED16C81A25B7F92F003DD0F0 /* SceneDelegate.swift in Sources */,
-				74F5D82525C649F2003EA002 /* RunningDetailInfoCVC.swift in Sources */,
 				74FDE74725C17CF2002EF553 /* CourseListTVC.swift in Sources */,
 				ED7622C625BB25D0007E1C98 /* PopularCourseTVC.swift in Sources */,
 				ED16C8C125BAAB90003DD0F0 /* HomeLatestCourseCVC.swift in Sources */,
 				ED01F4D425BFDB1000B9AD43 /* ReviewTVC.swift in Sources */,
 				EDD2608825C401F500619E8E /* Extensions+String.swift in Sources */,
+				748C63BA25CA912F0072B8AE /* RunningInfoHotPlaceCVC.swift in Sources */,
 				ED16C86225B7FE50003DD0F0 /* CourseSearchVC.swift in Sources */,
 				ED16C8A825BA9BB4003DD0F0 /* HomePopularCourseTVC.swift in Sources */,
 				ED16C8B225BAA4FD003DD0F0 /* HomeBookmarkCourseTVC.swift in Sources */,
