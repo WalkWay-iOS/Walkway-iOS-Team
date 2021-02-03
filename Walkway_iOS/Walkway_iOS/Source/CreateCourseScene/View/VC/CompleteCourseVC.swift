@@ -13,20 +13,28 @@ class CompleteCourseVC: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var addPhotoButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var hashInfoLabel: UILabel!
     @IBOutlet weak var distanceTitleLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var backgroundLabel: UILabel!
+    @IBOutlet weak var backgroundInfoLabel: UILabel!
     @IBOutlet weak var timeTitleLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var hashtagLabel: UILabel!
+    @IBOutlet weak var emptyLabel: UILabel!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var infoView: UIView!
+    @IBOutlet weak var emptyView: UIView!
+    @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var hashtagTableView: UITableView!
     
     var mapView = GMSMapView()
     var camera = GMSCameraPosition()
+    
+    let picker = UIImagePickerController()
     
     var hashtags: [String] = []
     var coordinates: [CLLocationCoordinate2D] = []
@@ -64,6 +72,7 @@ extension CompleteCourseVC: UITableViewDelegate {
         if editingStyle == .delete {
             hashtags.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            confirmTableView()
         }
     }
     
@@ -73,6 +82,31 @@ extension CompleteCourseVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
+    }
+}
+
+// MARK: - Picker
+extension CompleteCourseVC : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            backgroundImageView.image = image
+            backgroundImageView.sizeToFit()
+        }
+        dismiss(animated: true, completion: nil)
+    }
+
+    func openLibrary(){
+        picker.sourceType = .photoLibrary
+        present(picker, animated: false, completion: nil)
+    }
+
+    func openCamera(){
+        if(UIImagePickerController .isSourceTypeAvailable(.camera)){
+            picker.sourceType = .camera
+            present(picker, animated: false, completion: nil)
+        } else {
+            print("Camera not available")
+        }
     }
 }
 
@@ -96,6 +130,7 @@ extension CompleteCourseVC: UITextFieldDelegate {
 // MARK: - UI
 extension CompleteCourseVC {
     private func setUI() {
+        setPicker()
         setTableView()
         setTableViewNib()
         setView()
@@ -104,11 +139,16 @@ extension CompleteCourseVC {
         setTextField()
     }
     
+    private func setPicker() {
+        picker.delegate = self
+    }
+    
     private func setTableView() {
         hashtagTableView.delegate = self
         hashtagTableView.dataSource = self
         hashtagTableView.separatorInset.left = 0
         hashtagTableView.separatorColor = .clear
+        confirmTableView()
     }
     
     private func setTableViewNib() {
@@ -118,6 +158,7 @@ extension CompleteCourseVC {
     
     private func setView() {
         infoView.backgroundColor = UIColor.bookmarkDarkBlue.withAlphaComponent(0.5)
+        emptyView.backgroundColor = .gray30
     }
     
     private func setLabel() {
@@ -150,6 +191,17 @@ extension CompleteCourseVC {
         hashInfoLabel.text = "나만의 해시태그는 버튼을 눌러서 추가하고 해시태그를 밀어서 삭제하세요"
         hashInfoLabel.font = .systemFont(ofSize: 9, weight: .semibold)
         hashInfoLabel.textColor = .bookmarkGray
+        
+        backgroundLabel.text = "#대표사진 설정하기"
+        backgroundLabel.font = .systemFont(ofSize: 18, weight: .semibold)
+        
+        backgroundInfoLabel.text = "대표사진을 설정하지 않으면 Walkway 로고로 사진이 설정됩니다"
+        backgroundInfoLabel.font = .systemFont(ofSize: 9, weight: .semibold)
+        backgroundInfoLabel.textColor = .bookmarkGray
+        
+        emptyLabel.text = "해시태그가 존재하지 않아요😢"
+        emptyLabel.font = .systemFont(ofSize: 13, weight: .medium)
+        emptyLabel.textColor = .gray70
     }
     
     private func setButton() {
@@ -168,6 +220,13 @@ extension CompleteCourseVC {
         addButton.setImage(UIImage(systemName: "plus.circle.fill"), for: .normal)
         addButton.setPreferredSymbolConfiguration(.init(pointSize: 18, weight: .regular, scale: .large), forImageIn: .normal)
         addButton.addTarget(self, action: #selector(touchUpAdd), for: .touchUpInside)
+        
+        addPhotoButton.setTitle("", for: .normal)
+        addPhotoButton.tintColor = .bookmarkDarkBlue
+        addPhotoButton.setImage(UIImage(systemName: "plus.circle.fill"), for: .normal)
+        addPhotoButton.setPreferredSymbolConfiguration(.init(pointSize: 18, weight: .regular, scale: .large), forImageIn: .normal)
+        addPhotoButton.addTarget(self, action: #selector(touchUpPhoto), for: .touchUpInside)
+        
     }
     
     private func setTextField() {
@@ -179,6 +238,14 @@ extension CompleteCourseVC {
         titleTextField.placeholder = "Walkway"
         titleTextField.borderStyle = .none
         titleTextField.delegate = self
+    }
+    
+    private func confirmTableView() {
+        if hashtags.isEmpty {
+            hashtagTableView.isHidden = true
+        } else {
+            hashtagTableView.isHidden = false
+        }
     }
 }
 
@@ -253,6 +320,7 @@ extension CompleteCourseVC {
             }
             dvc.saveHashtag = { text in
                 self.hashtags.append(text)
+                self.confirmTableView()
                 self.hashtagTableView.reloadData()
             }
             dvc.modalPresentationStyle = .overCurrentContext
@@ -261,5 +329,20 @@ extension CompleteCourseVC {
         } else {
             // Alert
         }
+    }
+    
+    @objc func touchUpPhoto() {
+        let alert =  UIAlertController(title: "대표사진 설정하기", message: "", preferredStyle: .actionSheet)
+        let library =  UIAlertAction(title: "사진앨범", style: .default) { (action) in
+            self.openLibrary()
+        }
+        let camera =  UIAlertAction(title: "카메라", style: .default) { (action) in
+            self.openCamera()
+        }
+        let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        alert.addAction(library)
+        alert.addAction(camera)
+        alert.addAction(cancel)
+        present(alert, animated: true, completion: nil)
     }
 }
