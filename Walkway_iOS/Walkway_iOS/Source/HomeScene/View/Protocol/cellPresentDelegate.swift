@@ -12,4 +12,5 @@ protocol cellPresentDelegate: class {
     func cellTapedBookmarkCourse()
     func cellTapedLatestCourse()
     func collectionViewCellTapedCourse(dvc: CourseDetailVC)
+    func collectionViewCellTapedFollower(dvc: FollowerVC)
 }

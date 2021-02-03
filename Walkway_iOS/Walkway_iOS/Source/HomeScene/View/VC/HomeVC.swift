@@ -38,6 +38,7 @@ extension HomeVC: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeFollowerTVC.identifier) as? HomeFollowerTVC else {
                 return UITableViewCell()
             }
+            cell.delegate = self
             cell.selectionStyle = .none
             return cell
         } else if indexPath.section == 2 {
@@ -151,6 +152,12 @@ extension HomeVC: cellPresentDelegate {
         dvc.cellTime = "시간 1시간 30분"
         dvc.cellDistance = "거리 6.0km"
         dvc.isHomeCell = true
+        dvc.modalPresentationStyle = .fullScreen
+        dvc.modalTransitionStyle = .crossDissolve
+        present(dvc, animated: true, completion: nil)
+    }
+    
+    func collectionViewCellTapedFollower(dvc: FollowerVC) {
         dvc.modalPresentationStyle = .fullScreen
         dvc.modalTransitionStyle = .crossDissolve
         present(dvc, animated: true, completion: nil)

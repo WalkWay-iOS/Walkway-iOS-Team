@@ -11,8 +11,9 @@ class HomeFollowerTVC: UITableViewCell {
     static let identifier = "HomeFollowerTVC"
     
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var viewAllButton: UIButton!
     @IBOutlet weak var followerCollectionView: UICollectionView!
+    
+    var delegate: cellPresentDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -58,13 +59,21 @@ extension HomeFollowerTVC: UICollectionViewDelegateFlowLayout {
     }
 }
 
+extension HomeFollowerTVC: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let dvc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(identifier: "FollowerVC") as? FollowerVC else {
+            return
+        }
+        delegate?.collectionViewCellTapedFollower(dvc: dvc)
+    }
+}
+
 // MARK: - UI
 extension HomeFollowerTVC {
     private func setUI() {
         setCollectionView()
         setCollectionViewNib()
         setLabel()
-        setButton()
     }
     
     private func setCollectionView() {
@@ -80,11 +89,5 @@ extension HomeFollowerTVC {
     private func setLabel() {
         titleLabel.text = "요즘 인기있는 팔로워"
         titleLabel.font = .systemFont(ofSize: 20, weight: .semibold)
-    }
-    
-    private func setButton() {
-        viewAllButton.setTitle("전체보기", for: .normal)
-        viewAllButton.titleLabel?.font = .systemFont(ofSize: 13, weight: .semibold)
-        viewAllButton.setTitleColor(.black, for: .normal)
     }
 }
