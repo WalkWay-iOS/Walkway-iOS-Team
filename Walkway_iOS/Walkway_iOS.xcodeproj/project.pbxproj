@@ -106,6 +106,10 @@
 		EDDF9A6D25CA7F4600F5F7FD /* FollowerKeywordTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDF9A6B25CA7F4600F5F7FD /* FollowerKeywordTVC.xib */; };
 		EDDF9A7125CA83C700F5F7FD /* FollowerKeywordCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A6F25CA83C700F5F7FD /* FollowerKeywordCVC.swift */; };
 		EDDF9A7225CA83C700F5F7FD /* FollowerKeywordCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDF9A7025CA83C700F5F7FD /* FollowerKeywordCVC.xib */; };
+		EDDF9A7625CA897400F5F7FD /* FollowerCourseTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A7425CA897400F5F7FD /* FollowerCourseTVC.swift */; };
+		EDDF9A7725CA897400F5F7FD /* FollowerCourseTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDF9A7525CA897400F5F7FD /* FollowerCourseTVC.xib */; };
+		EDDF9A7B25CA8C2E00F5F7FD /* FollowerCourseCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A7925CA8C2E00F5F7FD /* FollowerCourseCVC.swift */; };
+		EDDF9A7C25CA8C2E00F5F7FD /* FollowerCourseCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDF9A7A25CA8C2E00F5F7FD /* FollowerCourseCVC.xib */; };
 		EDE0BDEA25BD912F00ADE8D1 /* CourseDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDE925BD912F00ADE8D1 /* CourseDetailVC.swift */; };
 		EDE0BDED25BD9B9500ADE8D1 /* Extensions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDEC25BD9B9500ADE8D1 /* Extensions+UIViewController.swift */; };
 		EDE0BDF225BD9E9900ADE8D1 /* DetailHeaderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDF025BD9E9900ADE8D1 /* DetailHeaderTVC.swift */; };
@@ -218,6 +222,10 @@
 		EDDF9A6B25CA7F4600F5F7FD /* FollowerKeywordTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowerKeywordTVC.xib; sourceTree = "<group>"; };
 		EDDF9A6F25CA83C700F5F7FD /* FollowerKeywordCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerKeywordCVC.swift; sourceTree = "<group>"; };
 		EDDF9A7025CA83C700F5F7FD /* FollowerKeywordCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowerKeywordCVC.xib; sourceTree = "<group>"; };
+		EDDF9A7425CA897400F5F7FD /* FollowerCourseTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCourseTVC.swift; sourceTree = "<group>"; };
+		EDDF9A7525CA897400F5F7FD /* FollowerCourseTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowerCourseTVC.xib; sourceTree = "<group>"; };
+		EDDF9A7925CA8C2E00F5F7FD /* FollowerCourseCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCourseCVC.swift; sourceTree = "<group>"; };
+		EDDF9A7A25CA8C2E00F5F7FD /* FollowerCourseCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowerCourseCVC.xib; sourceTree = "<group>"; };
 		EDE0BDE925BD912F00ADE8D1 /* CourseDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailVC.swift; sourceTree = "<group>"; };
 		EDE0BDEC25BD9B9500ADE8D1 /* Extensions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIViewController.swift"; sourceTree = "<group>"; };
 		EDE0BDF025BD9E9900ADE8D1 /* DetailHeaderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderTVC.swift; sourceTree = "<group>"; };
@@ -761,6 +769,8 @@
 				EDDF9A5F25CA74F300F5F7FD /* FollowerBadgeTVC.xib */,
 				EDDF9A6A25CA7F4600F5F7FD /* FollowerKeywordTVC.swift */,
 				EDDF9A6B25CA7F4600F5F7FD /* FollowerKeywordTVC.xib */,
+				EDDF9A7425CA897400F5F7FD /* FollowerCourseTVC.swift */,
+				EDDF9A7525CA897400F5F7FD /* FollowerCourseTVC.xib */,
 			);
 			path = Follower;
 			sourceTree = "<group>";
@@ -772,6 +782,8 @@
 				EDDF9A6525CA784E00F5F7FD /* FollowerBadgeCVC.xib */,
 				EDDF9A6F25CA83C700F5F7FD /* FollowerKeywordCVC.swift */,
 				EDDF9A7025CA83C700F5F7FD /* FollowerKeywordCVC.xib */,
+				EDDF9A7925CA8C2E00F5F7FD /* FollowerCourseCVC.swift */,
+				EDDF9A7A25CA8C2E00F5F7FD /* FollowerCourseCVC.xib */,
 			);
 			path = Follower;
 			sourceTree = "<group>";
@@ -859,6 +871,7 @@
 				EDDF9A6D25CA7F4600F5F7FD /* FollowerKeywordTVC.xib in Resources */,
 				ED16C83B25B7FAE9003DD0F0 /* Tabbar.storyboard in Resources */,
 				ED16C89A25BA7AAF003DD0F0 /* HomeBannerCVC.xib in Resources */,
+				EDDF9A7725CA897400F5F7FD /* FollowerCourseTVC.xib in Resources */,
 				ED16C8C225BAAB90003DD0F0 /* HomeLatestCourseCVC.xib in Resources */,
 				ED16C86E25B80136003DD0F0 /* CreateCourse.storyboard in Resources */,
 				EDF3716225BFAD680000A1F6 /* DetailExplanationTVC.xib in Resources */,
@@ -883,6 +896,7 @@
 				EDE0BDF325BD9E9900ADE8D1 /* DetailHeaderTVC.xib in Resources */,
 				ED8A965825C81FE40088EFBA /* MessageTVC.xib in Resources */,
 				ED16C89425BA7471003DD0F0 /* HomeBannerTVC.xib in Resources */,
+				EDDF9A7C25CA8C2E00F5F7FD /* FollowerCourseCVC.xib in Resources */,
 				ED16C85125B7FCB4003DD0F0 /* CourseSearch.storyboard in Resources */,
 				74685F5F25C3C6DC004EDFEC /* CourseRunningTab.storyboard in Resources */,
 				ED01F4DD25C0076B00B9AD43 /* DetailPhotoTVC.xib in Resources */,
@@ -967,6 +981,7 @@
 				EDD055BD25BBFB70009FA3FB /* BookmarkCourseTVC.swift in Sources */,
 				EDD2608225C3CB7D00619E8E /* WelcomeLoginVC.swift in Sources */,
 				ED01F4DC25C0076B00B9AD43 /* DetailPhotoTVC.swift in Sources */,
+				EDDF9A7B25CA8C2E00F5F7FD /* FollowerCourseCVC.swift in Sources */,
 				ED8A965C25C822DE0088EFBA /* Message.swift in Sources */,
 				ED16C8BC25BAA95F003DD0F0 /* HomeLatestCourseTVC.swift in Sources */,
 				ED01F4CF25BFBFCB00B9AD43 /* DetailReviewTVC.swift in Sources */,
@@ -989,6 +1004,7 @@
 				EDCC755D25C2ECDA00EF435A /* HashtagPopUpVC.swift in Sources */,
 				EDDF9A6025CA74F300F5F7FD /* FollowerBadgeTVC.swift in Sources */,
 				ED01F4D825BFF88900B9AD43 /* Review.swift in Sources */,
+				EDDF9A7625CA897400F5F7FD /* FollowerCourseTVC.swift in Sources */,
 				ED01F4E625C02E4300B9AD43 /* Extensions+UIScrollView.swift in Sources */,
 				ED16C85625B7FDE9003DD0F0 /* MypageVC.swift in Sources */,
 				ED8A965F25C8260C0088EFBA /* ChatVC.swift in Sources */,

@@ -31,7 +31,7 @@ extension FollowerKeywordCVC {
     }
     
     private func setLabel() {
-        keywordLabel.font = .systemFont(ofSize: 13, weight: .semibold)
+        keywordLabel.font = .systemFont(ofSize: 11, weight: .semibold)
         keywordLabel.textColor = .gray80
     }
 }

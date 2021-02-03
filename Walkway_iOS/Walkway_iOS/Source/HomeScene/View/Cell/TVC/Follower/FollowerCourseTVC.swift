@@ -1,5 +1,5 @@
 //
-//  FollowerKeywordTVC.swift
+//  FollowerCourseTVC.swift
 //  Walkway_iOS
 //
 //  Created by SHIN YOON AH on 2021/02/03.
@@ -7,14 +7,14 @@
 
 import UIKit
 
-class FollowerKeywordTVC: UITableViewCell {
-    static let identifier = "FollowerKeywordTVC"
-    
-    @IBOutlet weak var bottomView: UIView!
+class FollowerCourseTVC: UITableViewCell {
+    static let identifier = "FollowerCourseTVC"
+
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var keywordCollectionView: UICollectionView!
+    @IBOutlet weak var courseCollectionView: UICollectionView!
+    @IBOutlet weak var bottomView: UIView!
     
-    var keywords: [String] = ["남산", "서울대공원", "밤", "밤산책", "신나요"]
+    var courses: [String] = ["남산 한바퀴", "남산 두바퀴", "룰루리랄라리 신나는북악산여행", "북악산가자", "집뒤에 숨어있는 보물"]
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,27 +27,27 @@ class FollowerKeywordTVC: UITableViewCell {
 }
 
 // MARK: - CollectionViewDelegate
-extension FollowerKeywordTVC: UICollectionViewDataSource {
+extension FollowerCourseTVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return keywords.count
+        return courses.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FollowerKeywordCVC.identifier, for: indexPath) as? FollowerKeywordCVC else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FollowerCourseCVC.identifier, for: indexPath) as? FollowerCourseCVC else {
             return UICollectionViewCell()
         }
-        cell.setLabelText(text: keywords[indexPath.row])
+        cell.setTitle(title: courses[indexPath.row])
         return cell
     }
 }
 
-extension FollowerKeywordTVC: UICollectionViewDelegateFlowLayout {
+extension FollowerCourseTVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 78, height: 25)
+        return CGSize(width: 220, height: 83)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 7
+        return 8
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -55,12 +55,12 @@ extension FollowerKeywordTVC: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 13, left: 16, bottom: 13, right: 16)
+        return UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
     }
 }
 
 // MARK: - UI
-extension FollowerKeywordTVC {
+extension FollowerCourseTVC {
     private func setUI() {
         setView()
         setCollectionView()
@@ -73,17 +73,17 @@ extension FollowerKeywordTVC {
     }
     
     private func setCollectionView() {
-        keywordCollectionView.delegate = self
-        keywordCollectionView.dataSource = self
+        courseCollectionView.delegate = self
+        courseCollectionView.dataSource = self
     }
     
     private func setCollectionViewNib() {
-        let nibName =  UINib(nibName: "FollowerKeywordCVC", bundle: nil)
-        keywordCollectionView.register(nibName, forCellWithReuseIdentifier: FollowerKeywordCVC.identifier)
+        let nibName =  UINib(nibName: "FollowerCourseCVC", bundle: nil)
+        courseCollectionView.register(nibName, forCellWithReuseIdentifier: FollowerCourseCVC.identifier)
     }
     
     private func setLabel() {
-        titleLabel.text = "따릉이 님의 대표키워드"
+        titleLabel.text = "따릉이 님의 코스"
         titleLabel.font = .boldSystemFont(ofSize: 16)
     }
 }

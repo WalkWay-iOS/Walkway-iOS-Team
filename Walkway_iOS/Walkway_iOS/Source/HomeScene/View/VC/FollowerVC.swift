@@ -47,6 +47,12 @@ extension FollowerVC: UITableViewDataSource {
             }
             cell.selectionStyle = .none
             return cell
+        } else if indexPath.section == 3 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: FollowerCourseTVC.identifier) as? FollowerCourseTVC else {
+                return UITableViewCell()
+            }
+            cell.selectionStyle = .none
+            return cell
         }
         return UITableViewCell()
     }
@@ -60,6 +66,8 @@ extension FollowerVC: UITableViewDelegate {
             return 111
         } else if indexPath.section == 2 {
             return 92
+        } else if indexPath.section == 3 {
+            return 156
         }
         return 0
     }
@@ -105,6 +113,9 @@ extension FollowerVC {
         
         let keywordNib = UINib(nibName: "FollowerKeywordTVC", bundle: nil)
         followerTableView.register(keywordNib, forCellReuseIdentifier: FollowerKeywordTVC.identifier)
+        
+        let courseNib = UINib(nibName: "FollowerCourseTVC", bundle: nil)
+        followerTableView.register(courseNib, forCellReuseIdentifier: FollowerCourseTVC.identifier)
     }
     
     private func setButton() {
