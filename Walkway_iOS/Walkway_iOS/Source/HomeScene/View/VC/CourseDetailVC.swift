@@ -62,6 +62,7 @@ extension CourseDetailVC: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: DetailReviewTVC.identifier) as? DetailReviewTVC else {
                 return UITableViewCell()
             }
+            cell.delegate = self
             cell.setRate(rate: cellRate ?? 0.0, isHome: isHomeCell ?? false)
             cell.selectionStyle = .none
             return cell
@@ -352,5 +353,20 @@ extension CourseDetailVC {
         } else {
             stickyView.isHidden = true
         }
+    }
+}
+
+// MARK: - Delegate
+extension CourseDetailVC: detailDelegate {
+    func cellTapedReview(dvc: DetailReviewVC) {
+        let transition = CATransition()
+        transition.duration = 0.5
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromRight
+        self.view.window!.layer.add(transition, forKey: kCATransition)
+        
+        dvc.modalPresentationStyle = .fullScreen
+        present(dvc, animated: false, completion: nil)
     }
 }

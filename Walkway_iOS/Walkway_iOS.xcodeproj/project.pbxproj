@@ -119,6 +119,8 @@
 		EDDF9A9525CABC7300F5F7FD /* BannerHeaderTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDF9A9325CABC7300F5F7FD /* BannerHeaderTVC.xib */; };
 		EDDF9A9825CABFD700F5F7FD /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A9725CABFD700F5F7FD /* Country.swift */; };
 		EDDF9A9B25CAC5DD00F5F7FD /* followerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A9A25CAC5DD00F5F7FD /* followerDelegate.swift */; };
+		EDDF9A9E25CACD1600F5F7FD /* DetailReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A9D25CACD1600F5F7FD /* DetailReviewVC.swift */; };
+		EDDF9AA125CACF1100F5F7FD /* detailDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9AA025CACF1100F5F7FD /* detailDelegate.swift */; };
 		EDE0BDEA25BD912F00ADE8D1 /* CourseDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDE925BD912F00ADE8D1 /* CourseDetailVC.swift */; };
 		EDE0BDED25BD9B9500ADE8D1 /* Extensions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDEC25BD9B9500ADE8D1 /* Extensions+UIViewController.swift */; };
 		EDE0BDF225BD9E9900ADE8D1 /* DetailHeaderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDF025BD9E9900ADE8D1 /* DetailHeaderTVC.swift */; };
@@ -244,6 +246,8 @@
 		EDDF9A9325CABC7300F5F7FD /* BannerHeaderTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerHeaderTVC.xib; sourceTree = "<group>"; };
 		EDDF9A9725CABFD700F5F7FD /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		EDDF9A9A25CAC5DD00F5F7FD /* followerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = followerDelegate.swift; sourceTree = "<group>"; };
+		EDDF9A9D25CACD1600F5F7FD /* DetailReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailReviewVC.swift; sourceTree = "<group>"; };
+		EDDF9AA025CACF1100F5F7FD /* detailDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailDelegate.swift; sourceTree = "<group>"; };
 		EDE0BDE925BD912F00ADE8D1 /* CourseDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailVC.swift; sourceTree = "<group>"; };
 		EDE0BDEC25BD9B9500ADE8D1 /* Extensions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIViewController.swift"; sourceTree = "<group>"; };
 		EDE0BDF025BD9E9900ADE8D1 /* DetailHeaderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderTVC.swift; sourceTree = "<group>"; };
@@ -569,6 +573,7 @@
 				EDE0BDE925BD912F00ADE8D1 /* CourseDetailVC.swift */,
 				EDDF9A4925CA4F5D00F5F7FD /* FollowerVC.swift */,
 				EDDF9A8E25CAB7D500F5F7FD /* BannerVC.swift */,
+				EDDF9A9D25CACD1600F5F7FD /* DetailReviewVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -658,6 +663,7 @@
 			children = (
 				ED7622C025BB13DC007E1C98 /* cellPresentDelegate.swift */,
 				EDDF9A9A25CAC5DD00F5F7FD /* followerDelegate.swift */,
+				EDDF9AA025CACF1100F5F7FD /* detailDelegate.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -1028,6 +1034,7 @@
 				EDD055C525BC2AFA009FA3FB /* LatestCourseTVC.swift in Sources */,
 				EDCC755925C2CADA00EF435A /* Extensions+UITextField.swift in Sources */,
 				EDD055C125BC282F009FA3FB /* LatestCourseVC.swift in Sources */,
+				EDDF9A9E25CACD1600F5F7FD /* DetailReviewVC.swift in Sources */,
 				EDD055B925BBF402009FA3FB /* BookmarkCourseVC.swift in Sources */,
 				EDDF9A8025CA90EC00F5F7FD /* FollowerLatestTVC.swift in Sources */,
 				ED16C89E25BA8D05003DD0F0 /* HomeFollowerTVC.swift in Sources */,
@@ -1068,6 +1075,7 @@
 				ED16C85C25B7FE1B003DD0F0 /* AlertVC.swift in Sources */,
 				74F5D81825C64829003EA002 /* CourseRunningSettingCVC.swift in Sources */,
 				EDDF9A9425CABC7300F5F7FD /* BannerHeaderTVC.swift in Sources */,
+				EDDF9AA125CACF1100F5F7FD /* detailDelegate.swift in Sources */,
 				ED16C87125B80150003DD0F0 /* CreateCourseVC.swift in Sources */,
 				EDE0BDED25BD9B9500ADE8D1 /* Extensions+UIViewController.swift in Sources */,
 				EDDF9A8F25CAB7D500F5F7FD /* BannerVC.swift in Sources */,
