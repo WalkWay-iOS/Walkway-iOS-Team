@@ -70,6 +70,7 @@ extension CourseDetailVC: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: DetailPhotoTVC.identifier) as? DetailPhotoTVC else {
             return UITableViewCell()
         }
+        cell.delegate = self
         cell.selectionStyle = .none
         return cell
     }
@@ -359,13 +360,11 @@ extension CourseDetailVC {
 // MARK: - Delegate
 extension CourseDetailVC: detailDelegate {
     func cellTapedReview(dvc: DetailReviewVC) {
-        let transition = CATransition()
-        transition.duration = 0.5
-        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-        transition.type = CATransitionType.push
-        transition.subtype = CATransitionSubtype.fromRight
-        self.view.window!.layer.add(transition, forKey: kCATransition)
-        
+        dvc.modalPresentationStyle = .fullScreen
+        present(dvc, animated: false, completion: nil)
+    }
+    
+    func cellTapedPhoto(dvc: DetailPhotoVC) {
         dvc.modalPresentationStyle = .fullScreen
         present(dvc, animated: false, completion: nil)
     }

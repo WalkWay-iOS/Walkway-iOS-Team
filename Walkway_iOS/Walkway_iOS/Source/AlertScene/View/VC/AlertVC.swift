@@ -97,6 +97,7 @@ extension AlertVC {
         profileButton.layer.shadowOpacity = 1.0
         profileButton.layer.shadowOffset = CGSize(width: 1, height: 2)
         profileButton.layer.shadowRadius = 3
+        profileButton.addTarget(self, action: #selector(touchUpProfile), for: .touchUpInside)
         
         alertButton.addTarget(self, action: #selector(touchUpAlert), for: .touchUpInside)
         messageButton.addTarget(self, action: #selector(touchUpMessage), for: .touchUpInside)
@@ -135,5 +136,18 @@ extension AlertVC {
     
     @objc func touchUpMessage() {
         selectedMessageButton()
+    }
+    
+    @objc func touchUpProfile() {
+        let alert = UIAlertController(title: "Walkway", message: "Walkway와 함께 즐거운 산책되세요", preferredStyle: UIAlertController.Style.actionSheet)
+        let courseAction = UIAlertAction(title: "찜한 코스", style: .default)
+        let photoAction =  UIAlertAction(title: "찜한 사진", style: .default, handler: nil)
+        let latestAction = UIAlertAction(title: "최근 본 목록", style: .default, handler: nil)
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        alert.addAction(courseAction)
+        alert.addAction(photoAction)
+        alert.addAction(latestAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true)
     }
 }
