@@ -62,6 +62,7 @@ extension CourseDetailVC: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: DetailReviewTVC.identifier) as? DetailReviewTVC else {
                 return UITableViewCell()
             }
+            cell.delegate = self
             cell.setRate(rate: cellRate ?? 0.0, isHome: isHomeCell ?? false)
             cell.selectionStyle = .none
             return cell
@@ -69,6 +70,7 @@ extension CourseDetailVC: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: DetailPhotoTVC.identifier) as? DetailPhotoTVC else {
             return UITableViewCell()
         }
+        cell.delegate = self
         cell.selectionStyle = .none
         return cell
     }
@@ -352,5 +354,18 @@ extension CourseDetailVC {
         } else {
             stickyView.isHidden = true
         }
+    }
+}
+
+// MARK: - Delegate
+extension CourseDetailVC: detailDelegate {
+    func cellTapedReview(dvc: DetailReviewVC) {
+        dvc.modalPresentationStyle = .fullScreen
+        present(dvc, animated: false, completion: nil)
+    }
+    
+    func cellTapedPhoto(dvc: DetailPhotoVC) {
+        dvc.modalPresentationStyle = .fullScreen
+        present(dvc, animated: false, completion: nil)
     }
 }

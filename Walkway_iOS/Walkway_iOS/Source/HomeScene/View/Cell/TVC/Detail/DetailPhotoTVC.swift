@@ -15,6 +15,8 @@ class DetailPhotoTVC: UITableViewCell {
     @IBOutlet weak var viewAllButton: UIButton!
     @IBOutlet weak var photoCollectionView: UICollectionView!
     
+    var delegate: detailDelegate?
+    
     var photos: [Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     
     override func awakeFromNib() {
@@ -121,5 +123,16 @@ extension DetailPhotoTVC {
         viewAllButton.setTitle("전체보기", for: .normal)
         viewAllButton.titleLabel?.font = .systemFont(ofSize: 13, weight: .bold)
         viewAllButton.setTitleColor(.gray70, for: .normal)
+        viewAllButton.addTarget(self, action: #selector(touchUpViewAll), for: .touchUpInside)
+    }
+}
+
+// MARK: - Action
+extension DetailPhotoTVC {
+    @objc func touchUpViewAll() {
+        guard let dvc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(identifier: "DetailPhotoVC") as? DetailPhotoVC else {
+            return
+        }
+        delegate?.cellTapedPhoto(dvc: dvc)
     }
 }

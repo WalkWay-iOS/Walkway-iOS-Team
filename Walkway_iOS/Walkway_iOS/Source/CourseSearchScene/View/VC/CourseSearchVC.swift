@@ -70,17 +70,20 @@ class CourseSearchVC: UIViewController {
     }
     
     func setCourseSearch() {
-        btnTrend.layer.cornerRadius = 10
+        btnTrend.layer.cornerRadius = 13
         btnTrend.layer.borderWidth = 1.0
         btnTrend.layer.borderColor = UIColor.gray.cgColor
+        btnTrend.layer.borderWidth = 0.5
         
-        btnBookmark.layer.cornerRadius = 10
+        btnBookmark.layer.cornerRadius = 13
         btnBookmark.layer.borderWidth = 1.0
         btnBookmark.layer.borderColor = UIColor.gray.cgColor
+        btnBookmark.layer.borderWidth = 0.5
         
-        btnFollow.layer.cornerRadius = 10
+        btnFollow.layer.cornerRadius = 13
         btnFollow.layer.borderWidth = 1.0
         btnFollow.layer.borderColor = UIColor.gray.cgColor
+        btnFollow.layer.borderWidth = 0.5
     }
     
     func setNoSearching() {

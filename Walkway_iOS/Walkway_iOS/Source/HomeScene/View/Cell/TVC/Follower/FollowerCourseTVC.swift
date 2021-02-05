@@ -1,22 +1,23 @@
 //
-//  HomeFollowerTVC.swift
+//  FollowerCourseTVC.swift
 //  Walkway_iOS
 //
-//  Created by SHIN YOON AH on 2021/01/22.
+//  Created by SHIN YOON AH on 2021/02/03.
 //
 
 import UIKit
 
-class HomeFollowerTVC: UITableViewCell {
-    static let identifier = "HomeFollowerTVC"
-    
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var followerCollectionView: UICollectionView!
-    
-    var delegate: cellPresentDelegate?
-    
-    var follower: [String] = ["하늘을향해", "Emily", "작은마음", "코로나아웃", "아이스아메", "밝은웃음", "WalkWalk", "팔로우해줘", "코스종결자", "화이팅하자"]
+class FollowerCourseTVC: UITableViewCell {
+    static let identifier = "FollowerCourseTVC"
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var courseCollectionView: UICollectionView!
+    @IBOutlet weak var bottomView: UIView!
+    
+    var delegate: followerDelegate?
+    
+    var courses: [String] = ["남산 한바퀴", "남산 두바퀴", "룰루리랄라리 신나는북악산여행", "북악산가자", "집뒤에 숨어있는 보물"]
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setUI()
@@ -28,25 +29,23 @@ class HomeFollowerTVC: UITableViewCell {
 }
 
 // MARK: - CollectionViewDelegate
-extension HomeFollowerTVC: UICollectionViewDataSource {
+extension FollowerCourseTVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return follower.count
+        return courses.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeFollowerCVC.identifier, for: indexPath) as? HomeFollowerCVC else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FollowerCourseCVC.identifier, for: indexPath) as? FollowerCourseCVC else {
             return UICollectionViewCell()
         }
-        cell.setLabelText(text: follower[indexPath.row])
+        cell.setTitle(title: courses[indexPath.row])
         return cell
     }
 }
 
-extension HomeFollowerTVC: UICollectionViewDelegateFlowLayout {
+extension FollowerCourseTVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (UIScreen.main.bounds.size.width - 14 - 50 - 24) / 3
-        let height = collectionView.frame.size.height - 11
-        return CGSize(width: width, height: height)
+        return CGSize(width: 220, height: 83)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -58,40 +57,50 @@ extension HomeFollowerTVC: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 11, left: 14, bottom: 0, right: 14)
+        return UIEdgeInsets(top: 10, left: 16, bottom: 22, right: 16)
     }
 }
 
-extension HomeFollowerTVC: UICollectionViewDelegate {
+extension FollowerCourseTVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let dvc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(identifier: "FollowerVC") as? FollowerVC else {
+        guard let dvc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(identifier: "CourseDetailVC") as? CourseDetailVC else {
             return
         }
-        dvc.followerName = follower[indexPath.row]
-        delegate?.collectionViewCellTapedFollower(dvc: dvc)
+        delegate?.cellTapedUserCourses(dvc: dvc)
     }
 }
 
 // MARK: - UI
-extension HomeFollowerTVC {
+extension FollowerCourseTVC {
     private func setUI() {
+        setView()
         setCollectionView()
         setCollectionViewNib()
         setLabel()
     }
     
+    private func setView() {
+        bottomView.backgroundColor = .gray40
+    }
+    
     private func setCollectionView() {
-        followerCollectionView.delegate = self
-        followerCollectionView.dataSource = self
+        courseCollectionView.delegate = self
+        courseCollectionView.dataSource = self
     }
     
     private func setCollectionViewNib() {
-        let nibName = UINib(nibName: "HomeFollowerCVC", bundle: nil)
-        followerCollectionView.register(nibName, forCellWithReuseIdentifier: HomeFollowerCVC.identifier)
+        let nibName =  UINib(nibName: "FollowerCourseCVC", bundle: nil)
+        courseCollectionView.register(nibName, forCellWithReuseIdentifier: FollowerCourseCVC.identifier)
     }
     
     private func setLabel() {
-        titleLabel.text = "요즘 인기있는 팔로워"
-        titleLabel.font = .systemFont(ofSize: 20, weight: .semibold)
+        titleLabel.font = .boldSystemFont(ofSize: 16)
+    }
+}
+
+// MARK: - Data
+extension FollowerCourseTVC {
+    func setName(name: String) {
+        titleLabel.text = "\(name) 님의 코스"
     }
 }

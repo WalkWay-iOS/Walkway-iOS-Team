@@ -37,7 +37,13 @@ extension HomeFollowerCVC {
     }
     
     private func setLabel() {
-        nameLabel.text = "NoName"
         nameLabel.font = .systemFont(ofSize: 11, weight: .bold)
+    }
+}
+
+// MARK: - Data
+extension HomeFollowerCVC {
+    func setLabelText(text: String) {
+        nameLabel.text = text
     }
 }
