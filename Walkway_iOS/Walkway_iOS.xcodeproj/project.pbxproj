@@ -12,6 +12,14 @@
 		74685F6525C3C72D004EDFEC /* CourseRunningTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74685F6425C3C72D004EDFEC /* CourseRunningTabVC.swift */; };
 		748C63B625CA81F70072B8AE /* CourseRunningInfoCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748C63B525CA81F70072B8AE /* CourseRunningInfoCVC.swift */; };
 		748C63BA25CA912F0072B8AE /* RunningInfoHotPlaceCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748C63B925CA912F0072B8AE /* RunningInfoHotPlaceCVC.swift */; };
+		74E77DB425CE7EE700EBE83D /* LocationInfoAllowTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E77DB225CE7EE700EBE83D /* LocationInfoAllowTVC.swift */; };
+		74E77DB525CE7EE700EBE83D /* LocationInfoAllowTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74E77DB325CE7EE700EBE83D /* LocationInfoAllowTVC.xib */; };
+		74E77DBA25CE7F0400EBE83D /* CameraInfoAllowTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E77DB825CE7F0400EBE83D /* CameraInfoAllowTVC.swift */; };
+		74E77DBB25CE7F0400EBE83D /* CameraInfoAllowTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74E77DB925CE7F0400EBE83D /* CameraInfoAllowTVC.xib */; };
+		74E77DBF25CE7F3E00EBE83D /* ScopeOfMyPageTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E77DBD25CE7F3E00EBE83D /* ScopeOfMyPageTVC.swift */; };
+		74E77DC025CE7F3E00EBE83D /* ScopeOfMyPageTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74E77DBE25CE7F3E00EBE83D /* ScopeOfMyPageTVC.xib */; };
+		74E77DC425CE7F6D00EBE83D /* NotificationInfoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E77DC225CE7F6D00EBE83D /* NotificationInfoTVC.swift */; };
+		74E77DC525CE7F6D00EBE83D /* NotificationInfoTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74E77DC325CE7F6D00EBE83D /* NotificationInfoTVC.xib */; };
 		74F5D81325C64813003EA002 /* CourseRunningMapCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F5D81125C64813003EA002 /* CourseRunningMapCVC.swift */; };
 		74F5D81425C64813003EA002 /* CourseRunningMapCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74F5D81225C64813003EA002 /* CourseRunningMapCVC.xib */; };
 		74F5D81825C64829003EA002 /* CourseRunningSettingCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F5D81625C64829003EA002 /* CourseRunningSettingCVC.swift */; };
@@ -110,6 +118,14 @@
 		74685F6425C3C72D004EDFEC /* CourseRunningTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRunningTabVC.swift; sourceTree = "<group>"; };
 		748C63B525CA81F70072B8AE /* CourseRunningInfoCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRunningInfoCVC.swift; sourceTree = "<group>"; };
 		748C63B925CA912F0072B8AE /* RunningInfoHotPlaceCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningInfoHotPlaceCVC.swift; sourceTree = "<group>"; };
+		74E77DB225CE7EE700EBE83D /* LocationInfoAllowTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInfoAllowTVC.swift; sourceTree = "<group>"; };
+		74E77DB325CE7EE700EBE83D /* LocationInfoAllowTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationInfoAllowTVC.xib; sourceTree = "<group>"; };
+		74E77DB825CE7F0400EBE83D /* CameraInfoAllowTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraInfoAllowTVC.swift; sourceTree = "<group>"; };
+		74E77DB925CE7F0400EBE83D /* CameraInfoAllowTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraInfoAllowTVC.xib; sourceTree = "<group>"; };
+		74E77DBD25CE7F3E00EBE83D /* ScopeOfMyPageTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScopeOfMyPageTVC.swift; sourceTree = "<group>"; };
+		74E77DBE25CE7F3E00EBE83D /* ScopeOfMyPageTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScopeOfMyPageTVC.xib; sourceTree = "<group>"; };
+		74E77DC225CE7F6D00EBE83D /* NotificationInfoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationInfoTVC.swift; sourceTree = "<group>"; };
+		74E77DC325CE7F6D00EBE83D /* NotificationInfoTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationInfoTVC.xib; sourceTree = "<group>"; };
 		74F5D81125C64813003EA002 /* CourseRunningMapCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRunningMapCVC.swift; sourceTree = "<group>"; };
 		74F5D81225C64813003EA002 /* CourseRunningMapCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseRunningMapCVC.xib; sourceTree = "<group>"; };
 		74F5D81625C64829003EA002 /* CourseRunningSettingCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRunningSettingCVC.swift; sourceTree = "<group>"; };
@@ -260,6 +276,37 @@
 				74FDE74525C17CF2002EF553 /* CourseListTVC.swift */,
 			);
 			path = TVC;
+			sourceTree = "<group>";
+		};
+		74E77DAF25CE7E6B00EBE83D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				74E77DB025CE7E7300EBE83D /* TVC */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		74E77DB025CE7E7300EBE83D /* TVC */ = {
+			isa = PBXGroup;
+			children = (
+				74E77DB125CE7E8D00EBE83D /* Setting */,
+			);
+			path = TVC;
+			sourceTree = "<group>";
+		};
+		74E77DB125CE7E8D00EBE83D /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				74E77DB225CE7EE700EBE83D /* LocationInfoAllowTVC.swift */,
+				74E77DB325CE7EE700EBE83D /* LocationInfoAllowTVC.xib */,
+				74E77DB825CE7F0400EBE83D /* CameraInfoAllowTVC.swift */,
+				74E77DB925CE7F0400EBE83D /* CameraInfoAllowTVC.xib */,
+				74E77DBD25CE7F3E00EBE83D /* ScopeOfMyPageTVC.swift */,
+				74E77DBE25CE7F3E00EBE83D /* ScopeOfMyPageTVC.xib */,
+				74E77DC225CE7F6D00EBE83D /* NotificationInfoTVC.swift */,
+				74E77DC325CE7F6D00EBE83D /* NotificationInfoTVC.xib */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		74F5D81C25C6483E003EA002 /* CVC */ = {
@@ -438,6 +485,7 @@
 		ED16C85325B7FDD1003DD0F0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				74E77DAF25CE7E6B00EBE83D /* Cell */,
 				ED16C85425B7FDD7003DD0F0 /* VC */,
 			);
 			path = View;
@@ -804,12 +852,15 @@
 				ED16C84B25B7FCA0003DD0F0 /* Mypage.storyboard in Resources */,
 				ED16C8B825BAA68F003DD0F0 /* HomeBookmarkCourseCVC.xib in Resources */,
 				EDD055C625BC2AFA009FA3FB /* LatestCourseTVC.xib in Resources */,
+				74E77DC525CE7F6D00EBE83D /* NotificationInfoTVC.xib in Resources */,
 				EDD2607225C3B9AE00619E8E /* HashtagTVC.xib in Resources */,
 				ED16C84825B7FC8F003DD0F0 /* Home.storyboard in Resources */,
 				ED16C82425B7F92F003DD0F0 /* LaunchScreen.storyboard in Resources */,
 				74FDE74825C17CF2002EF553 /* CourseListTVC.xib in Resources */,
 				74F5D81925C64829003EA002 /* CourseRunningSettingCVC.xib in Resources */,
+				74E77DB525CE7EE700EBE83D /* LocationInfoAllowTVC.xib in Resources */,
 				EDD055BE25BBFB70009FA3FB /* BookmarkCourseTVC.xib in Resources */,
+				74E77DC025CE7F3E00EBE83D /* ScopeOfMyPageTVC.xib in Resources */,
 				ED16C8AE25BA9E1E003DD0F0 /* HomePopularCourseCVC.xib in Resources */,
 				ED01F4D025BFBFCB00B9AD43 /* DetailReviewTVC.xib in Resources */,
 				ED7622C725BB25D0007E1C98 /* PopularCourseTVC.xib in Resources */,
@@ -820,6 +871,7 @@
 				ED16C85125B7FCB4003DD0F0 /* CourseSearch.storyboard in Resources */,
 				74685F5F25C3C6DC004EDFEC /* CourseRunningTab.storyboard in Resources */,
 				ED01F4DD25C0076B00B9AD43 /* DetailPhotoTVC.xib in Resources */,
+				74E77DBB25CE7F0400EBE83D /* CameraInfoAllowTVC.xib in Resources */,
 				ED8A965325C8189D0088EFBA /* AlertTVC.xib in Resources */,
 				EDD2607D25C3CB2D00619E8E /* Login.storyboard in Resources */,
 				ED16C8BD25BAA95F003DD0F0 /* HomeLatestCourseTVC.xib in Resources */,
@@ -901,10 +953,12 @@
 				ED01F4DC25C0076B00B9AD43 /* DetailPhotoTVC.swift in Sources */,
 				ED8A965C25C822DE0088EFBA /* Message.swift in Sources */,
 				ED16C8BC25BAA95F003DD0F0 /* HomeLatestCourseTVC.swift in Sources */,
+				74E77DC425CE7F6D00EBE83D /* NotificationInfoTVC.swift in Sources */,
 				ED01F4CF25BFBFCB00B9AD43 /* DetailReviewTVC.swift in Sources */,
 				ED8A965225C8189D0088EFBA /* AlertTVC.swift in Sources */,
 				EDF3716125BFAD680000A1F6 /* DetailExplanationTVC.swift in Sources */,
 				EDD055C525BC2AFA009FA3FB /* LatestCourseTVC.swift in Sources */,
+				74E77DBA25CE7F0400EBE83D /* CameraInfoAllowTVC.swift in Sources */,
 				EDCC755925C2CADA00EF435A /* Extensions+UITextField.swift in Sources */,
 				EDD055C125BC282F009FA3FB /* LatestCourseVC.swift in Sources */,
 				EDD055B925BBF402009FA3FB /* BookmarkCourseVC.swift in Sources */,
@@ -914,6 +968,7 @@
 				74685F6525C3C72D004EDFEC /* CourseRunningTabVC.swift in Sources */,
 				EDE0BDEA25BD912F00ADE8D1 /* CourseDetailVC.swift in Sources */,
 				EDCC755325C2A68600EF435A /* MakeCreateCourseVC.swift in Sources */,
+				74E77DBF25CE7F3E00EBE83D /* ScopeOfMyPageTVC.swift in Sources */,
 				748C63B625CA81F70072B8AE /* CourseRunningInfoCVC.swift in Sources */,
 				ED16C8B725BAA68F003DD0F0 /* HomeBookmarkCourseCVC.swift in Sources */,
 				EDD2608E25C4546700619E8E /* FindIdVC.swift in Sources */,
@@ -933,6 +988,7 @@
 				ED7622BD25BB12D1007E1C98 /* PopularCourseVC.swift in Sources */,
 				EDD2608525C3E9C200619E8E /* SignUpVC.swift in Sources */,
 				ED16C89325BA7471003DD0F0 /* HomeBannerTVC.swift in Sources */,
+				74E77DB425CE7EE700EBE83D /* LocationInfoAllowTVC.swift in Sources */,
 				EDD2607125C3B9AE00619E8E /* HashtagTVC.swift in Sources */,
 				EDD2608B25C44D5A00619E8E /* SignInVC.swift in Sources */,
 				ED16C84525B7FC1D003DD0F0 /* TabbarController.swift in Sources */,
