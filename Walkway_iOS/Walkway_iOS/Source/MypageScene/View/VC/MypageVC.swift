@@ -8,21 +8,20 @@
 import UIKit
 
 class MypageVC: UIViewController {
-
-    @IBOutlet var viewNameLabel: UILabel!
-    @IBOutlet var logoImage: UIImageView!
-    @IBOutlet var settingTableView: UITableView!
+    
+    @IBOutlet var myPageTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setUI()
     }
 }
 
-// MARK: - TableViewDelegate
+// MARK:- TableViewDelegate
 extension MypageVC: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return 6
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,28 +30,42 @@ extension MypageVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: LocationInfoAllowTVC.identifier) as? LocationInfoAllowTVC else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: MyPageHeaderTVC.identifier) as? MyPageHeaderTVC else {
                 return UITableViewCell()
             }
             cell.selectionStyle = .none
             return cell
         }
         else if indexPath.section == 1 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: CameraInfoAllowTVC.identifier) as? CameraInfoAllowTVC else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: MyProfileTVC.identifier) as? MyProfileTVC else {
                 return UITableViewCell()
             }
             cell.selectionStyle = .none
             return cell
         }
         else if indexPath.section == 2 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: ScopeOfMyPageTVC.identifier) as? ScopeOfMyPageTVC else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: MyBadgeTVC.identifier) as? MyBadgeTVC else {
                 return UITableViewCell()
             }
             cell.selectionStyle = .none
             return cell
         }
         else if indexPath.section == 3 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: NotificationInfoTVC.identifier) as? NotificationInfoTVC else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: MyKeywordTVC.identifier) as? MyKeywordTVC else {
+                return UITableViewCell()
+            }
+            cell.selectionStyle = .none
+            return cell
+        }
+        else if indexPath.section == 4 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: MyCourseTVC.identifier) as? MyCourseTVC else {
+                return UITableViewCell()
+            }
+            cell.selectionStyle = .none
+            return cell
+        }
+        else if indexPath.section == 5 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: MyRecordTVC.identifier) as? MyRecordTVC else {
                 return UITableViewCell()
             }
             cell.selectionStyle = .none
@@ -62,19 +75,25 @@ extension MypageVC: UITableViewDataSource {
     }
 }
 
-extension MypageVC:UITableViewDelegate {
+extension MypageVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            return 100
+            return 188
         }
         else if indexPath.section == 1 {
-            return 70
+            return 300
         }
         else if indexPath.section == 2 {
-            return 200
+            return 100
         }
         else if indexPath.section == 3 {
-            return 340
+            return 100
+        }
+        else if indexPath.section == 4 {
+            return 100
+        }
+        else if indexPath.section == 5 {
+            return 100
         }
         return 100
     }
@@ -87,23 +106,29 @@ extension MypageVC {
     }
     
     private func setTableView() {
-        settingTableView.delegate = self
-        settingTableView.dataSource = self
+        myPageTableView.delegate = self
+        myPageTableView.dataSource = self
         
-        settingTableView.separatorColor = .clear
+        myPageTableView.separatorColor = .clear
     }
     
     func setTableViewNib() {
-        let locationNib = UINib(nibName: "LocationInfoAllowTVC", bundle: nil)
-        settingTableView.register(locationNib, forCellReuseIdentifier: LocationInfoAllowTVC.identifier)
+        let headerNib = UINib(nibName: "MyPageHeaderTVC", bundle: nil)
+        myPageTableView.register(headerNib, forCellReuseIdentifier: MyPageHeaderTVC.identifier)
         
-        let cameraNib = UINib(nibName: "CameraInfoAllowTVC", bundle: nil)
-        settingTableView.register(cameraNib, forCellReuseIdentifier: CameraInfoAllowTVC.identifier)
+        let profileNib = UINib(nibName: "MyProfileTVC", bundle: nil)
+        myPageTableView.register(profileNib, forCellReuseIdentifier: MyProfileTVC.identifier)
         
-        let myPageScopeNib = UINib(nibName: "ScopeOfMyPageTVC", bundle: nil)
-        settingTableView.register(myPageScopeNib, forCellReuseIdentifier: ScopeOfMyPageTVC.identifier)
+        let myBadgeNib = UINib(nibName: "MyBadgeTVC", bundle: nil)
+        myPageTableView.register(myBadgeNib, forCellReuseIdentifier: MyBadgeTVC.identifier)
         
-        let notificationNib = UINib(nibName: "NotificationInfoTVC", bundle: nil)
-        settingTableView.register(notificationNib, forCellReuseIdentifier: NotificationInfoTVC.identifier)
+        let myKeywordNib = UINib(nibName: "MyKeywordTVC", bundle: nil)
+        myPageTableView.register(myKeywordNib, forCellReuseIdentifier: MyKeywordTVC.identifier)
+        
+        let myCourseNib = UINib(nibName: "MyCourseTVC", bundle: nil)
+        myPageTableView.register(myCourseNib, forCellReuseIdentifier: MyCourseTVC.identifier)
+        
+        let myRecordNib = UINib(nibName: "MyRecordTVC", bundle: nil)
+        myPageTableView.register(myRecordNib, forCellReuseIdentifier: MyRecordTVC.identifier)
     }
 }
