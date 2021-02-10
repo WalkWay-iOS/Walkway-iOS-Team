@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1766393A52A4BD11CD141885 /* Pods_Walkway_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA9CA972E2FCA8C7F9A8776 /* Pods_Walkway_iOS.framework */; };
+		743DB1BB25D37B600038F8F0 /* MyProfileTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743DB1B925D37B600038F8F0 /* MyProfileTVC.swift */; };
+		743DB1BC25D37B600038F8F0 /* MyProfileTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 743DB1BA25D37B600038F8F0 /* MyProfileTVC.xib */; };
 		7452E94B25D2EFC00048DE2E /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452E94A25D2EFC00048DE2E /* SettingVC.swift */; };
 		7452E95025D2F23F0048DE2E /* MyPageHeaderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452E94E25D2F23F0048DE2E /* MyPageHeaderTVC.swift */; };
 		7452E95125D2F23F0048DE2E /* MyPageHeaderTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7452E94F25D2F23F0048DE2E /* MyPageHeaderTVC.xib */; };
-		7452E95525D2F2570048DE2E /* MyProfileTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452E95325D2F2570048DE2E /* MyProfileTVC.swift */; };
-		7452E95625D2F2570048DE2E /* MyProfileTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7452E95425D2F2570048DE2E /* MyProfileTVC.xib */; };
 		7452E95A25D2F26D0048DE2E /* MyBadgeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452E95825D2F26D0048DE2E /* MyBadgeTVC.swift */; };
 		7452E95B25D2F26D0048DE2E /* MyBadgeTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7452E95925D2F26D0048DE2E /* MyBadgeTVC.xib */; };
 		7452E95F25D2F2830048DE2E /* MyKeywordTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452E95D25D2F2830048DE2E /* MyKeywordTVC.swift */; };
@@ -134,11 +134,11 @@
 
 /* Begin PBXFileReference section */
 		1438CA5AD824FFC830D71151 /* Pods-Walkway_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Walkway_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Walkway_iOS/Pods-Walkway_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		743DB1B925D37B600038F8F0 /* MyProfileTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileTVC.swift; sourceTree = "<group>"; };
+		743DB1BA25D37B600038F8F0 /* MyProfileTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyProfileTVC.xib; sourceTree = "<group>"; };
 		7452E94A25D2EFC00048DE2E /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		7452E94E25D2F23F0048DE2E /* MyPageHeaderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageHeaderTVC.swift; sourceTree = "<group>"; };
 		7452E94F25D2F23F0048DE2E /* MyPageHeaderTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPageHeaderTVC.xib; sourceTree = "<group>"; };
-		7452E95325D2F2570048DE2E /* MyProfileTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileTVC.swift; sourceTree = "<group>"; };
-		7452E95425D2F2570048DE2E /* MyProfileTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyProfileTVC.xib; sourceTree = "<group>"; };
 		7452E95825D2F26D0048DE2E /* MyBadgeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBadgeTVC.swift; sourceTree = "<group>"; };
 		7452E95925D2F26D0048DE2E /* MyBadgeTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyBadgeTVC.xib; sourceTree = "<group>"; };
 		7452E95D25D2F2830048DE2E /* MyKeywordTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKeywordTVC.swift; sourceTree = "<group>"; };
@@ -288,8 +288,8 @@
 			children = (
 				7452E94E25D2F23F0048DE2E /* MyPageHeaderTVC.swift */,
 				7452E94F25D2F23F0048DE2E /* MyPageHeaderTVC.xib */,
-				7452E95325D2F2570048DE2E /* MyProfileTVC.swift */,
-				7452E95425D2F2570048DE2E /* MyProfileTVC.xib */,
+				743DB1B925D37B600038F8F0 /* MyProfileTVC.swift */,
+				743DB1BA25D37B600038F8F0 /* MyProfileTVC.xib */,
 				7452E95825D2F26D0048DE2E /* MyBadgeTVC.swift */,
 				7452E95925D2F26D0048DE2E /* MyBadgeTVC.xib */,
 				7452E95D25D2F2830048DE2E /* MyKeywordTVC.swift */,
@@ -952,11 +952,11 @@
 				ED16C85125B7FCB4003DD0F0 /* CourseSearch.storyboard in Resources */,
 				74685F5F25C3C6DC004EDFEC /* CourseRunningTab.storyboard in Resources */,
 				ED01F4DD25C0076B00B9AD43 /* DetailPhotoTVC.xib in Resources */,
+				743DB1BC25D37B600038F8F0 /* MyProfileTVC.xib in Resources */,
 				74E77DBB25CE7F0400EBE83D /* CameraInfoAllowTVC.xib in Resources */,
 				ED8A965325C8189D0088EFBA /* AlertTVC.xib in Resources */,
 				EDD2607D25C3CB2D00619E8E /* Login.storyboard in Resources */,
 				7452E95125D2F23F0048DE2E /* MyPageHeaderTVC.xib in Resources */,
-				7452E95625D2F2570048DE2E /* MyProfileTVC.xib in Resources */,
 				ED16C8BD25BAA95F003DD0F0 /* HomeLatestCourseTVC.xib in Resources */,
 				ED16C84E25B7FCA9003DD0F0 /* Alert.storyboard in Resources */,
 				74F4150A25CF7A68007E4C07 /* ProfileImageTVC.xib in Resources */,
@@ -1037,6 +1037,7 @@
 				EDD2608225C3CB7D00619E8E /* WelcomeLoginVC.swift in Sources */,
 				ED01F4DC25C0076B00B9AD43 /* DetailPhotoTVC.swift in Sources */,
 				ED8A965C25C822DE0088EFBA /* Message.swift in Sources */,
+				743DB1BB25D37B600038F8F0 /* MyProfileTVC.swift in Sources */,
 				ED16C8BC25BAA95F003DD0F0 /* HomeLatestCourseTVC.swift in Sources */,
 				74E77DC425CE7F6D00EBE83D /* NotificationInfoTVC.swift in Sources */,
 				ED01F4CF25BFBFCB00B9AD43 /* DetailReviewTVC.swift in Sources */,
@@ -1092,7 +1093,6 @@
 				ED7622C625BB25D0007E1C98 /* PopularCourseTVC.swift in Sources */,
 				ED16C8C125BAAB90003DD0F0 /* HomeLatestCourseCVC.swift in Sources */,
 				ED01F4D425BFDB1000B9AD43 /* ReviewTVC.swift in Sources */,
-				7452E95525D2F2570048DE2E /* MyProfileTVC.swift in Sources */,
 				7452E95025D2F23F0048DE2E /* MyPageHeaderTVC.swift in Sources */,
 				74F4150E25CF7A7E007E4C07 /* ProfileInfoTVC.swift in Sources */,
 				EDD2608825C401F500619E8E /* Extensions+String.swift in Sources */,

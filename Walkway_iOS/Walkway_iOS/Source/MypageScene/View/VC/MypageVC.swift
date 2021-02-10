@@ -81,13 +81,13 @@ extension MypageVC: UITableViewDelegate {
             return 188
         }
         else if indexPath.section == 1 {
-            return 300
+            return 325
         }
         else if indexPath.section == 2 {
-            return 100
+            return 155
         }
         else if indexPath.section == 3 {
-            return 100
+            return 155
         }
         else if indexPath.section == 4 {
             return 100
