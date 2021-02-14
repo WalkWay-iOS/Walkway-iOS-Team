@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1766393A52A4BD11CD141885 /* Pods_Walkway_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA9CA972E2FCA8C7F9A8776 /* Pods_Walkway_iOS.framework */; };
+		741DC2FA25D67A1F0026F1D9 /* MycourseListCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741DC2F825D67A1F0026F1D9 /* MycourseListCVC.swift */; };
+		741DC2FB25D67A1F0026F1D9 /* MycourseListCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 741DC2F925D67A1F0026F1D9 /* MycourseListCVC.xib */; };
 		743DB1BB25D37B600038F8F0 /* MyProfileTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743DB1B925D37B600038F8F0 /* MyProfileTVC.swift */; };
 		743DB1BC25D37B600038F8F0 /* MyProfileTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 743DB1BA25D37B600038F8F0 /* MyProfileTVC.xib */; };
 		7452E94B25D2EFC00048DE2E /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452E94A25D2EFC00048DE2E /* SettingVC.swift */; };
@@ -134,6 +136,8 @@
 
 /* Begin PBXFileReference section */
 		1438CA5AD824FFC830D71151 /* Pods-Walkway_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Walkway_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Walkway_iOS/Pods-Walkway_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		741DC2F825D67A1F0026F1D9 /* MycourseListCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MycourseListCVC.swift; sourceTree = "<group>"; };
+		741DC2F925D67A1F0026F1D9 /* MycourseListCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MycourseListCVC.xib; sourceTree = "<group>"; };
 		743DB1B925D37B600038F8F0 /* MyProfileTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileTVC.swift; sourceTree = "<group>"; };
 		743DB1BA25D37B600038F8F0 /* MyProfileTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyProfileTVC.xib; sourceTree = "<group>"; };
 		7452E94A25D2EFC00048DE2E /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
@@ -283,6 +287,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		741DC2EF25D664310026F1D9 /* CVC */ = {
+			isa = PBXGroup;
+			children = (
+				741DC2F025D664380026F1D9 /* MyPage */,
+			);
+			path = CVC;
+			sourceTree = "<group>";
+		};
+		741DC2F025D664380026F1D9 /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				741DC2F825D67A1F0026F1D9 /* MycourseListCVC.swift */,
+				741DC2F925D67A1F0026F1D9 /* MycourseListCVC.xib */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
 		7452E94D25D2F2020048DE2E /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -340,6 +361,7 @@
 		74E77DAF25CE7E6B00EBE83D /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				741DC2EF25D664310026F1D9 /* CVC */,
 				74E77DB025CE7E7300EBE83D /* TVC */,
 			);
 			path = Cell;
@@ -937,6 +959,7 @@
 				ED16C82425B7F92F003DD0F0 /* LaunchScreen.storyboard in Resources */,
 				74FDE74825C17CF2002EF553 /* CourseListTVC.xib in Resources */,
 				74F5D81925C64829003EA002 /* CourseRunningSettingCVC.xib in Resources */,
+				741DC2FB25D67A1F0026F1D9 /* MycourseListCVC.xib in Resources */,
 				74E77DB525CE7EE700EBE83D /* LocationInfoAllowTVC.xib in Resources */,
 				EDD055BE25BBFB70009FA3FB /* BookmarkCourseTVC.xib in Resources */,
 				74E77DC025CE7F3E00EBE83D /* ScopeOfMyPageTVC.xib in Resources */,
@@ -1093,6 +1116,7 @@
 				ED7622C625BB25D0007E1C98 /* PopularCourseTVC.swift in Sources */,
 				ED16C8C125BAAB90003DD0F0 /* HomeLatestCourseCVC.swift in Sources */,
 				ED01F4D425BFDB1000B9AD43 /* ReviewTVC.swift in Sources */,
+				741DC2FA25D67A1F0026F1D9 /* MycourseListCVC.swift in Sources */,
 				7452E95025D2F23F0048DE2E /* MyPageHeaderTVC.swift in Sources */,
 				74F4150E25CF7A7E007E4C07 /* ProfileInfoTVC.swift in Sources */,
 				EDD2608825C401F500619E8E /* Extensions+String.swift in Sources */,
