@@ -12,4 +12,5 @@ source 'https://github.com/CocoaPods/Specs.git'
     pod 'SwiftyJSON'
     pod 'GoogleMaps', '4.1.0'
     pod 'GooglePlaces', '4.1.0'
+    pod 'FSCalendar'
 end

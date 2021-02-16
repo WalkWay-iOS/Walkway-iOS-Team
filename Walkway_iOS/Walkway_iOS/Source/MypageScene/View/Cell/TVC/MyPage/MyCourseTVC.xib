@@ -27,6 +27,9 @@
                         <rect key="frame" x="312" y="17.5" width="38" height="27"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <state key="normal" title="Button"/>
+                        <connections>
+                            <action selector="touchUpViewAll:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="1gc-E0-euN"/>
+                        </connections>
                     </button>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="r9H-v3-a6P">
                         <rect key="frame" x="0.0" y="61.5" width="375" height="123.5"/>

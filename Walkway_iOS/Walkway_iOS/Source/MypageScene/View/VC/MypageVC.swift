@@ -13,7 +13,6 @@ class MypageVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setUI()
     }
 }
@@ -33,6 +32,7 @@ extension MypageVC: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: MyPageHeaderTVC.identifier) as? MyPageHeaderTVC else {
                 return UITableViewCell()
             }
+            cell.delegate = self
             cell.selectionStyle = .none
             return cell
         }
@@ -40,6 +40,7 @@ extension MypageVC: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: MyProfileTVC.identifier) as? MyProfileTVC else {
                 return UITableViewCell()
             }
+            cell.delegate = self
             cell.selectionStyle = .none
             return cell
         }
@@ -47,6 +48,7 @@ extension MypageVC: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: MyBadgeTVC.identifier) as? MyBadgeTVC else {
                 return UITableViewCell()
             }
+            cell.delegate = self
             cell.selectionStyle = .none
             return cell
         }
@@ -54,6 +56,7 @@ extension MypageVC: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: MyKeywordTVC.identifier) as? MyKeywordTVC else {
                 return UITableViewCell()
             }
+            cell.delegate = self
             cell.selectionStyle = .none
             return cell
         }
@@ -61,6 +64,7 @@ extension MypageVC: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: MyCourseTVC.identifier) as? MyCourseTVC else {
                 return UITableViewCell()
             }
+            cell.delegate = self
             cell.selectionStyle = .none
             return cell
         }
@@ -68,6 +72,7 @@ extension MypageVC: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: MyRecordTVC.identifier) as? MyRecordTVC else {
                 return UITableViewCell()
             }
+            cell.delegate = self
             cell.selectionStyle = .none
             return cell
         }
@@ -93,12 +98,13 @@ extension MypageVC: UITableViewDelegate {
             return 200
         }
         else if indexPath.section == 5 {
-            return 100
+            return 410
         }
         return 100
     }
 }
 
+// MARK: - UI
 extension MypageVC {
     private func setUI() {
         setTableView()
@@ -130,5 +136,64 @@ extension MypageVC {
         
         let myRecordNib = UINib(nibName: "MyRecordTVC", bundle: nil)
         myPageTableView.register(myRecordNib, forCellReuseIdentifier: MyRecordTVC.identifier)
+    }
+}
+
+// MARK: - Protocol
+extension MypageVC: myPagePresentDelegate {
+    func cellTapedSetting() {
+        guard let dvc = storyboard?.instantiateViewController(identifier: "SettingVC") as? SettingVC else {
+            return
+        }
+        dvc.modalPresentationStyle = .fullScreen
+        present(dvc, animated: true, completion: nil)
+    }
+    
+    func cellTapedProfileSetting() {
+        guard let dvc = storyboard?.instantiateViewController(identifier: "ProfileSettingVC") as? ProfileSettingVC else {
+            return
+        }
+        dvc.modalPresentationStyle = .fullScreen
+        present(dvc, animated: true, completion: nil)
+    }
+    
+    func cellTapedMyBadge() {
+        guard let dvc = storyboard?.instantiateViewController(identifier: "MyBadgeListVC") as? MyBadgeListVC else {
+            return
+        }
+        dvc.modalPresentationStyle = .fullScreen
+        present(dvc, animated: true, completion: nil)
+    }
+    
+    func cellTapedMyKeyword() {
+        guard let dvc = storyboard?.instantiateViewController(identifier: "MyKeywordListVC") as? MyKeywordListVC else {
+            return
+        }
+        dvc.modalPresentationStyle = .fullScreen
+        present(dvc, animated: true, completion: nil)
+    }
+    
+    func cellTapedMyCourse() {
+        guard let dvc = storyboard?.instantiateViewController(identifier: "MyCourseListVC") as? MyCourseListVC else {
+            return
+        }
+        dvc.modalPresentationStyle = .fullScreen
+        present(dvc, animated: true, completion: nil)
+    }
+    
+    func cellTapedMyRecord() {
+        guard let dvc = storyboard?.instantiateViewController(identifier: "MyRecordListVC") as? MyRecordListVC else {
+            return
+        }
+        dvc.modalPresentationStyle = .fullScreen
+        present(dvc, animated: true, completion: nil)
+    }
+    
+    func cellTapedMyPage() {
+        guard let dvc = storyboard?.instantiateViewController(identifier: "MyPageVC") as? MypageVC else {
+            return
+        }
+        dvc.modalPresentationStyle = .fullScreen
+        present(dvc, animated: true, completion: nil)
     }
 }

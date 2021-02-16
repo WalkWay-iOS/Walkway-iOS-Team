@@ -14,23 +14,39 @@ class MyPageHeaderTVC: UITableViewCell {
     @IBOutlet var logoImage: UIImageView!
     @IBOutlet var settingButton: UIButton!
     
+    var delegate: myPagePresentDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        setText()
-        setButton()
+        setUI()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+}
 
-        // Configure the view for the selected state
+// MARK: - UI
+extension MyPageHeaderTVC {
+    func setUI() {
+        setLabel()
+        setButton()
     }
     
-    func setText() {
+    func setLabel() {
         myPageTitleLabel.text = "마이 페이지"
     }
     
     func setButton() {
         settingButton.setImage(UIImage(systemName: "gearshape"), for: .normal)
+        settingButton.setTitleColor(.systemIndigo, for: .normal)
+        settingButton.addTarget(self, action: #selector(touchUpSetting), for: .touchUpInside)
+    }
+}
+
+// MARK: - Action
+extension MyPageHeaderTVC {
+    @objc func touchUpSetting() {
+        delegate?.cellTapedSetting()
     }
 }

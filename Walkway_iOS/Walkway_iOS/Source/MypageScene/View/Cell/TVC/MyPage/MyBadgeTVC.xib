@@ -27,6 +27,9 @@
                         <rect key="frame" x="312" y="17.5" width="38" height="27"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <state key="normal" title="Button"/>
+                        <connections>
+                            <action selector="touchUpViewAll:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="4zM-BF-Cn6"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJc-K1-iRZ">
                         <rect key="frame" x="50" y="67.5" width="50" height="50"/>
@@ -102,7 +105,7 @@
                 <outlet property="myBadge4Button" destination="1ow-U0-cPW" id="EZl-Nl-A5B"/>
                 <outlet property="myBadgeTitleLabel" destination="6Bq-0R-Qmq" id="a0v-Zb-ro9"/>
             </connections>
-            <point key="canvasLocation" x="-28" y="63"/>
+            <point key="canvasLocation" x="21" y="66"/>
         </tableViewCell>
     </objects>
     <resources>

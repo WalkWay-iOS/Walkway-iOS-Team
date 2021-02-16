@@ -17,19 +17,30 @@ class MyBadgeTVC: UITableViewCell {
     @IBOutlet var myBadge3Button: UIButton!
     @IBOutlet var myBadge4Button: UIButton!
     
+    var delegate: myPagePresentDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        setText()
-        setButton()
+        setUI()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
-    func setText() {
+    @IBAction func touchUpViewAll(_ sender: UIButton) {
+        delegate?.cellTapedMyBadge()
+    }
+}
+
+// MARK: - UI
+extension MyBadgeTVC {
+    func setUI() {
+        setLabel()
+        setButton()
+    }
+    
+    func setLabel() {
         myBadgeTitleLabel.text = "뱃지"
     }
     

@@ -22,20 +22,26 @@ class MyProfileTVC: UITableViewCell {
     @IBOutlet var myCourseNumLabel: UILabel!
     @IBOutlet var followerNumLabel: UILabel!
     
+    var delegate: myPagePresentDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setUI()
-        setText()
-        setButton()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+}
 
-        // Configure the view for the selected state
+// MARK: - UI
+extension MyProfileTVC {
+    func setUI() {
+        setLabel()
+        setButton()
     }
     
-    func setUI() {
+    func setLabel() {
         hashTag1Label.backgroundColor = .systemIndigo
         hashTag1Label.textColor = .white
         hashTag1Label.layer.masksToBounds = true
@@ -52,9 +58,6 @@ class MyProfileTVC: UITableViewCell {
         hashTag4Label.textColor = .white
         hashTag4Label.layer.masksToBounds = true
         hashTag4Label.layer.cornerRadius = 12
-    }
-    
-    func setText() {
         hashTag1Label.text = "#스포츠"
         hashTag2Label.text = "#야경"
         hashTag3Label.text = "#등산"
@@ -70,5 +73,13 @@ class MyProfileTVC: UITableViewCell {
     func setButton() {
         myProfileButton.setTitle("나", for: .normal)
         myProfileButton.layer.cornerRadius = myProfileButton.layer.frame.size.width/2
+        myProfileButton.addTarget(self, action: #selector(touchUpProfileSetting), for: .touchUpInside)
+    }
+}
+
+// MARK: - Action
+extension MyProfileTVC {
+    @objc func touchUpProfileSetting() {
+        delegate?.cellTapedProfileSetting()
     }
 }

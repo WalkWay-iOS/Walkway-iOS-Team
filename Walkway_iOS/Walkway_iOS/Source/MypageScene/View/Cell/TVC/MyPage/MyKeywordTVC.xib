@@ -26,6 +26,9 @@
                         <rect key="frame" x="312" y="30.5" width="38" height="27"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <state key="normal" title="Button"/>
+                        <connections>
+                            <action selector="touchUpViewAllButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="WVW-lk-dX2"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4w-3y-mmG">
                         <rect key="frame" x="15" y="92.5" width="75" height="25"/>

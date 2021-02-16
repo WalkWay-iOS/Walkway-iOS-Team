@@ -15,7 +15,6 @@ class SettingVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setUI()
     }
 }
@@ -81,10 +80,12 @@ extension SettingVC: UITableViewDelegate {
     }
 }
 
+// MARK: - UI
 extension SettingVC {
     private func setUI() {
         setTableView()
         setTableViewNib()
+        setLabel()
     }
     
     private func setTableView() {
@@ -106,5 +107,9 @@ extension SettingVC {
         
         let notificationNib = UINib(nibName: "NotificationInfoTVC", bundle: nil)
         settingTableView.register(notificationNib, forCellReuseIdentifier: NotificationInfoTVC.identifier)
+    }
+    
+    func setLabel() {
+        viewNameLabel.text = "설정"
     }
 }

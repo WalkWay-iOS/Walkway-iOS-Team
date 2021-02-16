@@ -14,13 +14,19 @@ class MyCourseTVC: UITableViewCell {
     @IBOutlet var courseAllButton: UIButton!
     @IBOutlet var myCourseCollectionView: UICollectionView!
     
+    var delegate: myPagePresentDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setUI()
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    @IBAction func touchUpViewAll(_ sender: Any) {
+        delegate?.cellTapedMyCourse()
     }
 }
 
@@ -56,6 +62,17 @@ extension MyCourseTVC: UICollectionViewDelegateFlowLayout {
     }
 }
 
+/*
+extension MyCourseTVC: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let dvc = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(identifier: "CourseDetailVC") as? CourseDetailVC else {
+            return
+        }
+        delegate?.collectionViewCellTapedCourse(dvc: dvc)
+    }
+}
+*/
+
 // MARK: - UI
 extension MyCourseTVC {
     private func setUI() {
@@ -80,7 +97,7 @@ extension MyCourseTVC {
     }
     
     private func setButton() {
-        courseAllButton.tintColor = .black
+        courseAllButton.setTitleColor(.black, for: .normal)
         courseAllButton.setTitle("전체보기", for: .normal)
     }
 }

@@ -65,8 +65,4 @@ extension MycourseListCVC {
             index += 1
         }
     }
-    
-    /*func setStackView() {
-        buttonStackView.widthAnchor.constraint(lessThanOrEqualTo: self.widthAnchor, constant: -20).isActive = true
-    }*/
 }
