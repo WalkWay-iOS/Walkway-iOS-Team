@@ -7,10 +7,10 @@
 
 import UIKit
 
-var recordDate = ["201210", "201217", "201224", "210101", "210110", "210111"]
-var recordName = ["관악산 초급 코스", "관악산 초급 코스", "관악산 초급 코스", "관악산 초급 코스", "관악산 초급 코스", "관악산 초급 코스"]
-var recordDistance = ["5km", "5km", "5km", "5km", "5km", "5km"]
-var recordTime = ["1시간", "1시간", "1시간", "1시간", "1시간", "1시간"]
+var myRecordDate = ["201210", "201217", "201224", "210101", "210110", "210111"]
+var myRecordName = ["관악산 초급 코스", "관악산 초급 코스", "관악산 초급 코스", "관악산 초급 코스", "관악산 초급 코스", "관악산 초급 코스"]
+var myRecordDistance = ["5km", "5km", "5km", "5km", "5km", "5km"]
+var myRecordTime = ["1시간", "1시간", "1시간", "1시간", "1시간", "1시간"]
 
 class MyRecordListVC: UIViewController {
 
@@ -36,7 +36,7 @@ extension MyRecordListVC: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: MyRecordListTVC.identifier) as? MyRecordListTVC else {
             return UITableViewCell()
         }
-        cell.setData(record: recordDate[indexPath.row], name: recordName[indexPath.row],  distance: courseDistance[indexPath.row], time: courseTime[indexPath.row])
+        cell.setData(record: myRecordDate[indexPath.row], name: myRecordName[indexPath.row],  distance: myRecordDistance[indexPath.row], time: myRecordTime[indexPath.row])
         return cell
     }
 }

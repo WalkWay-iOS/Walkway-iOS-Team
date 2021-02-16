@@ -18,8 +18,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="396" height="165"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCm-DM-cNs">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dK9-hu-2gh">
                         <rect key="frame" x="140.5" y="50" width="115" height="115"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="115" id="24g-dd-HLv"/>
+                            <constraint firstAttribute="height" constant="115" id="ESq-jN-8Y4"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCm-DM-cNs">
+                        <rect key="frame" x="140" y="50" width="115" height="115"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="115" id="0r1-DV-sRq"/>
                             <constraint firstAttribute="height" constant="115" id="hUf-Yw-K8P"/>
@@ -32,6 +39,8 @@
                     </button>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="dK9-hu-2gh" secondAttribute="bottom" id="628-B3-VEq"/>
+                    <constraint firstItem="dK9-hu-2gh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="140.5" id="aRT-WL-gqB"/>
                     <constraint firstItem="aCm-DM-cNs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="140.5" id="jx3-NT-Dag"/>
                     <constraint firstItem="aCm-DM-cNs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="50" id="zWK-ce-pIC"/>
                 </constraints>
@@ -39,6 +48,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="profileImageButton" destination="aCm-DM-cNs" id="EjA-Ef-Ohe"/>
+                <outlet property="profileImageView" destination="dK9-hu-2gh" id="zyt-Yw-EyJ"/>
             </connections>
             <point key="canvasLocation" x="133" y="75"/>
         </tableViewCell>

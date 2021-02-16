@@ -98,7 +98,7 @@ extension MypageVC: UITableViewDelegate {
             return 200
         }
         else if indexPath.section == 5 {
-            return 410
+            return 500
         }
         return 100
     }

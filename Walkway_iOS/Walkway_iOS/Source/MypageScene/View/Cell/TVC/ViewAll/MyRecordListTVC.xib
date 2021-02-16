@@ -68,7 +68,7 @@
                 <outlet property="myRecordNameLabel" destination="xFw-EH-EJ8" id="W0A-Lf-zwv"/>
                 <outlet property="myRecordTimeLabel" destination="kvh-xQ-DeD" id="2qq-Gn-Rgj"/>
             </connections>
-            <point key="canvasLocation" x="180" y="71"/>
+            <point key="canvasLocation" x="183" y="55"/>
         </tableViewCell>
     </objects>
 </document>

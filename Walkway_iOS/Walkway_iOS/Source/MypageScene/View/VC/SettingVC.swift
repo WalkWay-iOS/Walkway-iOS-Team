@@ -9,9 +9,12 @@ import UIKit
 
 class SettingVC: UIViewController {
 
+    @IBOutlet var closeButton: UIButton!
     @IBOutlet var viewNameLabel: UILabel!
     @IBOutlet var logoImage: UIImageView!
     @IBOutlet var settingTableView: UITableView!
+    
+    var delegate: myPagePresentDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,6 +89,7 @@ extension SettingVC {
         setTableView()
         setTableViewNib()
         setLabel()
+        setButton()
     }
     
     private func setTableView() {
@@ -111,5 +115,20 @@ extension SettingVC {
     
     func setLabel() {
         viewNameLabel.text = "설정"
+        viewNameLabel.font = .boldSystemFont(ofSize: 35)
+    }
+    
+    func setButton() {
+        closeButton.setTitle("", for: .normal)
+        closeButton.setImage(UIImage(systemName: "xmark"), for: .normal)
+        closeButton.setTitleColor(.systemIndigo, for: .normal)
+        closeButton.addTarget(self, action: #selector(touchUpClose), for: .touchUpInside)
+    }
+}
+
+// MARK: - Action
+extension SettingVC {
+    @objc func touchUpClose() {
+        dismiss(animated: false, completion: nil)
     }
 }

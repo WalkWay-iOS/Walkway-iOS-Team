@@ -8,6 +8,11 @@
 import UIKit
 import FSCalendar
 
+var recordDate = ["201210", "201217", "201224"]
+var recordName = ["관악산 초급 코스", "관악산 초급 코스", "관악산 초급 코스"]
+var recordDistance = ["5km", "5km", "5km"]
+var recordTime = ["1시간", "1시간", "1시간"]
+
 class MyRecordTVC: UITableViewCell {
     static let identifier = "MyRecordTVC"
     
@@ -31,20 +36,21 @@ class MyRecordTVC: UITableViewCell {
 // MARK: - CollectionViewDelegate
 extension MyRecordTVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyRecordListCVC.identifier, for: indexPath) as? MyRecordListCVC else {
             return UICollectionViewCell()
         }
+        cell.setData(record: recordDate[indexPath.row], name: recordName[indexPath.row],  distance: recordDistance[indexPath.row], time: recordTime[indexPath.row])
         return cell
     }
 }
 
 extension MyRecordTVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 140, height: 100)
+        return CGSize(width: UIScreen.main.bounds.size.width, height: 60)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -56,7 +62,7 @@ extension MyRecordTVC: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+        return UIEdgeInsets(top: 0, left: 25, bottom: 0, right: 25)
     }
 }
 
