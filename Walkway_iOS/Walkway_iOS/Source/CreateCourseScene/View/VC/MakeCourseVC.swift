@@ -172,7 +172,7 @@ extension MakeCourseVC {
         
         createCourseButton.setTitle("경로생성", for: .normal)
         createCourseButton.setTitleColor(.bookmarkDarkBlue, for: .normal)
-        createCourseButton.titleLabel?.font = .boldSystemFont(ofSize: 17)
+        createCourseButton.titleLabel?.font = .myBoldSystemFont(ofSize: 17)
         createCourseButton.addTarget(self, action: #selector(touchUpCreate), for: .touchUpInside)
         createCourseButton.translatesAutoresizingMaskIntoConstraints = false
         createCourseButton.isHidden = true
@@ -182,7 +182,7 @@ extension MakeCourseVC {
         
         saveButton.setTitle("저장", for: .normal)
         saveButton.setTitleColor(.bookmarkDarkBlue, for: .normal)
-        saveButton.titleLabel?.font = .boldSystemFont(ofSize: 17)
+        saveButton.titleLabel?.font = .myBoldSystemFont(ofSize: 17)
         saveButton.addTarget(self, action: #selector(touchUpSave), for: .touchUpInside)
         saveButton.translatesAutoresizingMaskIntoConstraints = false
         saveButton.isHidden = true
@@ -194,7 +194,7 @@ extension MakeCourseVC {
     private func setLabel() {
         hiddenLabel.text = "자신만의 Walkway를 만들어봐요.\n원하는 길을 탭해보세요👆🏼"
         hiddenLabel.numberOfLines = 2
-        hiddenLabel.font = .systemFont(ofSize: 20, weight: .bold)
+        hiddenLabel.font = .myBoldSystemFont(ofSize: 20)
         hiddenLabel.textColor = .white
         hiddenLabel.translatesAutoresizingMaskIntoConstraints = false
         hiddenView.addSubview(hiddenLabel)
@@ -202,7 +202,7 @@ extension MakeCourseVC {
         hiddenLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15).isActive = true
         
         warningLabel.text = "걸을 수 있는 길을 따라서 탭해주세요"
-        warningLabel.font = .systemFont(ofSize: 13, weight: .semibold)
+        warningLabel.font = .myMediumSystemFont(ofSize: 13)
         warningLabel.textColor = .white
         warningLabel.translatesAutoresizingMaskIntoConstraints = false
         hiddenView.addSubview(warningLabel)

@@ -36,13 +36,13 @@ extension BannerHeaderTVC {
     }
     
     private func setLabel() {
-        titleLabel.font = .boldSystemFont(ofSize: 28)
+        titleLabel.font = .myBoldSystemFont(ofSize: 28)
         titleLabel.textColor = .white
         
-        countLabel.font = .systemFont(ofSize: 13, weight: .semibold)
+        countLabel.font = .myMediumSystemFont(ofSize: 13)
         countLabel.textColor = .white
         
-        contentLabel.font = .systemFont(ofSize: 13, weight: .regular)
+        contentLabel.font = .myRegularSystemFont(ofSize: 13)
         contentLabel.textColor = .white
     }
 }

@@ -118,29 +118,29 @@ extension SignUpVC {
     
     private func setLabel() {
         titleLabel.text = "회원가입"
-        titleLabel.font = .boldSystemFont(ofSize: 30)
+        titleLabel.font = .myBoldSystemFont(ofSize: 30)
         
         emailWarningLabel.text = ""
-        emailWarningLabel.font = .systemFont(ofSize: 11)
+        emailWarningLabel.font = .myRegularSystemFont(ofSize: 11)
         emailWarningLabel.textColor = .latestBurgundy
         
         passwordWarningLabel.text = ""
-        passwordWarningLabel.font = .systemFont(ofSize: 11)
+        passwordWarningLabel.font = .myRegularSystemFont(ofSize: 11)
         passwordWarningLabel.textColor = .latestBurgundy
         
         confirmWarningLabel.text = ""
-        confirmWarningLabel.font = .systemFont(ofSize: 11)
+        confirmWarningLabel.font = .myRegularSystemFont(ofSize: 11)
         confirmWarningLabel.textColor = .latestBurgundy
         
         nameWarningLabel.text = ""
-        nameWarningLabel.font = .systemFont(ofSize: 11)
+        nameWarningLabel.font = .myRegularSystemFont(ofSize: 11)
         nameWarningLabel.textColor = .latestBurgundy
     }
     
     private func setButton() {
         signUpButton.setTitle("가입하기", for: .normal)
         signUpButton.setTitleColor(.white, for: .normal)
-        signUpButton.titleLabel?.font = .boldSystemFont(ofSize: 15)
+        signUpButton.titleLabel?.font = .myBoldSystemFont(ofSize: 15)
         signUpButton.backgroundColor = .gray60
         signUpButton.layer.cornerRadius = 19
         signUpButton.isEnabled = false

@@ -37,7 +37,7 @@ extension HomeFollowerCVC {
     }
     
     private func setLabel() {
-        nameLabel.font = .systemFont(ofSize: 11, weight: .bold)
+        nameLabel.font = .myBoldSystemFont(ofSize: 11)
     }
 }
 

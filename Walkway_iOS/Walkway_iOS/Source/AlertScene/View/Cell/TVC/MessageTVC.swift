@@ -42,10 +42,10 @@ extension MessageTVC {
     }
     
     private func setLabel() {
-        nameLabel.font = .systemFont(ofSize: 13, weight: .semibold)
+        nameLabel.font = .myMediumSystemFont(ofSize: 13)
         nameLabel.textColor = .gray90
         
-        contentLabel.font = .systemFont(ofSize: 11, weight: .medium)
+        contentLabel.font = .myRegularSystemFont(ofSize: 11)
         contentLabel.textColor = .gray60
     }
 }

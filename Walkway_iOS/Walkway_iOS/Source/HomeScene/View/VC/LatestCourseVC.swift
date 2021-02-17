@@ -77,7 +77,7 @@ extension LatestCourseVC  {
     
     private func setLabel() {
         titleLabel.text = "최신 코스"
-        titleLabel.font = .systemFont(ofSize: 25, weight: .black)
+        titleLabel.font = .myBoldSystemFont(ofSize: 25)
     }
     
     private func setButton() {

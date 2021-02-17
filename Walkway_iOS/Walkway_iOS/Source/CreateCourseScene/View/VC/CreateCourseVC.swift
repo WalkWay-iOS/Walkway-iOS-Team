@@ -195,7 +195,7 @@ extension CreateCourseVC {
         infoLabel.numberOfLines = 2
         infoLabel.text = "Walkway와 함께\n원하는 길을 찾아봐요🏃🏻‍♀️"
         infoLabel.textColor = .white
-        infoLabel.font = .systemFont(ofSize: 25, weight: .bold)
+        infoLabel.font = .myBoldSystemFont(ofSize: 25)
         infoLabel.translatesAutoresizingMaskIntoConstraints = false
         hiddenView.addSubview(infoLabel)
         infoLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 80).isActive = true
@@ -204,7 +204,7 @@ extension CreateCourseVC {
     
     private func setLabel() {
         startTitleLabel.text = "출발 위치 정보"
-        startTitleLabel.font = .systemFont(ofSize: 13, weight: .semibold)
+        startTitleLabel.font = .myMediumSystemFont(ofSize: 13)
         startTitleLabel.textColor = .gray70
         startTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         infoView.addSubview(startTitleLabel)
@@ -212,7 +212,7 @@ extension CreateCourseVC {
         startTitleLabel.leadingAnchor.constraint(equalTo: infoView.leadingAnchor, constant: 15).isActive = true
         
         destinationTitleLabel.text = "도착 위치 정보"
-        destinationTitleLabel.font = .systemFont(ofSize: 13, weight: .semibold)
+        destinationTitleLabel.font = .myMediumSystemFont(ofSize: 13)
         destinationTitleLabel.textColor = .gray70
         destinationTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         infoView.addSubview(destinationTitleLabel)
@@ -220,19 +220,19 @@ extension CreateCourseVC {
         destinationTitleLabel.leadingAnchor.constraint(equalTo: startTitleLabel.leadingAnchor).isActive = true
         
         startLocalLabel.text = ""
-        startLocalLabel.font = .systemFont(ofSize: 11)
+        startLocalLabel.font = .myRegularSystemFont(ofSize: 11)
         startLocalLabel.textColor = .gray90
         startLocalLabel.translatesAutoresizingMaskIntoConstraints = false
         infoView.addSubview(startLocalLabel)
-        startLocalLabel.topAnchor.constraint(equalTo: startTitleLabel.bottomAnchor, constant: 30).isActive = true
+        startLocalLabel.topAnchor.constraint(equalTo: startTitleLabel.bottomAnchor, constant: 25).isActive = true
         startLocalLabel.leadingAnchor.constraint(equalTo: startTitleLabel.leadingAnchor, constant: 20).isActive = true
         
         destinationLocalLabel.text = ""
-        destinationLocalLabel.font = .systemFont(ofSize: 11)
+        destinationLocalLabel.font = .myRegularSystemFont(ofSize: 11)
         destinationLocalLabel.textColor = .gray90
         destinationLocalLabel.translatesAutoresizingMaskIntoConstraints = false
         infoView.addSubview(destinationLocalLabel)
-        destinationLocalLabel.topAnchor.constraint(equalTo: destinationTitleLabel.bottomAnchor, constant: 30).isActive = true
+        destinationLocalLabel.topAnchor.constraint(equalTo: destinationTitleLabel.bottomAnchor, constant: 25).isActive = true
         destinationLocalLabel.leadingAnchor.constraint(equalTo: startTitleLabel.leadingAnchor, constant: 20).isActive = true
     }
     
@@ -254,7 +254,7 @@ extension CreateCourseVC {
         
         startButton.setTitle("출발 위치 설정", for: .normal)
         startButton.setTitleColor(.black, for: .normal)
-        startButton.titleLabel?.font = .boldSystemFont(ofSize: 16)
+        startButton.titleLabel?.font = .myBoldSystemFont(ofSize: 16)
         startButton.translatesAutoresizingMaskIntoConstraints = false
         startButton.addTarget(self, action: #selector(touchUpGetStartPoint), for: .touchUpInside)
         infoView.addSubview(startButton)
@@ -263,7 +263,7 @@ extension CreateCourseVC {
         
         destinationButton.setTitle("도착 위치 설정", for: .normal)
         destinationButton.setTitleColor(.black, for: .normal)
-        destinationButton.titleLabel?.font = .boldSystemFont(ofSize: 16)
+        destinationButton.titleLabel?.font = .myBoldSystemFont(ofSize: 16)
         destinationButton.translatesAutoresizingMaskIntoConstraints = false
         destinationButton.addTarget(self, action: #selector(touchUpGetDestinationPoint), for: .touchUpInside)
         infoView.addSubview(destinationButton)
@@ -282,7 +282,7 @@ extension CreateCourseVC {
         
         drawCourseButton.setTitle("직접 그리기", for: .normal)
         drawCourseButton.setTitleColor(.white, for: .normal)
-        drawCourseButton.titleLabel?.font = .boldSystemFont(ofSize: 15)
+        drawCourseButton.titleLabel?.font = .myBoldSystemFont(ofSize: 15)
         drawCourseButton.backgroundColor = .black
         drawCourseButton.layer.cornerRadius = 15
         drawCourseButton.addTarget(self, action: #selector(touchUpDraw), for: .touchUpInside)
@@ -292,7 +292,7 @@ extension CreateCourseVC {
 
         makeCourseButton.setTitle("경로 생성", for: .normal)
         makeCourseButton.setTitleColor(.white, for: .normal)
-        makeCourseButton.titleLabel?.font = .boldSystemFont(ofSize: 15)
+        makeCourseButton.titleLabel?.font = .myBoldSystemFont(ofSize: 15)
         makeCourseButton.backgroundColor = .black
         makeCourseButton.layer.cornerRadius = 15
         makeCourseButton.addTarget(self, action: #selector(touchUpCreateCourse), for: .touchUpInside)
@@ -316,7 +316,7 @@ extension CreateCourseVC {
         
         let label = UILabel()
         label.text = "길찾기"
-        label.font = .systemFont(ofSize: 14)
+        label.font = .myRegularSystemFont(ofSize: 14)
         label.textColor = .gray60
         label.translatesAutoresizingMaskIntoConstraints = false
         searchButton.addSubview(label)
