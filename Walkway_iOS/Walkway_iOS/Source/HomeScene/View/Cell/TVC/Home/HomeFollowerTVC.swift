@@ -92,6 +92,6 @@ extension HomeFollowerTVC {
     
     private func setLabel() {
         titleLabel.text = "요즘 인기있는 팔로워"
-        titleLabel.font = .systemFont(ofSize: 20, weight: .semibold)
+        titleLabel.font = .myBoldSystemFont(ofSize: 20)
     }
 }

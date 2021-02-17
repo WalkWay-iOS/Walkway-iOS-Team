@@ -31,13 +31,13 @@ extension FollowerLatestCourseTVC {
     }
     
     private func setLabel() {
-        titleLabel.font = .boldSystemFont(ofSize: 13)
+        titleLabel.font = .myBoldSystemFont(ofSize: 13)
         
         dateLabel.textColor = .bookmarkDarkBlue
-        dateLabel.font = .boldSystemFont(ofSize: 13)
+        dateLabel.font = .myBoldSystemFont(ofSize: 13)
         dateLabel.text = "201021"
         
-        infoLabel.font = .systemFont(ofSize: 13, weight: .medium)
+        infoLabel.font = .myRegularSystemFont(ofSize: 13)
         infoLabel.text = "10km / 2시간 30분"
     }
 }

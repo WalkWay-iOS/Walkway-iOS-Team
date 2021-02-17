@@ -61,23 +61,23 @@ extension DetailExplanationTVC {
     
     private func setLabel() {
         startingPointTitleLabel.text = "출발지"
-        startingPointTitleLabel.font = .systemFont(ofSize: 13, weight: .semibold)
+        startingPointTitleLabel.font = .myMediumSystemFont(ofSize: 13)
         startingPointTitleLabel.textColor = .darkGray
         
         destinationTitleLabel.text = "도착지"
-        destinationTitleLabel.font = .systemFont(ofSize: 13, weight: .semibold)
+        destinationTitleLabel.font = .myMediumSystemFont(ofSize: 13)
         destinationTitleLabel.textColor = .darkGray
         
         startingPointLabel.text = "서울대 입구"
-        startingPointLabel.font = .systemFont(ofSize: 13, weight: .semibold)
+        startingPointLabel.font = .myMediumSystemFont(ofSize: 13)
         startingPointLabel.textColor = .darkGray
         
         
         destinationLabel.text = "관악산 정상"
-        destinationLabel.font = .systemFont(ofSize: 13, weight: .semibold)
+        destinationLabel.font = .myMediumSystemFont(ofSize: 13)
         destinationLabel.textColor = .darkGray
         
         contentLabel.text = "어디서 출발해서 어디서 끝나는 코스입니다. 어디를 경유해서 가는 길입니다~~ 재밌게 즐기세요~~ enjoy 이 편지는 영국에서부터 시작했구요. 서울에서 끝이 납니다. 하하하하."
-        contentLabel.font = .systemFont(ofSize: 13, weight: .regular)
+        contentLabel.font = .myRegularSystemFont(ofSize: 13)
     }
 }

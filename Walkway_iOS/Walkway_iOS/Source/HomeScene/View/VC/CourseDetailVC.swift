@@ -223,7 +223,7 @@ extension CourseDetailVC {
         let startButton = UIButton()
         startButton.setTitle("시작하기", for: .normal)
         startButton.setTitleColor(.white, for: .normal)
-        startButton.titleLabel?.font = .boldSystemFont(ofSize: 16)
+        startButton.titleLabel?.font = .myBoldSystemFont(ofSize: 16)
         startButton.backgroundColor = .bookmarkDarkBlue
         startButton.layer.cornerRadius = 17
         startButton.translatesAutoresizingMaskIntoConstraints = false

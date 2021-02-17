@@ -67,7 +67,7 @@ extension FollowerLatestTVC {
     }
     
     private func setLabel() {
-        titleLabel.font = .boldSystemFont(ofSize: 16)
+        titleLabel.font = .myBoldSystemFont(ofSize: 16)
     }
 }
 

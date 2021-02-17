@@ -29,7 +29,7 @@ extension HashtagTVC {
     }
     
     private func setLabel() {
-        hashtagLabel.font = .systemFont(ofSize: 13, weight: .semibold)
+        hashtagLabel.font = .myMediumSystemFont(ofSize: 13)
     }
 }
 

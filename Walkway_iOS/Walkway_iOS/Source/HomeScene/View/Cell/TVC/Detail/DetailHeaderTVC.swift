@@ -53,26 +53,26 @@ extension DetailHeaderTVC {
     }
     
     private func setLabel() {
-        titleLabel.font = .boldSystemFont(ofSize: 26)
+        titleLabel.font = .myBoldSystemFont(ofSize: 25)
         
-        distanceLabel.font = .systemFont(ofSize: 15, weight: .semibold)
+        distanceLabel.font = .myMediumSystemFont(ofSize: 15)
         distanceLabel.textColor = .gray50
         
-        timeLabel.font = .systemFont(ofSize: 15, weight: .semibold)
+        timeLabel.font = .myMediumSystemFont(ofSize: 15)
         timeLabel.textColor = .gray50
         
         courseStrengthLabel.text = "코스 강도"
-        courseStrengthLabel.font = .systemFont(ofSize: 13, weight: .semibold)
+        courseStrengthLabel.font = .myMediumSystemFont(ofSize: 13)
         courseStrengthLabel.textColor = .gray50
         
         courseRateLabel.text = "코스 평점"
-        courseRateLabel.font = .systemFont(ofSize: 13, weight: .semibold)
+        courseRateLabel.font = .myMediumSystemFont(ofSize: 13)
         courseRateLabel.textColor = .gray50
         
         strengthLabel.text = "🔥10/100"
-        strengthLabel.font = .systemFont(ofSize: 11, weight: .semibold)
+        strengthLabel.font = .myMediumSystemFont(ofSize: 11)
         
-        rateLabel.font = .systemFont(ofSize: 11, weight: .semibold)
+        rateLabel.font = .myMediumSystemFont(ofSize: 11)
     }
     
     private func setProgressBar() {

@@ -79,7 +79,7 @@ extension BookmarkCourseVC  {
     
     private func setLabel() {
         titleLabel.text = "북마크 / 평점 코스"
-        titleLabel.font = .systemFont(ofSize: 25, weight: .black)
+        titleLabel.font = .myBoldSystemFont(ofSize: 25)
     }
     
     private func setButton() {
@@ -89,7 +89,7 @@ extension BookmarkCourseVC  {
         closeButton.addTarget(self, action: #selector(touchUpClose), for: .touchUpInside)
         
         bookmarkButton.setTitle("#북마크", for: .normal)
-        bookmarkButton.titleLabel?.font = .boldSystemFont(ofSize: 15)
+        bookmarkButton.titleLabel?.font = .myBoldSystemFont(ofSize: 15)
         bookmarkButton.setTitleColor(.white, for: .normal)
         bookmarkButton.backgroundColor = .bookmarkGray
         bookmarkButton.layer.cornerRadius = 13
@@ -100,7 +100,7 @@ extension BookmarkCourseVC  {
         bookmarkButton.addTarget(self, action: #selector(touchUpBookmark), for: .touchUpInside)
         
         rateButton.setTitle("#평점", for: .normal)
-        rateButton.titleLabel?.font = .boldSystemFont(ofSize: 15)
+        rateButton.titleLabel?.font = .myBoldSystemFont(ofSize: 15)
         rateButton.setTitleColor(.white, for: .normal)
         rateButton.backgroundColor = .popularGreen
         rateButton.layer.cornerRadius = 13

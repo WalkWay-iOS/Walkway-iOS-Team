@@ -117,15 +117,15 @@ extension DetailReviewTVC {
         } else {
             titleLabel.text = "코스 참가 후기(\(reviewCounter))"
         }
-        titleLabel.font = .boldSystemFont(ofSize: 20)
+        titleLabel.font = .myBoldSystemFont(ofSize: 20)
         
-        rateLabel.font = .systemFont(ofSize: 15, weight: .medium)
+        rateLabel.font = .myRegularSystemFont(ofSize: 15)
         rateLabel.textColor = .gray70
     }
     
     private func setButton() {
         viewAllButton.setTitle("전체보기", for: .normal)
-        viewAllButton.titleLabel?.font = .systemFont(ofSize: 13, weight: .bold)
+        viewAllButton.titleLabel?.font = .myMediumSystemFont(ofSize: 13)
         viewAllButton.setTitleColor(.gray70, for: .normal)
         viewAllButton.addTarget(self, action: #selector(touchUpViewAll), for: .touchUpInside)
     }

@@ -41,7 +41,7 @@ extension AlertTVC {
     }
     
     private func setLabel() {
-        contentLabel.font = .systemFont(ofSize: 13, weight: .medium)
+        contentLabel.font = .myMediumSystemFont(ofSize: 12)
         contentLabel.textColor = .gray70
     }
 }

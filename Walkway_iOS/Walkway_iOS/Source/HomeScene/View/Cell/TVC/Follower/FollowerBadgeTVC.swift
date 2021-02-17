@@ -86,12 +86,12 @@ extension FollowerBadgeTVC {
     
     private func setLabel() {
         titleLabel.text = "뱃지"
-        titleLabel.font = .boldSystemFont(ofSize: 16)
+        titleLabel.font = .myBoldSystemFont(ofSize: 16)
     }
     
     private func setButton() {
         viewAllButton.setTitle("전체보기", for: .normal)
         viewAllButton.setTitleColor(.gray70, for: .normal)
-        viewAllButton.titleLabel?.font = .systemFont(ofSize: 11, weight: .semibold)
+        viewAllButton.titleLabel?.font = .myMediumSystemFont(ofSize: 11)
     }
 }

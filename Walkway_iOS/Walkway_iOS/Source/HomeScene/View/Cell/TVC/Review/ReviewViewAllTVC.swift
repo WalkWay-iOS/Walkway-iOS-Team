@@ -35,7 +35,7 @@ extension ReviewViewAllTVC {
     
     private func setButton() {
         profileButton.setTitleColor(.white, for: .normal)
-        profileButton.titleLabel?.font = .systemFont(ofSize: 13, weight: .medium)
+        profileButton.titleLabel?.font = .myMediumSystemFont(ofSize: 13)
         profileButton.backgroundColor = .bookmarkDarkBlue
         profileButton.layer.cornerRadius = 15
         profileButton.layer.shadowColor = UIColor.black.withAlphaComponent(0.8).cgColor

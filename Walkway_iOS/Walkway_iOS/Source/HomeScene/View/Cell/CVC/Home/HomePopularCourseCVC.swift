@@ -47,16 +47,16 @@ extension HomePopularCourseCVC {
     
     private func setLabel() {
         titleLabel.text = "북악산 워킹 코스달려라 코스야 달려라 달려"
-        titleLabel.font = .boldSystemFont(ofSize: 15)
+        titleLabel.font = .myBoldSystemFont(ofSize: 15)
         titleLabel.textColor = .white
-        titleLabel.widthAnchor.constraint(lessThanOrEqualTo: self.widthAnchor, constant: -self.frame.size.width/4.5).isActive = true
+        titleLabel.widthAnchor.constraint(lessThanOrEqualTo: self.widthAnchor, constant: -self.frame.size.width/4.3).isActive = true
         
         timeLabel.text = "1시간 30분"
-        timeLabel.font = .systemFont(ofSize: 11)
+        timeLabel.font = .myRegularSystemFont(ofSize: 11)
         timeLabel.textColor = .white
         
         distanceLabel.text = "2km"
-        distanceLabel.font = .systemFont(ofSize: 11)
+        distanceLabel.font = .myRegularSystemFont(ofSize: 11)
         distanceLabel.textColor = .white
     }
     
@@ -66,14 +66,14 @@ extension HomePopularCourseCVC {
         var index = 0
         
         for btn in hashtagButtons {
-            btn.layer.cornerRadius = 9
+            btn.layer.cornerRadius = 11
             btn.layer.shadowColor = UIColor.black.withAlphaComponent(0.5).cgColor
             btn.layer.shadowOpacity = 0.8
             btn.layer.shadowOffset = CGSize(width: 1, height: 2)
             btn.layer.shadowRadius = 2
             
             btn.setTitle(title[index], for: .normal)
-            btn.titleLabel?.font = .systemFont(ofSize: 12, weight: .semibold)
+            btn.titleLabel?.font = .myMediumSystemFont(ofSize: 12)
             btn.backgroundColor = colors[index]
             btn.contentEdgeInsets = UIEdgeInsets(top: 2, left: 8, bottom: 2, right: 8)
             btn.setTitleColor(.white, for: .normal)

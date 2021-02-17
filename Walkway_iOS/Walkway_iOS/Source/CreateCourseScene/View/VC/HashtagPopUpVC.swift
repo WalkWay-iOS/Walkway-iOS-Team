@@ -72,27 +72,27 @@ extension HashtagPopUpVC {
     
     private func setLabel() {
         titleLabel.text = "#Walkway 해시태그"
-        titleLabel.font = .systemFont(ofSize: 15, weight: .semibold)
+        titleLabel.font = .myMediumSystemFont(ofSize: 15)
         
         infoLabel.text = "돋보이는 5글자 이하의 해시태그를 넣어주세요✨"
-        infoLabel.font = .systemFont(ofSize: 9, weight: .semibold)
+        infoLabel.font = .myMediumSystemFont(ofSize: 9)
         infoLabel.textColor = .gray70
         
         warningLabel.text = ""
-        warningLabel.font = .systemFont(ofSize: 9, weight: .semibold)
+        warningLabel.font = .myMediumSystemFont(ofSize: 9)
         warningLabel.textColor = .latestBurgundy
     }
     
     private func setButton() {
         saveButton.setTitle("저장", for: .normal)
         saveButton.setTitleColor(.bookmarkDarkBlue, for: .normal)
-        saveButton.titleLabel?.font = .systemFont(ofSize: 15, weight: .semibold)
+        saveButton.titleLabel?.font = .myMediumSystemFont(ofSize: 15)
         saveButton.addTarget(self, action: #selector(touchUpSave), for: .touchUpInside)
         saveButton.isEnabled = false
         
         cancelButton.setTitle("취소", for: .normal)
         cancelButton.setTitleColor(.bookmarkDarkBlue, for: .normal)
-        cancelButton.titleLabel?.font = .systemFont(ofSize: 15, weight: .semibold)
+        cancelButton.titleLabel?.font = .myMediumSystemFont(ofSize: 15)
         cancelButton.addTarget(self, action: #selector(touchUpCancel), for: .touchUpInside)
     }
     
