@@ -311,7 +311,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3hj-kI-62S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1988" y="-17"/>
+            <point key="canvasLocation" x="1899" y="-3"/>
         </scene>
         <!--Hashtag Pop UpVC-->
         <scene sceneID="O76-aJ-7By">

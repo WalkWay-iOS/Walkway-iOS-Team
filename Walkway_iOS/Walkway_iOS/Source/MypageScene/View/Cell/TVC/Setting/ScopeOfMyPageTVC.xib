@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ScopeOfMyPageTVC" rowHeight="201" id="KGk-i7-Jjw" customClass="ScopeOfMyPageTVC" customModule="Walkway_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="396" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="396" height="200"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ame-cr-NRJ">
+                        <rect key="frame" x="25" y="20.5" width="40" height="18"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pHc-gU-Sgl">
+                        <rect key="frame" x="183" y="45" width="191" height="32"/>
+                        <segments>
+                            <segment title="전체공개"/>
+                            <segment title="친구공개"/>
+                            <segment title="비공개"/>
+                        </segments>
+                    </segmentedControl>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oro-Tz-mz6">
+                        <rect key="frame" x="115" y="99.5" width="33" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yph-qE-4pw">
+                        <rect key="frame" x="183" y="91" width="191" height="32"/>
+                        <segments>
+                            <segment title="전체공개"/>
+                            <segment title="친구공개"/>
+                            <segment title="비공개"/>
+                        </segments>
+                    </segmentedControl>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59C-kf-Msv">
+                        <rect key="frame" x="115" y="145.5" width="33" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7sg-S4-66z">
+                        <rect key="frame" x="25" y="188.5" width="340" height="1"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="340" id="MAu-fF-obB"/>
+                            <constraint firstAttribute="height" constant="1" id="hGL-lD-daf"/>
+                        </constraints>
+                    </imageView>
+                    <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Osc-rC-te7">
+                        <rect key="frame" x="183" y="137" width="191" height="32"/>
+                        <segments>
+                            <segment title="전체공개"/>
+                            <segment title="친구공개"/>
+                            <segment title="비공개"/>
+                        </segments>
+                    </segmentedControl>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbC-RR-njh">
+                        <rect key="frame" x="115" y="53.5" width="33" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Oro-Tz-mz6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="115" id="8LE-Ga-eOe"/>
+                    <constraint firstItem="RbC-RR-njh" firstAttribute="centerY" secondItem="pHc-gU-Sgl" secondAttribute="centerY" id="Cn1-Hs-fj4"/>
+                    <constraint firstItem="ame-cr-NRJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="DEf-It-Sfy"/>
+                    <constraint firstAttribute="trailing" secondItem="7sg-S4-66z" secondAttribute="trailing" constant="25" id="IXA-50-5tx"/>
+                    <constraint firstAttribute="trailing" secondItem="Osc-rC-te7" secondAttribute="trailing" constant="25" id="MO1-jW-cMg"/>
+                    <constraint firstItem="Oro-Tz-mz6" firstAttribute="centerY" secondItem="yph-qE-4pw" secondAttribute="centerY" id="N29-yb-TAm"/>
+                    <constraint firstItem="Osc-rC-te7" firstAttribute="top" secondItem="yph-qE-4pw" secondAttribute="bottom" constant="15" id="OYF-em-9Jz"/>
+                    <constraint firstItem="Osc-rC-te7" firstAttribute="trailing" secondItem="yph-qE-4pw" secondAttribute="trailing" id="QNo-g3-MRY"/>
+                    <constraint firstItem="yph-qE-4pw" firstAttribute="top" secondItem="pHc-gU-Sgl" secondAttribute="bottom" constant="15" id="Vhx-rC-RY1"/>
+                    <constraint firstItem="59C-kf-Msv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="115" id="W7c-bA-EZC"/>
+                    <constraint firstItem="ame-cr-NRJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20.5" id="X1D-GF-yc0"/>
+                    <constraint firstItem="7sg-S4-66z" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="aHT-yt-DfE"/>
+                    <constraint firstItem="RbC-RR-njh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="115" id="bJF-5C-VdQ"/>
+                    <constraint firstItem="pHc-gU-Sgl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="45" id="gDj-4s-H3H"/>
+                    <constraint firstItem="59C-kf-Msv" firstAttribute="centerY" secondItem="Osc-rC-te7" secondAttribute="centerY" id="lN7-MV-mfC"/>
+                    <constraint firstAttribute="trailing" secondItem="pHc-gU-Sgl" secondAttribute="trailing" constant="25" id="qhM-qb-9iu"/>
+                    <constraint firstItem="yph-qE-4pw" firstAttribute="trailing" secondItem="pHc-gU-Sgl" secondAttribute="trailing" id="wGJ-bN-WGw"/>
+                    <constraint firstAttribute="trailing" secondItem="yph-qE-4pw" secondAttribute="trailing" constant="25" id="xuH-9d-DKs"/>
+                    <constraint firstItem="7sg-S4-66z" firstAttribute="top" secondItem="Osc-rC-te7" secondAttribute="bottom" constant="20.5" id="zdf-O4-Yle"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="badgeTitleLabel" destination="Oro-Tz-mz6" id="hmr-Ce-4x9"/>
+                <outlet property="keywordTitleLabel" destination="59C-kf-Msv" id="fvE-ul-Mhs"/>
+                <outlet property="recordTitleLabel" destination="RbC-RR-njh" id="bxN-8s-pv7"/>
+                <outlet property="titleLabel" destination="ame-cr-NRJ" id="XPf-8V-Fxo"/>
+            </connections>
+            <point key="canvasLocation" x="234.78260869565219" y="110.82589285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
