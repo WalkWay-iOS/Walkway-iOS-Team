@@ -9,7 +9,7 @@ import UIKit
 
 class HomePopularCourseCVC: UICollectionViewCell {
     static let identifier = "HomePopularCourseCVC"
-
+    
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var mainImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!

@@ -8,58 +8,63 @@
 import UIKit
 
 class CourseRunningTabVC: UIViewController {
-
-    private let pageViewController = UIPageViewController(transitionStyle: .pageCurl, navigationOrientation: .horizontal)
     
-    private let pageControl: UIPageControl = {
-        let pc = UIPageControl()
-        
-        pc.currentPageIndicatorTintColor = .purple
-        pc.pageIndicatorTintColor = .gray
-        pc.translatesAutoresizingMaskIntoConstraints = false
-        
-        return pc
-    }()
+    @IBOutlet var collectionView: UICollectionView!
     
-    /*override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
     }
-    
-    private func setPageViewController() {
-        pageViewController.dataSource = self
-        pageViewController.delegate = self
-    }
-    
-    private func setPageControl() {
-    }*/
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
-/*extension CourseRunningTabVC: UIPageViewControllerDataSource {
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        
+//MARK: - courseRunningTab extension
+extension CourseRunningTabVC: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 3
+    }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
     }
     
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if indexPath.section == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CourseWalkingSetting", for: indexPath)
+            cell.backgroundColor = .white
+            return cell
+        } else if indexPath.section == 1 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CourseWalkingMap", for: indexPath)
+            cell.backgroundColor = .black
+            return cell
+        } else if indexPath.section == 2 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CourseWalkingInfo", for: indexPath)
+            cell.backgroundColor = .white
+            return cell
+        }
+        return UICollectionViewCell()
     }
     
+    // 셀크기 설정
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
+    }
     
+    // 셀 위아래 간격 설정
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    //셀 옆 간격 설정
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
 }
-
-extension CourseRunningTabVC: UIPageViewControllerDelegate {
-    
-}*/

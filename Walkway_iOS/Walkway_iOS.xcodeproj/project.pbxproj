@@ -8,14 +8,64 @@
 
 /* Begin PBXBuildFile section */
 		1766393A52A4BD11CD141885 /* Pods_Walkway_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA9CA972E2FCA8C7F9A8776 /* Pods_Walkway_iOS.framework */; };
+		7408AEBF25DB73F400E1C55C /* MyCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7408AEBE25DB73F400E1C55C /* MyCourse.swift */; };
+		741DC2FA25D67A1F0026F1D9 /* MycourseListCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741DC2F825D67A1F0026F1D9 /* MycourseListCVC.swift */; };
+		741DC2FB25D67A1F0026F1D9 /* MycourseListCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 741DC2F925D67A1F0026F1D9 /* MycourseListCVC.xib */; };
+		742E701025D956B700F4ADB8 /* MyCourseListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742E700E25D956B700F4ADB8 /* MyCourseListTVC.swift */; };
+		742E701125D956B700F4ADB8 /* MyCourseListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 742E700F25D956B700F4ADB8 /* MyCourseListTVC.xib */; };
+		742E701525D956DA00F4ADB8 /* MyRecordListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742E701325D956DA00F4ADB8 /* MyRecordListTVC.swift */; };
+		742E701625D956DA00F4ADB8 /* MyRecordListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 742E701425D956DA00F4ADB8 /* MyRecordListTVC.xib */; };
+		743DB1BB25D37B600038F8F0 /* MyProfileTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743DB1B925D37B600038F8F0 /* MyProfileTVC.swift */; };
+		743DB1BC25D37B600038F8F0 /* MyProfileTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 743DB1BA25D37B600038F8F0 /* MyProfileTVC.xib */; };
+		7452E94B25D2EFC00048DE2E /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452E94A25D2EFC00048DE2E /* SettingVC.swift */; };
+		7452E95025D2F23F0048DE2E /* MyPageHeaderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452E94E25D2F23F0048DE2E /* MyPageHeaderTVC.swift */; };
+		7452E95125D2F23F0048DE2E /* MyPageHeaderTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7452E94F25D2F23F0048DE2E /* MyPageHeaderTVC.xib */; };
+		7452E95A25D2F26D0048DE2E /* MyBadgeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452E95825D2F26D0048DE2E /* MyBadgeTVC.swift */; };
+		7452E95B25D2F26D0048DE2E /* MyBadgeTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7452E95925D2F26D0048DE2E /* MyBadgeTVC.xib */; };
+		7452E95F25D2F2830048DE2E /* MyKeywordTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452E95D25D2F2830048DE2E /* MyKeywordTVC.swift */; };
+		7452E96025D2F2830048DE2E /* MyKeywordTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7452E95E25D2F2830048DE2E /* MyKeywordTVC.xib */; };
+		7452E96425D2F29B0048DE2E /* MyCourseTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452E96225D2F29B0048DE2E /* MyCourseTVC.swift */; };
+		7452E96525D2F29B0048DE2E /* MyCourseTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7452E96325D2F29B0048DE2E /* MyCourseTVC.xib */; };
+		7452E96925D2F2B10048DE2E /* MyRecordTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452E96725D2F2B10048DE2E /* MyRecordTVC.swift */; };
+		7452E96A25D2F2B10048DE2E /* MyRecordTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7452E96825D2F2B10048DE2E /* MyRecordTVC.xib */; };
+		7463EF3525DBFF400094F192 /* MyRecordListCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7463EF3325DBFF400094F192 /* MyRecordListCVC.swift */; };
+		7463EF3625DBFF400094F192 /* MyRecordListCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7463EF3425DBFF400094F192 /* MyRecordListCVC.xib */; };
+		7463EF3925DC20FD0094F192 /* EditEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7463EF3825DC20FC0094F192 /* EditEmailVC.swift */; };
+		7463EF3C25DC21140094F192 /* EditPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7463EF3B25DC21140094F192 /* EditPasswordVC.swift */; };
+		7463EF4125DC222E0094F192 /* profilePresentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7463EF4025DC222E0094F192 /* profilePresentDelegate.swift */; };
+		7463EF4525DC308C0094F192 /* EditKeywordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7463EF4425DC308C0094F192 /* EditKeywordVC.swift */; };
+		7463EF4C25DC3A900094F192 /* MyBadgeCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7463EF4A25DC3A900094F192 /* MyBadgeCVC.swift */; };
+		7463EF4D25DC3A900094F192 /* MyBadgeCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7463EF4B25DC3A900094F192 /* MyBadgeCVC.xib */; };
+		7463EF5125DC43140094F192 /* MyKeywordCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7463EF4F25DC43140094F192 /* MyKeywordCVC.swift */; };
+		7463EF5225DC43140094F192 /* MyKeywordCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7463EF5025DC43140094F192 /* MyKeywordCVC.xib */; };
 		74685F5F25C3C6DC004EDFEC /* CourseRunningTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74685F5E25C3C6DC004EDFEC /* CourseRunningTab.storyboard */; };
 		74685F6525C3C72D004EDFEC /* CourseRunningTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74685F6425C3C72D004EDFEC /* CourseRunningTabVC.swift */; };
+		748C63B625CA81F70072B8AE /* CourseRunningInfoCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748C63B525CA81F70072B8AE /* CourseRunningInfoCVC.swift */; };
+		748C63BA25CA912F0072B8AE /* RunningInfoHotPlaceCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748C63B925CA912F0072B8AE /* RunningInfoHotPlaceCVC.swift */; };
+		748E6B4625D993B800374211 /* MyCourseListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748E6B4525D993B800374211 /* MyCourseListVC.swift */; };
+		748E6B5325D99D2500374211 /* MyRecordListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748E6B5225D99D2500374211 /* MyRecordListVC.swift */; };
+		748E6B5925D99DAA00374211 /* MyBadgeListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748E6B5825D99DAA00374211 /* MyBadgeListVC.swift */; };
+		748E6B5D25D99DBB00374211 /* MyKeywordListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748E6B5C25D99DBB00374211 /* MyKeywordListVC.swift */; };
+		74996CCB25DAE3C000A03218 /* myPagePresentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74996CCA25DAE3C000A03218 /* myPagePresentDelegate.swift */; };
+		74E77DB425CE7EE700EBE83D /* LocationInfoAllowTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E77DB225CE7EE700EBE83D /* LocationInfoAllowTVC.swift */; };
+		74E77DB525CE7EE700EBE83D /* LocationInfoAllowTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74E77DB325CE7EE700EBE83D /* LocationInfoAllowTVC.xib */; };
+		74E77DBA25CE7F0400EBE83D /* CameraInfoAllowTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E77DB825CE7F0400EBE83D /* CameraInfoAllowTVC.swift */; };
+		74E77DBB25CE7F0400EBE83D /* CameraInfoAllowTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74E77DB925CE7F0400EBE83D /* CameraInfoAllowTVC.xib */; };
+		74E77DBF25CE7F3E00EBE83D /* ScopeOfMyPageTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E77DBD25CE7F3E00EBE83D /* ScopeOfMyPageTVC.swift */; };
+		74E77DC025CE7F3E00EBE83D /* ScopeOfMyPageTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74E77DBE25CE7F3E00EBE83D /* ScopeOfMyPageTVC.xib */; };
+		74E77DC425CE7F6D00EBE83D /* NotificationInfoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E77DC225CE7F6D00EBE83D /* NotificationInfoTVC.swift */; };
+		74E77DC525CE7F6D00EBE83D /* NotificationInfoTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74E77DC325CE7F6D00EBE83D /* NotificationInfoTVC.xib */; };
+		74F4150325CF791C007E4C07 /* ProfileSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F4150225CF791C007E4C07 /* ProfileSettingVC.swift */; };
+		74F4150925CF7A68007E4C07 /* ProfileImageTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F4150725CF7A68007E4C07 /* ProfileImageTVC.swift */; };
+		74F4150A25CF7A68007E4C07 /* ProfileImageTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74F4150825CF7A68007E4C07 /* ProfileImageTVC.xib */; };
+		74F4150E25CF7A7E007E4C07 /* ProfileInfoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F4150C25CF7A7E007E4C07 /* ProfileInfoTVC.swift */; };
+		74F4150F25CF7A7E007E4C07 /* ProfileInfoTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74F4150D25CF7A7E007E4C07 /* ProfileInfoTVC.xib */; };
+		74F4151325CF7A90007E4C07 /* ProfileKeywordTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F4151125CF7A90007E4C07 /* ProfileKeywordTVC.swift */; };
+		74F4151425CF7A90007E4C07 /* ProfileKeywordTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74F4151225CF7A90007E4C07 /* ProfileKeywordTVC.xib */; };
 		74F5D81325C64813003EA002 /* CourseRunningMapCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F5D81125C64813003EA002 /* CourseRunningMapCVC.swift */; };
 		74F5D81425C64813003EA002 /* CourseRunningMapCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74F5D81225C64813003EA002 /* CourseRunningMapCVC.xib */; };
 		74F5D81825C64829003EA002 /* CourseRunningSettingCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F5D81625C64829003EA002 /* CourseRunningSettingCVC.swift */; };
 		74F5D81925C64829003EA002 /* CourseRunningSettingCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74F5D81725C64829003EA002 /* CourseRunningSettingCVC.xib */; };
-		74F5D82525C649F2003EA002 /* RunningDetailInfoCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F5D82325C649F2003EA002 /* RunningDetailInfoCVC.swift */; };
-		74F5D82625C649F2003EA002 /* RunningDetailInfoCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74F5D82425C649F2003EA002 /* RunningDetailInfoCVC.xib */; };
 		74FDE74725C17CF2002EF553 /* CourseListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FDE74525C17CF2002EF553 /* CourseListTVC.swift */; };
 		74FDE74825C17CF2002EF553 /* CourseListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74FDE74625C17CF2002EF553 /* CourseListTVC.xib */; };
 		ED01F4CF25BFBFCB00B9AD43 /* DetailReviewTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED01F4CD25BFBFCB00B9AD43 /* DetailReviewTVC.swift */; };
@@ -64,6 +114,12 @@
 		ED16C8BD25BAA95F003DD0F0 /* HomeLatestCourseTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED16C8BB25BAA95F003DD0F0 /* HomeLatestCourseTVC.xib */; };
 		ED16C8C125BAAB90003DD0F0 /* HomeLatestCourseCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED16C8BF25BAAB90003DD0F0 /* HomeLatestCourseCVC.swift */; };
 		ED16C8C225BAAB90003DD0F0 /* HomeLatestCourseCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED16C8C025BAAB90003DD0F0 /* HomeLatestCourseCVC.xib */; };
+		ED5630E125CD33A400A3A22C /* ReviewViewAllTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5630DF25CD33A400A3A22C /* ReviewViewAllTVC.swift */; };
+		ED5630E225CD33A400A3A22C /* ReviewViewAllTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED5630E025CD33A400A3A22C /* ReviewViewAllTVC.xib */; };
+		ED5630E625CD57B300A3A22C /* DetailPhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5630E525CD57B300A3A22C /* DetailPhotoVC.swift */; };
+		ED5630EB25CD5C7B00A3A22C /* PhotoViewAllCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5630E925CD5C7B00A3A22C /* PhotoViewAllCVC.swift */; };
+		ED5630EC25CD5C7B00A3A22C /* PhotoViewAllCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED5630EA25CD5C7B00A3A22C /* PhotoViewAllCVC.xib */; };
+		ED5630EF25CD7D6A00A3A22C /* DetailPhotoPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5630EE25CD7D6A00A3A22C /* DetailPhotoPopUpVC.swift */; };
 		ED7622BA25BAFC88007E1C98 /* Extensions+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7622B925BAFC88007E1C98 /* Extensions+UIColor.swift */; };
 		ED7622BD25BB12D1007E1C98 /* PopularCourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7622BC25BB12D1007E1C98 /* PopularCourseVC.swift */; };
 		ED7622C125BB13DC007E1C98 /* cellPresentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7622C025BB13DC007E1C98 /* cellPresentDelegate.swift */; };
@@ -96,6 +152,31 @@
 		EDD2608B25C44D5A00619E8E /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2608A25C44D5A00619E8E /* SignInVC.swift */; };
 		EDD2608E25C4546700619E8E /* FindIdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2608D25C4546700619E8E /* FindIdVC.swift */; };
 		EDDF9A4A25CA4F5D00F5F7FD /* FollowerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A4925CA4F5D00F5F7FD /* FollowerVC.swift */; };
+		EDDF9A5A25CA67C300F5F7FD /* FollowerHeaderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A5825CA67C300F5F7FD /* FollowerHeaderTVC.swift */; };
+		EDDF9A5B25CA67C300F5F7FD /* FollowerHeaderTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDF9A5925CA67C300F5F7FD /* FollowerHeaderTVC.xib */; };
+		EDDF9A6025CA74F300F5F7FD /* FollowerBadgeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A5E25CA74F300F5F7FD /* FollowerBadgeTVC.swift */; };
+		EDDF9A6125CA74F300F5F7FD /* FollowerBadgeTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDF9A5F25CA74F300F5F7FD /* FollowerBadgeTVC.xib */; };
+		EDDF9A6625CA784E00F5F7FD /* FollowerBadgeCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A6425CA784E00F5F7FD /* FollowerBadgeCVC.swift */; };
+		EDDF9A6725CA784E00F5F7FD /* FollowerBadgeCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDF9A6525CA784E00F5F7FD /* FollowerBadgeCVC.xib */; };
+		EDDF9A6C25CA7F4600F5F7FD /* FollowerKeywordTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A6A25CA7F4600F5F7FD /* FollowerKeywordTVC.swift */; };
+		EDDF9A6D25CA7F4600F5F7FD /* FollowerKeywordTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDF9A6B25CA7F4600F5F7FD /* FollowerKeywordTVC.xib */; };
+		EDDF9A7125CA83C700F5F7FD /* FollowerKeywordCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A6F25CA83C700F5F7FD /* FollowerKeywordCVC.swift */; };
+		EDDF9A7225CA83C700F5F7FD /* FollowerKeywordCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDF9A7025CA83C700F5F7FD /* FollowerKeywordCVC.xib */; };
+		EDDF9A7625CA897400F5F7FD /* FollowerCourseTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A7425CA897400F5F7FD /* FollowerCourseTVC.swift */; };
+		EDDF9A7725CA897400F5F7FD /* FollowerCourseTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDF9A7525CA897400F5F7FD /* FollowerCourseTVC.xib */; };
+		EDDF9A7B25CA8C2E00F5F7FD /* FollowerCourseCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A7925CA8C2E00F5F7FD /* FollowerCourseCVC.swift */; };
+		EDDF9A7C25CA8C2E00F5F7FD /* FollowerCourseCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDF9A7A25CA8C2E00F5F7FD /* FollowerCourseCVC.xib */; };
+		EDDF9A8025CA90EC00F5F7FD /* FollowerLatestTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A7E25CA90EC00F5F7FD /* FollowerLatestTVC.swift */; };
+		EDDF9A8125CA90EC00F5F7FD /* FollowerLatestTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDF9A7F25CA90EC00F5F7FD /* FollowerLatestTVC.xib */; };
+		EDDF9A8B25CA9AD300F5F7FD /* FollowerLatestCourseTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A8925CA9AD300F5F7FD /* FollowerLatestCourseTVC.swift */; };
+		EDDF9A8C25CA9AD300F5F7FD /* FollowerLatestCourseTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDF9A8A25CA9AD300F5F7FD /* FollowerLatestCourseTVC.xib */; };
+		EDDF9A8F25CAB7D500F5F7FD /* BannerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A8E25CAB7D500F5F7FD /* BannerVC.swift */; };
+		EDDF9A9425CABC7300F5F7FD /* BannerHeaderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A9225CABC7300F5F7FD /* BannerHeaderTVC.swift */; };
+		EDDF9A9525CABC7300F5F7FD /* BannerHeaderTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDF9A9325CABC7300F5F7FD /* BannerHeaderTVC.xib */; };
+		EDDF9A9825CABFD700F5F7FD /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A9725CABFD700F5F7FD /* Country.swift */; };
+		EDDF9A9B25CAC5DD00F5F7FD /* followerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A9A25CAC5DD00F5F7FD /* followerDelegate.swift */; };
+		EDDF9A9E25CACD1600F5F7FD /* DetailReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A9D25CACD1600F5F7FD /* DetailReviewVC.swift */; };
+		EDDF9AA125CACF1100F5F7FD /* detailDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9AA025CACF1100F5F7FD /* detailDelegate.swift */; };
 		EDE0BDEA25BD912F00ADE8D1 /* CourseDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDE925BD912F00ADE8D1 /* CourseDetailVC.swift */; };
 		EDE0BDED25BD9B9500ADE8D1 /* Extensions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDEC25BD9B9500ADE8D1 /* Extensions+UIViewController.swift */; };
 		EDE0BDF225BD9E9900ADE8D1 /* DetailHeaderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDF025BD9E9900ADE8D1 /* DetailHeaderTVC.swift */; };
@@ -106,14 +187,64 @@
 
 /* Begin PBXFileReference section */
 		1438CA5AD824FFC830D71151 /* Pods-Walkway_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Walkway_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Walkway_iOS/Pods-Walkway_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		7408AEBE25DB73F400E1C55C /* MyCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourse.swift; sourceTree = "<group>"; };
+		741DC2F825D67A1F0026F1D9 /* MycourseListCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MycourseListCVC.swift; sourceTree = "<group>"; };
+		741DC2F925D67A1F0026F1D9 /* MycourseListCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MycourseListCVC.xib; sourceTree = "<group>"; };
+		742E700E25D956B700F4ADB8 /* MyCourseListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourseListTVC.swift; sourceTree = "<group>"; };
+		742E700F25D956B700F4ADB8 /* MyCourseListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCourseListTVC.xib; sourceTree = "<group>"; };
+		742E701325D956DA00F4ADB8 /* MyRecordListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordListTVC.swift; sourceTree = "<group>"; };
+		742E701425D956DA00F4ADB8 /* MyRecordListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyRecordListTVC.xib; sourceTree = "<group>"; };
+		743DB1B925D37B600038F8F0 /* MyProfileTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileTVC.swift; sourceTree = "<group>"; };
+		743DB1BA25D37B600038F8F0 /* MyProfileTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyProfileTVC.xib; sourceTree = "<group>"; };
+		7452E94A25D2EFC00048DE2E /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		7452E94E25D2F23F0048DE2E /* MyPageHeaderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageHeaderTVC.swift; sourceTree = "<group>"; };
+		7452E94F25D2F23F0048DE2E /* MyPageHeaderTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPageHeaderTVC.xib; sourceTree = "<group>"; };
+		7452E95825D2F26D0048DE2E /* MyBadgeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBadgeTVC.swift; sourceTree = "<group>"; };
+		7452E95925D2F26D0048DE2E /* MyBadgeTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyBadgeTVC.xib; sourceTree = "<group>"; };
+		7452E95D25D2F2830048DE2E /* MyKeywordTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKeywordTVC.swift; sourceTree = "<group>"; };
+		7452E95E25D2F2830048DE2E /* MyKeywordTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyKeywordTVC.xib; sourceTree = "<group>"; };
+		7452E96225D2F29B0048DE2E /* MyCourseTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourseTVC.swift; sourceTree = "<group>"; };
+		7452E96325D2F29B0048DE2E /* MyCourseTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCourseTVC.xib; sourceTree = "<group>"; };
+		7452E96725D2F2B10048DE2E /* MyRecordTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordTVC.swift; sourceTree = "<group>"; };
+		7452E96825D2F2B10048DE2E /* MyRecordTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyRecordTVC.xib; sourceTree = "<group>"; };
+		7463EF3325DBFF400094F192 /* MyRecordListCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordListCVC.swift; sourceTree = "<group>"; };
+		7463EF3425DBFF400094F192 /* MyRecordListCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyRecordListCVC.xib; sourceTree = "<group>"; };
+		7463EF3825DC20FC0094F192 /* EditEmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEmailVC.swift; sourceTree = "<group>"; };
+		7463EF3B25DC21140094F192 /* EditPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPasswordVC.swift; sourceTree = "<group>"; };
+		7463EF4025DC222E0094F192 /* profilePresentDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profilePresentDelegate.swift; sourceTree = "<group>"; };
+		7463EF4425DC308C0094F192 /* EditKeywordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditKeywordVC.swift; sourceTree = "<group>"; };
+		7463EF4A25DC3A900094F192 /* MyBadgeCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBadgeCVC.swift; sourceTree = "<group>"; };
+		7463EF4B25DC3A900094F192 /* MyBadgeCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyBadgeCVC.xib; sourceTree = "<group>"; };
+		7463EF4F25DC43140094F192 /* MyKeywordCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKeywordCVC.swift; sourceTree = "<group>"; };
+		7463EF5025DC43140094F192 /* MyKeywordCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyKeywordCVC.xib; sourceTree = "<group>"; };
 		74685F5E25C3C6DC004EDFEC /* CourseRunningTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CourseRunningTab.storyboard; sourceTree = "<group>"; };
 		74685F6425C3C72D004EDFEC /* CourseRunningTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRunningTabVC.swift; sourceTree = "<group>"; };
+		748C63B525CA81F70072B8AE /* CourseRunningInfoCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRunningInfoCVC.swift; sourceTree = "<group>"; };
+		748C63B925CA912F0072B8AE /* RunningInfoHotPlaceCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningInfoHotPlaceCVC.swift; sourceTree = "<group>"; };
+		748E6B4525D993B800374211 /* MyCourseListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourseListVC.swift; sourceTree = "<group>"; };
+		748E6B5225D99D2500374211 /* MyRecordListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordListVC.swift; sourceTree = "<group>"; };
+		748E6B5825D99DAA00374211 /* MyBadgeListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBadgeListVC.swift; sourceTree = "<group>"; };
+		748E6B5C25D99DBB00374211 /* MyKeywordListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKeywordListVC.swift; sourceTree = "<group>"; };
+		74996CCA25DAE3C000A03218 /* myPagePresentDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myPagePresentDelegate.swift; sourceTree = "<group>"; };
+		74E77DB225CE7EE700EBE83D /* LocationInfoAllowTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInfoAllowTVC.swift; sourceTree = "<group>"; };
+		74E77DB325CE7EE700EBE83D /* LocationInfoAllowTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationInfoAllowTVC.xib; sourceTree = "<group>"; };
+		74E77DB825CE7F0400EBE83D /* CameraInfoAllowTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraInfoAllowTVC.swift; sourceTree = "<group>"; };
+		74E77DB925CE7F0400EBE83D /* CameraInfoAllowTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraInfoAllowTVC.xib; sourceTree = "<group>"; };
+		74E77DBD25CE7F3E00EBE83D /* ScopeOfMyPageTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScopeOfMyPageTVC.swift; sourceTree = "<group>"; };
+		74E77DBE25CE7F3E00EBE83D /* ScopeOfMyPageTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScopeOfMyPageTVC.xib; sourceTree = "<group>"; };
+		74E77DC225CE7F6D00EBE83D /* NotificationInfoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationInfoTVC.swift; sourceTree = "<group>"; };
+		74E77DC325CE7F6D00EBE83D /* NotificationInfoTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationInfoTVC.xib; sourceTree = "<group>"; };
+		74F4150225CF791C007E4C07 /* ProfileSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingVC.swift; sourceTree = "<group>"; };
+		74F4150725CF7A68007E4C07 /* ProfileImageTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageTVC.swift; sourceTree = "<group>"; };
+		74F4150825CF7A68007E4C07 /* ProfileImageTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileImageTVC.xib; sourceTree = "<group>"; };
+		74F4150C25CF7A7E007E4C07 /* ProfileInfoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoTVC.swift; sourceTree = "<group>"; };
+		74F4150D25CF7A7E007E4C07 /* ProfileInfoTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileInfoTVC.xib; sourceTree = "<group>"; };
+		74F4151125CF7A90007E4C07 /* ProfileKeywordTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileKeywordTVC.swift; sourceTree = "<group>"; };
+		74F4151225CF7A90007E4C07 /* ProfileKeywordTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileKeywordTVC.xib; sourceTree = "<group>"; };
 		74F5D81125C64813003EA002 /* CourseRunningMapCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRunningMapCVC.swift; sourceTree = "<group>"; };
 		74F5D81225C64813003EA002 /* CourseRunningMapCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseRunningMapCVC.xib; sourceTree = "<group>"; };
 		74F5D81625C64829003EA002 /* CourseRunningSettingCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRunningSettingCVC.swift; sourceTree = "<group>"; };
 		74F5D81725C64829003EA002 /* CourseRunningSettingCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseRunningSettingCVC.xib; sourceTree = "<group>"; };
-		74F5D82325C649F2003EA002 /* RunningDetailInfoCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningDetailInfoCVC.swift; sourceTree = "<group>"; };
-		74F5D82425C649F2003EA002 /* RunningDetailInfoCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunningDetailInfoCVC.xib; sourceTree = "<group>"; };
 		74FDE74525C17CF2002EF553 /* CourseListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListTVC.swift; sourceTree = "<group>"; };
 		74FDE74625C17CF2002EF553 /* CourseListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseListTVC.xib; sourceTree = "<group>"; };
 		A4E36DDEE106831C5696941A /* Pods-Walkway_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Walkway_iOS.release.xcconfig"; path = "Target Support Files/Pods-Walkway_iOS/Pods-Walkway_iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -166,6 +297,12 @@
 		ED16C8BB25BAA95F003DD0F0 /* HomeLatestCourseTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeLatestCourseTVC.xib; sourceTree = "<group>"; };
 		ED16C8BF25BAAB90003DD0F0 /* HomeLatestCourseCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLatestCourseCVC.swift; sourceTree = "<group>"; };
 		ED16C8C025BAAB90003DD0F0 /* HomeLatestCourseCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeLatestCourseCVC.xib; sourceTree = "<group>"; };
+		ED5630DF25CD33A400A3A22C /* ReviewViewAllTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewAllTVC.swift; sourceTree = "<group>"; };
+		ED5630E025CD33A400A3A22C /* ReviewViewAllTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewViewAllTVC.xib; sourceTree = "<group>"; };
+		ED5630E525CD57B300A3A22C /* DetailPhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoVC.swift; sourceTree = "<group>"; };
+		ED5630E925CD5C7B00A3A22C /* PhotoViewAllCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewAllCVC.swift; sourceTree = "<group>"; };
+		ED5630EA25CD5C7B00A3A22C /* PhotoViewAllCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoViewAllCVC.xib; sourceTree = "<group>"; };
+		ED5630EE25CD7D6A00A3A22C /* DetailPhotoPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoPopUpVC.swift; sourceTree = "<group>"; };
 		ED7622B925BAFC88007E1C98 /* Extensions+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIColor.swift"; sourceTree = "<group>"; };
 		ED7622BC25BB12D1007E1C98 /* PopularCourseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCourseVC.swift; sourceTree = "<group>"; };
 		ED7622C025BB13DC007E1C98 /* cellPresentDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellPresentDelegate.swift; sourceTree = "<group>"; };
@@ -198,6 +335,31 @@
 		EDD2608A25C44D5A00619E8E /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		EDD2608D25C4546700619E8E /* FindIdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindIdVC.swift; sourceTree = "<group>"; };
 		EDDF9A4925CA4F5D00F5F7FD /* FollowerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerVC.swift; sourceTree = "<group>"; };
+		EDDF9A5825CA67C300F5F7FD /* FollowerHeaderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerHeaderTVC.swift; sourceTree = "<group>"; };
+		EDDF9A5925CA67C300F5F7FD /* FollowerHeaderTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowerHeaderTVC.xib; sourceTree = "<group>"; };
+		EDDF9A5E25CA74F300F5F7FD /* FollowerBadgeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerBadgeTVC.swift; sourceTree = "<group>"; };
+		EDDF9A5F25CA74F300F5F7FD /* FollowerBadgeTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowerBadgeTVC.xib; sourceTree = "<group>"; };
+		EDDF9A6425CA784E00F5F7FD /* FollowerBadgeCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerBadgeCVC.swift; sourceTree = "<group>"; };
+		EDDF9A6525CA784E00F5F7FD /* FollowerBadgeCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowerBadgeCVC.xib; sourceTree = "<group>"; };
+		EDDF9A6A25CA7F4600F5F7FD /* FollowerKeywordTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerKeywordTVC.swift; sourceTree = "<group>"; };
+		EDDF9A6B25CA7F4600F5F7FD /* FollowerKeywordTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowerKeywordTVC.xib; sourceTree = "<group>"; };
+		EDDF9A6F25CA83C700F5F7FD /* FollowerKeywordCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerKeywordCVC.swift; sourceTree = "<group>"; };
+		EDDF9A7025CA83C700F5F7FD /* FollowerKeywordCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowerKeywordCVC.xib; sourceTree = "<group>"; };
+		EDDF9A7425CA897400F5F7FD /* FollowerCourseTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCourseTVC.swift; sourceTree = "<group>"; };
+		EDDF9A7525CA897400F5F7FD /* FollowerCourseTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowerCourseTVC.xib; sourceTree = "<group>"; };
+		EDDF9A7925CA8C2E00F5F7FD /* FollowerCourseCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCourseCVC.swift; sourceTree = "<group>"; };
+		EDDF9A7A25CA8C2E00F5F7FD /* FollowerCourseCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowerCourseCVC.xib; sourceTree = "<group>"; };
+		EDDF9A7E25CA90EC00F5F7FD /* FollowerLatestTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerLatestTVC.swift; sourceTree = "<group>"; };
+		EDDF9A7F25CA90EC00F5F7FD /* FollowerLatestTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowerLatestTVC.xib; sourceTree = "<group>"; };
+		EDDF9A8925CA9AD300F5F7FD /* FollowerLatestCourseTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerLatestCourseTVC.swift; sourceTree = "<group>"; };
+		EDDF9A8A25CA9AD300F5F7FD /* FollowerLatestCourseTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowerLatestCourseTVC.xib; sourceTree = "<group>"; };
+		EDDF9A8E25CAB7D500F5F7FD /* BannerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerVC.swift; sourceTree = "<group>"; };
+		EDDF9A9225CABC7300F5F7FD /* BannerHeaderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerHeaderTVC.swift; sourceTree = "<group>"; };
+		EDDF9A9325CABC7300F5F7FD /* BannerHeaderTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerHeaderTVC.xib; sourceTree = "<group>"; };
+		EDDF9A9725CABFD700F5F7FD /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		EDDF9A9A25CAC5DD00F5F7FD /* followerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = followerDelegate.swift; sourceTree = "<group>"; };
+		EDDF9A9D25CACD1600F5F7FD /* DetailReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailReviewVC.swift; sourceTree = "<group>"; };
+		EDDF9AA025CACF1100F5F7FD /* detailDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailDelegate.swift; sourceTree = "<group>"; };
 		EDE0BDE925BD912F00ADE8D1 /* CourseDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailVC.swift; sourceTree = "<group>"; };
 		EDE0BDEC25BD9B9500ADE8D1 /* Extensions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIViewController.swift"; sourceTree = "<group>"; };
 		EDE0BDF025BD9E9900ADE8D1 /* DetailHeaderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderTVC.swift; sourceTree = "<group>"; };
@@ -227,6 +389,75 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		7408AEBD25DB73E700E1C55C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7408AEBE25DB73F400E1C55C /* MyCourse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		741DC2EF25D664310026F1D9 /* CVC */ = {
+			isa = PBXGroup;
+			children = (
+				7463EF4925DC3A760094F192 /* ViewAll */,
+				741DC2F025D664380026F1D9 /* MyPage */,
+			);
+			path = CVC;
+			sourceTree = "<group>";
+		};
+		741DC2F025D664380026F1D9 /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				741DC2F825D67A1F0026F1D9 /* MycourseListCVC.swift */,
+				741DC2F925D67A1F0026F1D9 /* MycourseListCVC.xib */,
+				7463EF3325DBFF400094F192 /* MyRecordListCVC.swift */,
+				7463EF3425DBFF400094F192 /* MyRecordListCVC.xib */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
+		742E700D25D9568800F4ADB8 /* ViewAll */ = {
+			isa = PBXGroup;
+			children = (
+				742E700E25D956B700F4ADB8 /* MyCourseListTVC.swift */,
+				742E700F25D956B700F4ADB8 /* MyCourseListTVC.xib */,
+				742E701325D956DA00F4ADB8 /* MyRecordListTVC.swift */,
+				742E701425D956DA00F4ADB8 /* MyRecordListTVC.xib */,
+			);
+			path = ViewAll;
+			sourceTree = "<group>";
+		};
+		7452E94D25D2F2020048DE2E /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				7452E94E25D2F23F0048DE2E /* MyPageHeaderTVC.swift */,
+				7452E94F25D2F23F0048DE2E /* MyPageHeaderTVC.xib */,
+				743DB1B925D37B600038F8F0 /* MyProfileTVC.swift */,
+				743DB1BA25D37B600038F8F0 /* MyProfileTVC.xib */,
+				7452E95825D2F26D0048DE2E /* MyBadgeTVC.swift */,
+				7452E95925D2F26D0048DE2E /* MyBadgeTVC.xib */,
+				7452E95D25D2F2830048DE2E /* MyKeywordTVC.swift */,
+				7452E95E25D2F2830048DE2E /* MyKeywordTVC.xib */,
+				7452E96225D2F29B0048DE2E /* MyCourseTVC.swift */,
+				7452E96325D2F29B0048DE2E /* MyCourseTVC.xib */,
+				7452E96725D2F2B10048DE2E /* MyRecordTVC.swift */,
+				7452E96825D2F2B10048DE2E /* MyRecordTVC.xib */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
+		7463EF4925DC3A760094F192 /* ViewAll */ = {
+			isa = PBXGroup;
+			children = (
+				7463EF4A25DC3A900094F192 /* MyBadgeCVC.swift */,
+				7463EF4B25DC3A900094F192 /* MyBadgeCVC.xib */,
+				7463EF4F25DC43140094F192 /* MyKeywordCVC.swift */,
+				7463EF5025DC43140094F192 /* MyKeywordCVC.xib */,
+			);
+			path = ViewAll;
+			sourceTree = "<group>";
+		};
 		74685F5D25C3C6A2004EDFEC /* CourseRunningTabScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,7 +470,6 @@
 		74685F6125C3C6E7004EDFEC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				74F5D82125C649B1003EA002 /* Detail */,
 				74F5D81D25C6485C003EA002 /* CC */,
 				74F5D81C25C6483E003EA002 /* CVC */,
 				74685F6225C3C6ED004EDFEC /* VC */,
@@ -263,11 +493,70 @@
 			path = TVC;
 			sourceTree = "<group>";
 		};
+		74996CC825DAE39200A03218 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				74996CCA25DAE3C000A03218 /* myPagePresentDelegate.swift */,
+				7463EF4025DC222E0094F192 /* profilePresentDelegate.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		74E77DAF25CE7E6B00EBE83D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				741DC2EF25D664310026F1D9 /* CVC */,
+				74E77DB025CE7E7300EBE83D /* TVC */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		74E77DB025CE7E7300EBE83D /* TVC */ = {
+			isa = PBXGroup;
+			children = (
+				742E700D25D9568800F4ADB8 /* ViewAll */,
+				7452E94D25D2F2020048DE2E /* MyPage */,
+				74E77DB125CE7E8D00EBE83D /* Setting */,
+				74F4150525CF7A34007E4C07 /* ProfileSetting */,
+			);
+			path = TVC;
+			sourceTree = "<group>";
+		};
+		74E77DB125CE7E8D00EBE83D /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				74E77DB225CE7EE700EBE83D /* LocationInfoAllowTVC.swift */,
+				74E77DB325CE7EE700EBE83D /* LocationInfoAllowTVC.xib */,
+				74E77DB825CE7F0400EBE83D /* CameraInfoAllowTVC.swift */,
+				74E77DB925CE7F0400EBE83D /* CameraInfoAllowTVC.xib */,
+				74E77DBD25CE7F3E00EBE83D /* ScopeOfMyPageTVC.swift */,
+				74E77DBE25CE7F3E00EBE83D /* ScopeOfMyPageTVC.xib */,
+				74E77DC225CE7F6D00EBE83D /* NotificationInfoTVC.swift */,
+				74E77DC325CE7F6D00EBE83D /* NotificationInfoTVC.xib */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		74F4150525CF7A34007E4C07 /* ProfileSetting */ = {
+			isa = PBXGroup;
+			children = (
+				74F4150725CF7A68007E4C07 /* ProfileImageTVC.swift */,
+				74F4150825CF7A68007E4C07 /* ProfileImageTVC.xib */,
+				74F4150C25CF7A7E007E4C07 /* ProfileInfoTVC.swift */,
+				74F4150D25CF7A7E007E4C07 /* ProfileInfoTVC.xib */,
+				74F4151125CF7A90007E4C07 /* ProfileKeywordTVC.swift */,
+				74F4151225CF7A90007E4C07 /* ProfileKeywordTVC.xib */,
+			);
+			path = ProfileSetting;
+			sourceTree = "<group>";
+		};
 		74F5D81C25C6483E003EA002 /* CVC */ = {
 			isa = PBXGroup;
 			children = (
 				74F5D81125C64813003EA002 /* CourseRunningMapCVC.swift */,
 				74F5D81625C64829003EA002 /* CourseRunningSettingCVC.swift */,
+				748C63B525CA81F70072B8AE /* CourseRunningInfoCVC.swift */,
+				748C63B925CA912F0072B8AE /* RunningInfoHotPlaceCVC.swift */,
 			);
 			path = CVC;
 			sourceTree = "<group>";
@@ -279,23 +568,6 @@
 				74F5D81725C64829003EA002 /* CourseRunningSettingCVC.xib */,
 			);
 			path = CC;
-			sourceTree = "<group>";
-		};
-		74F5D82125C649B1003EA002 /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-				74F5D82225C649C9003EA002 /* CVC */,
-			);
-			path = Detail;
-			sourceTree = "<group>";
-		};
-		74F5D82225C649C9003EA002 /* CVC */ = {
-			isa = PBXGroup;
-			children = (
-				74F5D82325C649F2003EA002 /* RunningDetailInfoCVC.swift */,
-				74F5D82425C649F2003EA002 /* RunningDetailInfoCVC.xib */,
-			);
-			path = CVC;
 			sourceTree = "<group>";
 		};
 		E8777F2FF776D513FBC49364 /* Frameworks */ = {
@@ -454,6 +726,9 @@
 		ED16C85325B7FDD1003DD0F0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7408AEBD25DB73E700E1C55C /* Model */,
+				74996CC825DAE39200A03218 /* Protocol */,
+				74E77DAF25CE7E6B00EBE83D /* Cell */,
 				ED16C85425B7FDD7003DD0F0 /* VC */,
 			);
 			path = View;
@@ -463,6 +738,15 @@
 			isa = PBXGroup;
 			children = (
 				ED16C85525B7FDE9003DD0F0 /* MypageVC.swift */,
+				7452E94A25D2EFC00048DE2E /* SettingVC.swift */,
+				74F4150225CF791C007E4C07 /* ProfileSettingVC.swift */,
+				7463EF3825DC20FC0094F192 /* EditEmailVC.swift */,
+				7463EF3B25DC21140094F192 /* EditPasswordVC.swift */,
+				7463EF4425DC308C0094F192 /* EditKeywordVC.swift */,
+				748E6B5825D99DAA00374211 /* MyBadgeListVC.swift */,
+				748E6B5C25D99DBB00374211 /* MyKeywordListVC.swift */,
+				748E6B4525D993B800374211 /* MyCourseListVC.swift */,
+				748E6B5225D99D2500374211 /* MyRecordListVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -522,6 +806,10 @@
 				EDD055C025BC282F009FA3FB /* LatestCourseVC.swift */,
 				EDE0BDE925BD912F00ADE8D1 /* CourseDetailVC.swift */,
 				EDDF9A4925CA4F5D00F5F7FD /* FollowerVC.swift */,
+				EDDF9A8E25CAB7D500F5F7FD /* BannerVC.swift */,
+				EDDF9A9D25CACD1600F5F7FD /* DetailReviewVC.swift */,
+				ED5630E525CD57B300A3A22C /* DetailPhotoVC.swift */,
+				ED5630EE25CD7D6A00A3A22C /* DetailPhotoPopUpVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -575,6 +863,8 @@
 		ED16C88F25BA7441003DD0F0 /* CVC */ = {
 			isa = PBXGroup;
 			children = (
+				ED5630E825CD5C6B00A3A22C /* Review */,
+				EDDF9A6325CA783500F5F7FD /* Follower */,
 				ED01F4DF25C0141A00B9AD43 /* Detail */,
 				ED94370A25BABC9F009642E5 /* Home */,
 			);
@@ -584,11 +874,32 @@
 		ED16C89025BA7445003DD0F0 /* TVC */ = {
 			isa = PBXGroup;
 			children = (
+				ED5630DE25CD338100A3A22C /* Review */,
+				EDDF9A9125CABC5900F5F7FD /* Banner */,
+				EDDF9A5725CA67A300F5F7FD /* Follower */,
 				EDE0BDEF25BD9E6300ADE8D1 /* Detail */,
 				ED7622C325BB259A007E1C98 /* ViewAll */,
 				ED94370925BABC94009642E5 /* Home */,
 			);
 			path = TVC;
+			sourceTree = "<group>";
+		};
+		ED5630DE25CD338100A3A22C /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				ED5630DF25CD33A400A3A22C /* ReviewViewAllTVC.swift */,
+				ED5630E025CD33A400A3A22C /* ReviewViewAllTVC.xib */,
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
+		ED5630E825CD5C6B00A3A22C /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				ED5630E925CD5C7B00A3A22C /* PhotoViewAllCVC.swift */,
+				ED5630EA25CD5C7B00A3A22C /* PhotoViewAllCVC.xib */,
+			);
+			path = Review;
 			sourceTree = "<group>";
 		};
 		ED7622B825BAFC75007E1C98 /* Extensions */ = {
@@ -607,6 +918,8 @@
 			isa = PBXGroup;
 			children = (
 				ED7622C025BB13DC007E1C98 /* cellPresentDelegate.swift */,
+				EDDF9A9A25CAC5DD00F5F7FD /* followerDelegate.swift */,
+				EDDF9AA025CACF1100F5F7FD /* detailDelegate.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -690,6 +1003,7 @@
 			children = (
 				EDD055AE25BBBE9C009FA3FB /* Course.swift */,
 				ED01F4D725BFF88900B9AD43 /* Review.swift */,
+				EDDF9A9725CABFD700F5F7FD /* Country.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -728,6 +1042,47 @@
 				EDD2608D25C4546700619E8E /* FindIdVC.swift */,
 			);
 			path = VC;
+			sourceTree = "<group>";
+		};
+		EDDF9A5725CA67A300F5F7FD /* Follower */ = {
+			isa = PBXGroup;
+			children = (
+				EDDF9A5825CA67C300F5F7FD /* FollowerHeaderTVC.swift */,
+				EDDF9A5925CA67C300F5F7FD /* FollowerHeaderTVC.xib */,
+				EDDF9A5E25CA74F300F5F7FD /* FollowerBadgeTVC.swift */,
+				EDDF9A5F25CA74F300F5F7FD /* FollowerBadgeTVC.xib */,
+				EDDF9A6A25CA7F4600F5F7FD /* FollowerKeywordTVC.swift */,
+				EDDF9A6B25CA7F4600F5F7FD /* FollowerKeywordTVC.xib */,
+				EDDF9A7425CA897400F5F7FD /* FollowerCourseTVC.swift */,
+				EDDF9A7525CA897400F5F7FD /* FollowerCourseTVC.xib */,
+				EDDF9A7E25CA90EC00F5F7FD /* FollowerLatestTVC.swift */,
+				EDDF9A7F25CA90EC00F5F7FD /* FollowerLatestTVC.xib */,
+				EDDF9A8925CA9AD300F5F7FD /* FollowerLatestCourseTVC.swift */,
+				EDDF9A8A25CA9AD300F5F7FD /* FollowerLatestCourseTVC.xib */,
+			);
+			path = Follower;
+			sourceTree = "<group>";
+		};
+		EDDF9A6325CA783500F5F7FD /* Follower */ = {
+			isa = PBXGroup;
+			children = (
+				EDDF9A6425CA784E00F5F7FD /* FollowerBadgeCVC.swift */,
+				EDDF9A6525CA784E00F5F7FD /* FollowerBadgeCVC.xib */,
+				EDDF9A6F25CA83C700F5F7FD /* FollowerKeywordCVC.swift */,
+				EDDF9A7025CA83C700F5F7FD /* FollowerKeywordCVC.xib */,
+				EDDF9A7925CA8C2E00F5F7FD /* FollowerCourseCVC.swift */,
+				EDDF9A7A25CA8C2E00F5F7FD /* FollowerCourseCVC.xib */,
+			);
+			path = Follower;
+			sourceTree = "<group>";
+		};
+		EDDF9A9125CABC5900F5F7FD /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				EDDF9A9225CABC7300F5F7FD /* BannerHeaderTVC.swift */,
+				EDDF9A9325CABC7300F5F7FD /* BannerHeaderTVC.xib */,
+			);
+			path = Banner;
 			sourceTree = "<group>";
 		};
 		EDE0BDEF25BD9E6300ADE8D1 /* Detail */ = {
@@ -807,42 +1162,72 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDDF9A8C25CA9AD300F5F7FD /* FollowerLatestCourseTVC.xib in Resources */,
 				74F5D81425C64813003EA002 /* CourseRunningMapCVC.xib in Resources */,
+				742E701625D956DA00F4ADB8 /* MyRecordListTVC.xib in Resources */,
 				ED01F4D525BFDB1000B9AD43 /* ReviewTVC.xib in Resources */,
+				7452E96A25D2F2B10048DE2E /* MyRecordTVC.xib in Resources */,
 				ED16C8A925BA9BB4003DD0F0 /* HomePopularCourseTVC.xib in Resources */,
+				EDDF9A6D25CA7F4600F5F7FD /* FollowerKeywordTVC.xib in Resources */,
 				ED16C83B25B7FAE9003DD0F0 /* Tabbar.storyboard in Resources */,
+				EDDF9A9525CABC7300F5F7FD /* BannerHeaderTVC.xib in Resources */,
 				ED16C89A25BA7AAF003DD0F0 /* HomeBannerCVC.xib in Resources */,
+				7463EF3625DBFF400094F192 /* MyRecordListCVC.xib in Resources */,
+				EDDF9A7725CA897400F5F7FD /* FollowerCourseTVC.xib in Resources */,
 				ED16C8C225BAAB90003DD0F0 /* HomeLatestCourseCVC.xib in Resources */,
 				ED16C86E25B80136003DD0F0 /* CreateCourse.storyboard in Resources */,
+				742E701125D956B700F4ADB8 /* MyCourseListTVC.xib in Resources */,
 				EDF3716225BFAD680000A1F6 /* DetailExplanationTVC.xib in Resources */,
+				EDDF9A5B25CA67C300F5F7FD /* FollowerHeaderTVC.xib in Resources */,
 				ED16C89F25BA8D05003DD0F0 /* HomeFollowerTVC.xib in Resources */,
+				ED5630EC25CD5C7B00A3A22C /* PhotoViewAllCVC.xib in Resources */,
 				ED01F4E325C0144D00B9AD43 /* PhotoCVC.xib in Resources */,
 				ED16C84B25B7FCA0003DD0F0 /* Mypage.storyboard in Resources */,
+				74F4151425CF7A90007E4C07 /* ProfileKeywordTVC.xib in Resources */,
+				EDDF9A8125CA90EC00F5F7FD /* FollowerLatestTVC.xib in Resources */,
+				ED5630E225CD33A400A3A22C /* ReviewViewAllTVC.xib in Resources */,
 				ED16C8B825BAA68F003DD0F0 /* HomeBookmarkCourseCVC.xib in Resources */,
+				7463EF4D25DC3A900094F192 /* MyBadgeCVC.xib in Resources */,
 				EDD055C625BC2AFA009FA3FB /* LatestCourseTVC.xib in Resources */,
+				74E77DC525CE7F6D00EBE83D /* NotificationInfoTVC.xib in Resources */,
+				7452E96525D2F29B0048DE2E /* MyCourseTVC.xib in Resources */,
+				EDDF9A7225CA83C700F5F7FD /* FollowerKeywordCVC.xib in Resources */,
 				EDD2607225C3B9AE00619E8E /* HashtagTVC.xib in Resources */,
 				ED16C84825B7FC8F003DD0F0 /* Home.storyboard in Resources */,
-				74F5D82625C649F2003EA002 /* RunningDetailInfoCVC.xib in Resources */,
 				ED16C82425B7F92F003DD0F0 /* LaunchScreen.storyboard in Resources */,
 				74FDE74825C17CF2002EF553 /* CourseListTVC.xib in Resources */,
 				74F5D81925C64829003EA002 /* CourseRunningSettingCVC.xib in Resources */,
+				741DC2FB25D67A1F0026F1D9 /* MycourseListCVC.xib in Resources */,
+				74E77DB525CE7EE700EBE83D /* LocationInfoAllowTVC.xib in Resources */,
 				EDD055BE25BBFB70009FA3FB /* BookmarkCourseTVC.xib in Resources */,
+				74E77DC025CE7F3E00EBE83D /* ScopeOfMyPageTVC.xib in Resources */,
 				ED16C8AE25BA9E1E003DD0F0 /* HomePopularCourseCVC.xib in Resources */,
 				ED01F4D025BFBFCB00B9AD43 /* DetailReviewTVC.xib in Resources */,
 				ED7622C725BB25D0007E1C98 /* PopularCourseTVC.xib in Resources */,
 				ED16C8A425BA9478003DD0F0 /* HomeFollowerCVC.xib in Resources */,
+				7452E96025D2F2830048DE2E /* MyKeywordTVC.xib in Resources */,
+				7452E95B25D2F26D0048DE2E /* MyBadgeTVC.xib in Resources */,
 				EDE0BDF325BD9E9900ADE8D1 /* DetailHeaderTVC.xib in Resources */,
 				ED8A965825C81FE40088EFBA /* MessageTVC.xib in Resources */,
 				ED16C89425BA7471003DD0F0 /* HomeBannerTVC.xib in Resources */,
+				EDDF9A7C25CA8C2E00F5F7FD /* FollowerCourseCVC.xib in Resources */,
 				ED16C85125B7FCB4003DD0F0 /* CourseSearch.storyboard in Resources */,
 				74685F5F25C3C6DC004EDFEC /* CourseRunningTab.storyboard in Resources */,
 				ED01F4DD25C0076B00B9AD43 /* DetailPhotoTVC.xib in Resources */,
+				743DB1BC25D37B600038F8F0 /* MyProfileTVC.xib in Resources */,
+				74E77DBB25CE7F0400EBE83D /* CameraInfoAllowTVC.xib in Resources */,
+				EDDF9A6725CA784E00F5F7FD /* FollowerBadgeCVC.xib in Resources */,
 				ED8A965325C8189D0088EFBA /* AlertTVC.xib in Resources */,
 				EDD2607D25C3CB2D00619E8E /* Login.storyboard in Resources */,
+				7452E95125D2F23F0048DE2E /* MyPageHeaderTVC.xib in Resources */,
 				ED16C8BD25BAA95F003DD0F0 /* HomeLatestCourseTVC.xib in Resources */,
 				ED16C84E25B7FCA9003DD0F0 /* Alert.storyboard in Resources */,
+				EDDF9A6125CA74F300F5F7FD /* FollowerBadgeTVC.xib in Resources */,
+				74F4150A25CF7A68007E4C07 /* ProfileImageTVC.xib in Resources */,
+				7463EF5225DC43140094F192 /* MyKeywordCVC.xib in Resources */,
 				ED16C82125B7F92F003DD0F0 /* Assets.xcassets in Resources */,
 				ED16C8B325BAA4FD003DD0F0 /* HomeBookmarkCourseTVC.xib in Resources */,
+				74F4150F25CF7A7E007E4C07 /* ProfileInfoTVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -916,60 +1301,111 @@
 				EDD055BD25BBFB70009FA3FB /* BookmarkCourseTVC.swift in Sources */,
 				EDD2608225C3CB7D00619E8E /* WelcomeLoginVC.swift in Sources */,
 				ED01F4DC25C0076B00B9AD43 /* DetailPhotoTVC.swift in Sources */,
+				EDDF9A7B25CA8C2E00F5F7FD /* FollowerCourseCVC.swift in Sources */,
 				ED8A965C25C822DE0088EFBA /* Message.swift in Sources */,
+				743DB1BB25D37B600038F8F0 /* MyProfileTVC.swift in Sources */,
 				ED16C8BC25BAA95F003DD0F0 /* HomeLatestCourseTVC.swift in Sources */,
+				74E77DC425CE7F6D00EBE83D /* NotificationInfoTVC.swift in Sources */,
 				ED01F4CF25BFBFCB00B9AD43 /* DetailReviewTVC.swift in Sources */,
 				ED8A965225C8189D0088EFBA /* AlertTVC.swift in Sources */,
 				EDF3716125BFAD680000A1F6 /* DetailExplanationTVC.swift in Sources */,
 				EDD055C525BC2AFA009FA3FB /* LatestCourseTVC.swift in Sources */,
+				74E77DBA25CE7F0400EBE83D /* CameraInfoAllowTVC.swift in Sources */,
 				EDCC755925C2CADA00EF435A /* Extensions+UITextField.swift in Sources */,
+				7452E95F25D2F2830048DE2E /* MyKeywordTVC.swift in Sources */,
+				7452E95A25D2F26D0048DE2E /* MyBadgeTVC.swift in Sources */,
 				EDD055C125BC282F009FA3FB /* LatestCourseVC.swift in Sources */,
+				ED5630EF25CD7D6A00A3A22C /* DetailPhotoPopUpVC.swift in Sources */,
+				EDDF9A9E25CACD1600F5F7FD /* DetailReviewVC.swift in Sources */,
+				ED5630EB25CD5C7B00A3A22C /* PhotoViewAllCVC.swift in Sources */,
 				EDD055B925BBF402009FA3FB /* BookmarkCourseVC.swift in Sources */,
+				EDDF9A8025CA90EC00F5F7FD /* FollowerLatestTVC.swift in Sources */,
 				ED16C89E25BA8D05003DD0F0 /* HomeFollowerTVC.swift in Sources */,
 				ED7622BA25BAFC88007E1C98 /* Extensions+UIColor.swift in Sources */,
+				EDDF9A9B25CAC5DD00F5F7FD /* followerDelegate.swift in Sources */,
 				ED16C81825B7F92F003DD0F0 /* AppDelegate.swift in Sources */,
+				EDDF9A7125CA83C700F5F7FD /* FollowerKeywordCVC.swift in Sources */,
 				74685F6525C3C72D004EDFEC /* CourseRunningTabVC.swift in Sources */,
 				EDE0BDEA25BD912F00ADE8D1 /* CourseDetailVC.swift in Sources */,
+				74F4150925CF7A68007E4C07 /* ProfileImageTVC.swift in Sources */,
 				EDCC755325C2A68600EF435A /* MakeCreateCourseVC.swift in Sources */,
+				74E77DBF25CE7F3E00EBE83D /* ScopeOfMyPageTVC.swift in Sources */,
+				748C63B625CA81F70072B8AE /* CourseRunningInfoCVC.swift in Sources */,
+				7463EF3C25DC21140094F192 /* EditPasswordVC.swift in Sources */,
 				ED16C8B725BAA68F003DD0F0 /* HomeBookmarkCourseCVC.swift in Sources */,
 				EDD2608E25C4546700619E8E /* FindIdVC.swift in Sources */,
+				748E6B5925D99DAA00374211 /* MyBadgeListVC.swift in Sources */,
 				ED16C86825B7FE7A003DD0F0 /* HomeVC.swift in Sources */,
 				EDCC755D25C2ECDA00EF435A /* HashtagPopUpVC.swift in Sources */,
+				EDDF9A6025CA74F300F5F7FD /* FollowerBadgeTVC.swift in Sources */,
+				ED5630E625CD57B300A3A22C /* DetailPhotoVC.swift in Sources */,
 				ED01F4D825BFF88900B9AD43 /* Review.swift in Sources */,
+				EDDF9A9825CABFD700F5F7FD /* Country.swift in Sources */,
+				EDDF9A7625CA897400F5F7FD /* FollowerCourseTVC.swift in Sources */,
 				ED01F4E625C02E4300B9AD43 /* Extensions+UIScrollView.swift in Sources */,
+				748E6B4625D993B800374211 /* MyCourseListVC.swift in Sources */,
+				7408AEBF25DB73F400E1C55C /* MyCourse.swift in Sources */,
 				ED16C85625B7FDE9003DD0F0 /* MypageVC.swift in Sources */,
 				ED8A965F25C8260C0088EFBA /* ChatVC.swift in Sources */,
 				ED8A8C9025C1EE9D00E2BD7B /* MakeCourseVC.swift in Sources */,
 				ED16C8AD25BA9E1E003DD0F0 /* HomePopularCourseCVC.swift in Sources */,
 				EDCC755625C2BA1900EF435A /* CompleteCourseVC.swift in Sources */,
+				EDDF9A6C25CA7F4600F5F7FD /* FollowerKeywordTVC.swift in Sources */,
 				EDE0BDF225BD9E9900ADE8D1 /* DetailHeaderTVC.swift in Sources */,
 				ED16C89925BA7AAF003DD0F0 /* HomeBannerCVC.swift in Sources */,
 				ED01F4E225C0144D00B9AD43 /* PhotoCVC.swift in Sources */,
+				748E6B5D25D99DBB00374211 /* MyKeywordListVC.swift in Sources */,
 				ED8A965725C81FE40088EFBA /* MessageTVC.swift in Sources */,
 				ED7622BD25BB12D1007E1C98 /* PopularCourseVC.swift in Sources */,
 				EDD2608525C3E9C200619E8E /* SignUpVC.swift in Sources */,
+				7463EF4525DC308C0094F192 /* EditKeywordVC.swift in Sources */,
 				ED16C89325BA7471003DD0F0 /* HomeBannerTVC.swift in Sources */,
+				7463EF4125DC222E0094F192 /* profilePresentDelegate.swift in Sources */,
+				74E77DB425CE7EE700EBE83D /* LocationInfoAllowTVC.swift in Sources */,
 				EDD2607125C3B9AE00619E8E /* HashtagTVC.swift in Sources */,
+				7452E96425D2F29B0048DE2E /* MyCourseTVC.swift in Sources */,
 				EDD2608B25C44D5A00619E8E /* SignInVC.swift in Sources */,
+				748E6B5325D99D2500374211 /* MyRecordListVC.swift in Sources */,
+				ED5630E125CD33A400A3A22C /* ReviewViewAllTVC.swift in Sources */,
+				EDDF9A5A25CA67C300F5F7FD /* FollowerHeaderTVC.swift in Sources */,
 				ED16C84525B7FC1D003DD0F0 /* TabbarController.swift in Sources */,
 				EDDF9A4A25CA4F5D00F5F7FD /* FollowerVC.swift in Sources */,
 				ED16C85C25B7FE1B003DD0F0 /* AlertVC.swift in Sources */,
 				74F5D81825C64829003EA002 /* CourseRunningSettingCVC.swift in Sources */,
+				EDDF9A9425CABC7300F5F7FD /* BannerHeaderTVC.swift in Sources */,
+				EDDF9AA125CACF1100F5F7FD /* detailDelegate.swift in Sources */,
 				ED16C87125B80150003DD0F0 /* CreateCourseVC.swift in Sources */,
+				742E701525D956DA00F4ADB8 /* MyRecordListTVC.swift in Sources */,
 				EDE0BDED25BD9B9500ADE8D1 /* Extensions+UIViewController.swift in Sources */,
+				7463EF5125DC43140094F192 /* MyKeywordCVC.swift in Sources */,
+				EDDF9A8F25CAB7D500F5F7FD /* BannerVC.swift in Sources */,
 				ED7622C125BB13DC007E1C98 /* cellPresentDelegate.swift in Sources */,
 				ED16C81A25B7F92F003DD0F0 /* SceneDelegate.swift in Sources */,
-				74F5D82525C649F2003EA002 /* RunningDetailInfoCVC.swift in Sources */,
 				74FDE74725C17CF2002EF553 /* CourseListTVC.swift in Sources */,
 				ED7622C625BB25D0007E1C98 /* PopularCourseTVC.swift in Sources */,
+				7463EF3525DBFF400094F192 /* MyRecordListCVC.swift in Sources */,
 				ED16C8C125BAAB90003DD0F0 /* HomeLatestCourseCVC.swift in Sources */,
+				EDDF9A6625CA784E00F5F7FD /* FollowerBadgeCVC.swift in Sources */,
 				ED01F4D425BFDB1000B9AD43 /* ReviewTVC.swift in Sources */,
+				741DC2FA25D67A1F0026F1D9 /* MycourseListCVC.swift in Sources */,
+				7452E95025D2F23F0048DE2E /* MyPageHeaderTVC.swift in Sources */,
+				74996CCB25DAE3C000A03218 /* myPagePresentDelegate.swift in Sources */,
+				74F4150E25CF7A7E007E4C07 /* ProfileInfoTVC.swift in Sources */,
+				742E701025D956B700F4ADB8 /* MyCourseListTVC.swift in Sources */,
 				EDD2608825C401F500619E8E /* Extensions+String.swift in Sources */,
+				74F4150325CF791C007E4C07 /* ProfileSettingVC.swift in Sources */,
+				748C63BA25CA912F0072B8AE /* RunningInfoHotPlaceCVC.swift in Sources */,
+				7463EF4C25DC3A900094F192 /* MyBadgeCVC.swift in Sources */,
+				7452E94B25D2EFC00048DE2E /* SettingVC.swift in Sources */,
 				ED16C86225B7FE50003DD0F0 /* CourseSearchVC.swift in Sources */,
 				ED16C8A825BA9BB4003DD0F0 /* HomePopularCourseTVC.swift in Sources */,
+				EDDF9A8B25CA9AD300F5F7FD /* FollowerLatestCourseTVC.swift in Sources */,
 				ED16C8B225BAA4FD003DD0F0 /* HomeBookmarkCourseTVC.swift in Sources */,
+				7463EF3925DC20FD0094F192 /* EditEmailVC.swift in Sources */,
+				7452E96925D2F2B10048DE2E /* MyRecordTVC.swift in Sources */,
 				ED16C8A325BA9478003DD0F0 /* HomeFollowerCVC.swift in Sources */,
 				EDD055AF25BBBE9C009FA3FB /* Course.swift in Sources */,
+				74F4151325CF7A90007E4C07 /* ProfileKeywordTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

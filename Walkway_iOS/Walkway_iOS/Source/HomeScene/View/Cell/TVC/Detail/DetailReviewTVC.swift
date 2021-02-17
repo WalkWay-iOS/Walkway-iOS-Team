@@ -17,6 +17,8 @@ class DetailReviewTVC: UITableViewCell {
     @IBOutlet weak var viewAllButton: UIButton!
     @IBOutlet weak var courseTableView: UITableView!
     
+    var delegate: detailDelegate?
+    
     var courseReviews: [Review] = []
     var reviewCounter = 0
     
@@ -125,6 +127,7 @@ extension DetailReviewTVC {
         viewAllButton.setTitle("전체보기", for: .normal)
         viewAllButton.titleLabel?.font = .systemFont(ofSize: 13, weight: .bold)
         viewAllButton.setTitleColor(.gray70, for: .normal)
+        viewAllButton.addTarget(self, action: #selector(touchUpViewAll), for: .touchUpInside)
     }
 }
 
@@ -153,5 +156,15 @@ extension DetailReviewTVC {
             Review(name: "goSeoul0913", date: "20. 12. 20", rate: 3.5, content: "좋은 길이었습니다. 사색에 잠겨 걸을 수 있는 길. 정말 바람이 좋더라구요. 바람이 진짜 좋아요. 최곱니다. 아주 최고예요"),
             Review(name: "123087__", date: "21. 01. 15", rate: 4.5, content: "부모님이 좋아하셨습니다.")
         ])
+    }
+}
+
+// MARK: - Action
+extension DetailReviewTVC {
+    @objc func touchUpViewAll() {
+        guard let dvc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(identifier: "DetailReviewVC") as? DetailReviewVC else {
+            return
+        }
+        delegate?.cellTapedReview(dvc: dvc)
     }
 }
