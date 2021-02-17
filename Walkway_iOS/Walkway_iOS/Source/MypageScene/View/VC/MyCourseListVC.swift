@@ -21,6 +21,7 @@ class MyCourseListVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupStatusBar(.lightGray)
         setUI()
     }
 }
@@ -44,6 +45,46 @@ extension MyCourseListVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
+    
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == .delete {
+//
+//        } else if editingStyle == .none {
+//
+//        }
+//    }
+//
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+//
+//    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+//        return "삭제"
+//    }
+//
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let editAction = UITableViewRowAction(style: .normal, title: "수정") { (rowAction, indexPath) in
+            
+        }
+        editAction.backgroundColor = .green
+        let deleteAction = UITableViewRowAction(style: .normal, title: "삭제") { (rowAction, indexPath) in
+            let alert = UIAlertController(title: "코스를 삭제하시겠습니까?", message: "삭제된 코스는 복구가 불가능합니다🥲", preferredStyle: UIAlertController.Style.alert)
+            let okAction = UIAlertAction(title: "삭제", style: .default) { (Action) in
+                courseName.remove(at: indexPath.row)
+                courseTime.remove(at: indexPath.row)
+                courseDistance.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+            let cancelAction = UIAlertAction(title: "취소", style: .default)
+            alert.addAction(okAction)
+            alert.addAction(cancelAction)
+            self.present(alert, animated: true)
+        }
+        deleteAction.backgroundColor = .red
+        
+        return [deleteAction, editAction]
+    }
+    
     
     // 셀 누르면 디테일뷰로 넘기기
 }

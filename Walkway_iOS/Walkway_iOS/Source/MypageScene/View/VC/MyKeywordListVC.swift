@@ -20,6 +20,7 @@ class MyKeywordListVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupStatusBar(.lightGray)
         setUI()
     }
 }
@@ -41,11 +42,12 @@ extension MyKeywordListVC: UICollectionViewDataSource {
 
 extension MyKeywordListVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 140, height: 60)
+        let width = (UIScreen.main.bounds.size.width - 20 - 10)/3
+        return CGSize(width: width, height: 60)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 15
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -53,7 +55,7 @@ extension MyKeywordListVC: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 25, bottom: 0, right: 25)
+        return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
     }
 }
 // MARK: - UI

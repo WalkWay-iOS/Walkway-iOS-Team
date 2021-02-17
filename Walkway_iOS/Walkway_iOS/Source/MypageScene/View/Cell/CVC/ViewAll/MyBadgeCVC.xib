@@ -35,10 +35,10 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="vGX-fI-cDu" firstAttribute="top" secondItem="MQw-IB-V7W" secondAttribute="bottom" constant="30" id="46x-dx-HuN"/>
-                <constraint firstItem="MQw-IB-V7W" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="34.5" id="Crl-5I-TQR"/>
-                <constraint firstItem="MQw-IB-V7W" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="25" id="UGS-ZJ-uls"/>
-                <constraint firstItem="vGX-fI-cDu" firstAttribute="centerX" secondItem="MQw-IB-V7W" secondAttribute="centerX" id="kve-nN-mni"/>
+                <constraint firstItem="vGX-fI-cDu" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Fqw-3S-3iE"/>
+                <constraint firstItem="MQw-IB-V7W" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="25" id="TXi-4x-EO7"/>
+                <constraint firstItem="vGX-fI-cDu" firstAttribute="top" secondItem="MQw-IB-V7W" secondAttribute="bottom" constant="30" id="hUK-PD-cos"/>
+                <constraint firstItem="MQw-IB-V7W" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="pyr-3A-b3w"/>
             </constraints>
             <size key="customSize" width="113" height="135"/>
             <connections>

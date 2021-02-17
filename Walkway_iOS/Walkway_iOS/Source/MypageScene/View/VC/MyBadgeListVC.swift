@@ -20,6 +20,7 @@ class MyBadgeListVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupStatusBar(.lightGray)
         setUI()
     }
 }
@@ -41,11 +42,12 @@ extension MyBadgeListVC: UICollectionViewDataSource {
 
 extension MyBadgeListVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 119, height: 187)
+        let width = (UIScreen.main.bounds.size.width - 50 - 20)/3
+        return CGSize(width: width, height: 187)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 15
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {

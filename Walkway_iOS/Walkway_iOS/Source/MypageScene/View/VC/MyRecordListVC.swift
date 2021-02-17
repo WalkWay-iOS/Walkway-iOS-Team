@@ -22,6 +22,7 @@ class MyRecordListVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupStatusBar(.lightGray)
         setUI()
     }
 }

@@ -27,8 +27,8 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="grZ-mP-FbP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="30" id="9KC-tL-WwR"/>
                 <constraint firstItem="grZ-mP-FbP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="KYc-yn-WBZ"/>
+                <constraint firstItem="grZ-mP-FbP" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="USi-Bq-Qy7"/>
             </constraints>
             <size key="customSize" width="140" height="53"/>
             <connections>
