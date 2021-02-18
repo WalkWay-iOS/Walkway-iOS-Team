@@ -163,56 +163,56 @@ extension CompleteCourseVC {
     
     private func setLabel() {
         titleLabel.text = "나만의 Walkway"
-        titleLabel.font = .boldSystemFont(ofSize: 20)
+        titleLabel.font = .myBoldSystemFont(ofSize: 20)
         titleLabel.textColor = .bookmarkDarkBlue
         
         infoLabel.text = "나만의 Walkway를 가장 잘 설명하는 이름을 15글자 이하로 표현해주세요."
-        infoLabel.font = .systemFont(ofSize: 9, weight: .semibold)
+        infoLabel.font = .myMediumSystemFont(ofSize: 9)
         infoLabel.textColor = .bookmarkGray
         
         distanceTitleLabel.text = "예상 거리"
-        distanceTitleLabel.font = .boldSystemFont(ofSize: 13)
+        distanceTitleLabel.font = .myBoldSystemFont(ofSize: 13)
         distanceTitleLabel.textColor = .gray70
         
-        distanceLabel.font = .boldSystemFont(ofSize: 20)
+        distanceLabel.font = .myBoldSystemFont(ofSize: 20)
         distanceLabel.textColor = .bookmarkDarkBlue
         
         timeTitleLabel.text = "예상 시간"
-        timeTitleLabel.font = .boldSystemFont(ofSize: 13)
+        timeTitleLabel.font = .myBoldSystemFont(ofSize: 13)
         timeTitleLabel.textColor = .gray70
         
-        timeLabel.font = .boldSystemFont(ofSize: 20)
+        timeLabel.font = .myBoldSystemFont(ofSize: 20)
         timeLabel.textColor = .bookmarkDarkBlue
         
         hashtagLabel.text = "#해시태그 설정하기"
-        hashtagLabel.font = .systemFont(ofSize: 18, weight: .semibold)
+        hashtagLabel.font = .myMediumSystemFont(ofSize: 18)
         hashtagLabel.textColor = .black
         
         hashInfoLabel.text = "나만의 해시태그는 버튼을 눌러서 추가하고 해시태그를 밀어서 삭제하세요"
-        hashInfoLabel.font = .systemFont(ofSize: 9, weight: .semibold)
+        hashInfoLabel.font = .myMediumSystemFont(ofSize: 9)
         hashInfoLabel.textColor = .bookmarkGray
         
         backgroundLabel.text = "#대표사진 설정하기"
-        backgroundLabel.font = .systemFont(ofSize: 18, weight: .semibold)
+        backgroundLabel.font = .myMediumSystemFont(ofSize: 18)
         
         backgroundInfoLabel.text = "대표사진을 설정하지 않으면 Walkway 로고로 사진이 설정됩니다"
-        backgroundInfoLabel.font = .systemFont(ofSize: 9, weight: .semibold)
+        backgroundInfoLabel.font = .myMediumSystemFont(ofSize: 9)
         backgroundInfoLabel.textColor = .bookmarkGray
         
         emptyLabel.text = "해시태그가 존재하지 않아요😢"
-        emptyLabel.font = .systemFont(ofSize: 13, weight: .medium)
+        emptyLabel.font = .myMediumSystemFont(ofSize: 13)
         emptyLabel.textColor = .gray70
     }
     
     private func setButton() {
-        saveButton.setTitle("저장", for: .normal)
+        saveButton.setTitle("다음", for: .normal)
         saveButton.setTitleColor(.bookmarkDarkBlue, for: .normal)
-        saveButton.titleLabel?.font = .boldSystemFont(ofSize: 15)
+        saveButton.titleLabel?.font = .myBoldSystemFont(ofSize: 15)
         saveButton.addTarget(self, action: #selector(touchUpSave), for: .touchUpInside)
         
         cancelButton.setTitle("취소", for: .normal)
         cancelButton.setTitleColor(.bookmarkDarkBlue, for: .normal)
-        cancelButton.titleLabel?.font = .boldSystemFont(ofSize: 15)
+        cancelButton.titleLabel?.font = .myBoldSystemFont(ofSize: 15)
         cancelButton.addTarget(self, action: #selector(touchUpCancel), for: .touchUpInside)
         
         addButton.setTitle("", for: .normal)
@@ -305,7 +305,7 @@ extension CompleteCourseVC {
 // MARK: - Action
 extension CompleteCourseVC {
     @objc func touchUpSave() {
-        print("저장")
+        print("다음")
     }
     
     @objc func touchUpCancel() {

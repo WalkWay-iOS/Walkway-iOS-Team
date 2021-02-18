@@ -90,12 +90,12 @@ extension HomePopularCourseTVC {
     
     private func setLabel() {
         titleLabel.text = "인기 추천 코스"
-        titleLabel.font = .systemFont(ofSize: 20, weight: .semibold)
+        titleLabel.font = .myBoldSystemFont(ofSize: 20)
     }
     
     private func setButton() {
         viewAllButton.setTitle("전체보기", for: .normal)
-        viewAllButton.titleLabel?.font = .systemFont(ofSize: 13, weight: .semibold)
+        viewAllButton.titleLabel?.font = .myMediumSystemFont(ofSize: 13)
         viewAllButton.setTitleColor(.black, for: .normal)
         viewAllButton.addTarget(self, action: #selector(touchUpViewAll), for: .touchUpInside)
     }

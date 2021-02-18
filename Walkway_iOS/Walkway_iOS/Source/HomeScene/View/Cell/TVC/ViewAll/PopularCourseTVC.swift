@@ -40,11 +40,11 @@ extension PopularCourseTVC {
     }
     
     private func setLabel() {
-        rankLabel.font = .boldSystemFont(ofSize: 16)
-        titleLabel.font = .boldSystemFont(ofSize: 16)
-        distanceLabel.font = .systemFont(ofSize: 13, weight: .medium)
-        timeLabel.font = .systemFont(ofSize: 13, weight: .medium)
-        rateLabel.font = .systemFont(ofSize: 13, weight: .medium)
+        rankLabel.font = .myBoldSystemFont(ofSize: 16)
+        titleLabel.font = .myBoldSystemFont(ofSize: 16)
+        distanceLabel.font = .myRegularSystemFont(ofSize: 11)
+        timeLabel.font = .myRegularSystemFont(ofSize: 11)
+        rateLabel.font = .myRegularSystemFont(ofSize: 11)
     }
     
     private func setImage() {

@@ -38,9 +38,9 @@ extension LatestCourseTVC {
     }
     
     private func setLabel() {
-        titleLabel.font = .boldSystemFont(ofSize: 16)
-        distanceLabel.font = .systemFont(ofSize: 13, weight: .medium)
-        timeLabel.font = .systemFont(ofSize: 13, weight: .medium)
+        titleLabel.font = .myBoldSystemFont(ofSize: 16)
+        distanceLabel.font = .myRegularSystemFont(ofSize: 11)
+        timeLabel.font = .myRegularSystemFont(ofSize: 11)
     }
     
     private func setImage() {

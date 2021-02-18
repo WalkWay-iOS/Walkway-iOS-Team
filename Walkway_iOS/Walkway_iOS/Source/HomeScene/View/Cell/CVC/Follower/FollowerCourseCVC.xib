@@ -21,43 +21,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="220" height="83"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lwr-6b-Fb2">
-                                <rect key="frame" x="10" y="10" width="125" height="21"/>
+                                <rect key="frame" x="90" y="10" width="125" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bT5-TY-Oln">
-                                <rect key="frame" x="62" y="41" width="42" height="21"/>
+                                <rect key="frame" x="142" y="41" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAL-Vn-VBO">
-                                <rect key="frame" x="10" y="41" width="42" height="21"/>
+                                <rect key="frame" x="90" y="41" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MzI-ol-29W">
-                                <rect key="frame" x="140" y="0.0" width="80" height="83"/>
+                                <rect key="frame" x="0.0" y="0.0" width="80" height="83"/>
                                 <color key="backgroundColor" red="0.92549019610000005" green="0.40784313729999999" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="sct-8P-wzS"/>
+                                    <constraint firstAttribute="width" constant="80" id="q4b-U1-bgR"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="MzI-ol-29W" secondAttribute="bottom" id="2ji-eS-O7X"/>
-                            <constraint firstItem="FAL-Vn-VBO" firstAttribute="top" secondItem="Lwr-6b-Fb2" secondAttribute="bottom" constant="10" id="99c-Ga-uHh"/>
-                            <constraint firstItem="bT5-TY-Oln" firstAttribute="top" secondItem="FAL-Vn-VBO" secondAttribute="top" id="Kb6-1Z-5kC"/>
-                            <constraint firstItem="FAL-Vn-VBO" firstAttribute="leading" secondItem="Lwr-6b-Fb2" secondAttribute="leading" id="SPL-OD-VLh"/>
-                            <constraint firstItem="Lwr-6b-Fb2" firstAttribute="top" secondItem="fD7-Ld-Ife" secondAttribute="top" constant="10" id="brE-QG-Rh6"/>
-                            <constraint firstItem="bT5-TY-Oln" firstAttribute="leading" secondItem="FAL-Vn-VBO" secondAttribute="trailing" constant="10" id="iah-78-Wzd"/>
-                            <constraint firstItem="MzI-ol-29W" firstAttribute="top" secondItem="fD7-Ld-Ife" secondAttribute="top" id="lgE-b7-5Zk"/>
-                            <constraint firstAttribute="trailing" secondItem="MzI-ol-29W" secondAttribute="trailing" id="nfS-HS-U3I"/>
-                            <constraint firstItem="Lwr-6b-Fb2" firstAttribute="leading" secondItem="fD7-Ld-Ife" secondAttribute="leading" constant="10" id="rg0-h5-82x"/>
-                            <constraint firstItem="MzI-ol-29W" firstAttribute="leading" secondItem="Lwr-6b-Fb2" secondAttribute="trailing" constant="5" id="wXo-Qz-9XP"/>
+                            <constraint firstAttribute="bottom" secondItem="MzI-ol-29W" secondAttribute="bottom" id="CVv-dL-5Sa"/>
+                            <constraint firstItem="bT5-TY-Oln" firstAttribute="top" secondItem="FAL-Vn-VBO" secondAttribute="top" id="DY6-w2-s4B"/>
+                            <constraint firstItem="FAL-Vn-VBO" firstAttribute="leading" secondItem="Lwr-6b-Fb2" secondAttribute="leading" id="Mmn-HG-TyB"/>
+                            <constraint firstItem="MzI-ol-29W" firstAttribute="top" secondItem="fD7-Ld-Ife" secondAttribute="top" id="N5G-j7-BwA"/>
+                            <constraint firstItem="Lwr-6b-Fb2" firstAttribute="top" secondItem="fD7-Ld-Ife" secondAttribute="top" constant="10" id="aQs-G9-yPn"/>
+                            <constraint firstItem="MzI-ol-29W" firstAttribute="leading" secondItem="fD7-Ld-Ife" secondAttribute="leading" id="asY-Ih-5XX"/>
+                            <constraint firstItem="FAL-Vn-VBO" firstAttribute="top" secondItem="Lwr-6b-Fb2" secondAttribute="bottom" constant="10" id="bNP-wT-UWW"/>
+                            <constraint firstItem="Lwr-6b-Fb2" firstAttribute="leading" secondItem="MzI-ol-29W" secondAttribute="trailing" constant="10" id="nSg-Ym-r2h"/>
+                            <constraint firstItem="bT5-TY-Oln" firstAttribute="leading" secondItem="FAL-Vn-VBO" secondAttribute="trailing" constant="10" id="ulz-Ce-HRv"/>
+                            <constraint firstAttribute="trailing" secondItem="Lwr-6b-Fb2" secondAttribute="trailing" constant="5" id="zu6-Oo-kZM"/>
                         </constraints>
                     </view>
                 </subviews>

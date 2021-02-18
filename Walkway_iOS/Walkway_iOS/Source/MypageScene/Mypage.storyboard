@@ -52,9 +52,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LJy-gU-aLz">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="introimage2" translatesAutoresizingMaskIntoConstraints="NO" id="LJy-gU-aLz">
                                 <rect key="frame" x="183" y="15" width="192" height="117"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="192" id="1OY-pu-J6Y"/>
                                     <constraint firstAttribute="height" constant="117" id="dD5-fF-w1g"/>
@@ -359,9 +358,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Le8-6H-Ifx">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="introimage2" translatesAutoresizingMaskIntoConstraints="NO" id="Le8-6H-Ifx">
                                 <rect key="frame" x="183" y="15" width="192" height="117"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="117" id="2Rq-56-b2N"/>
                                     <constraint firstAttribute="width" constant="192" id="Kcd-lh-6Jz"/>
@@ -689,11 +687,9 @@
     </scenes>
     <resources>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="introimage2" width="192" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
