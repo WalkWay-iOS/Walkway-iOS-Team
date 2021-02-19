@@ -24,8 +24,6 @@
 		740654C225DCF5B100249EC7 /* CourseRecordInfoTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 740654C025DCF5B100249EC7 /* CourseRecordInfoTVC.xib */; };
 		740654C725DCF5C300249EC7 /* CourseEstimateTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740654C525DCF5C300249EC7 /* CourseEstimateTVC.swift */; };
 		740654C825DCF5C300249EC7 /* CourseEstimateTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 740654C625DCF5C300249EC7 /* CourseEstimateTVC.xib */; };
-		740654CC25DCF5DA00249EC7 /* CourseKeywordTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740654CA25DCF5DA00249EC7 /* CourseKeywordTVC.swift */; };
-		740654CD25DCF5DA00249EC7 /* CourseKeywordTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 740654CB25DCF5DA00249EC7 /* CourseKeywordTVC.xib */; };
 		740654D125DCF5ED00249EC7 /* CourseMemoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740654CF25DCF5ED00249EC7 /* CourseMemoTVC.swift */; };
 		740654D225DCF5ED00249EC7 /* CourseMemoTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 740654D025DCF5ED00249EC7 /* CourseMemoTVC.xib */; };
 		740654D925DD06B800249EC7 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 740654D825DD06B800249EC7 /* NotoSansKR-Regular.otf */; };
@@ -224,8 +222,6 @@
 		740654C025DCF5B100249EC7 /* CourseRecordInfoTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseRecordInfoTVC.xib; sourceTree = "<group>"; };
 		740654C525DCF5C300249EC7 /* CourseEstimateTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseEstimateTVC.swift; sourceTree = "<group>"; };
 		740654C625DCF5C300249EC7 /* CourseEstimateTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseEstimateTVC.xib; sourceTree = "<group>"; };
-		740654CA25DCF5DA00249EC7 /* CourseKeywordTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseKeywordTVC.swift; sourceTree = "<group>"; };
-		740654CB25DCF5DA00249EC7 /* CourseKeywordTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseKeywordTVC.xib; sourceTree = "<group>"; };
 		740654CF25DCF5ED00249EC7 /* CourseMemoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseMemoTVC.swift; sourceTree = "<group>"; };
 		740654D025DCF5ED00249EC7 /* CourseMemoTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseMemoTVC.xib; sourceTree = "<group>"; };
 		740654D825DD06B800249EC7 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Regular.otf"; path = "../../../../../../../Downloads/Noto_Sans_KR/NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
@@ -455,8 +451,6 @@
 				740654C025DCF5B100249EC7 /* CourseRecordInfoTVC.xib */,
 				740654C525DCF5C300249EC7 /* CourseEstimateTVC.swift */,
 				740654C625DCF5C300249EC7 /* CourseEstimateTVC.xib */,
-				740654CA25DCF5DA00249EC7 /* CourseKeywordTVC.swift */,
-				740654CB25DCF5DA00249EC7 /* CourseKeywordTVC.xib */,
 				740654CF25DCF5ED00249EC7 /* CourseMemoTVC.swift */,
 				740654D025DCF5ED00249EC7 /* CourseMemoTVC.xib */,
 			);
@@ -1322,7 +1316,6 @@
 				74F4150A25CF7A68007E4C07 /* ProfileImageTVC.xib in Resources */,
 				740654C225DCF5B100249EC7 /* CourseRecordInfoTVC.xib in Resources */,
 				7463EF5225DC43140094F192 /* MyKeywordCVC.xib in Resources */,
-				740654CD25DCF5DA00249EC7 /* CourseKeywordTVC.xib in Resources */,
 				ED16C82125B7F92F003DD0F0 /* Assets.xcassets in Resources */,
 				ED16C8B325BAA4FD003DD0F0 /* HomeBookmarkCourseTVC.xib in Resources */,
 				74F4150F25CF7A7E007E4C07 /* ProfileInfoTVC.xib in Resources */,
@@ -1443,7 +1436,6 @@
 				ED5630E625CD57B300A3A22C /* DetailPhotoVC.swift in Sources */,
 				740654AA25DCD64500249EC7 /* CourseWalkingMapCVC.swift in Sources */,
 				ED01F4D825BFF88900B9AD43 /* Review.swift in Sources */,
-				740654CC25DCF5DA00249EC7 /* CourseKeywordTVC.swift in Sources */,
 				EDDF9A9825CABFD700F5F7FD /* Country.swift in Sources */,
 				740654D125DCF5ED00249EC7 /* CourseMemoTVC.swift in Sources */,
 				740654B925DCE2AB00249EC7 /* CourseWalkingHotPlaceCVC.swift in Sources */,

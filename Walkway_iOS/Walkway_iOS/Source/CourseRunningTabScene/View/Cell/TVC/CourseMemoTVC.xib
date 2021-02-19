@@ -37,7 +37,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="138.40579710144928" y="94.419642857142847"/>
+            <connections>
+                <outlet property="memoTextField" destination="YEa-lD-fMj" id="Wf7-qS-gex"/>
+                <outlet property="viewTitleLabel" destination="NTV-J0-Yws" id="sqg-MK-M5o"/>
+            </connections>
+            <point key="canvasLocation" x="138.40579710144928" y="94.084821428571431"/>
         </tableViewCell>
     </objects>
 </document>

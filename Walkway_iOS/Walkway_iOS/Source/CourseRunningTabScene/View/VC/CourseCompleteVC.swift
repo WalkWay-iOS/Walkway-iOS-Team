@@ -17,13 +17,14 @@ class CourseCompleteVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUI()
     }
 }
 
 // MARK: - TableViewDelegate
 extension CourseCompleteVC: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,14 +46,8 @@ extension CourseCompleteVC: UITableViewDataSource {
             cell.selectionStyle = .none
             return cell
         }
+        
         else if indexPath.section == 2 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: CourseKeywordTVC.identifier) as? CourseKeywordTVC else {
-                return UITableViewCell()
-            }
-            cell.selectionStyle = .none
-            return cell
-        }
-        else if indexPath.section == 3 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: CourseMemoTVC.identifier) as? CourseMemoTVC else {
                 return UITableViewCell()
             }
@@ -64,18 +59,15 @@ extension CourseCompleteVC: UITableViewDataSource {
 }
 
 extension CourseCompleteVC: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
             return 160
         }
         else if indexPath.section == 1 {
-            return 160
+            return 170
         }
         else if indexPath.section == 2 {
-            return 140
-        }
-        else if indexPath.section == 3 {
-            return 95
+            return 110
         }
         return 100
     }
@@ -102,9 +94,6 @@ extension CourseCompleteVC {
         
         let estimateNib = UINib(nibName: "CourseEstimateTVC", bundle: nil)
         courseRecordTableView.register(estimateNib, forCellReuseIdentifier: CourseEstimateTVC.identifier)
-        
-        let keywordNib = UINib(nibName: "CourseKeywordTVC", bundle: nil)
-        courseRecordTableView.register(keywordNib, forCellReuseIdentifier: CourseKeywordTVC.identifier)
         
         let memoNib = UINib(nibName: "CourseMemoTVC", bundle: nil)
         courseRecordTableView.register(memoNib, forCellReuseIdentifier: CourseMemoTVC.identifier)

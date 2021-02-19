@@ -9,11 +9,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="170" id="KGk-i7-Jjw" customClass="CourseEstimateTVC" customModule="Walkway_iOS" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="325" height="160"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="180" id="KGk-i7-Jjw" customClass="CourseEstimateTVC" customModule="Walkway_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="325" height="170"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="325" height="160"/>
+                <rect key="frame" x="0.0" y="0.0" width="325" height="170"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26j-6a-Zfq">
@@ -22,40 +22,41 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="BXb-4e-SS2">
-                        <rect key="frame" x="0.0" y="71" width="325" height="4"/>
-                    </progressView>
-                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Itz-4Z-hbo">
-                        <rect key="frame" x="0.0" y="126" width="325" height="4"/>
-                    </progressView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Yi-0H-ZxI">
-                        <rect key="frame" x="0.0" y="95" width="42" height="21"/>
+                        <rect key="frame" x="0.0" y="109" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Cxd-jS-Ycu">
+                        <rect key="frame" x="-2" y="66" width="329" height="34"/>
+                    </slider>
+                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Tyr-hr-ehc">
+                        <rect key="frame" x="-2" y="135" width="329" height="34"/>
+                    </slider>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Itz-4Z-hbo" firstAttribute="top" secondItem="8Yi-0H-ZxI" secondAttribute="bottom" constant="10" id="7cH-0x-MhS"/>
+                    <constraint firstItem="8Yi-0H-ZxI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="2mj-qT-psE"/>
+                    <constraint firstItem="Tyr-hr-ehc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="6RK-Eg-dkp"/>
                     <constraint firstItem="26j-6a-Zfq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="8uT-be-R7B"/>
-                    <constraint firstAttribute="trailing" secondItem="Itz-4Z-hbo" secondAttribute="trailing" id="E77-Yn-wmd"/>
-                    <constraint firstItem="8Yi-0H-ZxI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="I6F-09-utc"/>
+                    <constraint firstItem="8Yi-0H-ZxI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Gmp-Qw-WZb"/>
                     <constraint firstItem="26j-6a-Zfq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="40" id="Q5E-X0-ma0"/>
-                    <constraint firstItem="8Yi-0H-ZxI" firstAttribute="top" secondItem="BXb-4e-SS2" secondAttribute="bottom" constant="20" id="XYC-De-OFX"/>
-                    <constraint firstAttribute="trailing" secondItem="BXb-4e-SS2" secondAttribute="trailing" id="iid-1O-gD4"/>
-                    <constraint firstItem="Itz-4Z-hbo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="mdt-bg-3z4"/>
-                    <constraint firstItem="BXb-4e-SS2" firstAttribute="leading" secondItem="26j-6a-Zfq" secondAttribute="leading" id="mu2-vj-XoY"/>
-                    <constraint firstItem="BXb-4e-SS2" firstAttribute="top" secondItem="26j-6a-Zfq" secondAttribute="bottom" constant="10" id="vsx-bc-LS7"/>
+                    <constraint firstItem="Cxd-jS-Ycu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Utp-cy-X9z"/>
+                    <constraint firstAttribute="trailing" secondItem="Cxd-jS-Ycu" secondAttribute="trailing" id="W8R-wq-6aE"/>
+                    <constraint firstItem="Cxd-jS-Ycu" firstAttribute="top" secondItem="26j-6a-Zfq" secondAttribute="bottom" constant="5" id="XrO-Qp-3rc"/>
+                    <constraint firstAttribute="trailing" secondItem="Tyr-hr-ehc" secondAttribute="trailing" id="cCh-JP-1qk"/>
+                    <constraint firstItem="8Yi-0H-ZxI" firstAttribute="top" secondItem="Cxd-jS-Ycu" secondAttribute="bottom" constant="10" id="jgA-zx-T4k"/>
+                    <constraint firstItem="Tyr-hr-ehc" firstAttribute="top" secondItem="8Yi-0H-ZxI" secondAttribute="bottom" constant="5" id="qNN-lZ-X6Z"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="courseRateProgress" destination="Itz-4Z-hbo" id="94H-i4-fBn"/>
                 <outlet property="courseRateTitleLabel" destination="8Yi-0H-ZxI" id="nYD-u8-Qem"/>
-                <outlet property="courseStrengthProgress" destination="BXb-4e-SS2" id="75e-bD-DRB"/>
                 <outlet property="courseStrengthTitleLabel" destination="26j-6a-Zfq" id="he9-Lc-Czp"/>
+                <outlet property="rateSlider" destination="Tyr-hr-ehc" id="F1o-wi-tnx"/>
+                <outlet property="strengthSlider" destination="Cxd-jS-Ycu" id="CNy-rp-X3Z"/>
             </connections>
-            <point key="canvasLocation" x="138.40579710144928" y="58.928571428571423"/>
+            <point key="canvasLocation" x="363" y="51"/>
         </tableViewCell>
     </objects>
 </document>
