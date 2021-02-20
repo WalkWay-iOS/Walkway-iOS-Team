@@ -28,8 +28,12 @@ class ScopeOfMyPageTVC: UITableViewCell {
     
     func setText() {
         titleLabel.text = "공개 범위"
+        titleLabel.font = .myBoldSystemFont(ofSize: 15)
         recordTitleLabel.text = "기록"
+        recordTitleLabel.font = .myMediumSystemFont(ofSize: 13)
         badgeTitleLabel.text = "뱃지"
+        badgeTitleLabel.font = .myMediumSystemFont(ofSize: 13)
         keywordTitleLabel.text = "키워드"
+        keywordTitleLabel.font = .myMediumSystemFont(ofSize: 13)
     }
 }

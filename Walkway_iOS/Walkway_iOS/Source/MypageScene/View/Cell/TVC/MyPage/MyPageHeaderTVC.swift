@@ -35,11 +35,12 @@ extension MyPageHeaderTVC {
     
     func setLabel() {
         myPageTitleLabel.text = "마이 페이지"
+        myPageTitleLabel.font = .myBoldSystemFont(ofSize: 35)
     }
     
     func setButton() {
         settingButton.setImage(UIImage(systemName: "gearshape"), for: .normal)
-        settingButton.setTitleColor(.systemIndigo, for: .normal)
+        settingButton.tintColor = .bookmarkDarkBlue
         settingButton.addTarget(self, action: #selector(touchUpSetting), for: .touchUpInside)
     }
 }

@@ -27,7 +27,12 @@ class CameraInfoAllowTVC: UITableViewCell {
     
     func setText() {
         titleLabel.text = "카메라 활용 여부"
+        titleLabel.font = .myBoldSystemFont(ofSize: 15)
+        
         allowLabel.text = "동의"
+        allowLabel.font = .myRegularSystemFont(ofSize: 12)
+        
         disallowLabel.text = "비동의"
+        disallowLabel.font = .myRegularSystemFont(ofSize: 12)
     }
 }

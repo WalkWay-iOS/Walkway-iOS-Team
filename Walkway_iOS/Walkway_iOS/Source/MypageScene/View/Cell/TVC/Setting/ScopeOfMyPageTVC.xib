@@ -13,17 +13,17 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ScopeOfMyPageTVC" rowHeight="201" id="KGk-i7-Jjw" customClass="ScopeOfMyPageTVC" customModule="Walkway_iOS" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="396" height="200"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="396" height="200"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ame-cr-NRJ">
-                        <rect key="frame" x="25" y="20.5" width="40" height="18"/>
+                        <rect key="frame" x="25" y="21" width="40" height="18"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pHc-gU-Sgl">
+                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pHc-gU-Sgl">
                         <rect key="frame" x="183" y="45" width="191" height="32"/>
                         <segments>
                             <segment title="전체공개"/>
@@ -37,7 +37,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yph-qE-4pw">
+                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yph-qE-4pw">
                         <rect key="frame" x="183" y="91" width="191" height="32"/>
                         <segments>
                             <segment title="전체공개"/>
@@ -52,14 +52,14 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7sg-S4-66z">
-                        <rect key="frame" x="25" y="188.5" width="340" height="1"/>
+                        <rect key="frame" x="25" y="189" width="340" height="1"/>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="340" id="MAu-fF-obB"/>
                             <constraint firstAttribute="height" constant="1" id="hGL-lD-daf"/>
                         </constraints>
                     </imageView>
-                    <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Osc-rC-te7">
+                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Osc-rC-te7">
                         <rect key="frame" x="183" y="137" width="191" height="32"/>
                         <segments>
                             <segment title="전체공개"/>
@@ -76,24 +76,25 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="Oro-Tz-mz6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="115" id="8LE-Ga-eOe"/>
+                    <constraint firstAttribute="trailing" secondItem="pHc-gU-Sgl" secondAttribute="trailing" constant="22" id="AiP-uh-hur"/>
+                    <constraint firstItem="pHc-gU-Sgl" firstAttribute="leading" secondItem="RbC-RR-njh" secondAttribute="trailing" constant="35" id="CPc-iv-aU0"/>
                     <constraint firstItem="RbC-RR-njh" firstAttribute="centerY" secondItem="pHc-gU-Sgl" secondAttribute="centerY" id="Cn1-Hs-fj4"/>
                     <constraint firstItem="ame-cr-NRJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="DEf-It-Sfy"/>
+                    <constraint firstItem="Osc-rC-te7" firstAttribute="trailing" secondItem="pHc-gU-Sgl" secondAttribute="trailing" id="F3K-Cf-Spe"/>
                     <constraint firstAttribute="trailing" secondItem="7sg-S4-66z" secondAttribute="trailing" constant="25" id="IXA-50-5tx"/>
-                    <constraint firstAttribute="trailing" secondItem="Osc-rC-te7" secondAttribute="trailing" constant="25" id="MO1-jW-cMg"/>
+                    <constraint firstItem="Osc-rC-te7" firstAttribute="leading" secondItem="pHc-gU-Sgl" secondAttribute="leading" id="JQW-Pn-iIU"/>
                     <constraint firstItem="Oro-Tz-mz6" firstAttribute="centerY" secondItem="yph-qE-4pw" secondAttribute="centerY" id="N29-yb-TAm"/>
                     <constraint firstItem="Osc-rC-te7" firstAttribute="top" secondItem="yph-qE-4pw" secondAttribute="bottom" constant="15" id="OYF-em-9Jz"/>
-                    <constraint firstItem="Osc-rC-te7" firstAttribute="trailing" secondItem="yph-qE-4pw" secondAttribute="trailing" id="QNo-g3-MRY"/>
+                    <constraint firstAttribute="bottom" secondItem="7sg-S4-66z" secondAttribute="bottom" constant="10" id="Qry-YG-JdV"/>
                     <constraint firstItem="yph-qE-4pw" firstAttribute="top" secondItem="pHc-gU-Sgl" secondAttribute="bottom" constant="15" id="Vhx-rC-RY1"/>
                     <constraint firstItem="59C-kf-Msv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="115" id="W7c-bA-EZC"/>
-                    <constraint firstItem="ame-cr-NRJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20.5" id="X1D-GF-yc0"/>
+                    <constraint firstItem="ame-cr-NRJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="21" id="X1D-GF-yc0"/>
+                    <constraint firstItem="yph-qE-4pw" firstAttribute="leading" secondItem="pHc-gU-Sgl" secondAttribute="leading" id="ZZx-gM-k3B"/>
                     <constraint firstItem="7sg-S4-66z" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="aHT-yt-DfE"/>
                     <constraint firstItem="RbC-RR-njh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="115" id="bJF-5C-VdQ"/>
                     <constraint firstItem="pHc-gU-Sgl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="45" id="gDj-4s-H3H"/>
                     <constraint firstItem="59C-kf-Msv" firstAttribute="centerY" secondItem="Osc-rC-te7" secondAttribute="centerY" id="lN7-MV-mfC"/>
-                    <constraint firstAttribute="trailing" secondItem="pHc-gU-Sgl" secondAttribute="trailing" constant="25" id="qhM-qb-9iu"/>
-                    <constraint firstItem="yph-qE-4pw" firstAttribute="trailing" secondItem="pHc-gU-Sgl" secondAttribute="trailing" id="wGJ-bN-WGw"/>
-                    <constraint firstAttribute="trailing" secondItem="yph-qE-4pw" secondAttribute="trailing" constant="25" id="xuH-9d-DKs"/>
-                    <constraint firstItem="7sg-S4-66z" firstAttribute="top" secondItem="Osc-rC-te7" secondAttribute="bottom" constant="20.5" id="zdf-O4-Yle"/>
+                    <constraint firstItem="yph-qE-4pw" firstAttribute="trailing" secondItem="pHc-gU-Sgl" secondAttribute="trailing" id="naB-6z-hde"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

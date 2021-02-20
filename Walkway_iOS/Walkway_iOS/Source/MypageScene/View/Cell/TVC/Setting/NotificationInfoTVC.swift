@@ -42,11 +42,19 @@ class NotificationInfoTVC: UITableViewCell {
     
     func setText() {
         titleLabel.text = "알림"
+        titleLabel.font = .myBoldSystemFont(ofSize: 15)
+        
         followTitleLabel.text = "팔로우"
         bookmarkTitleLabel.text = "북마크"
         rewardTitleLabel.text = "리워드"
         messageTitleLabel.text = "쪽지"
         landmarkTitleLabel.text = "랜드마크"
+        
+        followTitleLabel.font = .myMediumSystemFont(ofSize: 13)
+        bookmarkTitleLabel.font = .myMediumSystemFont(ofSize: 13)
+        rewardTitleLabel.font = .myMediumSystemFont(ofSize: 13)
+        messageTitleLabel.font = .myMediumSystemFont(ofSize: 13)
+        landmarkTitleLabel.font = .myMediumSystemFont(ofSize: 13)
         
         followAllowLabel.text = "동의"
         bookmarkAllowLabel.text = "동의"
@@ -54,12 +62,25 @@ class NotificationInfoTVC: UITableViewCell {
         messageAllowLabel.text = "동의"
         landmarkAllowLabel.text = "동의"
         
+        followAllowLabel.font = .myRegularSystemFont(ofSize: 12)
+        bookmarkAllowLabel.font = .myRegularSystemFont(ofSize: 12)
+        rewardAllowLabel.font = .myRegularSystemFont(ofSize: 12)
+        messageAllowLabel.font = .myRegularSystemFont(ofSize: 12)
+        landmarkAllowLabel.font = .myRegularSystemFont(ofSize: 12)
+        
         followDisallowLabel.text = "비동의"
         bookmarkDisallowLabel.text = "비동의"
         rewardDisallowLabel.text = "비동의"
         messageDisallowLabel.text = "비동의"
         landmarkDisallowLabel.text = "비동의"
         
+        followDisallowLabel.font = .myRegularSystemFont(ofSize: 12)
+        bookmarkDisallowLabel.font = .myRegularSystemFont(ofSize: 12)
+        rewardDisallowLabel.font = .myRegularSystemFont(ofSize: 12)
+        messageDisallowLabel.font = .myRegularSystemFont(ofSize: 12)
+        landmarkDisallowLabel.font = .myRegularSystemFont(ofSize: 12)
+        
         outButton.setTitle("회원 탈퇴", for: .normal)
+        outButton.titleLabel?.font = .myRegularSystemFont(ofSize: 11)
     }
 }
