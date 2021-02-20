@@ -38,7 +38,7 @@ extension SignInVC {
     
     private func setLabel() {
         titleLabel.text = "로그인"
-        titleLabel.font = .boldSystemFont(ofSize: 30)
+        titleLabel.font = .myBoldSystemFont(ofSize: 30)
     }
     
     private func setButton() {
@@ -50,14 +50,14 @@ extension SignInVC {
         
         signInButton.setTitle("로그인", for: .normal)
         signInButton.setTitleColor(.white, for: .normal)
-        signInButton.titleLabel?.font = .boldSystemFont(ofSize: 15)
+        signInButton.titleLabel?.font = .myBoldSystemFont(ofSize: 15)
         signInButton.backgroundColor = .bookmarkDarkBlue
         signInButton.layer.cornerRadius = 19
         signInButton.addTarget(self, action: #selector(touchUpSignIn), for: .touchUpInside)
         
         findButton.setTitle("아이디/비밀번호 찾기", for: .normal)
         findButton.setTitleColor(.gray50, for: .normal)
-        findButton.titleLabel?.font = .systemFont(ofSize: 13, weight: .semibold)
+        findButton.titleLabel?.font = .myMediumSystemFont(ofSize: 13)
         findButton.addTarget(self, action: #selector(touchUpFind), for: .touchUpInside)
     }
     

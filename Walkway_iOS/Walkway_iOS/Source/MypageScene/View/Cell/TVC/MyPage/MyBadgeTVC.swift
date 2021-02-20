@@ -12,12 +12,11 @@ class MyBadgeTVC: UITableViewCell {
     
     @IBOutlet var myBadgeTitleLabel: UILabel!
     @IBOutlet var badgeAllButton: UIButton!
-    @IBOutlet var myBadge1Button: UIButton!
-    @IBOutlet var myBadge2Button: UIButton!
-    @IBOutlet var myBadge3Button: UIButton!
-    @IBOutlet var myBadge4Button: UIButton!
+    @IBOutlet weak var badgeCollectionView: UICollectionView!
     
     var delegate: myPagePresentDelegate?
+    
+    var images: [String] = ["bookmark", "paperplane", "person.3", "graduationcap", "sun.haze", "sparkles", "flame"]
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,11 +32,52 @@ class MyBadgeTVC: UITableViewCell {
     }
 }
 
+extension MyBadgeTVC: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return images.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FollowerBadgeCVC.identifier, for: indexPath) as? FollowerBadgeCVC else {
+            return UICollectionViewCell()
+        }
+        cell.setImage(image: images[indexPath.row])
+        return cell
+    }
+}
+
+extension MyBadgeTVC: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 44, height: 44)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 12
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 14, left: 16, bottom: 14, right: 16)
+    }
+}
+
 // MARK: - UI
 extension MyBadgeTVC {
     func setUI() {
         setLabel()
         setButton()
+        setCollectionView()
+    }
+    
+    private func setCollectionView() {
+        badgeCollectionView.delegate = self
+        badgeCollectionView.dataSource = self
+        
+        let nibName =  UINib(nibName: "FollowerBadgeCVC", bundle: nil)
+        badgeCollectionView.register(nibName, forCellWithReuseIdentifier: FollowerBadgeCVC.identifier)
     }
     
     func setLabel() {
@@ -47,21 +87,5 @@ extension MyBadgeTVC {
     func setButton() {
         badgeAllButton.setTitle("전체보기", for: .normal)
         badgeAllButton.tintColor = .black
-        myBadge1Button.backgroundColor = .systemIndigo
-        myBadge1Button.tintColor = .white
-        myBadge1Button.setImage(UIImage(systemName: "camera"), for: .normal)
-        myBadge1Button.layer.cornerRadius = myBadge1Button.layer.frame.size.width/2
-        myBadge2Button.backgroundColor = .systemIndigo
-        myBadge2Button.tintColor = .white
-        myBadge2Button.setImage(UIImage(systemName: "highlighter"), for: .normal)
-        myBadge2Button.layer.cornerRadius = myBadge1Button.layer.frame.size.width/2
-        myBadge3Button.backgroundColor = .systemIndigo
-        myBadge3Button.tintColor = .white
-        myBadge3Button.setImage(UIImage(systemName: "bookmark"), for: .normal)
-        myBadge3Button.layer.cornerRadius = myBadge1Button.layer.frame.size.width/2
-        myBadge4Button.backgroundColor = .systemIndigo
-        myBadge4Button.tintColor = .white
-        myBadge4Button.setImage(UIImage(systemName: "flag"), for: .normal)
-        myBadge4Button.layer.cornerRadius = myBadge1Button.layer.frame.size.width/2
     }
 }

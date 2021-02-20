@@ -41,15 +41,15 @@ extension FollowerCourseCVC {
     }
     
     private func setLabel() {
-        titleLabel.font = .boldSystemFont(ofSize: 15)
+        titleLabel.font = .myBoldSystemFont(ofSize: 15)
         titleLabel.textColor = .white
         
         distanceLabel.text = "1.3km"
-        distanceLabel.font = .systemFont(ofSize: 13, weight: .medium)
+        distanceLabel.font = .myRegularSystemFont(ofSize: 13)
         distanceLabel.textColor = .gray30
         
         timeLabel.text = "1시간 35분"
-        timeLabel.font = .systemFont(ofSize: 13, weight: .medium)
+        timeLabel.font = .myRegularSystemFont(ofSize: 13)
         timeLabel.textColor = .gray30
     }
 }

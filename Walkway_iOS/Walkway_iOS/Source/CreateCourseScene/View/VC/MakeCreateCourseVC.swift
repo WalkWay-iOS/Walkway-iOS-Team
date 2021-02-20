@@ -135,7 +135,7 @@ extension MakeCreateCourseVC {
         
         saveButton.setTitle("저장", for: .normal)
         saveButton.setTitleColor(.bookmarkDarkBlue, for: .normal)
-        saveButton.titleLabel?.font = .boldSystemFont(ofSize: 17)
+        saveButton.titleLabel?.font = .myBoldSystemFont(ofSize: 17)
         saveButton.addTarget(self, action: #selector(touchUpSave), for: .touchUpInside)
         saveButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(saveButton)
@@ -146,7 +146,7 @@ extension MakeCreateCourseVC {
     private func setLabel() {
         hiddenLabel.text = "함께 걸어보고 싶어요🥰\n경로를 생성하려면 저장버튼을 눌러주세요."
         hiddenLabel.numberOfLines = 2
-        hiddenLabel.font = .systemFont(ofSize: 17, weight: .semibold)
+        hiddenLabel.font = .myBoldSystemFont(ofSize: 17)
         hiddenLabel.textColor = .white
         hiddenLabel.translatesAutoresizingMaskIntoConstraints = false
         hiddenView.addSubview(hiddenLabel)

@@ -47,16 +47,16 @@ extension HomeBookmarkCourseCVC {
     
     private func setLabel() {
         titleLabel.text = "광화문 걸어보기"
-        titleLabel.font = .boldSystemFont(ofSize: 15)
+        titleLabel.font = .myBoldSystemFont(ofSize: 15)
         titleLabel.textColor = .white
         titleLabel.widthAnchor.constraint(lessThanOrEqualTo: self.widthAnchor, constant: -self.frame.size.width/6).isActive = true
         
         timeLabel.text = "1시간"
-        timeLabel.font = .systemFont(ofSize: 11)
+        timeLabel.font = .myRegularSystemFont(ofSize: 11)
         timeLabel.textColor = .white
         
         distanceLabel.text = "1km"
-        distanceLabel.font = .systemFont(ofSize: 11)
+        distanceLabel.font = .myRegularSystemFont(ofSize: 11)
         distanceLabel.textColor = .white
     }
     
@@ -66,14 +66,14 @@ extension HomeBookmarkCourseCVC {
         var index = 0
         
         for btn in hashtagButtons {
-            btn.layer.cornerRadius = 9
+            btn.layer.cornerRadius = 11
             btn.layer.shadowColor = UIColor.black.withAlphaComponent(0.5).cgColor
             btn.layer.shadowOpacity = 0.8
             btn.layer.shadowOffset = CGSize(width: 1, height: 2)
             btn.layer.shadowRadius = 2
             
             btn.setTitle(title[index], for: .normal)
-            btn.titleLabel?.font = .systemFont(ofSize: 12, weight: .semibold)
+            btn.titleLabel?.font = .myMediumSystemFont(ofSize: 12)
             btn.backgroundColor = colors[index]
             btn.contentEdgeInsets = UIEdgeInsets(top: 2, left: 8, bottom: 2, right: 8)
             btn.setTitleColor(.white, for: .normal)

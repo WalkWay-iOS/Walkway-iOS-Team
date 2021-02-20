@@ -122,22 +122,22 @@ extension FindIdVC {
     
     private func setLabel() {
         idTitleLabel.text = "아이디 찾기"
-        idTitleLabel.font = .boldSystemFont(ofSize: 25)
+        idTitleLabel.font = .myBoldSystemFont(ofSize: 25)
         
         idInfoLabel.text = "아이디를 가입하신 이메일로 발송합니다"
-        idInfoLabel.font = .systemFont(ofSize: 13)
+        idInfoLabel.font = .myRegularSystemFont(ofSize: 13)
         
         pwTitleLabel.text = "비밀번호 찾기"
-        pwTitleLabel.font = .systemFont(ofSize: 25)
+        pwTitleLabel.font = .myBoldSystemFont(ofSize: 25)
         
         pwInfoLabel.text = "임시 비밀번호를 가입하신 이메일로 발송합니다"
-        pwInfoLabel.font = .systemFont(ofSize: 13)
+        pwInfoLabel.font = .myRegularSystemFont(ofSize: 13)
     }
     
     private func setButton() {
         idButton.setTitle("이메일 발송", for: .normal)
         idButton.setTitleColor(.white, for: .normal)
-        idButton.titleLabel?.font = .boldSystemFont(ofSize: 15)
+        idButton.titleLabel?.font = .myBoldSystemFont(ofSize: 15)
         idButton.backgroundColor = .gray60
         idButton.layer.cornerRadius = 19
         idButton.isEnabled = false
@@ -145,7 +145,7 @@ extension FindIdVC {
         
         pwButton.setTitle("이메일 발송", for: .normal)
         pwButton.setTitleColor(.white, for: .normal)
-        pwButton.titleLabel?.font = .boldSystemFont(ofSize: 15)
+        pwButton.titleLabel?.font = .myBoldSystemFont(ofSize: 15)
         pwButton.backgroundColor = .gray60
         pwButton.layer.cornerRadius = 19
         pwButton.isEnabled = false

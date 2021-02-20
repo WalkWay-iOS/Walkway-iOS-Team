@@ -79,7 +79,7 @@ extension PopularCourseVC  {
     
     private func setLabel() {
         titleLabel.text = "인기 추천 코스"
-        titleLabel.font = .systemFont(ofSize: 25, weight: .black)
+        titleLabel.font = .myBoldSystemFont(ofSize: 25)
     }
     
     private func setButton() {
@@ -89,7 +89,7 @@ extension PopularCourseVC  {
         closeButton.addTarget(self, action: #selector(touchUpClose), for: .touchUpInside)
         
         seoulButton.setTitle("#서울", for: .normal)
-        seoulButton.titleLabel?.font = .boldSystemFont(ofSize: 15)
+        seoulButton.titleLabel?.font = .myBoldSystemFont(ofSize: 15)
         seoulButton.setTitleColor(.white, for: .normal)
         seoulButton.backgroundColor = .bookmarkGray
         seoulButton.layer.cornerRadius = 13
@@ -100,7 +100,7 @@ extension PopularCourseVC  {
         seoulButton.addTarget(self, action: #selector(touchUpSeoul), for: .touchUpInside)
         
         jejuButton.setTitle("#제주", for: .normal)
-        jejuButton.titleLabel?.font = .boldSystemFont(ofSize: 15)
+        jejuButton.titleLabel?.font = .myBoldSystemFont(ofSize: 15)
         jejuButton.setTitleColor(.white, for: .normal)
         jejuButton.backgroundColor = .popularGreen
         jejuButton.layer.cornerRadius = 13

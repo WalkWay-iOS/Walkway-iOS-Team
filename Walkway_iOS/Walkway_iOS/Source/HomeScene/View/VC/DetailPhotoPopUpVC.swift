@@ -39,7 +39,7 @@ extension DetailPhotoPopUpVC {
     
     private func setButton() {
         profileButton.setTitleColor(.white, for: .normal)
-        profileButton.titleLabel?.font = .systemFont(ofSize: 13, weight: .medium)
+        profileButton.titleLabel?.font = .myMediumSystemFont(ofSize: 13)
         profileButton.backgroundColor = .bookmarkDarkBlue
         profileButton.layer.cornerRadius = 15
         profileButton.layer.shadowColor = UIColor.black.withAlphaComponent(0.8).cgColor
@@ -56,11 +56,11 @@ extension DetailPhotoPopUpVC {
     }
     
     private func setLabel() {
-        nameLabel.font = .systemFont(ofSize: 13, weight: .medium)
+        nameLabel.font = .myMediumSystemFont(ofSize: 13)
         nameLabel.textColor = .gray60
         nameLabel.text = "따릉이"
         
-        dateLabel.font = .systemFont(ofSize: 13, weight: .medium)
+        dateLabel.font = .myMediumSystemFont(ofSize: 13)
         dateLabel.textColor = .gray60
         dateLabel.text = "21. 02. 03"
     }

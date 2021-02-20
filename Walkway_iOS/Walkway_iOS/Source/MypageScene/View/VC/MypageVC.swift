@@ -83,19 +83,19 @@ extension MypageVC: UITableViewDataSource {
 extension MypageVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            return 188
+            return 170
         }
         else if indexPath.section == 1 {
-            return 325
+            return 345
         }
         else if indexPath.section == 2 {
-            return 155
+            return 121
         }
         else if indexPath.section == 3 {
-            return 155
+            return 112
         }
         else if indexPath.section == 4 {
-            return 200
+            return 176
         }
         else if indexPath.section == 5 {
             return 500

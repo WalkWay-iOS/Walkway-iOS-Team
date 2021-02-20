@@ -16,6 +16,8 @@ class MyCourseTVC: UITableViewCell {
     
     var delegate: myPagePresentDelegate?
     
+    var courses: [String] = ["남산 한바퀴", "남산 두바퀴", "룰루리랄라리 신나는북악산여행", "북악산가자", "집뒤에 숨어있는 보물"]
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setUI()
@@ -33,24 +35,25 @@ class MyCourseTVC: UITableViewCell {
 // MARK: - CollectionViewDelegate
 extension MyCourseTVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return courses.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MycourseListCVC.identifier, for: indexPath) as? MycourseListCVC else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FollowerCourseCVC.identifier, for: indexPath) as? FollowerCourseCVC else {
             return UICollectionViewCell()
         }
+        cell.setTitle(title: courses[indexPath.row])
         return cell
     }
 }
 
 extension MyCourseTVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 140, height: 100)
+        return CGSize(width: 220, height: 83)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 5
+        return 8
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -58,7 +61,7 @@ extension MyCourseTVC: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+        return UIEdgeInsets(top: 11, left: 16, bottom: 23, right: 16)
     }
 }
 
@@ -88,8 +91,8 @@ extension MyCourseTVC {
     }
     
     private func setCollectionViewNib() {
-        let nibName = UINib(nibName: "MycourseListCVC", bundle: nil)
-        myCourseCollectionView.register(nibName, forCellWithReuseIdentifier: MycourseListCVC.identifier)
+        let nibName =  UINib(nibName: "FollowerCourseCVC", bundle: nil)
+        myCourseCollectionView.register(nibName, forCellWithReuseIdentifier: FollowerCourseCVC.identifier)
     }
     
     private func setLabel() {

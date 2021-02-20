@@ -79,7 +79,6 @@ extension AlertVC {
     private func setTableView() {
         alertTableView.delegate = self
         alertTableView.dataSource = self
-        alertTableView.backgroundColor = .gray30
         alertTableView.separatorColor = .clear
     }
     
@@ -99,29 +98,29 @@ extension AlertVC {
         profileButton.layer.shadowRadius = 3
         profileButton.addTarget(self, action: #selector(touchUpProfile), for: .touchUpInside)
         
+        alertButton.setTitle("알림", for: .normal)
+        alertButton.titleLabel?.font = .myBoldSystemFont(ofSize: 15)
         alertButton.addTarget(self, action: #selector(touchUpAlert), for: .touchUpInside)
+        
+        messageButton.setTitle("쪽지", for: .normal)
+        
+        messageButton.titleLabel?.font = .myBoldSystemFont(ofSize: 15)
         messageButton.addTarget(self, action: #selector(touchUpMessage), for: .touchUpInside)
         
         selectedAlertButton()
     }
     
     private func selectedAlertButton() {
-        alertButton.backgroundColor = .gray30
-        alertButton.setTitle("", for: .normal)
-        
-        messageButton.backgroundColor = .white
-        messageButton.setTitle("", for: .normal)
+        alertButton.setTitleColor(.bookmarkDarkBlue, for: .normal)
+        messageButton.setTitleColor(.bookmarkLightBlue, for: .normal)
         
         isAlert = true
         alertTableView.reloadData()
     }
     
     private func selectedMessageButton() {
-        alertButton.backgroundColor = .white
-        alertButton.setTitle("", for: .normal)
-        
-        messageButton.backgroundColor = .gray30
-        messageButton.setTitle("", for: .normal)
+        alertButton.setTitleColor(.bookmarkLightBlue, for: .normal)
+        messageButton.setTitleColor(.bookmarkDarkBlue, for: .normal)
         
         isAlert = false
         alertTableView.reloadData()

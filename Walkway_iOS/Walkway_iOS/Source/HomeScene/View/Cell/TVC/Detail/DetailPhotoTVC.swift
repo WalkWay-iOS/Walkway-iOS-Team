@@ -116,12 +116,12 @@ extension DetailPhotoTVC {
         } else {
             titleLabel.text = "코스 후기 사진(\(photos.count))"
         }
-        titleLabel.font = .boldSystemFont(ofSize: 20)
+        titleLabel.font = .myBoldSystemFont(ofSize: 20)
     }
     
     private func setButton() {
         viewAllButton.setTitle("전체보기", for: .normal)
-        viewAllButton.titleLabel?.font = .systemFont(ofSize: 13, weight: .bold)
+        viewAllButton.titleLabel?.font = .myMediumSystemFont(ofSize: 13)
         viewAllButton.setTitleColor(.gray70, for: .normal)
         viewAllButton.addTarget(self, action: #selector(touchUpViewAll), for: .touchUpInside)
     }

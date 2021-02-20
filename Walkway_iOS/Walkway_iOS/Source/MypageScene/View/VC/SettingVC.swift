@@ -71,7 +71,7 @@ extension SettingVC: UITableViewDelegate {
             return 100
         }
         else if indexPath.section == 1 {
-            return 70
+            return 65
         }
         else if indexPath.section == 2 {
             return 200
@@ -115,13 +115,13 @@ extension SettingVC {
     
     func setLabel() {
         viewNameLabel.text = "설정"
-        viewNameLabel.font = .boldSystemFont(ofSize: 35)
+        viewNameLabel.font = .myBoldSystemFont(ofSize: 35)
     }
     
     func setButton() {
         closeButton.setTitle("", for: .normal)
         closeButton.setImage(UIImage(systemName: "xmark"), for: .normal)
-        closeButton.setTitleColor(.systemIndigo, for: .normal)
+        closeButton.tintColor = .bookmarkDarkBlue
         closeButton.addTarget(self, action: #selector(touchUpClose), for: .touchUpInside)
     }
 }
@@ -129,6 +129,6 @@ extension SettingVC {
 // MARK: - Action
 extension SettingVC {
     @objc func touchUpClose() {
-        dismiss(animated: false, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 }
