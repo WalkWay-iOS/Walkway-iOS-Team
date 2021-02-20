@@ -366,7 +366,7 @@
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TQE-cS-llc">
-                                <rect key="frame" x="0.0" y="152" width="375" height="515"/>
+                                <rect key="frame" x="0.0" y="132" width="375" height="535"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7o-KT-AiC">
@@ -381,7 +381,7 @@
                             <constraint firstItem="TQE-cS-llc" firstAttribute="trailing" secondItem="Lo3-hc-8ZZ" secondAttribute="trailing" id="7um-On-JQG"/>
                             <constraint firstItem="TQE-cS-llc" firstAttribute="leading" secondItem="Lo3-hc-8ZZ" secondAttribute="leading" id="E23-S2-Zm4"/>
                             <constraint firstItem="n7o-KT-AiC" firstAttribute="leading" secondItem="kFG-1f-VLg" secondAttribute="leading" id="IuY-4h-yg3"/>
-                            <constraint firstItem="TQE-cS-llc" firstAttribute="top" secondItem="kFG-1f-VLg" secondAttribute="bottom" constant="20" id="Yxg-uq-rfJ"/>
+                            <constraint firstItem="TQE-cS-llc" firstAttribute="top" secondItem="kFG-1f-VLg" secondAttribute="bottom" id="Yxg-uq-rfJ"/>
                             <constraint firstItem="Le8-6H-Ifx" firstAttribute="top" secondItem="Lo3-hc-8ZZ" secondAttribute="top" constant="15" id="n7B-sN-Gqg"/>
                             <constraint firstAttribute="bottom" secondItem="TQE-cS-llc" secondAttribute="bottom" id="oYC-TG-xUE"/>
                             <constraint firstItem="Le8-6H-Ifx" firstAttribute="trailing" secondItem="Lo3-hc-8ZZ" secondAttribute="trailing" id="vh5-LR-8Ef"/>

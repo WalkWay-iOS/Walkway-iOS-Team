@@ -12,12 +12,11 @@ class MyKeywordTVC: UITableViewCell {
     
     @IBOutlet var myKeywordTitleLabel: UILabel!
     @IBOutlet var keywordAllButton: UIButton!
-    @IBOutlet var myKeyword1Label: UILabel!
-    @IBOutlet var myKeyword2Label: UILabel!
-    @IBOutlet var myKeyword3Label: UILabel!
-    @IBOutlet var myKeyword4Label: UILabel!
+    @IBOutlet weak var keywordCollectionView: UICollectionView!
     
     var delegate: myPagePresentDelegate?
+    
+    var keywords: [String] = ["남산", "서울대공원", "밤", "밤산책", "신나요"]
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,35 +32,57 @@ class MyKeywordTVC: UITableViewCell {
     }
 }
 
+// MARK: - CollectionViewDelegate
+extension MyKeywordTVC: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return keywords.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FollowerKeywordCVC.identifier, for: indexPath) as? FollowerKeywordCVC else {
+            return UICollectionViewCell()
+        }
+        cell.setLabelText(text: keywords[indexPath.row])
+        return cell
+    }
+}
+
+extension MyKeywordTVC: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 78, height: 25.5)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 7
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 9, left: 16, bottom: 19, right: 16)
+    }
+}
+
 // MARK: - UI
 extension MyKeywordTVC {
     func setUI() {
+        setCollectionView()
         setLabel()
         setButton()
     }
     
+    private func setCollectionView() {
+        keywordCollectionView.delegate = self
+        keywordCollectionView.dataSource = self
+        
+        let nibName =  UINib(nibName: "FollowerKeywordCVC", bundle: nil)
+        keywordCollectionView.register(nibName, forCellWithReuseIdentifier: FollowerKeywordCVC.identifier)
+    }
+    
     func setLabel() {
         myKeywordTitleLabel.text = "나의 키워드"
-        myKeyword1Label.text = "#스포츠"
-        myKeyword1Label.backgroundColor = .systemIndigo
-        myKeyword1Label.textColor = .white
-        myKeyword1Label.layer.masksToBounds = true
-        myKeyword1Label.layer.cornerRadius = 12
-        myKeyword2Label.text = "#야경"
-        myKeyword2Label.backgroundColor = .systemIndigo
-        myKeyword2Label.textColor = .white
-        myKeyword2Label.layer.masksToBounds = true
-        myKeyword2Label.layer.cornerRadius = 12
-        myKeyword3Label.text = "#등산"
-        myKeyword3Label.backgroundColor = .systemIndigo
-        myKeyword3Label.textColor = .white
-        myKeyword3Label.layer.masksToBounds = true
-        myKeyword3Label.layer.cornerRadius = 12
-        myKeyword4Label.text = "#데이트코스"
-        myKeyword4Label.backgroundColor = .systemIndigo
-        myKeyword4Label.textColor = .white
-        myKeyword4Label.layer.masksToBounds = true
-        myKeyword4Label.layer.cornerRadius = 12
     }
     
     func setButton() {
