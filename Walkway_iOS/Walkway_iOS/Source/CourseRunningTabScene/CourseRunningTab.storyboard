@@ -225,22 +225,39 @@
             </objects>
             <point key="canvasLocation" x="-1750" y="-1332"/>
         </scene>
-        <!--View Controller-->
+        <!--Course MemoVC-->
         <scene sceneID="ZsR-pj-FFe">
             <objects>
-                <viewController id="I0k-aH-MVs" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CourseMemoVC" id="I0k-aH-MVs" customClass="CourseMemoVC" customModule="Walkway_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7pj-Ba-BpS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oxb-D8-M9a">
-                                <rect key="frame" x="0.0" y="142" width="375" height="525"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oxb-D8-M9a">
+                                <rect key="frame" x="50" y="100" width="275" height="467"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JEb-4v-Bh3">
-                                        <rect key="frame" x="48" y="230" width="240" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icF-iF-7gy">
+                                        <rect key="frame" x="25" y="25" width="60" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="Cvy-iR-4Qf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igU-qX-h8a">
+                                        <rect key="frame" x="190" y="25" width="60" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="1sm-ft-s70"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JEb-4v-Bh3">
+                                        <rect key="frame" x="25" y="82" width="225" height="360"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="360" id="Ebu-Rf-Vhy"/>
+                                        </constraints>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -248,11 +265,31 @@
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="icF-iF-7gy" firstAttribute="baseline" secondItem="igU-qX-h8a" secondAttribute="baseline" id="M0V-9c-KsE"/>
+                                    <constraint firstAttribute="trailing" secondItem="igU-qX-h8a" secondAttribute="trailing" constant="25" id="RkX-Mb-kId"/>
+                                    <constraint firstItem="JEb-4v-Bh3" firstAttribute="leading" secondItem="oxb-D8-M9a" secondAttribute="leading" constant="25" id="VtV-Qe-hEa"/>
+                                    <constraint firstItem="icF-iF-7gy" firstAttribute="leading" secondItem="oxb-D8-M9a" secondAttribute="leading" constant="25" id="XFP-bX-l7z"/>
+                                    <constraint firstAttribute="trailing" secondItem="JEb-4v-Bh3" secondAttribute="trailing" constant="25" id="cHK-6w-4LU"/>
+                                    <constraint firstItem="igU-qX-h8a" firstAttribute="top" secondItem="oxb-D8-M9a" secondAttribute="top" constant="25" id="ueS-kg-wYy"/>
+                                    <constraint firstAttribute="bottom" secondItem="JEb-4v-Bh3" secondAttribute="bottom" constant="25" id="wjl-nm-Fek"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aJH-G6-AYs"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oxb-D8-M9a" firstAttribute="top" secondItem="aJH-G6-AYs" secondAttribute="top" constant="100" id="7Rc-jr-aiP"/>
+                            <constraint firstAttribute="trailing" secondItem="oxb-D8-M9a" secondAttribute="trailing" constant="50" id="Da2-Av-3LJ"/>
+                            <constraint firstItem="oxb-D8-M9a" firstAttribute="leading" secondItem="aJH-G6-AYs" secondAttribute="leading" constant="50" id="zPp-gR-TXz"/>
+                            <constraint firstAttribute="bottom" secondItem="oxb-D8-M9a" secondAttribute="bottom" constant="100" id="zf2-Pt-SQj"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="icF-iF-7gy" id="Lo8-rr-6Br"/>
+                        <outlet property="memoTextView" destination="JEb-4v-Bh3" id="rRm-g5-HeG"/>
+                        <outlet property="saveButton" destination="igU-qX-h8a" id="dqv-Xx-g04"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7g0-jg-17h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

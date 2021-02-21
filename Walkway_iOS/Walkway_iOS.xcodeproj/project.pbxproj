@@ -71,6 +71,8 @@
 		74E77DC025CE7F3E00EBE83D /* ScopeOfMyPageTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74E77DBE25CE7F3E00EBE83D /* ScopeOfMyPageTVC.xib */; };
 		74E77DC425CE7F6D00EBE83D /* NotificationInfoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E77DC225CE7F6D00EBE83D /* NotificationInfoTVC.swift */; };
 		74E77DC525CE7F6D00EBE83D /* NotificationInfoTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74E77DC325CE7F6D00EBE83D /* NotificationInfoTVC.xib */; };
+		74E9279325E1F5F20013B762 /* CourseMemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E9279225E1F5F20013B762 /* CourseMemoVC.swift */; };
+		74E9279625E2193A0013B762 /* walkingCourseMemoPresentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E9279525E2193A0013B762 /* walkingCourseMemoPresentDelegate.swift */; };
 		74F4150325CF791C007E4C07 /* ProfileSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F4150225CF791C007E4C07 /* ProfileSettingVC.swift */; };
 		74F4150925CF7A68007E4C07 /* ProfileImageTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F4150725CF7A68007E4C07 /* ProfileImageTVC.swift */; };
 		74F4150A25CF7A68007E4C07 /* ProfileImageTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74F4150825CF7A68007E4C07 /* ProfileImageTVC.xib */; };
@@ -269,6 +271,8 @@
 		74E77DBE25CE7F3E00EBE83D /* ScopeOfMyPageTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScopeOfMyPageTVC.xib; sourceTree = "<group>"; };
 		74E77DC225CE7F6D00EBE83D /* NotificationInfoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationInfoTVC.swift; sourceTree = "<group>"; };
 		74E77DC325CE7F6D00EBE83D /* NotificationInfoTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationInfoTVC.xib; sourceTree = "<group>"; };
+		74E9279225E1F5F20013B762 /* CourseMemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseMemoVC.swift; sourceTree = "<group>"; };
+		74E9279525E2193A0013B762 /* walkingCourseMemoPresentDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = walkingCourseMemoPresentDelegate.swift; sourceTree = "<group>"; };
 		74F4150225CF791C007E4C07 /* ProfileSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingVC.swift; sourceTree = "<group>"; };
 		74F4150725CF7A68007E4C07 /* ProfileImageTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageTVC.swift; sourceTree = "<group>"; };
 		74F4150825CF7A68007E4C07 /* ProfileImageTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileImageTVC.xib; sourceTree = "<group>"; };
@@ -431,6 +435,7 @@
 			isa = PBXGroup;
 			children = (
 				7406548525DCCB3100249EC7 /* walkingCoursePresentDelegate.swift */,
+				74E9279525E2193A0013B762 /* walkingCourseMemoPresentDelegate.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -551,6 +556,7 @@
 				7406549F25DCD32000249EC7 /* CourseWalkingVC.swift */,
 				7406547C25DCC59C00249EC7 /* CoursePauseVC.swift */,
 				7406547F25DCC5B300249EC7 /* CourseCompleteVC.swift */,
+				74E9279225E1F5F20013B762 /* CourseMemoVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -1401,6 +1407,7 @@
 				ED16C8BC25BAA95F003DD0F0 /* HomeLatestCourseTVC.swift in Sources */,
 				74E77DC425CE7F6D00EBE83D /* NotificationInfoTVC.swift in Sources */,
 				ED01F4CF25BFBFCB00B9AD43 /* DetailReviewTVC.swift in Sources */,
+				74E9279625E2193A0013B762 /* walkingCourseMemoPresentDelegate.swift in Sources */,
 				ED8A965225C8189D0088EFBA /* AlertTVC.swift in Sources */,
 				EDF3716125BFAD680000A1F6 /* DetailExplanationTVC.swift in Sources */,
 				EDD055C525BC2AFA009FA3FB /* LatestCourseTVC.swift in Sources */,
@@ -1481,6 +1488,7 @@
 				ED7622C125BB13DC007E1C98 /* cellPresentDelegate.swift in Sources */,
 				ED16C81A25B7F92F003DD0F0 /* SceneDelegate.swift in Sources */,
 				ED7622C625BB25D0007E1C98 /* PopularCourseTVC.swift in Sources */,
+				74E9279325E1F5F20013B762 /* CourseMemoVC.swift in Sources */,
 				7463EF3525DBFF400094F192 /* MyRecordListCVC.swift in Sources */,
 				ED16C8C125BAAB90003DD0F0 /* HomeLatestCourseCVC.swift in Sources */,
 				740654AF25DCD65700249EC7 /* CourseWalkingInfoCVC.swift in Sources */,

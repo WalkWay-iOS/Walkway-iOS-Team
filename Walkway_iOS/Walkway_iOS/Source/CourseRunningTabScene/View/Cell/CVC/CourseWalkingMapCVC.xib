@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -24,17 +25,53 @@
                         </constraints>
                         <state key="normal" title="Button"/>
                     </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0X0-z7-1Bo">
+                        <rect key="frame" x="50" y="100" width="275" height="144"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nlo-um-PQR">
+                                <rect key="frame" x="116.5" y="30" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VlG-qL-xvk">
+                                <rect key="frame" x="116.5" y="51" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Nlo-um-PQR" firstAttribute="centerX" secondItem="0X0-z7-1Bo" secondAttribute="centerX" id="BVU-Kd-lFC"/>
+                            <constraint firstItem="VlG-qL-xvk" firstAttribute="centerX" secondItem="0X0-z7-1Bo" secondAttribute="centerX" id="Kuu-HF-bMD"/>
+                            <constraint firstItem="VlG-qL-xvk" firstAttribute="top" secondItem="Nlo-um-PQR" secondAttribute="bottom" id="mpn-LX-4B9"/>
+                            <constraint firstItem="Nlo-um-PQR" firstAttribute="top" secondItem="0X0-z7-1Bo" secondAttribute="top" constant="30" id="v77-k2-BBY"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="WbX-F5-ZF2" secondAttribute="bottom" constant="100" id="HBj-5D-flY"/>
+                <constraint firstItem="0X0-z7-1Bo" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="100" id="ROA-fu-YkY"/>
                 <constraint firstItem="WbX-F5-ZF2" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="bu8-hu-zjA"/>
+                <constraint firstItem="0X0-z7-1Bo" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="50" id="c28-ug-oUy"/>
+                <constraint firstAttribute="trailing" secondItem="0X0-z7-1Bo" secondAttribute="trailing" constant="50" id="cz8-nu-1uE"/>
+                <constraint firstAttribute="bottom" secondItem="0X0-z7-1Bo" secondAttribute="bottom" constant="433" id="oux-x1-s45"/>
             </constraints>
             <connections>
                 <outlet property="pauseButton" destination="WbX-F5-ZF2" id="y5C-dq-y3g"/>
+                <outlet property="timerTitleLabel" destination="Nlo-um-PQR" id="nPe-md-eQd"/>
+                <outlet property="timerView" destination="0X0-z7-1Bo" id="EtG-q6-7bQ"/>
+                <outlet property="walkingTimeLabel" destination="VlG-qL-xvk" id="DVs-T1-sGv"/>
             </connections>
             <point key="canvasLocation" x="200" y="67"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

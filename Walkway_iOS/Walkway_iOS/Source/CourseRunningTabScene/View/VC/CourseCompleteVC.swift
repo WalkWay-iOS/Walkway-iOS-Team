@@ -13,7 +13,7 @@ class CourseCompleteVC: UIViewController {
     @IBOutlet var userNameLabel: UILabel!
     @IBOutlet var courseRecordTableView: UITableView!
     
-    var delegate: walkingCoursePresentDelegate?
+    var delegate: walkingCourseMemoPresentDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +51,7 @@ extension CourseCompleteVC: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: CourseMemoTVC.identifier) as? CourseMemoTVC else {
                 return UITableViewCell()
             }
+            cell.delegate = self
             cell.selectionStyle = .none
             return cell
         }
@@ -108,5 +109,16 @@ extension CourseCompleteVC {
     func setButton() {
         saveButton.setTitle("저장", for: .normal)
         saveButton.setTitleColor(.systemIndigo, for: .normal)
+    }
+}
+
+// MARK: - Protocol
+extension CourseCompleteVC: walkingCourseMemoPresentDelegate {
+    func buttonTappedMemo() {
+        guard let dvc = storyboard?.instantiateViewController(identifier: "CourseMemoVC") as? CourseMemoVC else {
+            return
+        }
+        dvc.modalPresentationStyle = .overCurrentContext
+        present(dvc, animated: true, completion: nil)
     }
 }
