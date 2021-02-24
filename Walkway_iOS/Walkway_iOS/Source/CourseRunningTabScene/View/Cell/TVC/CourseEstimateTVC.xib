@@ -28,32 +28,56 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Cxd-jS-Ycu">
+                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2.5" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="Cxd-jS-Ycu">
                         <rect key="frame" x="-2" y="66" width="329" height="34"/>
+                        <connections>
+                            <action selector="setUpStrengthValue:" destination="KGk-i7-Jjw" eventType="valueChanged" id="62F-NF-1Fc"/>
+                        </connections>
                     </slider>
-                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Tyr-hr-ehc">
+                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="Tyr-hr-ehc">
                         <rect key="frame" x="-2" y="135" width="329" height="34"/>
+                        <connections>
+                            <action selector="setUpRateValue:" destination="KGk-i7-Jjw" eventType="valueChanged" id="gMU-jd-i8A"/>
+                        </connections>
                     </slider>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrH-Su-Url">
+                        <rect key="frame" x="283" y="40" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZt-GR-Gn1">
+                        <rect key="frame" x="283" y="109" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="8Yi-0H-ZxI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="2mj-qT-psE"/>
                     <constraint firstItem="Tyr-hr-ehc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="6RK-Eg-dkp"/>
                     <constraint firstItem="26j-6a-Zfq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="8uT-be-R7B"/>
                     <constraint firstItem="8Yi-0H-ZxI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Gmp-Qw-WZb"/>
+                    <constraint firstAttribute="trailing" secondItem="vrH-Su-Url" secondAttribute="trailing" id="Kqc-pw-NaE"/>
                     <constraint firstItem="26j-6a-Zfq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="40" id="Q5E-X0-ma0"/>
+                    <constraint firstItem="vrH-Su-Url" firstAttribute="bottom" secondItem="26j-6a-Zfq" secondAttribute="bottom" id="UTU-tR-5Ty"/>
                     <constraint firstItem="Cxd-jS-Ycu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Utp-cy-X9z"/>
                     <constraint firstAttribute="trailing" secondItem="Cxd-jS-Ycu" secondAttribute="trailing" id="W8R-wq-6aE"/>
                     <constraint firstItem="Cxd-jS-Ycu" firstAttribute="top" secondItem="26j-6a-Zfq" secondAttribute="bottom" constant="5" id="XrO-Qp-3rc"/>
                     <constraint firstAttribute="trailing" secondItem="Tyr-hr-ehc" secondAttribute="trailing" id="cCh-JP-1qk"/>
+                    <constraint firstAttribute="trailing" secondItem="fZt-GR-Gn1" secondAttribute="trailing" id="hwO-74-vuK"/>
                     <constraint firstItem="8Yi-0H-ZxI" firstAttribute="top" secondItem="Cxd-jS-Ycu" secondAttribute="bottom" constant="10" id="jgA-zx-T4k"/>
                     <constraint firstItem="Tyr-hr-ehc" firstAttribute="top" secondItem="8Yi-0H-ZxI" secondAttribute="bottom" constant="5" id="qNN-lZ-X6Z"/>
+                    <constraint firstItem="fZt-GR-Gn1" firstAttribute="bottom" secondItem="8Yi-0H-ZxI" secondAttribute="bottom" id="r4H-sg-yUV"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="courseRateTitleLabel" destination="8Yi-0H-ZxI" id="nYD-u8-Qem"/>
                 <outlet property="courseStrengthTitleLabel" destination="26j-6a-Zfq" id="he9-Lc-Czp"/>
+                <outlet property="rateLabel" destination="fZt-GR-Gn1" id="Y5x-lJ-8gt"/>
                 <outlet property="rateSlider" destination="Tyr-hr-ehc" id="F1o-wi-tnx"/>
+                <outlet property="strengthLabel" destination="vrH-Su-Url" id="eIy-gc-UEY"/>
                 <outlet property="strengthSlider" destination="Cxd-jS-Ycu" id="CNy-rp-X3Z"/>
             </connections>
             <point key="canvasLocation" x="363" y="51"/>

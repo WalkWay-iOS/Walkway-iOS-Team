@@ -38,23 +38,27 @@ extension CourseMemoTVC {
     }
     
     func setLabel() {
-        viewTitleLabel.font = .systemFont(ofSize: 10, weight: .bold)
-        viewTitleLabel.textColor = .systemIndigo
+        viewTitleLabel.font = .myBoldSystemFont(ofSize: 13)
+        viewTitleLabel.textColor = .bookmarkDarkBlue
         viewTitleLabel.text = "코스 후기 작성"
     }
     
     func setButton() {
         memoPresentButton.setTitle("입력", for: .normal)
+        memoPresentButton.titleLabel?.font = .myBoldSystemFont(ofSize: 13)
         memoPresentButton.setTitleColor(.white, for: .normal)
-        memoPresentButton.backgroundColor = .systemIndigo
-        memoPresentButton.layer.cornerRadius = 5
+        memoPresentButton.backgroundColor = .bookmarkDarkBlue
+        memoPresentButton.contentEdgeInsets = UIEdgeInsets(top: 3, left: 13, bottom: 3, right: 13)
+        memoPresentButton.layer.cornerRadius = 10
         memoPresentButton.addTarget(self, action: #selector(touchUpMemo), for: .touchUpInside)
     }
     
     func setTextView() {
         memoTextView.text = memoText
+        memoTextView.font = .myRegularSystemFont(ofSize: 12)
+        memoTextView.layer.cornerRadius = 10
         memoTextView.layer.borderWidth = 0.7
-        memoTextView.layer.borderColor = UIColor.gray70.cgColor
+        memoTextView.layer.borderColor = UIColor.gray50.cgColor
         memoTextView.isEditable = false
     }
 }

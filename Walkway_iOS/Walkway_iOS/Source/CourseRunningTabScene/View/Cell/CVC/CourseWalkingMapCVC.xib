@@ -26,7 +26,7 @@
                         <state key="normal" title="Button"/>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0X0-z7-1Bo">
-                        <rect key="frame" x="50" y="100" width="275" height="140"/>
+                        <rect key="frame" x="50" y="120" width="275" height="140"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nlo-um-PQR">
                                 <rect key="frame" x="116.5" y="15" width="42" height="21"/>
@@ -35,13 +35,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VlG-qL-xvk">
-                                <rect key="frame" x="116.5" y="36" width="42" height="21"/>
+                                <rect key="frame" x="116.5" y="59.5" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSn-an-jxp">
-                                <rect key="frame" x="116.5" y="57" width="42" height="21"/>
+                                <rect key="frame" x="116.5" y="80.5" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -49,13 +49,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="VlG-qL-xvk" firstAttribute="centerY" secondItem="0X0-z7-1Bo" secondAttribute="centerY" id="3T5-ue-emd"/>
                             <constraint firstAttribute="height" constant="140" id="5oK-mv-Dxo"/>
                             <constraint firstItem="SSn-an-jxp" firstAttribute="top" secondItem="VlG-qL-xvk" secondAttribute="bottom" id="DbC-qT-11v"/>
                             <constraint firstItem="VlG-qL-xvk" firstAttribute="centerX" secondItem="Nlo-um-PQR" secondAttribute="centerX" id="Du2-jd-vnk"/>
                             <constraint firstItem="SSn-an-jxp" firstAttribute="centerX" secondItem="0X0-z7-1Bo" secondAttribute="centerX" id="ZCP-Up-xyd"/>
                             <constraint firstItem="Nlo-um-PQR" firstAttribute="top" secondItem="0X0-z7-1Bo" secondAttribute="top" constant="15" id="hrA-t9-wJr"/>
                             <constraint firstItem="Nlo-um-PQR" firstAttribute="centerX" secondItem="0X0-z7-1Bo" secondAttribute="centerX" id="mPM-Ie-HC5"/>
-                            <constraint firstItem="VlG-qL-xvk" firstAttribute="top" secondItem="Nlo-um-PQR" secondAttribute="bottom" id="mpn-LX-4B9"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -65,7 +65,7 @@
                 <constraint firstAttribute="trailing" secondItem="0X0-z7-1Bo" secondAttribute="trailing" constant="50" id="D8y-lD-Ly2"/>
                 <constraint firstItem="0X0-z7-1Bo" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="F8J-ve-WVZ"/>
                 <constraint firstAttribute="bottom" secondItem="WbX-F5-ZF2" secondAttribute="bottom" constant="100" id="HBj-5D-flY"/>
-                <constraint firstItem="0X0-z7-1Bo" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="100" id="Ip4-Y2-ZTT"/>
+                <constraint firstItem="0X0-z7-1Bo" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="120" id="Ip4-Y2-ZTT"/>
                 <constraint firstItem="0X0-z7-1Bo" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="50" id="XEO-Q7-x2e"/>
                 <constraint firstItem="WbX-F5-ZF2" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="bu8-hu-zjA"/>
             </constraints>
@@ -76,7 +76,7 @@
                 <outlet property="timerView" destination="0X0-z7-1Bo" id="EtG-q6-7bQ"/>
                 <outlet property="walkingTimeLabel" destination="VlG-qL-xvk" id="DVs-T1-sGv"/>
             </connections>
-            <point key="canvasLocation" x="200" y="67"/>
+            <point key="canvasLocation" x="199.27536231884059" y="66.629464285714278"/>
         </collectionViewCell>
     </objects>
     <resources>

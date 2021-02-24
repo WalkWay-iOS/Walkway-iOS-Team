@@ -35,23 +35,25 @@ extension CourseRecordInfoTVC {
     }
     
     func setLabel() {
-        recordDateandTimeLabel.font = .systemFont(ofSize: 10, weight: .bold)
-        recordDateandTimeLabel.textColor = .systemIndigo
+        recordDateandTimeLabel.font = .myBoldSystemFont(ofSize: 13)
+        recordDateandTimeLabel.textColor = .bookmarkDarkBlue
         recordDateandTimeLabel.text = "2020/12/10 - 19:14"
-        recordCourseNameLabel.font = .systemFont(ofSize: 17, weight: .bold)
-        recordCourseNameLabel.textColor = .black
+        
+        recordCourseNameLabel.font = .myBoldSystemFont(ofSize: 17)
         recordCourseNameLabel.text = "관악산 달빛 둘레길"
-        recordCourseDistanceTitleLabel.font = .systemFont(ofSize: 10, weight: .bold)
-        recordCourseDistanceTitleLabel.textColor = .systemIndigo
+        
+        recordCourseDistanceTitleLabel.font = .myBoldSystemFont(ofSize: 13)
+        recordCourseDistanceTitleLabel.textColor = .bookmarkDarkBlue
         recordCourseDistanceTitleLabel.text = "함께한 거리"
-        recordCourseTimeTitleLabel.font = .systemFont(ofSize: 10, weight: .bold)
-        recordCourseTimeTitleLabel.textColor = .systemIndigo
+        
+        recordCourseTimeTitleLabel.font = .myBoldSystemFont(ofSize: 13)
+        recordCourseTimeTitleLabel.textColor = .bookmarkDarkBlue
         recordCourseTimeTitleLabel.text = "함께한 시간"
-        recordCourseDistanceLabel.font = .systemFont(ofSize: 40, weight: .bold)
-        recordCourseDistanceLabel.textColor = .black
+        
+        recordCourseDistanceLabel.font = .myBoldSystemFont(ofSize: 40)
         recordCourseDistanceLabel.text = "0.03"
-        recordCourseTimeLabel.font = .systemFont(ofSize: 40, weight: .bold)
-        recordCourseTimeLabel.textColor = .black
+        
+        recordCourseTimeLabel.font = .myBoldSystemFont(ofSize: 40)
         recordCourseTimeLabel.text = "02:09"
     }
 }

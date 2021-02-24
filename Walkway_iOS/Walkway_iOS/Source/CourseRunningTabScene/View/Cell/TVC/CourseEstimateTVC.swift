@@ -14,6 +14,8 @@ class CourseEstimateTVC: UITableViewCell {
     @IBOutlet var courseRateTitleLabel: UILabel!
     @IBOutlet var strengthSlider: UISlider!
     @IBOutlet var rateSlider: UISlider!
+    @IBOutlet weak var strengthLabel: UILabel!
+    @IBOutlet weak var rateLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,26 +25,49 @@ class CourseEstimateTVC: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+    
+    @IBAction func setUpStrengthValue(_ sender: UISlider) {
+        let currentValue = String(format: "%.1f", Float(sender.value))
+        strengthLabel.text = "\(currentValue)"
+    }
+    
+    @IBAction func setUpRateValue(_ sender: UISlider) {
+        let currentValue = String(format: "%.1f", Float(sender.value))
+        rateLabel.text = "\(currentValue)"
+    }
+    
 }
 
 // MARK: - UI
 extension CourseEstimateTVC {
     func setUI() {
-        setLabel()
         setSlider()
+        setLabel()
     }
     
     func setLabel() {
-        courseStrengthTitleLabel.font = .systemFont(ofSize: 10, weight: .bold)
-        courseStrengthTitleLabel.textColor = .systemIndigo
+        courseStrengthTitleLabel.font = .myBoldSystemFont(ofSize: 13)
+        courseStrengthTitleLabel.textColor = .bookmarkDarkBlue
         courseStrengthTitleLabel.text = "코스 강도"
-        courseRateTitleLabel.font = .systemFont(ofSize: 10, weight: .bold)
-        courseRateTitleLabel.textColor = .systemIndigo
+        
+        courseRateTitleLabel.font = .myBoldSystemFont(ofSize: 13)
+        courseRateTitleLabel.textColor = .bookmarkDarkBlue
         courseRateTitleLabel.text = "코스 평점"
+        
+        strengthLabel.font = .myBoldSystemFont(ofSize: 13)
+        strengthLabel.textColor = .gray60
+        strengthLabel.text = "\(strengthSlider.value)"
+        
+        rateLabel.font = .myBoldSystemFont(ofSize: 13)
+        rateLabel.textColor = .gray60
+        rateLabel.text = "\(rateSlider.value)"
     }
     
     func setSlider() {
-        strengthSlider.tintColor = .systemIndigo
-        rateSlider.tintColor = .systemIndigo
+        strengthSlider.tintColor = .bookmarkDarkBlue
+        strengthSlider.value = 2.5
+        
+        rateSlider.tintColor = .bookmarkDarkBlue
+        rateSlider.value = 2.5
     }
 }
