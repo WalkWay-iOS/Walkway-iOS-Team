@@ -9,6 +9,6 @@ import Foundation
 
 protocol walkingCoursePresentDelegate: class {
     func buttonTappedCourseMap()
-    func buttonTappedPause()
+    func buttonTappedPause(dvc: CoursePauseVC)
     func buttonTappedStop()
 }

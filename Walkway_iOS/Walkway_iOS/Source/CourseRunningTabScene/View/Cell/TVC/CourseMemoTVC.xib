@@ -24,11 +24,8 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yRg-j0-Asz">
-                        <rect key="frame" x="10" y="50.5" width="305" height="360"/>
+                        <rect key="frame" x="10" y="50.5" width="305" height="350.5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="360" id="yur-LJ-waC"/>
-                        </constraints>
                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                         <color key="textColor" systemColor="labelColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -47,6 +44,7 @@
                     <constraint firstItem="0dL-wV-Bj3" firstAttribute="centerY" secondItem="NTV-J0-Yws" secondAttribute="centerY" id="ChL-Mv-KVD"/>
                     <constraint firstItem="NTV-J0-Yws" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="Ewu-Y7-RXK"/>
                     <constraint firstAttribute="trailing" secondItem="0dL-wV-Bj3" secondAttribute="trailing" id="Ici-X3-cbg"/>
+                    <constraint firstAttribute="bottom" secondItem="yRg-j0-Asz" secondAttribute="bottom" constant="15" id="RfT-RK-jEg"/>
                     <constraint firstItem="yRg-j0-Asz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="cKJ-Ka-KK7"/>
                     <constraint firstItem="yRg-j0-Asz" firstAttribute="top" secondItem="NTV-J0-Yws" secondAttribute="bottom" constant="10" id="o6W-eP-cke"/>
                     <constraint firstItem="NTV-J0-Yws" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="xX2-15-ujz"/>

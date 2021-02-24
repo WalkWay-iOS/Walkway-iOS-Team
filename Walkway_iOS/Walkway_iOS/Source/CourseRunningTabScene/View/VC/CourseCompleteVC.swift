@@ -51,6 +51,7 @@ extension CourseCompleteVC: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: CourseMemoTVC.identifier) as? CourseMemoTVC else {
                 return UITableViewCell()
             }
+            cell.tableView = courseRecordTableView
             cell.delegate = self
             cell.selectionStyle = .none
             return cell
@@ -68,9 +69,9 @@ extension CourseCompleteVC: UITableViewDelegate {
             return 170
         }
         else if indexPath.section == 2 {
-            return 110
+            return 250
         }
-        return 100
+        return 0
     }
 }
 
@@ -114,11 +115,7 @@ extension CourseCompleteVC {
 
 // MARK: - Protocol
 extension CourseCompleteVC: walkingCourseMemoPresentDelegate {
-    func buttonTappedMemo() {
-        guard let dvc = storyboard?.instantiateViewController(identifier: "CourseMemoVC") as? CourseMemoVC else {
-            return
-        }
-        dvc.modalPresentationStyle = .overCurrentContext
+    func buttonTappedMemo(dvc: CourseMemoVC) {
         present(dvc, animated: true, completion: nil)
     }
 }

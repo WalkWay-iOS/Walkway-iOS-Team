@@ -8,5 +8,5 @@
 import Foundation
 
 protocol walkingCourseMemoPresentDelegate: class {
-    func buttonTappedMemo()
+    func buttonTappedMemo(dvc: CourseMemoVC)
 }

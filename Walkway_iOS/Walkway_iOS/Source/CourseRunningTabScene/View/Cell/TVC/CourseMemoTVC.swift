@@ -17,6 +17,7 @@ class CourseMemoTVC: UITableViewCell {
     @IBOutlet var memoPresentButton: UIButton!
     
     var delegate: walkingCourseMemoPresentDelegate?
+    var tableView: UITableView?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -52,12 +53,31 @@ extension CourseMemoTVC {
     
     func setTextView() {
         memoTextView.text = memoText
+        memoTextView.layer.borderWidth = 0.7
+        memoTextView.layer.borderColor = UIColor.gray70.cgColor
+        memoTextView.isEditable = false
     }
 }
 
 // MARK: - Action
 extension CourseMemoTVC {
     @objc func touchUpMemo() {
-        delegate?.buttonTappedMemo()
+        guard let dvc = UIStoryboard(name: "CourseRunningTab", bundle: nil).instantiateViewController(identifier: "CourseMemoVC") as? CourseMemoVC else {
+            return
+        }
+        
+        dvc.sendText = { text in
+            self.memoTextView.text = text
+            self.tableView?.reloadData()
+        }
+        
+        if memoTextView.text == "" {
+            dvc.getText(text: "")
+        } else {
+            guard let text = memoTextView.text else {return}
+            dvc.getText(text: text)
+        }
+        dvc.modalPresentationStyle = .overCurrentContext
+        delegate?.buttonTappedMemo(dvc: dvc)
     }
 }

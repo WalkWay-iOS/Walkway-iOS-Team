@@ -22,9 +22,14 @@ class CoursePauseVC: UIViewController {
     
     var delegate: walkingCoursePresentDelegate?
     
+    var walkingTime: String?
+    
+    var dismissView: (() -> ())?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
+        getText()
     }
 }
 
@@ -50,7 +55,6 @@ extension CoursePauseVC {
         distanceLabel.text = "0.00"
         timeLabel.font = .systemFont(ofSize: 30, weight: .bold)
         timeLabel.textColor = .black
-        timeLabel.text = "00:00"
         restartTitleLabel.font = .systemFont(ofSize: 15, weight: .bold)
         restartTitleLabel.textColor = .darkGray
         restartTitleLabel.text = "다시 걷기"
@@ -71,11 +75,20 @@ extension CoursePauseVC {
         stopButton.setImage(UIImage(systemName: "stop.fill"), for: .normal)
         stopButton.addTarget(self, action: #selector(touchUpStop), for: .touchUpInside)
     }
+    
+    func getText() {
+        let userDefault = UserDefaults.standard
+        
+        if let time = userDefault.string(forKey: "time") {
+            timeLabel.text = time
+        }
+    }
 }
 
 // MARK: - Action
 extension CoursePauseVC {
     @objc func touchUpRestart() {
+        dismissView?()
         dismiss(animated: true, completion: nil)
     }
     

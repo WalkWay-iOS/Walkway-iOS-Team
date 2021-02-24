@@ -14,6 +14,15 @@ class CourseWalkingVC: UIViewController {
     
     var delegate: walkingCoursePresentDelegate?
     
+    var onceOnly = false
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if !onceOnly {
+            courseWalkingCollectionView.scrollToItem(at: IndexPath(item: 0, section: 1), at: .centeredHorizontally, animated: true)
+            onceOnly = true
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -122,11 +131,7 @@ extension CourseWalkingVC: walkingCoursePresentDelegate {
         present(dvc, animated: true, completion: nil)
     }
     
-    func buttonTappedPause() {
-        guard let dvc = storyboard?.instantiateViewController(identifier: "CoursePauseVC") as? CoursePauseVC else {
-            return
-        }
-        dvc.modalPresentationStyle = .fullScreen
+    func buttonTappedPause(dvc: CoursePauseVC) {
         present(dvc, animated: true, completion: nil)
     }
     

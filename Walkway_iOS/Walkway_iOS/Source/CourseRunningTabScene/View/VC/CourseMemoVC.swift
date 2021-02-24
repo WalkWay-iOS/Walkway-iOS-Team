@@ -15,6 +15,10 @@ class CourseMemoVC: UIViewController {
     
     var delegate: walkingCoursePresentDelegate?
     
+    var sendText: ((String) -> ())?
+    
+    var memoText: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -42,7 +46,13 @@ extension CourseMemoVC {
     }
     
     func setTextView() {
-        memoTextView.text = ""
+        memoTextView.text = memoText
+        memoTextView.layer.borderWidth = 0.7
+        memoTextView.layer.borderColor = UIColor.gray70.cgColor
+    }
+    
+    func getText(text: String) {
+        memoText = text
     }
 }
 
@@ -53,5 +63,8 @@ extension CourseMemoVC {
     }
     
     @objc func touchUpSave() {
+        guard let text = memoTextView.text else {return}
+        sendText?(text)
+        dismiss(animated: true, completion: nil)
     }
 }

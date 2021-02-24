@@ -15,6 +15,7 @@ class CourseWalkingMapCVC: UICollectionViewCell, GMSMapViewDelegate {
     @IBOutlet var timerView: UIView!
     @IBOutlet var timerTitleLabel: UILabel!
     @IBOutlet var walkingTimeLabel: UILabel!
+    @IBOutlet var decimalTimeLabel: UILabel!
     
     var delegate: walkingCoursePresentDelegate?
     
@@ -23,14 +24,17 @@ class CourseWalkingMapCVC: UICollectionViewCell, GMSMapViewDelegate {
     
     var isStart: Bool = true
     var timer: Timer?
+    var time = ""
     var currentTimeCount: Int = 0
     
     let timeSelector: Selector = #selector(CourseWalkingMapCVC.updateTime)
     
+    let userDefault = UserDefaults.standard
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setUI()
-        setTimer()
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: timeSelector, userInfo: nil, repeats: true)
     }
 }
 
@@ -54,8 +58,11 @@ extension CourseWalkingMapCVC {
         timerTitleLabel.text = "Time"
         walkingTimeLabel.font = .systemFont(ofSize: 50, weight: .bold)
         walkingTimeLabel.textColor = .white
-        walkingTimeLabel.text = "00:05"
+        walkingTimeLabel.text = timeFormatter(0)
         
+        decimalTimeLabel.text = timeFormatterSec(0)
+        decimalTimeLabel.textColor = .white
+        decimalTimeLabel.font = .myRegularSystemFont(ofSize: 15)
     }
     
     func setButton() {
@@ -75,6 +82,9 @@ extension CourseWalkingMapCVC {
         
         self.backgroundView = mapView
     }
+    
+    func startTimer() {
+    }
 }
 
 // MARK: - Action
@@ -82,16 +92,23 @@ extension CourseWalkingMapCVC {
     @objc func touchUpPause() {
         isStart = false
         timer?.invalidate()
-        delegate?.buttonTappedPause()
+        time = timeFormatter(currentTimeCount)
+        guard let dvc = UIStoryboard(name: "CourseRunningTab", bundle: nil).instantiateViewController(identifier: "CoursePauseVC") as? CoursePauseVC else {
+            return
+        }
+        
+        dvc.dismissView = {
+            self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: self.timeSelector, userInfo: nil, repeats: true)
+        }
+        
+        dvc.modalPresentationStyle = .fullScreen
+        userDefault.setValue(time, forKey: "time")
+        delegate?.buttonTappedPause(dvc: dvc)
     }
 }
 
 // MARK: - Timer
 extension CourseWalkingMapCVC {
-    func setTimer() {
-        walkingTimeLabel.text = timeFormatter(0)
-    }
-    
     func timeFormatter(_ intTime: Int) -> String {
         let hour = intTime / 3600
         let minute = (intTime % 3600) / 60
@@ -102,8 +119,17 @@ extension CourseWalkingMapCVC {
         return "\(hourString):\(minuteString)"
     }
     
+    func timeFormatterSec(_ intTime: Int) -> String {
+        let sec = (intTime % 3600) % 60
+        
+        let secStr = sec < 10 ? "0\(sec)" : String(sec)
+        
+        return "\(secStr)"
+    }
+    
     @objc func updateTime() {
         currentTimeCount += 1
         walkingTimeLabel.text = timeFormatter(currentTimeCount)
+        decimalTimeLabel.text = timeFormatterSec(currentTimeCount)
     }
 }

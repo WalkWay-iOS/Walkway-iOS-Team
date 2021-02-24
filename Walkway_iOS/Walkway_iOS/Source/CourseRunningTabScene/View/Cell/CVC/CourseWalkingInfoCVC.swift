@@ -12,13 +12,6 @@ var hotplaceName = ["서울숲", "성수동", "안녕길", "카페거리", "아�
 class CourseWalkingInfoCVC: UICollectionViewCell {
     static let identifier = "CourseWalkingInfoCVC"
     
-    @IBOutlet var walkingDistanceTitleLabel: UILabel!
-    @IBOutlet var walkingDistanceLabel: UILabel!
-    @IBOutlet var remainDistanceTitleLabel: UILabel!
-    @IBOutlet var remainDistanceLabel: UILabel!
-    @IBOutlet var walkingTimeTitleLabel: UILabel!
-    @IBOutlet var walkingTimeLabel: UILabel!
-    
     @IBOutlet var hotPlaceInfoTitleLabel: UILabel!
     @IBOutlet var hotPlaceCollectionView: UICollectionView!
     
@@ -87,26 +80,6 @@ extension CourseWalkingInfoCVC {
     }
     
     func setLabel() {
-        walkingDistanceTitleLabel.font = .systemFont(ofSize: 10, weight: .bold)
-        walkingDistanceTitleLabel.textColor = .systemIndigo
-        walkingDistanceTitleLabel.text = "함께 산책한 거리"
-        remainDistanceTitleLabel.font = .systemFont(ofSize: 10, weight: .bold)
-        remainDistanceTitleLabel.textColor = .systemIndigo
-        remainDistanceTitleLabel.text = "도착지까지 남은 거리"
-        walkingTimeTitleLabel.font = .systemFont(ofSize: 10, weight: .bold)
-        walkingTimeTitleLabel.textColor = .systemIndigo
-        walkingTimeTitleLabel.text = "함께 산책한 시간"
-        
-        walkingDistanceLabel.font = .systemFont(ofSize: 30, weight: .bold)
-        walkingDistanceLabel.textColor = .black
-        walkingDistanceLabel.text = "0.00"
-        remainDistanceLabel.font = .systemFont(ofSize: 30, weight: .bold)
-        remainDistanceLabel.textColor = .black
-        remainDistanceLabel.text = "0.00"
-        walkingTimeLabel.font = .systemFont(ofSize: 30, weight: .bold)
-        walkingTimeLabel.textColor = .black
-        walkingTimeLabel.text = "00:00"
-        
         hotPlaceInfoTitleLabel.font = .systemFont(ofSize: 10, weight: .bold)
         hotPlaceInfoTitleLabel.textColor = .systemIndigo
         hotPlaceInfoTitleLabel.text = "[성동구 둘레길]의 핫플레이스"
@@ -116,7 +89,7 @@ extension CourseWalkingInfoCVC {
         walkingCourseInfoTitleLabel.text = "[성동구 둘레길] 소개"
         walkingCourseInfoLabel.font = .systemFont(ofSize: 10, weight: .bold)
         walkingCourseInfoLabel.textColor = .black
-        walkingCourseInfoLabel.text = "언젠가 먼 길을 떠나고 싶다.\n소년은 동틀 무렵의 엷은 잠에서 눈을 뜨며 문득 이런 생각을 했다.\n파도가 쓸려 가며 자연스러운 무늬를 남기는 것처럼.\n한 번쯤은 아무 목적도 결말도 모르는 길을 무작정 헤매고 싶다고.\n주변은 깊은 물 속처럼 조용하고 서늘한 탓인지 온몸이 작게 떨린다.\n눈을 뜬 소년이 다른 소년들을 조심스럽게 깨우는 동안 안개는 서서히 걷히고 있었다.\n새벽은 여기까지다."
+        walkingCourseInfoLabel.text = "언젠가 먼 길을 떠나고 싶다.\n소년은 동틀 무렵의 엷은 잠에서 눈을 뜨며 문득 이런 생각을 했다.\n파도가 쓸려 가며 자연스러운 무늬를 남기는 것처럼.\n한 번쯤은 아무 목적도 결말도 모르는 길을 무작정 헤매고 싶다고.\n주변은 깊은 물 속처럼 조용하고 서늘한 탓인지 온몸이 작게 떨린다.\n눈을 뜬 소년이 다른 소년들을 조심스럽게 깨우는 동안 안개는 서서히 걷히고 있었다.\n새벽은 여기까지다.\nSo good\n그래요 너무 좋아요."
         
         landmarkInfoLabel.font = .systemFont(ofSize: 10, weight: .bold)
         landmarkInfoLabel.textColor = .systemIndigo
