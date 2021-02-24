@@ -39,6 +39,11 @@ extension HomeBannerTVC: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeBannerCVC.identifier, for: indexPath) as? HomeBannerCVC else {
             return UICollectionViewCell()
         }
+        if indexPath.section == 0 {
+            cell.bannerImage.image = UIImage(named: "seoulhi")
+        } else if indexPath.section == 1 {
+            cell.bannerImage.image = UIImage(named: "jejuhi")
+        }
         return cell
     }
 }
@@ -100,6 +105,8 @@ extension HomeBannerTVC {
     private func setPageControl() {
         pageController.numberOfPages = 3
         pageController.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+        pageController.currentPageIndicatorTintColor = .bookmarkDarkBlue
+        pageController.pageIndicatorTintColor = .gray50
     }
 }
 
