@@ -20,6 +20,7 @@ class CourseWalkingVC: UIViewController {
         if !onceOnly {
             courseWalkingCollectionView.scrollToItem(at: IndexPath(item: 0, section: 1), at: .centeredHorizontally, animated: true)
             onceOnly = true
+            pageController.currentPage = 1
         }
     }
     
@@ -111,6 +112,8 @@ extension CourseWalkingVC {
     func setPageControl() {
         pageController.numberOfPages = 3
         pageController.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+        pageController.pageIndicatorTintColor = .gray50
+        pageController.tintColor = .blue
     }
 }
 

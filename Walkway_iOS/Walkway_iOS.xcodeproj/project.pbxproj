@@ -26,7 +26,6 @@
 		740654C825DCF5C300249EC7 /* CourseEstimateTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 740654C625DCF5C300249EC7 /* CourseEstimateTVC.xib */; };
 		740654D125DCF5ED00249EC7 /* CourseMemoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740654CF25DCF5ED00249EC7 /* CourseMemoTVC.swift */; };
 		740654D225DCF5ED00249EC7 /* CourseMemoTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 740654D025DCF5ED00249EC7 /* CourseMemoTVC.xib */; };
-		740654D925DD06B800249EC7 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 740654D825DD06B800249EC7 /* NotoSansKR-Regular.otf */; };
 		7408AEBF25DB73F400E1C55C /* MyCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7408AEBE25DB73F400E1C55C /* MyCourse.swift */; };
 		741DC2FA25D67A1F0026F1D9 /* MycourseListCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741DC2F825D67A1F0026F1D9 /* MycourseListCVC.swift */; };
 		741DC2FB25D67A1F0026F1D9 /* MycourseListCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 741DC2F925D67A1F0026F1D9 /* MycourseListCVC.xib */; };
@@ -153,6 +152,7 @@
 		ED8A965825C81FE40088EFBA /* MessageTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED8A965625C81FE40088EFBA /* MessageTVC.xib */; };
 		ED8A965C25C822DE0088EFBA /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A965B25C822DE0088EFBA /* Message.swift */; };
 		ED8A965F25C8260C0088EFBA /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A965E25C8260C0088EFBA /* ChatVC.swift */; };
+		EDBBFBFB25E6165500A7E33F /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDBBFBFA25E6165500A7E33F /* NotoSansKR-Regular.otf */; };
 		EDCC755325C2A68600EF435A /* MakeCreateCourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC755225C2A68600EF435A /* MakeCreateCourseVC.swift */; };
 		EDCC755625C2BA1900EF435A /* CompleteCourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC755525C2BA1900EF435A /* CompleteCourseVC.swift */; };
 		EDCC755925C2CADA00EF435A /* Extensions+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC755825C2CAD900EF435A /* Extensions+UITextField.swift */; };
@@ -226,7 +226,6 @@
 		740654C625DCF5C300249EC7 /* CourseEstimateTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseEstimateTVC.xib; sourceTree = "<group>"; };
 		740654CF25DCF5ED00249EC7 /* CourseMemoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseMemoTVC.swift; sourceTree = "<group>"; };
 		740654D025DCF5ED00249EC7 /* CourseMemoTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseMemoTVC.xib; sourceTree = "<group>"; };
-		740654D825DD06B800249EC7 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Regular.otf"; path = "../../../../../../../Downloads/Noto_Sans_KR/NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
 		7408AEBE25DB73F400E1C55C /* MyCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourse.swift; sourceTree = "<group>"; };
 		741DC2F825D67A1F0026F1D9 /* MycourseListCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MycourseListCVC.swift; sourceTree = "<group>"; };
 		741DC2F925D67A1F0026F1D9 /* MycourseListCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MycourseListCVC.xib; sourceTree = "<group>"; };
@@ -357,6 +356,7 @@
 		ED8A965625C81FE40088EFBA /* MessageTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageTVC.xib; sourceTree = "<group>"; };
 		ED8A965B25C822DE0088EFBA /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		ED8A965E25C8260C0088EFBA /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		EDBBFBFA25E6165500A7E33F /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Regular.otf"; path = "../../../../../../../../Downloads/Noto_Sans_KR/NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
 		EDCC755225C2A68600EF435A /* MakeCreateCourseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeCreateCourseVC.swift; sourceTree = "<group>"; };
 		EDCC755525C2BA1900EF435A /* CompleteCourseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteCourseVC.swift; sourceTree = "<group>"; };
 		EDCC755825C2CAD900EF435A /* Extensions+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UITextField.swift"; sourceTree = "<group>"; };
@@ -950,7 +950,7 @@
 		ED4DCE6E25DCCA2C00BFBE85 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				740654D825DD06B800249EC7 /* NotoSansKR-Regular.otf */,
+				EDBBFBFA25E6165500A7E33F /* NotoSansKR-Regular.otf */,
 				ED4DCE8525DCD33600BFBE85 /* NotoSansKR-Black.otf */,
 				ED4DCE8625DCD33700BFBE85 /* NotoSansKR-Bold.otf */,
 				ED4DCE8325DCD33600BFBE85 /* NotoSansKR-Light.otf */,
@@ -1263,7 +1263,6 @@
 				EDDF9A7725CA897400F5F7FD /* FollowerCourseTVC.xib in Resources */,
 				ED16C8C225BAAB90003DD0F0 /* HomeLatestCourseCVC.xib in Resources */,
 				ED4DCE8A25DCD33F00BFBE85 /* NotoSansKR-Bold.otf in Resources */,
-				740654D925DD06B800249EC7 /* NotoSansKR-Regular.otf in Resources */,
 				ED16C86E25B80136003DD0F0 /* CreateCourse.storyboard in Resources */,
 				742E701125D956B700F4ADB8 /* MyCourseListTVC.xib in Resources */,
 				ED4DCE8C25DCD34100BFBE85 /* NotoSansKR-Light.otf in Resources */,
@@ -1290,6 +1289,7 @@
 				741DC2FB25D67A1F0026F1D9 /* MycourseListCVC.xib in Resources */,
 				74E77DB525CE7EE700EBE83D /* LocationInfoAllowTVC.xib in Resources */,
 				EDD055BE25BBFB70009FA3FB /* BookmarkCourseTVC.xib in Resources */,
+				EDBBFBFB25E6165500A7E33F /* NotoSansKR-Regular.otf in Resources */,
 				74E77DC025CE7F3E00EBE83D /* ScopeOfMyPageTVC.xib in Resources */,
 				740654D225DCF5ED00249EC7 /* CourseMemoTVC.xib in Resources */,
 				ED16C8AE25BA9E1E003DD0F0 /* HomePopularCourseCVC.xib in Resources */,

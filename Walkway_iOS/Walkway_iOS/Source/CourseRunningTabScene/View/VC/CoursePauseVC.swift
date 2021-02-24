@@ -41,36 +41,39 @@ extension CoursePauseVC {
     }
     
     func setLabel() {
-        courseNameLabel.font = .systemFont(ofSize: 15, weight: .bold)
-        courseNameLabel.textColor = .darkGray
+        courseNameLabel.font = .myBoldSystemFont(ofSize: 18)
+        courseNameLabel.textColor = .gray70
         courseNameLabel.text = "[관악산 달빛 둘레길]"
-        distanceTitleLabel.font = .systemFont(ofSize: 10, weight: .bold)
-        distanceTitleLabel.textColor = .systemIndigo
+        distanceTitleLabel.font = .myBoldSystemFont(ofSize: 13)
+        distanceTitleLabel.textColor = .bookmarkDarkBlue
         distanceTitleLabel.text = "함께 산책한 거리"
-        timeTitleLabel.font = .systemFont(ofSize: 10, weight: .bold)
-        timeTitleLabel.textColor = .systemIndigo
+        timeTitleLabel.font = .myBoldSystemFont(ofSize: 13)
+        timeTitleLabel.textColor = .bookmarkDarkBlue
         timeTitleLabel.text = "함께 산책한 시간"
-        distanceLabel.font = .systemFont(ofSize: 30, weight: .bold)
+        distanceLabel.font = .myBoldSystemFont(ofSize: 30)
         distanceLabel.textColor = .black
         distanceLabel.text = "0.00"
-        timeLabel.font = .systemFont(ofSize: 30, weight: .bold)
+        timeLabel.font = .myBoldSystemFont(ofSize: 30)
         timeLabel.textColor = .black
-        restartTitleLabel.font = .systemFont(ofSize: 15, weight: .bold)
-        restartTitleLabel.textColor = .darkGray
+        restartTitleLabel.font = .myBoldSystemFont(ofSize: 15)
+        restartTitleLabel.textColor = .gray70
         restartTitleLabel.text = "다시 걷기"
-        stopTitleLabel.font = .systemFont(ofSize: 15, weight: .bold)
-        stopTitleLabel.textColor = .darkGray
+        stopTitleLabel.font = .myBoldSystemFont(ofSize: 15)
+        stopTitleLabel.textColor = .latestBurgundy
         stopTitleLabel.text = "종료"
     }
     
     func setButton() {
         restartButton.setTitle("", for: .normal)
-        restartButton.backgroundColor = .systemIndigo
+        restartButton.backgroundColor = .bookmarkDarkBlue
+        restartButton.layer.cornerRadius = 10
         restartButton.tintColor = .white
         restartButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
         restartButton.addTarget(self, action: #selector(touchUpRestart), for: .touchUpInside)
+        
         stopButton.setTitle("", for: .normal)
-        stopButton.backgroundColor = .systemIndigo
+        stopButton.backgroundColor = .bookmarkDarkBlue
+        stopButton.layer.cornerRadius = 10
         stopButton.tintColor = .white
         stopButton.setImage(UIImage(systemName: "stop.fill"), for: .normal)
         stopButton.addTarget(self, action: #selector(touchUpStop), for: .touchUpInside)
@@ -97,6 +100,7 @@ extension CoursePauseVC {
             return
         }
         dvc.modalPresentationStyle = .fullScreen
+        dvc.modalTransitionStyle = .crossDissolve
         present(dvc, animated: true, completion: nil)
     }
 }

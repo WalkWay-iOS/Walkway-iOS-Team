@@ -36,19 +36,19 @@ extension CourseWalkingSettingNotificationCVC {
     }
     
     func setLabel() {
-        viewTitleLabel.font = .systemFont(ofSize: 20, weight: .bold)
-        viewTitleLabel.textColor = .systemIndigo
+        viewTitleLabel.font = .myBoldSystemFont(ofSize: 20)
+        viewTitleLabel.textColor = .bookmarkDarkBlue
         viewTitleLabel.text = "알림 설정"
-        stopSettingTitleLabel.font = .systemFont(ofSize: 15, weight: .bold)
-        stopSettingTitleLabel.textColor = .darkGray
+        stopSettingTitleLabel.font = .myBoldSystemFont(ofSize: 15)
+        stopSettingTitleLabel.textColor = .gray70
         stopSettingTitleLabel.text = "코스 종료 알림"
-        landmarkSettingTitleLabel.font = .systemFont(ofSize: 15, weight: .bold)
-        landmarkSettingTitleLabel.textColor = .darkGray
+        landmarkSettingTitleLabel.font = .myBoldSystemFont(ofSize: 15)
+        landmarkSettingTitleLabel.textColor = .gray70
         landmarkSettingTitleLabel.text = "랜드마크 알림"
     }
     
     func setSwitch() {
-        stopSwitch.onTintColor = .systemIndigo
-        landmarkSwitch.onTintColor = .systemIndigo
+        stopSwitch.onTintColor = .bookmarkDarkBlue
+        landmarkSwitch.onTintColor = .bookmarkDarkBlue
     }
 }
