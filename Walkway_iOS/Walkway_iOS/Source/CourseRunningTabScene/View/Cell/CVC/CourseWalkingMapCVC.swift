@@ -48,27 +48,28 @@ extension CourseWalkingMapCVC {
     }
     
     func setBackground() {
-        timerView.backgroundColor = .systemIndigo
+        timerView.backgroundColor = .bookmarkDarkBlue
         timerView.layer.cornerRadius = 20
     }
     
     func setLabel() {
-        timerTitleLabel.font = .systemFont(ofSize: 20, weight: .bold)
+        timerTitleLabel.font = .myBoldSystemFont(ofSize: 20)
         timerTitleLabel.textColor = .white
         timerTitleLabel.text = "Time"
-        walkingTimeLabel.font = .systemFont(ofSize: 50, weight: .bold)
+        walkingTimeLabel.font = .myBoldSystemFont(ofSize: 50)
         walkingTimeLabel.textColor = .white
         walkingTimeLabel.text = timeFormatter(0)
         
         decimalTimeLabel.text = timeFormatterSec(0)
         decimalTimeLabel.textColor = .white
-        decimalTimeLabel.font = .myRegularSystemFont(ofSize: 15)
+        decimalTimeLabel.font = .myMediumSystemFont(ofSize: 15)
     }
     
     func setButton() {
         pauseButton.setTitle("정지", for: .normal)
+        pauseButton.titleLabel?.font = .myBoldSystemFont(ofSize: 18)
         pauseButton.setTitleColor(.white, for: .normal)
-        pauseButton.backgroundColor = .systemIndigo
+        pauseButton.backgroundColor = .bookmarkDarkBlue
         pauseButton.layer.cornerRadius = 12
         pauseButton.addTarget(self, action: #selector(touchUpPause), for: .touchUpInside)
     }

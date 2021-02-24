@@ -63,7 +63,7 @@ extension CourseCompleteVC: UITableViewDataSource {
 extension CourseCompleteVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            return 160
+            return 140
         }
         else if indexPath.section == 1 {
             return 170
@@ -102,14 +102,15 @@ extension CourseCompleteVC {
     }
     
     func setLabel() {
-        userNameLabel.font = .systemFont(ofSize: 12, weight: .bold)
-        userNameLabel.textColor = .systemIndigo
+        userNameLabel.font = .myBoldSystemFont(ofSize: 13)
+        userNameLabel.textColor = .bookmarkDarkBlue
         userNameLabel.text = "달려가자 님의 Walkway"
     }
     
     func setButton() {
         saveButton.setTitle("저장", for: .normal)
-        saveButton.setTitleColor(.systemIndigo, for: .normal)
+        saveButton.setTitleColor(.bookmarkDarkBlue, for: .normal)
+        saveButton.titleLabel?.font = .myBoldSystemFont(ofSize: 15)
     }
 }
 
