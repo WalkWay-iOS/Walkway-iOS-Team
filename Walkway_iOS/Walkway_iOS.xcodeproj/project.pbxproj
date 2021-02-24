@@ -693,7 +693,6 @@
 			isa = PBXGroup;
 			children = (
 				ED7622B825BAFC75007E1C98 /* Extensions */,
-				ED16C87425B801D3003DD0F0 /* GeneralExtensions */,
 				74685F5D25C3C6A2004EDFEC /* CourseRunningTabScene */,
 				ED16C86A25B8011A003DD0F0 /* CreateCourseScene */,
 				ED16C83925B7FAD4003DD0F0 /* MypageScene */,
@@ -905,13 +904,6 @@
 				EDCC755C25C2ECDA00EF435A /* HashtagPopUpVC.swift */,
 			);
 			path = VC;
-			sourceTree = "<group>";
-		};
-		ED16C87425B801D3003DD0F0 /* GeneralExtensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = GeneralExtensions;
 			sourceTree = "<group>";
 		};
 		ED16C88E25BA742F003DD0F0 /* Cell */ = {
