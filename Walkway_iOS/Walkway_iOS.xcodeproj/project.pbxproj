@@ -125,6 +125,11 @@
 		ED16C8BD25BAA95F003DD0F0 /* HomeLatestCourseTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED16C8BB25BAA95F003DD0F0 /* HomeLatestCourseTVC.xib */; };
 		ED16C8C125BAAB90003DD0F0 /* HomeLatestCourseCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED16C8BF25BAAB90003DD0F0 /* HomeLatestCourseCVC.swift */; };
 		ED16C8C225BAAB90003DD0F0 /* HomeLatestCourseCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED16C8C025BAAB90003DD0F0 /* HomeLatestCourseCVC.xib */; };
+		ED2A8B282601B89A00456E4D /* NetworkLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2A8B272601B89A00456E4D /* NetworkLoggerPlugin.swift */; };
+		ED2A8B2B2601B9E200456E4D /* GeneralAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2A8B2A2601B9E200456E4D /* GeneralAPI.swift */; };
+		ED2A8B2E2601BB4D00456E4D /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2A8B2D2601BB4D00456E4D /* UserData.swift */; };
+		ED2A8B312601BBFE00456E4D /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2A8B302601BBFE00456E4D /* Login.swift */; };
+		ED2A8B342601D11100456E4D /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED2A8B332601D11100456E4D /* NotoSansKR-Regular.otf */; };
 		ED4DCE7325DCCB4800BFBE85 /* Extensions+UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4DCE7225DCCB4800BFBE85 /* Extensions+UIFont.swift */; };
 		ED4DCE8825DCD33C00BFBE85 /* NotoSansKR-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED4DCE8525DCD33600BFBE85 /* NotoSansKR-Black.otf */; };
 		ED4DCE8A25DCD33F00BFBE85 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED4DCE8625DCD33700BFBE85 /* NotoSansKR-Bold.otf */; };
@@ -152,7 +157,6 @@
 		ED8A965825C81FE40088EFBA /* MessageTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED8A965625C81FE40088EFBA /* MessageTVC.xib */; };
 		ED8A965C25C822DE0088EFBA /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A965B25C822DE0088EFBA /* Message.swift */; };
 		ED8A965F25C8260C0088EFBA /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A965E25C8260C0088EFBA /* ChatVC.swift */; };
-		EDBBFBFB25E6165500A7E33F /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDBBFBFA25E6165500A7E33F /* NotoSansKR-Regular.otf */; };
 		EDCC755325C2A68600EF435A /* MakeCreateCourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC755225C2A68600EF435A /* MakeCreateCourseVC.swift */; };
 		EDCC755625C2BA1900EF435A /* CompleteCourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC755525C2BA1900EF435A /* CompleteCourseVC.swift */; };
 		EDCC755925C2CADA00EF435A /* Extensions+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC755825C2CAD900EF435A /* Extensions+UITextField.swift */; };
@@ -329,6 +333,11 @@
 		ED16C8BB25BAA95F003DD0F0 /* HomeLatestCourseTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeLatestCourseTVC.xib; sourceTree = "<group>"; };
 		ED16C8BF25BAAB90003DD0F0 /* HomeLatestCourseCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLatestCourseCVC.swift; sourceTree = "<group>"; };
 		ED16C8C025BAAB90003DD0F0 /* HomeLatestCourseCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeLatestCourseCVC.xib; sourceTree = "<group>"; };
+		ED2A8B272601B89A00456E4D /* NetworkLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoggerPlugin.swift; sourceTree = "<group>"; };
+		ED2A8B2A2601B9E200456E4D /* GeneralAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralAPI.swift; sourceTree = "<group>"; };
+		ED2A8B2D2601BB4D00456E4D /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		ED2A8B302601BBFE00456E4D /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		ED2A8B332601D11100456E4D /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Regular.otf"; path = "../../../../../../../1715606/2020-졸업작품/Noto_Sans_KR/NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
 		ED4DCE7225DCCB4800BFBE85 /* Extensions+UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIFont.swift"; sourceTree = "<group>"; };
 		ED4DCE8225DCD33600BFBE85 /* NotoSansKR-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Thin.otf"; sourceTree = "<group>"; };
 		ED4DCE8325DCD33600BFBE85 /* NotoSansKR-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Light.otf"; sourceTree = "<group>"; };
@@ -356,7 +365,6 @@
 		ED8A965625C81FE40088EFBA /* MessageTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageTVC.xib; sourceTree = "<group>"; };
 		ED8A965B25C822DE0088EFBA /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		ED8A965E25C8260C0088EFBA /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
-		EDBBFBFA25E6165500A7E33F /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Regular.otf"; path = "../../../../../../../../Downloads/Noto_Sans_KR/NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
 		EDCC755225C2A68600EF435A /* MakeCreateCourseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeCreateCourseVC.swift; sourceTree = "<group>"; };
 		EDCC755525C2BA1900EF435A /* CompleteCourseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteCourseVC.swift; sourceTree = "<group>"; };
 		EDCC755825C2CAD900EF435A /* Extensions+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UITextField.swift"; sourceTree = "<group>"; };
@@ -710,6 +718,10 @@
 			isa = PBXGroup;
 			children = (
 				ED16C81725B7F92F003DD0F0 /* AppDelegate.swift */,
+				ED2A8B272601B89A00456E4D /* NetworkLoggerPlugin.swift */,
+				ED2A8B2A2601B9E200456E4D /* GeneralAPI.swift */,
+				ED2A8B2D2601BB4D00456E4D /* UserData.swift */,
+				ED2A8B302601BBFE00456E4D /* Login.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -942,7 +954,7 @@
 		ED4DCE6E25DCCA2C00BFBE85 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				EDBBFBFA25E6165500A7E33F /* NotoSansKR-Regular.otf */,
+				ED2A8B332601D11100456E4D /* NotoSansKR-Regular.otf */,
 				ED4DCE8525DCD33600BFBE85 /* NotoSansKR-Black.otf */,
 				ED4DCE8625DCD33700BFBE85 /* NotoSansKR-Bold.otf */,
 				ED4DCE8325DCD33600BFBE85 /* NotoSansKR-Light.otf */,
@@ -1281,7 +1293,7 @@
 				741DC2FB25D67A1F0026F1D9 /* MycourseListCVC.xib in Resources */,
 				74E77DB525CE7EE700EBE83D /* LocationInfoAllowTVC.xib in Resources */,
 				EDD055BE25BBFB70009FA3FB /* BookmarkCourseTVC.xib in Resources */,
-				EDBBFBFB25E6165500A7E33F /* NotoSansKR-Regular.otf in Resources */,
+				ED2A8B342601D11100456E4D /* NotoSansKR-Regular.otf in Resources */,
 				74E77DC025CE7F3E00EBE83D /* ScopeOfMyPageTVC.xib in Resources */,
 				740654D225DCF5ED00249EC7 /* CourseMemoTVC.xib in Resources */,
 				ED16C8AE25BA9E1E003DD0F0 /* HomePopularCourseCVC.xib in Resources */,
@@ -1404,6 +1416,7 @@
 				EDF3716125BFAD680000A1F6 /* DetailExplanationTVC.swift in Sources */,
 				EDD055C525BC2AFA009FA3FB /* LatestCourseTVC.swift in Sources */,
 				74E77DBA25CE7F0400EBE83D /* CameraInfoAllowTVC.swift in Sources */,
+				ED2A8B2E2601BB4D00456E4D /* UserData.swift in Sources */,
 				EDCC755925C2CADA00EF435A /* Extensions+UITextField.swift in Sources */,
 				7452E95F25D2F2830048DE2E /* MyKeywordTVC.swift in Sources */,
 				7452E95A25D2F26D0048DE2E /* MyBadgeTVC.swift in Sources */,
@@ -1415,6 +1428,7 @@
 				EDD055B925BBF402009FA3FB /* BookmarkCourseVC.swift in Sources */,
 				EDDF9A8025CA90EC00F5F7FD /* FollowerLatestTVC.swift in Sources */,
 				ED16C89E25BA8D05003DD0F0 /* HomeFollowerTVC.swift in Sources */,
+				ED2A8B2B2601B9E200456E4D /* GeneralAPI.swift in Sources */,
 				ED7622BA25BAFC88007E1C98 /* Extensions+UIColor.swift in Sources */,
 				EDDF9A9B25CAC5DD00F5F7FD /* followerDelegate.swift in Sources */,
 				ED16C81825B7F92F003DD0F0 /* AppDelegate.swift in Sources */,
@@ -1450,6 +1464,7 @@
 				EDDF9A6C25CA7F4600F5F7FD /* FollowerKeywordTVC.swift in Sources */,
 				EDE0BDF225BD9E9900ADE8D1 /* DetailHeaderTVC.swift in Sources */,
 				ED16C89925BA7AAF003DD0F0 /* HomeBannerCVC.swift in Sources */,
+				ED2A8B282601B89A00456E4D /* NetworkLoggerPlugin.swift in Sources */,
 				ED01F4E225C0144D00B9AD43 /* PhotoCVC.swift in Sources */,
 				748E6B5D25D99DBB00374211 /* MyKeywordListVC.swift in Sources */,
 				ED8A965725C81FE40088EFBA /* MessageTVC.swift in Sources */,
@@ -1496,6 +1511,7 @@
 				74F4150325CF791C007E4C07 /* ProfileSettingVC.swift in Sources */,
 				7463EF4C25DC3A900094F192 /* MyBadgeCVC.swift in Sources */,
 				7452E94B25D2EFC00048DE2E /* SettingVC.swift in Sources */,
+				ED2A8B312601BBFE00456E4D /* Login.swift in Sources */,
 				740654C725DCF5C300249EC7 /* CourseEstimateTVC.swift in Sources */,
 				ED16C86225B7FE50003DD0F0 /* CourseSearchVC.swift in Sources */,
 				ED16C8A825BA9BB4003DD0F0 /* HomePopularCourseTVC.swift in Sources */,
