@@ -130,6 +130,9 @@
 		ED2A8B2E2601BB4D00456E4D /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2A8B2D2601BB4D00456E4D /* UserData.swift */; };
 		ED2A8B312601BBFE00456E4D /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2A8B302601BBFE00456E4D /* Login.swift */; };
 		ED2A8B342601D11100456E4D /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED2A8B332601D11100456E4D /* NotoSansKR-Regular.otf */; };
+		ED2A8B3D2603865500456E4D /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2A8B3C2603865500456E4D /* LoginService.swift */; };
+		ED2A8B412603A02900456E4D /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2A8B402603A02900456E4D /* SignupModel.swift */; };
+		ED2A8B442603A4EE00456E4D /* SignupRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2A8B432603A4EE00456E4D /* SignupRequest.swift */; };
 		ED4DCE7325DCCB4800BFBE85 /* Extensions+UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4DCE7225DCCB4800BFBE85 /* Extensions+UIFont.swift */; };
 		ED4DCE8825DCD33C00BFBE85 /* NotoSansKR-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED4DCE8525DCD33600BFBE85 /* NotoSansKR-Black.otf */; };
 		ED4DCE8A25DCD33F00BFBE85 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED4DCE8625DCD33700BFBE85 /* NotoSansKR-Bold.otf */; };
@@ -176,6 +179,8 @@
 		EDD2608825C401F500619E8E /* Extensions+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2608725C401F500619E8E /* Extensions+String.swift */; };
 		EDD2608B25C44D5A00619E8E /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2608A25C44D5A00619E8E /* SignInVC.swift */; };
 		EDD2608E25C4546700619E8E /* FindIdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2608D25C4546700619E8E /* FindIdVC.swift */; };
+		EDD9A51A2604505F00117E9E /* SigninRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD9A5192604505F00117E9E /* SigninRequest.swift */; };
+		EDD9A51D260450AA00117E9E /* SigninModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD9A51C260450AA00117E9E /* SigninModel.swift */; };
 		EDDF9A4A25CA4F5D00F5F7FD /* FollowerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A4925CA4F5D00F5F7FD /* FollowerVC.swift */; };
 		EDDF9A5A25CA67C300F5F7FD /* FollowerHeaderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF9A5825CA67C300F5F7FD /* FollowerHeaderTVC.swift */; };
 		EDDF9A5B25CA67C300F5F7FD /* FollowerHeaderTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDF9A5925CA67C300F5F7FD /* FollowerHeaderTVC.xib */; };
@@ -338,6 +343,9 @@
 		ED2A8B2D2601BB4D00456E4D /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		ED2A8B302601BBFE00456E4D /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		ED2A8B332601D11100456E4D /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Regular.otf"; path = "../../../../../../../1715606/2020-졸업작품/Noto_Sans_KR/NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
+		ED2A8B3C2603865500456E4D /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		ED2A8B402603A02900456E4D /* SignupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
+		ED2A8B432603A4EE00456E4D /* SignupRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRequest.swift; sourceTree = "<group>"; };
 		ED4DCE7225DCCB4800BFBE85 /* Extensions+UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIFont.swift"; sourceTree = "<group>"; };
 		ED4DCE8225DCD33600BFBE85 /* NotoSansKR-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Thin.otf"; sourceTree = "<group>"; };
 		ED4DCE8325DCD33600BFBE85 /* NotoSansKR-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Light.otf"; sourceTree = "<group>"; };
@@ -384,6 +392,8 @@
 		EDD2608725C401F500619E8E /* Extensions+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+String.swift"; sourceTree = "<group>"; };
 		EDD2608A25C44D5A00619E8E /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		EDD2608D25C4546700619E8E /* FindIdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindIdVC.swift; sourceTree = "<group>"; };
+		EDD9A5192604505F00117E9E /* SigninRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninRequest.swift; sourceTree = "<group>"; };
+		EDD9A51C260450AA00117E9E /* SigninModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninModel.swift; sourceTree = "<group>"; };
 		EDDF9A4925CA4F5D00F5F7FD /* FollowerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerVC.swift; sourceTree = "<group>"; };
 		EDDF9A5825CA67C300F5F7FD /* FollowerHeaderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerHeaderTVC.swift; sourceTree = "<group>"; };
 		EDDF9A5925CA67C300F5F7FD /* FollowerHeaderTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowerHeaderTVC.xib; sourceTree = "<group>"; };
@@ -739,6 +749,7 @@
 			isa = PBXGroup;
 			children = (
 				EDD2607C25C3CB2D00619E8E /* Login.storyboard */,
+				ED2A8B382603860400456E4D /* Model */,
 				EDD2607F25C3CB3100619E8E /* View */,
 			);
 			path = LoginScene;
@@ -949,6 +960,42 @@
 				ED94370925BABC94009642E5 /* Home */,
 			);
 			path = TVC;
+			sourceTree = "<group>";
+		};
+		ED2A8B382603860400456E4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ED2A8B3B2603863B00456E4D /* RequestModel */,
+				ED2A8B3A2603862F00456E4D /* ResponseModel */,
+				ED2A8B392603862300456E4D /* APIServices */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ED2A8B392603862300456E4D /* APIServices */ = {
+			isa = PBXGroup;
+			children = (
+				ED2A8B3C2603865500456E4D /* LoginService.swift */,
+			);
+			path = APIServices;
+			sourceTree = "<group>";
+		};
+		ED2A8B3A2603862F00456E4D /* ResponseModel */ = {
+			isa = PBXGroup;
+			children = (
+				ED2A8B402603A02900456E4D /* SignupModel.swift */,
+				EDD9A51C260450AA00117E9E /* SigninModel.swift */,
+			);
+			path = ResponseModel;
+			sourceTree = "<group>";
+		};
+		ED2A8B3B2603863B00456E4D /* RequestModel */ = {
+			isa = PBXGroup;
+			children = (
+				ED2A8B432603A4EE00456E4D /* SignupRequest.swift */,
+				EDD9A5192604505F00117E9E /* SigninRequest.swift */,
+			);
+			path = RequestModel;
 			sourceTree = "<group>";
 		};
 		ED4DCE6E25DCCA2C00BFBE85 /* Font */ = {
@@ -1455,7 +1502,9 @@
 				EDDF9A7625CA897400F5F7FD /* FollowerCourseTVC.swift in Sources */,
 				ED01F4E625C02E4300B9AD43 /* Extensions+UIScrollView.swift in Sources */,
 				748E6B4625D993B800374211 /* MyCourseListVC.swift in Sources */,
+				ED2A8B412603A02900456E4D /* SignupModel.swift in Sources */,
 				7408AEBF25DB73F400E1C55C /* MyCourse.swift in Sources */,
+				EDD9A51A2604505F00117E9E /* SigninRequest.swift in Sources */,
 				ED16C85625B7FDE9003DD0F0 /* MypageVC.swift in Sources */,
 				ED8A965F25C8260C0088EFBA /* ChatVC.swift in Sources */,
 				ED8A8C9025C1EE9D00E2BD7B /* MakeCourseVC.swift in Sources */,
@@ -1497,6 +1546,7 @@
 				ED7622C625BB25D0007E1C98 /* PopularCourseTVC.swift in Sources */,
 				74E9279325E1F5F20013B762 /* CourseMemoVC.swift in Sources */,
 				7463EF3525DBFF400094F192 /* MyRecordListCVC.swift in Sources */,
+				ED2A8B3D2603865500456E4D /* LoginService.swift in Sources */,
 				ED16C8C125BAAB90003DD0F0 /* HomeLatestCourseCVC.swift in Sources */,
 				740654AF25DCD65700249EC7 /* CourseWalkingInfoCVC.swift in Sources */,
 				EDDF9A6625CA784E00F5F7FD /* FollowerBadgeCVC.swift in Sources */,
@@ -1505,7 +1555,9 @@
 				7452E95025D2F23F0048DE2E /* MyPageHeaderTVC.swift in Sources */,
 				740654A425DCD5E800249EC7 /* CourseWalkingSettingNotificationCVC.swift in Sources */,
 				74996CCB25DAE3C000A03218 /* myPagePresentDelegate.swift in Sources */,
+				EDD9A51D260450AA00117E9E /* SigninModel.swift in Sources */,
 				74F4150E25CF7A7E007E4C07 /* ProfileInfoTVC.swift in Sources */,
+				ED2A8B442603A4EE00456E4D /* SignupRequest.swift in Sources */,
 				742E701025D956B700F4ADB8 /* MyCourseListTVC.swift in Sources */,
 				EDD2608825C401F500619E8E /* Extensions+String.swift in Sources */,
 				74F4150325CF791C007E4C07 /* ProfileSettingVC.swift in Sources */,
