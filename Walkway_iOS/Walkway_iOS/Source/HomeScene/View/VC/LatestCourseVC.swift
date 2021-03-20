@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import Moya
 
 class LatestCourseVC: UIViewController {
+    private let authProvider = MoyaProvider<HomeServices>(plugins: [NetworkLoggerPlugin(verbose: true)])
+    var courseData: ViewAllModel?
+    
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var latestTableView: UITableView!
@@ -16,8 +20,7 @@ class LatestCourseVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUI()
-        setData()
+        getCourse()
     }
 }
 
@@ -45,10 +48,11 @@ extension LatestCourseVC: UITableViewDelegate {
         guard let dvc = storyboard?.instantiateViewController(identifier: "CourseDetailVC") as? CourseDetailVC else {
             return
         }
-        dvc.cellRate = data[indexPath.row].rate
-        dvc.cellTitle = data[indexPath.row].title
-        dvc.cellTime = data[indexPath.row].time
-        dvc.cellDistance = "\(data[indexPath.row].distance)"
+//        dvc.cellRate = data[indexPath.row].rate
+//        dvc.cellTitle = data[indexPath.row].title
+//        dvc.cellTime = data[indexPath.row].time
+//        dvc.cellDistance = "\(data[indexPath.row].distance)"
+        // MARK: id 넣어두기
         dvc.isHomeCell = false
         dvc.modalPresentationStyle = .fullScreen
         dvc.modalTransitionStyle = .crossDissolve
@@ -95,26 +99,27 @@ extension LatestCourseVC {
     }
 }
 
-// MARK: - Data
+// MARK: Network
 extension LatestCourseVC {
-    private func setData() {
-        data.removeAll()
-        data.append(contentsOf: [
-            Course(title: "관악산 초급 코스", distance: 6, time: "1시간 30분", rate: 4.89, bookmark: 2, isBookmark: false, hashtag: ["#서울대입구", "#산악코스다", "#가벼운산책"]),
-            Course(title: "성수 둘레길", distance: 10.56, time: "2시간 45분", rate: 4.50, bookmark: 5, isBookmark: false, hashtag: []),
-            Course(title: "남산 하드 코스", distance: 15, time: "2시간", rate: 3.23, bookmark: 120, isBookmark: true, hashtag: ["#초급", "#서울대입구", "#가벼운산책"]),
-            Course(title: "관악산 초급 코스", distance: 6, time: "1시간 30분", rate: 4.89, bookmark: 2, isBookmark: false, hashtag: ["#서울대입구", "#산악코스다", "#가벼운산책"]),
-            Course(title: "성수 둘레길", distance: 10.56, time: "2시간 45분", rate: 4.50, bookmark: 5, isBookmark: false, hashtag: []),
-            Course(title: "남산 하드 코스", distance: 15, time: "2시간", rate: 3.23, bookmark: 120, isBookmark: true, hashtag: ["#초급", "#서울대입구", "#가벼운산책"]),
-            Course(title: "관악산 초급 코스", distance: 6, time: "1시간 30분", rate: 4.89, bookmark: 2, isBookmark: false, hashtag: ["#서울대입구", "#산악코스다", "#가벼운산책"]),
-            Course(title: "성수 둘레길", distance: 10.56, time: "2시간 45분", rate: 4.50, bookmark: 5, isBookmark: false, hashtag: []),
-            Course(title: "남산 하드 코스", distance: 15, time: "2시간", rate: 3.23, bookmark: 120, isBookmark: true, hashtag: ["#초급", "#서울대입구", "#가벼운산책"]),
-            Course(title: "관악산 초급 코스", distance: 6, time: "1시간 30분", rate: 4.89, bookmark: 2, isBookmark: false, hashtag: ["#서울대입구", "#산악코스다", "#가벼운산책"]),
-            Course(title: "성수 둘레길", distance: 10.56, time: "2시간 45분", rate: 4.50, bookmark: 5, isBookmark: false, hashtag: []),
-            Course(title: "남산 하드 코스", distance: 15, time: "2시간", rate: 3.23, bookmark: 120, isBookmark: true, hashtag: ["#초급", "#서울대입구", "#가벼운산책"]),
-            Course(title: "관악산 초급 코스", distance: 6, time: "1시간 30분", rate: 4.89, bookmark: 2, isBookmark: false, hashtag: ["#서울대입구", "#산악코스다", "#가벼운산책"]),
-            Course(title: "성수 둘레길", distance: 10.56, time: "2시간 45분", rate: 4.50, bookmark: 5, isBookmark: false, hashtag: []),
-            Course(title: "남산 하드 코스", distance: 15, time: "2시간", rate: 3.23, bookmark: 120, isBookmark: true, hashtag: ["#초급", "#서울대입구", "#가벼운산책"])
-        ])
+    func getCourse() {
+        let param = LatestRequest.init(0)
+        print(param)
+        authProvider.request(.latests(param: param)) { response in
+            switch response {
+                case .success(let result):
+                    do {
+                        let model = try result.map(ViewAllModel.self)
+                        self.data.removeAll()
+                        self.data.append(contentsOf: model.data.course)
+                        self.setUI()
+                        self.latestTableView.reloadData()
+                        print("리로드")
+                    } catch(let err) {
+                        print(err.localizedDescription)
+                    }
+                case .failure(let err):
+                    print(err.localizedDescription)
+            }
+        }
     }
 }

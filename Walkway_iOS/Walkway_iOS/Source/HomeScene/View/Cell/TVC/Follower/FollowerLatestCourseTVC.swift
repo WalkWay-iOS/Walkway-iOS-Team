@@ -35,16 +35,21 @@ extension FollowerLatestCourseTVC {
         
         dateLabel.textColor = .bookmarkDarkBlue
         dateLabel.font = .myBoldSystemFont(ofSize: 13)
-        dateLabel.text = "201021"
         
         infoLabel.font = .myRegularSystemFont(ofSize: 13)
-        infoLabel.text = "10km / 2시간 30분"
     }
 }
 
 // MARK: - Data
 extension FollowerLatestCourseTVC {
-    func setTitle(title: String) {
-        titleLabel.text = title
+    func setTitle(data: Record) {
+        titleLabel.text = "남산 둘레길"
+        infoLabel.text = "\(data.distance)km / \(data.time)"
+        
+        let start = String.Index(encodedOffset: 2)
+        let end = String.Index(encodedOffset: 8)
+        let substring = String(data.createdAt[start..<end])
+        
+        dateLabel.text = substring
     }
 }

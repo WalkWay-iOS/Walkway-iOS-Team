@@ -280,6 +280,7 @@ extension SignUpVC {
     }
 }
 
+// MARK: Network
 extension SignUpVC {
     func signUp() {
         let param = SignupRequest.init(self.nameTextField.text!, self.emailTextField.text!, self.idTextField.text!, self.passwordTextField.text!)

@@ -16,6 +16,8 @@ class HomeBookmarkCourseTVC: UITableViewCell {
     
     var delegate: cellPresentDelegate?
     
+    var bookmarks: [Course] = []
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setUI()
@@ -29,13 +31,14 @@ class HomeBookmarkCourseTVC: UITableViewCell {
 // MARK: - CollectionViewDelegate
 extension HomeBookmarkCourseTVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        return bookmarks.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeBookmarkCourseCVC.identifier, for: indexPath) as? HomeBookmarkCourseCVC else {
             return UICollectionViewCell()
         }
+        cell.getData(course: bookmarks[indexPath.item])
         return cell
     }
 }
@@ -60,6 +63,7 @@ extension HomeBookmarkCourseTVC: UICollectionViewDelegateFlowLayout {
     }
 }
 
+// MARK: Bookmark Course id 넘기기
 extension HomeBookmarkCourseTVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let dvc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(identifier: "CourseDetailVC") as? CourseDetailVC else {

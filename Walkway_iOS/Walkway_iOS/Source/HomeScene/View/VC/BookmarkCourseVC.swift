@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import Moya
 
 class BookmarkCourseVC: UIViewController {
+    private let authProvider = MoyaProvider<HomeServices>(plugins: [NetworkLoggerPlugin(verbose: true)])
+    var courseData: ViewAllModel?
+    
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var bookmarkButton: UIButton!
     @IBOutlet weak var rateButton: UIButton!
@@ -18,8 +22,8 @@ class BookmarkCourseVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getCourse(isBookmark: true)
         setUI()
-        setBookmarkData()
     }
 }
 
@@ -47,10 +51,10 @@ extension BookmarkCourseVC: UITableViewDelegate {
         guard let dvc = storyboard?.instantiateViewController(identifier: "CourseDetailVC") as? CourseDetailVC else {
             return
         }
-        dvc.cellRate = data[indexPath.row].rate
-        dvc.cellTitle = data[indexPath.row].title
-        dvc.cellTime = data[indexPath.row].time
-        dvc.cellDistance = "\(data[indexPath.row].distance)"
+//        dvc.cellTitle = data[indexPath.row].title
+//        dvc.cellTime = data[indexPath.row].time
+//        dvc.cellDistance = "\(data[indexPath.row].distance)"
+        // MARK: course id 넘기기
         dvc.isHomeCell = false
         dvc.modalPresentationStyle = .fullScreen
         dvc.modalTransitionStyle = .crossDissolve
@@ -119,62 +123,40 @@ extension BookmarkCourseVC {
     }
     
     @objc func touchUpBookmark() {
-        setBookmarkData()
-        bookmarkTableView.reloadData()
+        getCourse(isBookmark: true)
     }
     
     @objc func touchUpRate() {
-        setRateData()
-        bookmarkTableView.reloadData()
+        getCourse(isBookmark: false)
     }
 }
 
-// MARK: - Data
+// MARK: Network
 extension BookmarkCourseVC {
-    private func setBookmarkData() {
-        data.removeAll()
-        data.append(contentsOf: [
-            Course(title: "관악산 초급 코스", distance: 6, time: "1시간 30분", rate: 4.89, bookmark: 200, isBookmark: false, hashtag: ["#서울대입구", "#산악코스다", "#가벼운산책"]),
-            Course(title: "성수 둘레길", distance: 10.56, time: "2시간 45분", rate: 4.50, bookmark: 5, isBookmark: false, hashtag: []),
-            Course(title: "남산 하드 코스", distance: 15, time: "2시간", rate: 3.23, bookmark: 120, isBookmark: true, hashtag: ["#초급", "#서울대입구", "#가벼운산책"]),
-            Course(title: "관악산 초급 코스", distance: 6, time: "1시간 30분", rate: 4.89, bookmark: 2, isBookmark: false, hashtag: ["#서울대입구", "#산악코스다", "#가벼운산책"]),
-            Course(title: "성수 둘레길", distance: 10.56, time: "2시간 45분", rate: 4.50, bookmark: 5, isBookmark: false, hashtag: []),
-            Course(title: "남산 하드 코스", distance: 15, time: "2시간", rate: 3.23, bookmark: 120, isBookmark: true, hashtag: ["#초급", "#서울대입구", "#가벼운산책"]),
-            Course(title: "관악산 초급 코스", distance: 6, time: "1시간 30분", rate: 4.89, bookmark: 2, isBookmark: false, hashtag: ["#서울대입구", "#산악코스다", "#가벼운산책"]),
-            Course(title: "성수 둘레길", distance: 10.56, time: "2시간 45분", rate: 4.50, bookmark: 5, isBookmark: false, hashtag: []),
-            Course(title: "남산 하드 코스", distance: 15, time: "2시간", rate: 3.23, bookmark: 120, isBookmark: true, hashtag: ["#초급", "#서울대입구", "#가벼운산책"]),
-            Course(title: "관악산 초급 코스", distance: 6, time: "1시간 30분", rate: 4.89, bookmark: 2, isBookmark: false, hashtag: ["#서울대입구", "#산악코스다", "#가벼운산책"]),
-            Course(title: "성수 둘레길", distance: 10.56, time: "2시간 45분", rate: 4.50, bookmark: 5, isBookmark: false, hashtag: []),
-            Course(title: "남산 하드 코스", distance: 15, time: "2시간", rate: 3.23, bookmark: 120, isBookmark: true, hashtag: ["#초급", "#서울대입구", "#가벼운산책"]),
-            Course(title: "관악산 초급 코스", distance: 6, time: "1시간 30분", rate: 4.89, bookmark: 2, isBookmark: false, hashtag: ["#서울대입구", "#산악코스다", "#가벼운산책"]),
-            Course(title: "성수 둘레길", distance: 10.56, time: "2시간 45분", rate: 4.50, bookmark: 5, isBookmark: false, hashtag: []),
-            Course(title: "남산 하드 코스", distance: 15, time: "2시간", rate: 3.23, bookmark: 120, isBookmark: true, hashtag: ["#초급", "#서울대입구", "#가벼운산책"])
-        ])
-    }
-    
-    private func setRateData() {
-        data.removeAll()
-        data.append(contentsOf: [
-            Course(title: "한라산 등반 한라산 등반합시다", distance: 3.2, time: "30분", rate: 5.6, bookmark: 100, isBookmark: true, hashtag: ["#초급", "#가벼운산책"]),
-            Course(title: "한라산 등반 한라산 등반합시다", distance: 3.2, time: "30분", rate: 5.6, bookmark: 23, isBookmark: true, hashtag: ["#초급", "#가벼운산책"]),
-            Course(title: "한라산 등반 한라산 등반합시다", distance: 3.2, time: "30분", rate: 5.6, bookmark: 578, isBookmark: true, hashtag: ["#초급", "#가벼운산책"]),
-            Course(title: "한라산 등반 한라산 등반합시다", distance: 3.2, time: "30분", rate: 5.6, bookmark: 12, isBookmark: true, hashtag: ["#초급", "#가벼운산책"]),
-            Course(title: "한라산 등반 한라산 등반합시다", distance: 3.2, time: "30분", rate: 5.6, bookmark: 100, isBookmark: true, hashtag: ["#초급", "#가벼운산책"]),
-            Course(title: "한라산 등반 한라산 등반합시다", distance: 3.2, time: "30분", rate: 5.6, bookmark: 23, isBookmark: true, hashtag: ["#초급", "#가벼운산책"]),
-            Course(title: "한라산 등반 한라산 등반합시다", distance: 3.2, time: "30분", rate: 5.6, bookmark: 578, isBookmark: true, hashtag: ["#초급", "#가벼운산책"]),
-            Course(title: "한라산 등반 한라산 등반합시다", distance: 3.2, time: "30분", rate: 5.6, bookmark: 12, isBookmark: true, hashtag: ["#초급", "#가벼운산책"]),
-            Course(title: "한라산 등반 한라산 등반합시다", distance: 3.2, time: "30분", rate: 5.6, bookmark: 100, isBookmark: true, hashtag: ["#초급", "#가벼운산책"]),
-            Course(title: "한라산 등반 한라산 등반합시다", distance: 3.2, time: "30분", rate: 5.6, bookmark: 23, isBookmark: true, hashtag: ["#초급", "#가벼운산책"]),
-            Course(title: "한라산 등반 한라산 등반합시다", distance: 3.2, time: "30분", rate: 5.6, bookmark: 578, isBookmark: true, hashtag: ["#초급", "#가벼운산책"]),
-            Course(title: "한라산 등반 한라산 등반합시다", distance: 3.2, time: "30분", rate: 5.6, bookmark: 12, isBookmark: true, hashtag: ["#초급", "#가벼운산책"]),
-            Course(title: "한라산 등반 한라산 등반합시다", distance: 3.2, time: "30분", rate: 5.6, bookmark: 100, isBookmark: true, hashtag: ["#초급", "#가벼운산책"]),
-            Course(title: "한라산 등반 한라산 등반합시다", distance: 3.2, time: "30분", rate: 5.6, bookmark: 23, isBookmark: true, hashtag: ["#초급", "#가벼운산책"]),
-            Course(title: "한라산 등반 한라산 등반합시다", distance: 3.2, time: "30분", rate: 5.6, bookmark: 578, isBookmark: true, hashtag: ["#초급", "#가벼운산책"]),
-            Course(title: "한라산 등반 한라산 등반합시다", distance: 3.2, time: "30분", rate: 5.6, bookmark: 12, isBookmark: true, hashtag: ["#초급", "#가벼운산책"]),
-            Course(title: "한라산 등반 한라산 등반합시다", distance: 3.2, time: "30분", rate: 5.6, bookmark: 100, isBookmark: true, hashtag: ["#초급", "#가벼운산책"]),
-            Course(title: "한라산 등반 한라산 등반합시다", distance: 3.2, time: "30분", rate: 5.6, bookmark: 23, isBookmark: true, hashtag: ["#초급", "#가벼운산책"]),
-            Course(title: "한라산 등반 한라산 등반합시다", distance: 3.2, time: "30분", rate: 5.6, bookmark: 578, isBookmark: true, hashtag: ["#초급", "#가벼운산책"]),
-            Course(title: "한라산 등반 한라산 등반합시다", distance: 3.2, time: "30분", rate: 5.6, bookmark: 12, isBookmark: true, hashtag: ["#초급", "#가벼운산책"])
-        ])
+    func getCourse(isBookmark: Bool) {
+        var isString: String?
+        if isBookmark {
+            isString = "true"
+        } else {
+            isString = "false"
+        }
+        let param = BookmarkRequest.init(isString ?? "true")
+        print(param)
+        authProvider.request(.bookmarks(param: param)) { response in
+            switch response {
+                case .success(let result):
+                    do {
+                        let model = try result.map(ViewAllModel.self)
+                        self.data.removeAll()
+                        self.data.append(contentsOf: model.data.course)
+                        self.bookmarkTableView.reloadData()
+                        print("리로드")
+                    } catch(let err) {
+                        print(err.localizedDescription)
+                    }
+                case .failure(let err):
+                    print(err.localizedDescription)
+            }
+        }
     }
 }

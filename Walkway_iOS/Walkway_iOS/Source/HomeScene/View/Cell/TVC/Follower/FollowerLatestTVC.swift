@@ -13,7 +13,8 @@ class FollowerLatestTVC: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var courseTableView: UITableView!
     
-    var courses: [String] = ["성수둘레길", "성수둘레길", "성수둘레길", "성수둘레", "성수"]
+    var courses: [Record] = []
+    var courseName: String?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,7 +36,7 @@ extension FollowerLatestTVC: UITableViewDataSource {
         guard let cell =  tableView.dequeueReusableCell(withIdentifier: FollowerLatestCourseTVC.identifier) as? FollowerLatestCourseTVC else {
             return UITableViewCell()
         }
-        cell.setTitle(title: courses[indexPath.row])
+        cell.setTitle(data: courses[indexPath.row])
         cell.selectionStyle = .none
         return cell
     }
@@ -73,7 +74,9 @@ extension FollowerLatestTVC {
 
 // MARK: - Data
 extension FollowerLatestTVC {
-    func setName(name: String) {
+    func setData(name: String, record: [Record]) {
         titleLabel.text = "\(name) 님의 최근기록"
+        
+        courses.append(contentsOf: record)
     }
 }

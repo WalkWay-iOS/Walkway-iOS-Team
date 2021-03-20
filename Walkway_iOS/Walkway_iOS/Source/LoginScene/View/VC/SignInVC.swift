@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import Moya
 
 class SignInVC: UIViewController {
+    private let authProvider = MoyaProvider<LoginServices>(plugins: [NetworkLoggerPlugin(verbose: true)])
+    var user: SigninModel?
+    
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var findButton: UIButton!
@@ -101,6 +105,7 @@ extension SignInVC {
     
     @objc func touchUpSignIn() {
         print("로그인")
+        signIn()
     }
     
     @objc func touchUpFind() {
@@ -108,5 +113,34 @@ extension SignInVC {
             return
         }
         navigationController?.pushViewController(dvc, animated: true)
+    }
+}
+
+// MARK: Network
+extension SignInVC {
+    func signIn() {
+        let param = SigninRequest.init(self.idTextField.text!, self.passwordTextField.text!)
+        authProvider.request(.signIn(param: param)) { response in
+            switch response {
+                case .success(let result):
+                    do {
+                        self.user = try result.map(SigninModel.self)
+                        if self.user?.status == 200 {
+                            Login.shared.setLogin(name: "\(String(describing: self.user!.data.name))", token: "\(String(describing: self.user!.data.accessToken))")
+                        } else if self.user?.status == 400 {
+                            let alert = UIAlertController(title: "로그인 실패", message: "아이디 혹은 비밀번호가 틀렸습니다.", preferredStyle: UIAlertController.Style.alert)
+                            let okAction = UIAlertAction(title: "확인", style: .default) { (Action) in
+                                self.navigationController?.popViewController(animated: true)
+                            }
+                            alert.addAction(okAction)
+                            self.present(alert, animated: true)
+                        }
+                    } catch(let err) {
+                        print(err.localizedDescription)
+                    }
+                case .failure(let err):
+                    print(err.localizedDescription)
+            }
+        }
     }
 }

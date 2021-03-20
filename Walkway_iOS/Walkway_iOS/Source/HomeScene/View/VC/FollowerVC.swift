@@ -6,16 +6,26 @@
 //
 
 import UIKit
+import Moya
 
 class FollowerVC: UIViewController {
+    private let authProvider = MoyaProvider<FollowerServices>(plugins: [NetworkLoggerPlugin(verbose: true)])
+    var follower: FollowerDetailModel?
+    
     @IBOutlet weak var followerTableView: UITableView!
     
     let closeButton = UIButton()
     
     var followerName: String?
+    var followerUserId: String?
+    
+    var user: Follower = Follower.init(followerNumber: 0, followingNumber: 0, courseNumber: 0, id: "", name: "", email: "", followerID: "", password: "", createdAt: "", updatedAt: "", v: 0, token: "", tokenExp: 0)
+    var courses: [Course] = []
+    var records: [Record] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getFollower()
         setUI()
     }
 }
@@ -35,7 +45,8 @@ extension FollowerVC: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: FollowerHeaderTVC.identifier) as? FollowerHeaderTVC else {
                 return UITableViewCell()
             }
-            cell.setName(name: followerName ?? "")
+            cell.followerUserId = followerUserId
+            cell.setData(follower: user, courseNum: courses.count)
             cell.selectionStyle = .none
             return cell
         } else if indexPath.section == 1 {
@@ -48,7 +59,7 @@ extension FollowerVC: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: FollowerKeywordTVC.identifier) as? FollowerKeywordTVC else {
                 return UITableViewCell()
             }
-            cell.setName(name: followerName ?? "")
+            cell.setData(name: followerName ?? "",courses: courses)
             cell.selectionStyle = .none
             return cell
         } else if indexPath.section == 3 {
@@ -56,14 +67,14 @@ extension FollowerVC: UITableViewDataSource {
                 return UITableViewCell()
             }
             cell.delegate = self
-            cell.setName(name: followerName ?? "")
+            cell.setName(name: followerName ?? "", course: courses)
             cell.selectionStyle = .none
             return cell
         } else if indexPath.section == 4 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: FollowerLatestTVC.identifier) as? FollowerLatestTVC else {
                 return UITableViewCell()
             }
-            cell.setName(name: followerName ?? "")
+            cell.setData(name: followerName ?? "", record: records)
             cell.selectionStyle = .none
             return cell
         }
@@ -141,6 +152,11 @@ extension FollowerVC {
         closeButton.topAnchor.constraint(equalTo: followerTableView.topAnchor, constant: 15).isActive = true
         closeButton.leadingAnchor.constraint(equalTo: followerTableView.leadingAnchor, constant: 20).isActive = true
     }
+    
+    func getData(follow: Follower) {
+        followerName = follow.name
+        followerUserId = follow.id
+    }
 }
 
 // MARK: - Action
@@ -153,12 +169,33 @@ extension FollowerVC {
 // MARK: - Delegate
 extension FollowerVC: followerDelegate {
     func cellTapedUserCourses(dvc: CourseDetailVC) {
-        dvc.cellTitle = "남산 한바퀴"
-        dvc.cellTime = "시간 1시간 30분"
-        dvc.cellDistance = "거리 6.0km"
+        // 정보전달
         dvc.isHomeCell = true
         dvc.modalPresentationStyle = .fullScreen
         dvc.modalTransitionStyle = .crossDissolve
         present(dvc, animated: true, completion: nil)
+    }
+}
+
+// MARK: Network
+extension FollowerVC {
+    func getFollower() {
+        guard let id = followerUserId else {return}
+        print(id)
+        authProvider.request(.followerDetail(id)) { response in
+            switch response {
+                case .success(let result):
+                    do {
+                        self.follower = try result.map(FollowerDetailModel.self)
+                        self.user = (self.follower?.data.user)!
+                        self.courses.append(contentsOf: self.follower?.data.course ?? [])
+                        self.records.append(contentsOf: self.follower?.data.record ?? [])
+                    } catch(let err) {
+                        print(err.localizedDescription)
+                    }
+                case .failure(let err):
+                    print(err.localizedDescription)
+            }
+        }
     }
 }

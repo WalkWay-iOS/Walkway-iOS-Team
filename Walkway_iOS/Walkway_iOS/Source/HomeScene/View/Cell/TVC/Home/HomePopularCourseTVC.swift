@@ -15,6 +15,8 @@ class HomePopularCourseTVC: UITableViewCell {
     @IBOutlet weak var popularCollectionView: UICollectionView!
     
     var delegate: cellPresentDelegate?
+    
+    var populars: [Course] = []
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,13 +31,14 @@ class HomePopularCourseTVC: UITableViewCell {
 // MARK: - CollectionViewDelegate
 extension HomePopularCourseTVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        return populars.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomePopularCourseCVC.identifier, for: indexPath) as? HomePopularCourseCVC else {
             return UICollectionViewCell()
         }
+        cell.getData(course: populars[indexPath.item])
         return cell
     }
 }
@@ -60,11 +63,13 @@ extension HomePopularCourseTVC: UICollectionViewDelegateFlowLayout {
     }
 }
 
+// MARK: 코스 번호 넘겨주기~!~!~!
 extension HomePopularCourseTVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let dvc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(identifier: "CourseDetailVC") as? CourseDetailVC else {
             return
         }
+        // populars[indexPath.row].id 전달
         delegate?.collectionViewCellTapedCourse(dvc: dvc)
     }
 }

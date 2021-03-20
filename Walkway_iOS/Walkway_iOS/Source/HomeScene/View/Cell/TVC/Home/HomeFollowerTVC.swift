@@ -15,10 +15,11 @@ class HomeFollowerTVC: UITableViewCell {
     
     var delegate: cellPresentDelegate?
     
-    var follower: [String] = ["하늘을향해", "Emily", "작은마음", "코로나아웃", "아이스아메", "밝은웃음", "WalkWalk", "팔로우해줘", "코스종결자", "화이팅하자"]
+    var follower: [Follower] = []
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        print("팔로워뷰 생성")
         setUI()
     }
 
@@ -37,7 +38,7 @@ extension HomeFollowerTVC: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeFollowerCVC.identifier, for: indexPath) as? HomeFollowerCVC else {
             return UICollectionViewCell()
         }
-        cell.setLabelText(text: follower[indexPath.row])
+        cell.setLabelText(text: follower[indexPath.row].name)
         return cell
     }
 }
@@ -67,7 +68,8 @@ extension HomeFollowerTVC: UICollectionViewDelegate {
         guard let dvc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(identifier: "FollowerVC") as? FollowerVC else {
             return
         }
-        dvc.followerName = follower[indexPath.row]
+        dvc.followerUserId = follower[indexPath.item].followerID
+        dvc.getData(follow: follower[indexPath.item])
         delegate?.collectionViewCellTapedFollower(dvc: dvc)
     }
 }

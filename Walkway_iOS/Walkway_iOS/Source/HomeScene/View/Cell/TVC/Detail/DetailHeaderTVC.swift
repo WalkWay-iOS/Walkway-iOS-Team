@@ -96,31 +96,26 @@ extension DetailHeaderTVC {
 
 // MARK: - Data
 extension DetailHeaderTVC {
-    func setCellData(title: String, time: String, distance: String, hashtags: [String], isHome: Bool, rate: Float) {
-        titleLabel.text = title
-        rateLabel.text = "⭐️\(rate)/5.0"
-        rateProgressBar.progress = rate/5.0
+    func setData(course: DetailCourse) {
+        titleLabel.text = course.title
+        rateLabel.text = "⭐️\(course.rateAverage)/5.0"
+        rateProgressBar.progress = Float(course.rateAverage)/5.0
         
-        if isHome {
-            timeLabel.text = time
-            distanceLabel.text = distance
-        } else {
-            timeLabel.text = "시간 \(time)"
-            distanceLabel.text = "거리 \(distance)km"
-        }
+        timeLabel.text = "시간 \(course.time)"
+        distanceLabel.text = "거리 \(course.distance)km"
         
         if isHashtaged == false {
-            setHashtagButtons(buttons: hashtags)
+            setHashtagButtons(buttons: course.hashtag)
             isHashtaged = true
         }
     }
     
-    private func setHashtagButtons(buttons: [String]) {
+    private func setHashtagButtons(buttons: [Hashtag]) {
         var buttonTextCount = 0
         
         if !(buttons.isEmpty) {
             for btn in buttons[0...4] {
-                buttonTextCount += btn.count
+                buttonTextCount += btn.keyword.count
             }
             
             if buttonTextCount > 23 {
@@ -133,7 +128,7 @@ extension DetailHeaderTVC {
         }
     }
     
-    private func setOneLineHashtag(buttons: [String]) {
+    private func setOneLineHashtag(buttons: [Hashtag]) {
         let colors: [UIColor] = [.bookmarkBlue, .bookmarkDarkBlue, .bookmarkLightBlue, .bookmarkDarkBlue, .bookmarkLightBlue, .bookmarkBlue, .bookmarkDarkBlue]
         var index = 0
         
@@ -158,7 +153,7 @@ extension DetailHeaderTVC {
             button.layer.shadowRadius = 2
             
             button.backgroundColor = colors[index]
-            button.setTitle(btn, for: .normal)
+            button.setTitle(btn.keyword, for: .normal)
             button.titleLabel?.font = .boldSystemFont(ofSize: 10)
             button.setTitleColor(.white, for: .normal)
             button.contentEdgeInsets = UIEdgeInsets(top: 2, left: 8, bottom: 2, right: 8)
@@ -169,7 +164,7 @@ extension DetailHeaderTVC {
         }
     }
     
-    private func setTwoLineHashtag(buttons: [String], min: Int) {
+    private func setTwoLineHashtag(buttons: [Hashtag], min: Int) {
         let colors: [UIColor] = [.bookmarkBlue, .bookmarkDarkBlue, .bookmarkLightBlue, .bookmarkDarkBlue, .bookmarkLightBlue, .bookmarkBlue, .bookmarkDarkBlue]
         var index = 0
         
@@ -205,7 +200,7 @@ extension DetailHeaderTVC {
             button.layer.shadowRadius = 2
             
             button.backgroundColor = colors[index]
-            button.setTitle(btn, for: .normal)
+            button.setTitle(btn.keyword, for: .normal)
             button.titleLabel?.font = .boldSystemFont(ofSize: 10)
             button.setTitleColor(.white, for: .normal)
             button.contentEdgeInsets = UIEdgeInsets(top: 2, left: 8, bottom: 2, right: 8)
@@ -226,7 +221,7 @@ extension DetailHeaderTVC {
             button.layer.shadowRadius = 2
             
             button.backgroundColor = colors[index]
-            button.setTitle(btn, for: .normal)
+            button.setTitle(btn.keyword, for: .normal)
             button.titleLabel?.font = .boldSystemFont(ofSize: 10)
             button.setTitleColor(.white, for: .normal)
             button.contentEdgeInsets = UIEdgeInsets(top: 2, left: 8, bottom: 2, right: 8)

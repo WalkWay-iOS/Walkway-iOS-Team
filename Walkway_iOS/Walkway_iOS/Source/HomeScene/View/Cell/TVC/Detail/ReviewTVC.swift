@@ -61,14 +61,15 @@ extension ReviewTVC {
 
 // MARK: - Data
 extension ReviewTVC {
-    func setData(review: Review) {
-        nameLabel.text = review.name
-        dateLabel.text = review.date
-        rateLabel.text = "⭐️\(review.rate)"
+    func setData(review: Comments) {
+        nameLabel.text = "tlsdbsdk0525"
         contentLabel.text = review.content
+        profileButton.setTitle("T", for: .normal)
         
-        let start = String.Index(encodedOffset: 0)
-        let capitalLetter = review.name[start].uppercased()
-        profileButton.setTitle("\(capitalLetter)", for: .normal)
+        let start = String.Index(encodedOffset: 2)
+        let end = String.Index(encodedOffset: 8)
+        let substring = String(review.createdAt[start..<end])
+        
+        dateLabel.text = substring
     }
 }

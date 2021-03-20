@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import Moya
 
 class FollowerHeaderTVC: UITableViewCell {
     static let identifier = "FollowerHeaderTVC"
+    
+    private let authProvider = MoyaProvider<FollowerServices>(plugins: [NetworkLoggerPlugin(verbose: true)])
     
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var profileImage: UIImageView!
@@ -20,6 +23,8 @@ class FollowerHeaderTVC: UITableViewCell {
     @IBOutlet weak var followerTitleLabel: UILabel!
     @IBOutlet weak var followerLabel: UILabel!
     @IBOutlet weak var followButton: UIButton!
+    
+    var followerUserId: String?
     
     var isFollowing =  false
     
@@ -62,19 +67,16 @@ extension FollowerHeaderTVC {
         followingTitleLabel.text = "팔로잉"
         followingTitleLabel.font = .myMediumSystemFont(ofSize: 13)
         
-        followingLabel.text = "17"
         followingLabel.font = .myBoldSystemFont(ofSize: 20)
         
         courseTitleLabel.text = "코스"
         courseTitleLabel.font = .myMediumSystemFont(ofSize: 13)
         
-        courseLabel.text = "9"
         courseLabel.font = .myBoldSystemFont(ofSize: 20)
         
         followerTitleLabel.text = "팔로워"
         followerTitleLabel.font = .myMediumSystemFont(ofSize: 13)
         
-        followerLabel.text = "132"
         followerLabel.font = .myBoldSystemFont(ofSize: 20)
     }
     
@@ -104,9 +106,11 @@ extension FollowerHeaderTVC {
     @objc func touchUpFollow() {
         if isFollowing {
             isFollowing = false
+            unfollow()
             followSetting()
         } else {
             isFollowing = true
+            follow()
             followSetting()
         }
     }
@@ -114,7 +118,43 @@ extension FollowerHeaderTVC {
 
 // MARK: - Data
 extension FollowerHeaderTVC {
-    func setName(name: String) {
-        nameLabel.text = name
+    func setData(follower: Follower, courseNum: Int) {
+        nameLabel.text = follower.name
+        followingLabel.text = "\(follower.followingNumber)"
+        courseLabel.text = "\(courseNum)"
+        followerLabel.text = "\(follower.followerNumber)"
+    }
+}
+
+// MARK: Network
+extension FollowerHeaderTVC {
+    func follow() {
+        authProvider.request(.follow(self.followerUserId ?? "")) { response in
+            switch response {
+                case .success(let result):
+                    do {
+                        print(result)
+                    } catch(let err) {
+                        print(err.localizedDescription)
+                    }
+                case .failure(let err):
+                    print(err.localizedDescription)
+            }
+        }
+    }
+    
+    func unfollow() {
+        authProvider.request(.unfollow(self.followerUserId ?? "")) { response in
+            switch response {
+                case .success(let result):
+                    do {
+                        print(result)
+                    } catch(let err) {
+                        print(err.localizedDescription)
+                    }
+                case .failure(let err):
+                    print(err.localizedDescription)
+            }
+        }
     }
 }

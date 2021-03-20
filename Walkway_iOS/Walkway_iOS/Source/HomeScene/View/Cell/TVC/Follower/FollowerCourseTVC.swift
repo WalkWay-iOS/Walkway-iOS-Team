@@ -16,7 +16,7 @@ class FollowerCourseTVC: UITableViewCell {
     
     var delegate: followerDelegate?
     
-    var courses: [String] = ["남산 한바퀴", "남산 두바퀴", "룰루리랄라리 신나는북악산여행", "북악산가자", "집뒤에 숨어있는 보물"]
+    var courses: [Course] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,7 +38,7 @@ extension FollowerCourseTVC: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FollowerCourseCVC.identifier, for: indexPath) as? FollowerCourseCVC else {
             return UICollectionViewCell()
         }
-        cell.setTitle(title: courses[indexPath.row])
+        cell.setTitle(course: courses[indexPath.row])
         return cell
     }
 }
@@ -66,6 +66,7 @@ extension FollowerCourseTVC: UICollectionViewDelegate {
         guard let dvc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(identifier: "CourseDetailVC") as? CourseDetailVC else {
             return
         }
+        // courses[indexPath.row].id - id가져오기
         delegate?.cellTapedUserCourses(dvc: dvc)
     }
 }
@@ -100,7 +101,9 @@ extension FollowerCourseTVC {
 
 // MARK: - Data
 extension FollowerCourseTVC {
-    func setName(name: String) {
+    func setName(name: String, course: [Course]) {
         titleLabel.text = "\(name) 님의 코스"
+        
+        courses.append(contentsOf: course)
     }
 }

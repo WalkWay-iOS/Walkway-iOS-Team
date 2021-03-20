@@ -6,14 +6,27 @@
 //
 
 import UIKit
+import Moya
 
 class HomeVC: UIViewController {
+    private let authProvider = MoyaProvider<HomeServices>(plugins: [NetworkLoggerPlugin(verbose: true)])
+    var homeModel: HomeModel?
+    
     @IBOutlet weak var profileButton: UIButton!
     @IBOutlet weak var homeTableView: UITableView!
     
+    var followers: [Follower] = []
+    var bookmarks: [Course] = []
+    var latests: [Course] = []
+    var populars: [Course] = []
+    
+    override func viewWillAppear(_ animated: Bool) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUI()
+        setHome()
+        
     }
 }
 
@@ -39,6 +52,7 @@ extension HomeVC: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeFollowerTVC.identifier) as? HomeFollowerTVC else {
                 return UITableViewCell()
             }
+            cell.follower = followers
             cell.delegate = self
             cell.selectionStyle = .none
             return cell
@@ -46,6 +60,7 @@ extension HomeVC: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: HomePopularCourseTVC.identifier) as? HomePopularCourseTVC else {
                 return UITableViewCell()
             }
+            cell.populars = populars
             cell.delegate = self
             cell.selectionStyle = .none
             return cell
@@ -53,6 +68,7 @@ extension HomeVC: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeBookmarkCourseTVC.identifier) as? HomeBookmarkCourseTVC else {
                 return UITableViewCell()
             }
+            cell.bookmarks = bookmarks
             cell.delegate = self
             cell.selectionStyle = .none
             return cell
@@ -60,6 +76,7 @@ extension HomeVC: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeLatestCourseTVC.identifier) as? HomeLatestCourseTVC else {
                 return UITableViewCell()
             }
+            cell.latests = latests
             cell.delegate = self
             cell.selectionStyle = .none
             return cell
@@ -121,6 +138,10 @@ extension HomeVC {
         profileButton.layer.shadowRadius = 3
         profileButton.addTarget(self, action: #selector(touchUpProfile), for: .touchUpInside)
     }
+    
+    private func setReload() {
+        homeTableView.reloadData()
+    }
 }
 
 // MARK: - Action
@@ -166,10 +187,6 @@ extension HomeVC: cellPresentDelegate {
     }
     
     func collectionViewCellTapedCourse(dvc: CourseDetailVC) {
-        dvc.cellTitle = "북악산 달려라 달려 달려라!!"
-        dvc.cellTime = "시간 1시간 30분"
-        dvc.cellDistance = "거리 6.0km"
-        dvc.isHomeCell = true
         dvc.modalPresentationStyle = .fullScreen
         dvc.modalTransitionStyle = .crossDissolve
         present(dvc, animated: true, completion: nil)
@@ -185,5 +202,29 @@ extension HomeVC: cellPresentDelegate {
         dvc.modalPresentationStyle = .fullScreen
         dvc.modalTransitionStyle = .crossDissolve
         present(dvc, animated: true, completion: nil)
+    }
+}
+
+// MARK: Network
+extension HomeVC {
+    func setHome() {
+        authProvider.request(.main) { response in
+            switch response {
+            case .success(let result):
+                do {
+                    self.homeModel = try result.map(HomeModel.self)
+                    self.followers.append(contentsOf: self.homeModel?.data.follower ?? [])
+                    self.populars.append(contentsOf: self.homeModel?.data.popularCourse ?? [])
+                    self.bookmarks.append(contentsOf: self.homeModel?.data.bookmarkCourse ?? [])
+                    self.latests.append(contentsOf: self.homeModel?.data.latestCourse ?? [])
+                    self.setUI()
+                    self.setReload()
+                } catch(let err) {
+                    print(err.localizedDescription)
+                }
+            case .failure(let err):
+                print(err.localizedDescription)
+            }
+        }
     }
 }

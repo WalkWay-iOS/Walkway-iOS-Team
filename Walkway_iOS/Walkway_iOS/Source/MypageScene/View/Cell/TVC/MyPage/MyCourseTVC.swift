@@ -42,7 +42,7 @@ extension MyCourseTVC: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FollowerCourseCVC.identifier, for: indexPath) as? FollowerCourseCVC else {
             return UICollectionViewCell()
         }
-        cell.setTitle(title: courses[indexPath.row])
+//        cell.setTitle(title: courses[indexPath.row]) MARK: 수정해야함!!!!!
         return cell
     }
 }
