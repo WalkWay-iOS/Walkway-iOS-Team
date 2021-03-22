@@ -30,12 +30,13 @@ struct Record: Codable {
     let strength: Double
     let time: String
     let comment: Comment
+    let courseName: String
     let userID, courseID, createdAt, updatedAt: String
     let v: Int
 
     enum CodingKeys: String, CodingKey {
         case id = "_id"
-        case distance, rate, strength, time, comment
+        case distance, rate, strength, time, comment, courseName
         case userID = "userId"
         case courseID = "courseId"
         case createdAt, updatedAt
@@ -46,12 +47,13 @@ struct Record: Codable {
 // MARK: - Comment
 struct Comment: Codable {
     let id, userID, courseID, content: String
-    let createdAt, updatedAt: String
+    let createdAt, updatedAt, userName: String
+    let rate: Double
 
     enum CodingKeys: String, CodingKey {
         case id = "_id"
         case userID = "userId"
         case courseID = "courseId"
-        case content, createdAt, updatedAt
+        case content, createdAt, updatedAt, userName, rate
     }
 }

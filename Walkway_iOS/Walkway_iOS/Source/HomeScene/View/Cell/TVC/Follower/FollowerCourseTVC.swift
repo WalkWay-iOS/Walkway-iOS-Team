@@ -66,7 +66,7 @@ extension FollowerCourseTVC: UICollectionViewDelegate {
         guard let dvc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(identifier: "CourseDetailVC") as? CourseDetailVC else {
             return
         }
-        // courses[indexPath.row].id - id가져오기
+        dvc.courseId = courses[indexPath.row].id
         delegate?.cellTapedUserCourses(dvc: dvc)
     }
 }

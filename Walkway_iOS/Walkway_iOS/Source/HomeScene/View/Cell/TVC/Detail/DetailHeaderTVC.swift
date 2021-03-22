@@ -114,7 +114,7 @@ extension DetailHeaderTVC {
         var buttonTextCount = 0
         
         if !(buttons.isEmpty) {
-            for btn in buttons[0...4] {
+            for btn in buttons[0..<buttons.count] {
                 buttonTextCount += btn.keyword.count
             }
             
@@ -153,7 +153,7 @@ extension DetailHeaderTVC {
             button.layer.shadowRadius = 2
             
             button.backgroundColor = colors[index]
-            button.setTitle(btn.keyword, for: .normal)
+            button.setTitle("#\(btn.keyword)", for: .normal)
             button.titleLabel?.font = .boldSystemFont(ofSize: 10)
             button.setTitleColor(.white, for: .normal)
             button.contentEdgeInsets = UIEdgeInsets(top: 2, left: 8, bottom: 2, right: 8)
@@ -200,7 +200,7 @@ extension DetailHeaderTVC {
             button.layer.shadowRadius = 2
             
             button.backgroundColor = colors[index]
-            button.setTitle(btn.keyword, for: .normal)
+            button.setTitle("#\(btn.keyword)", for: .normal)
             button.titleLabel?.font = .boldSystemFont(ofSize: 10)
             button.setTitleColor(.white, for: .normal)
             button.contentEdgeInsets = UIEdgeInsets(top: 2, left: 8, bottom: 2, right: 8)
@@ -221,7 +221,7 @@ extension DetailHeaderTVC {
             button.layer.shadowRadius = 2
             
             button.backgroundColor = colors[index]
-            button.setTitle(btn.keyword, for: .normal)
+            button.setTitle("#\(btn.keyword)", for: .normal)
             button.titleLabel?.font = .boldSystemFont(ofSize: 10)
             button.setTitleColor(.white, for: .normal)
             button.contentEdgeInsets = UIEdgeInsets(top: 2, left: 8, bottom: 2, right: 8)

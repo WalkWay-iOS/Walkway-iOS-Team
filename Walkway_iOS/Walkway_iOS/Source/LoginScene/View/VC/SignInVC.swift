@@ -127,6 +127,10 @@ extension SignInVC {
                         self.user = try result.map(SigninModel.self)
                         if self.user?.status == 200 {
                             Login.shared.setLogin(name: "\(String(describing: self.user!.data.name))", token: "\(String(describing: self.user!.data.accessToken))")
+                            let dvc = UIStoryboard.init(name: "Tabbar", bundle: nil)
+                            let vc = dvc.instantiateViewController(identifier: "TabbarController")
+                            vc.modalPresentationStyle = .fullScreen
+                            self.present(vc, animated: true)
                         } else if self.user?.status == 400 {
                             let alert = UIAlertController(title: "로그인 실패", message: "아이디 혹은 비밀번호가 틀렸습니다.", preferredStyle: UIAlertController.Style.alert)
                             let okAction = UIAlertAction(title: "확인", style: .default) { (Action) in

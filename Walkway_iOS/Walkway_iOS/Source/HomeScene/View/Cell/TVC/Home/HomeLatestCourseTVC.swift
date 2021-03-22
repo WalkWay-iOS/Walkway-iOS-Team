@@ -69,6 +69,7 @@ extension HomeLatestCourseTVC: UICollectionViewDelegate {
         guard let dvc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(identifier: "CourseDetailVC") as? CourseDetailVC else {
             return
         }
+        dvc.courseId = latests[indexPath.row].id
         delegate?.collectionViewCellTapedCourse(dvc: dvc)
     }
 }

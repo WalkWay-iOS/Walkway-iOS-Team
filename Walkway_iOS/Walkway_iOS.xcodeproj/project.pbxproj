@@ -225,6 +225,7 @@
 		EDE0BDF325BD9E9900ADE8D1 /* DetailHeaderTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDE0BDF125BD9E9900ADE8D1 /* DetailHeaderTVC.xib */; };
 		EDF3716125BFAD680000A1F6 /* DetailExplanationTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF3715F25BFAD680000A1F6 /* DetailExplanationTVC.swift */; };
 		EDF3716225BFAD680000A1F6 /* DetailExplanationTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDF3716025BFAD680000A1F6 /* DetailExplanationTVC.xib */; };
+		EDFC90F0260829A0003DA2AB /* ReviewDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFC90EF260829A0003DA2AB /* ReviewDetailModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -450,6 +451,7 @@
 		EDE0BDF125BD9E9900ADE8D1 /* DetailHeaderTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailHeaderTVC.xib; sourceTree = "<group>"; };
 		EDF3715F25BFAD680000A1F6 /* DetailExplanationTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailExplanationTVC.swift; sourceTree = "<group>"; };
 		EDF3716025BFAD680000A1F6 /* DetailExplanationTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailExplanationTVC.xib; sourceTree = "<group>"; };
+		EDFC90EF260829A0003DA2AB /* ReviewDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetailModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1234,6 +1236,7 @@
 				EDD9A53826047CA300117E9E /* ViewAllModel.swift */,
 				ED9B91892606258F00C024FF /* CourseDetailModel.swift */,
 				ED9B919226062B8100C024FF /* RecordModel.swift */,
+				EDFC90EF260829A0003DA2AB /* ReviewDetailModel.swift */,
 			);
 			path = ResponseModel;
 			sourceTree = "<group>";
@@ -1619,6 +1622,7 @@
 				7406547D25DCC59C00249EC7 /* CoursePauseVC.swift in Sources */,
 				7463EF5125DC43140094F192 /* MyKeywordCVC.swift in Sources */,
 				EDDF9A8F25CAB7D500F5F7FD /* BannerVC.swift in Sources */,
+				EDFC90F0260829A0003DA2AB /* ReviewDetailModel.swift in Sources */,
 				ED7622C125BB13DC007E1C98 /* cellPresentDelegate.swift in Sources */,
 				ED16C81A25B7F92F003DD0F0 /* SceneDelegate.swift in Sources */,
 				ED7622C625BB25D0007E1C98 /* PopularCourseTVC.swift in Sources */,

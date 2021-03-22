@@ -26,7 +26,8 @@ class FollowerHeaderTVC: UITableViewCell {
     
     var followerUserId: String?
     
-    var isFollowing =  false
+    var isFollowing: Bool?
+    var followingNumber = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -89,7 +90,7 @@ extension FollowerHeaderTVC {
     }
     
     private func followSetting() {
-        if isFollowing {
+        if isFollowing ?? false {
             followButton.setTitle("언팔로우", for: .normal)
             followButton.backgroundColor = .gray50
             followButton.setTitleColor(.bookmarkBlue, for: .normal)
@@ -104,25 +105,33 @@ extension FollowerHeaderTVC {
 // MARK: - Action
 extension FollowerHeaderTVC {
     @objc func touchUpFollow() {
-        if isFollowing {
+        if isFollowing ?? false {
             isFollowing = false
             unfollow()
             followSetting()
+            followingNumber -= 1
+            followerLabel.text = "\(followingNumber)"
         } else {
             isFollowing = true
             follow()
             followSetting()
+            followingNumber += 1
+            followerLabel.text = "\(followingNumber)"
         }
     }
 }
 
 // MARK: - Data
 extension FollowerHeaderTVC {
-    func setData(follower: Follower, courseNum: Int) {
+    func setData(follower: Follower, courseNum: Int, isFollowing: Bool) {
         nameLabel.text = follower.name
         followingLabel.text = "\(follower.followingNumber)"
         courseLabel.text = "\(courseNum)"
         followerLabel.text = "\(follower.followerNumber)"
+        followingNumber = follower.followingNumber
+        
+        self.isFollowing = isFollowing
+        followSetting()
     }
 }
 

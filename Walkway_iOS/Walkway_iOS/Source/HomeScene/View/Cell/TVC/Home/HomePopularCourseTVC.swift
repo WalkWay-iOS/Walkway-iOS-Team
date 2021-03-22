@@ -63,13 +63,12 @@ extension HomePopularCourseTVC: UICollectionViewDelegateFlowLayout {
     }
 }
 
-// MARK: 코스 번호 넘겨주기~!~!~!
 extension HomePopularCourseTVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let dvc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(identifier: "CourseDetailVC") as? CourseDetailVC else {
             return
         }
-        // populars[indexPath.row].id 전달
+        dvc.courseId = populars[indexPath.row].id 
         delegate?.collectionViewCellTapedCourse(dvc: dvc)
     }
 }

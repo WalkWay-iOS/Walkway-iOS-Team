@@ -21,11 +21,11 @@ class DetailReviewTVC: UITableViewCell {
     
     var courseReviews: [Comments] = []
     var reviewCounter = 0
-    var rate: Double?
+    var rate: Double = 0.0
+    var isFirst = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setUI()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -36,7 +36,7 @@ class DetailReviewTVC: UITableViewCell {
 // MARK: - TableViewDelegate
 extension DetailReviewTVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return reviewCounter
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -110,8 +110,6 @@ extension DetailReviewTVC {
     }
     
     private func setLabel() {
-        reviewCounter = courseReviews.count
-        
         if reviewCounter > 99 {
             titleLabel.text = "코스 참가 후기(99+)"
         } else {
@@ -129,6 +127,19 @@ extension DetailReviewTVC {
         viewAllButton.titleLabel?.font = .myMediumSystemFont(ofSize: 13)
         viewAllButton.setTitleColor(.gray70, for: .normal)
         viewAllButton.addTarget(self, action: #selector(touchUpViewAll), for: .touchUpInside)
+    }
+    
+    func setData(comments: [Comments], rate: Double) {
+        courseReviews.removeAll()
+        courseReviews.append(contentsOf: comments)
+        if isFirst == false {
+            reviewCounter = courseReviews.count
+            isFirst = true
+        }
+        self.rate = rate
+        print(reviewCounter)
+        
+        setUI()
     }
 }
 

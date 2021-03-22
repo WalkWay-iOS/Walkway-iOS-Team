@@ -23,7 +23,6 @@ class BannerVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setData()
-        setUI()
     }
 }
 
@@ -71,11 +70,7 @@ extension BannerVC: UITableViewDelegate {
             guard let dvc = storyboard?.instantiateViewController(identifier: "CourseDetailVC") as? CourseDetailVC else {
                 return
             }
-//            dvc.cellRate = courses[indexPath.row].rate
-//            dvc.cellTitle = courses[indexPath.row].title
-//            dvc.cellTime = courses[indexPath.row].time
-//            dvc.cellDistance = "\(courses[indexPath.row].distance)"
-            // id 넘기기
+            dvc.courseId = courses[indexPath.row].id
             dvc.isHomeCell = false
             dvc.modalPresentationStyle = .fullScreen
             dvc.modalTransitionStyle = .crossDissolve
@@ -158,6 +153,8 @@ extension BannerVC {
                 do {
                     self.homeModel = try result.map(ViewAllModel.self)
                     self.courses.append(contentsOf: self.homeModel?.data.course ?? [])
+                    self.setUI()
+                    self.bannerTableView.reloadData()
                 } catch(let err) {
                     print(err.localizedDescription)
                 }
@@ -174,6 +171,7 @@ extension BannerVC {
                 do {
                     self.homeModel = try result.map(ViewAllModel.self)
                     self.courses.append(contentsOf: self.homeModel?.data.course ?? [])
+                    
                 } catch(let err) {
                     print(err.localizedDescription)
                 }

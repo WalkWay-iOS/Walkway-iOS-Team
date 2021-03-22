@@ -51,10 +51,7 @@ extension BookmarkCourseVC: UITableViewDelegate {
         guard let dvc = storyboard?.instantiateViewController(identifier: "CourseDetailVC") as? CourseDetailVC else {
             return
         }
-//        dvc.cellTitle = data[indexPath.row].title
-//        dvc.cellTime = data[indexPath.row].time
-//        dvc.cellDistance = "\(data[indexPath.row].distance)"
-        // MARK: course id 넘기기
+        dvc.courseId = data[indexPath.row].id
         dvc.isHomeCell = false
         dvc.modalPresentationStyle = .fullScreen
         dvc.modalTransitionStyle = .crossDissolve

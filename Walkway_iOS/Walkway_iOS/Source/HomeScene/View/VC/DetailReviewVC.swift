@@ -6,17 +6,25 @@
 //
 
 import UIKit
+import Moya
 
 class DetailReviewVC: UIViewController {
+    private let authProvider = MoyaProvider<CourseService>(plugins: [NetworkLoggerPlugin(verbose: true)])
+    var review: ReviewDetailModel?
+    
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var navigationBarView: UIView!
     @IBOutlet weak var reviewTableView: UITableView!
     
     var courseReviews: [Comments] = []
+    var courseId: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUI()
+        getReview()
+        setTableView()
+        setView()
+        setButton()
     }
 }
 
@@ -56,10 +64,9 @@ extension DetailReviewVC: UITableViewDelegate {
 // MARK: - UI
 extension DetailReviewVC {
     private func setUI() {
-        setTableView()
+        
         setTableViewNib()
-        setView()
-        setButton()
+ 
     }
     
     private func setTableView() {
@@ -91,5 +98,28 @@ extension DetailReviewVC {
 extension DetailReviewVC {
     @objc func touchUpClose() {
         dismiss(animated: false, completion: nil)
+    }
+}
+
+// MARK: Network
+extension DetailReviewVC {
+    func getReview() {
+        guard let id = courseId else {return}
+        print(id)
+        authProvider.request( .commentDetail(id)) { response in
+            switch response {
+                case .success(let result):
+                    do {
+                        self.review = try result.map(ReviewDetailModel.self)
+                        self.courseReviews.append(contentsOf: self.review?.data.comment ?? [])
+                        self.setUI()
+                        self.reviewTableView.reloadData()
+                    } catch(let err) {
+                        print(err.localizedDescription)
+                    }
+                case .failure(let err):
+                    print(err.localizedDescription)
+            }
+        }
     }
 }

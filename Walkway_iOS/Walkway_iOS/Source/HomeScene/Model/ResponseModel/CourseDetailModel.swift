@@ -24,14 +24,15 @@ struct DetailCourseResponse: Codable {
 // MARK: - Comment
 struct Comments: Codable {
     let id, userID, courseID, content: String
-    let createdAt, updatedAt: String
+    let createdAt, updatedAt, userName: String
+    let rate: Double
     let v: Int
 
     enum CodingKeys: String, CodingKey {
         case id = "_id"
         case userID = "userId"
         case courseID = "courseId"
-        case content, createdAt, updatedAt
+        case content, createdAt, updatedAt, userName, rate
         case v = "__v"
     }
 }
@@ -48,7 +49,7 @@ struct DetailCourse: Codable {
     let distance: Double
     let time, content: String
     let hashtag: [Hashtag]
-    let user: Follower
+    let user: String
     let createdAt, updatedAt: String
     let v: Int
 

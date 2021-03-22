@@ -69,6 +69,7 @@ extension HomeBookmarkCourseTVC: UICollectionViewDelegate {
         guard let dvc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(identifier: "CourseDetailVC") as? CourseDetailVC else {
             return
         }
+        dvc.courseId = bookmarks[indexPath.row].id
         delegate?.collectionViewCellTapedCourse(dvc: dvc)
     }
 }

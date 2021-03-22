@@ -34,7 +34,7 @@ class CourseDetailVC: UIViewController {
     
     var currentPage = 0
     
-    var courses: DetailCourse?
+    var courses: DetailCourse = DetailCourse.init(rateAverage: 0, strengthAverage: 0, isSeoul: true, image: "", official: 0, usesCount: 0, bookmarkCount: 0, position: [[0]], placeName: [""], id: "", title: "", distance: 0, time: "", content: "", hashtag: [Hashtag(referCount: 0, id: "", keyword: "")], user: "", createdAt: "", updatedAt: "", v: 0)
     var comments: [Comments] = []
     
     override func viewDidLoad() {
@@ -58,14 +58,14 @@ extension CourseDetailVC: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: DetailHeaderTVC.identifier) as? DetailHeaderTVC else {
                 return UITableViewCell()
             }
-            cell.setData(course: courses!)
+            cell.setData(course: courses)
             cell.selectionStyle = .none
             return cell
         } else if indexPath.section == 1 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: DetailExplanationTVC.identifier) as? DetailExplanationTVC else {
                 return UITableViewCell()
             }
-            cell.setData(course: courses!)
+            cell.setData(course: courses)
             cell.selectionStyle = .none
             return cell
         } else if indexPath.section == 2 {
@@ -73,8 +73,7 @@ extension CourseDetailVC: UITableViewDataSource {
                 return UITableViewCell()
             }
             cell.delegate = self
-            cell.rate = courses?.rateAverage
-            cell.courseReviews = comments
+            cell.setData(comments: comments, rate: courses.rateAverage)
             cell.selectionStyle = .none
             return cell
         }
@@ -159,10 +158,6 @@ extension CourseDetailVC: UITableViewDelegate {
 extension CourseDetailVC {
     private func setUI() {
         setTableView()
-        setTableViewNib()
-        setStickyHeader()
-        setButton()
-        setView()
         setBottomBar()
     }
     
@@ -371,6 +366,7 @@ extension CourseDetailVC {
 // MARK: - Delegate
 extension CourseDetailVC: detailDelegate {
     func cellTapedReview(dvc: DetailReviewVC) {
+        dvc.courseId = courseId
         dvc.modalPresentationStyle = .fullScreen
         present(dvc, animated: false, completion: nil)
     }
@@ -392,6 +388,11 @@ extension CourseDetailVC {
                         self.courses = courseData.data.course
                         self.comments.removeAll()
                         self.comments.append(contentsOf: courseData.data.comment)
+                        self.setTableViewNib()
+                        self.setStickyHeader()
+                        self.setButton()
+                        self.setView()
+                        self.detailTableView.reloadData()
                     } catch(let err) {
                         print(err.localizedDescription)
                     }

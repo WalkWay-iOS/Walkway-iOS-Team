@@ -19,6 +19,8 @@ class FollowerVC: UIViewController {
     var followerName: String?
     var followerUserId: String?
     
+    var isFollowing = false
+    
     var user: Follower = Follower.init(followerNumber: 0, followingNumber: 0, courseNumber: 0, id: "", name: "", email: "", followerID: "", password: "", createdAt: "", updatedAt: "", v: 0, token: "", tokenExp: 0)
     var courses: [Course] = []
     var records: [Record] = []
@@ -26,7 +28,6 @@ class FollowerVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getFollower()
-        setUI()
     }
 }
 
@@ -46,7 +47,7 @@ extension FollowerVC: UITableViewDataSource {
                 return UITableViewCell()
             }
             cell.followerUserId = followerUserId
-            cell.setData(follower: user, courseNum: courses.count)
+            cell.setData(follower: user, courseNum: courses.count, isFollowing: isFollowing)
             cell.selectionStyle = .none
             return cell
         } else if indexPath.section == 1 {
@@ -169,7 +170,6 @@ extension FollowerVC {
 // MARK: - Delegate
 extension FollowerVC: followerDelegate {
     func cellTapedUserCourses(dvc: CourseDetailVC) {
-        // 정보전달
         dvc.isHomeCell = true
         dvc.modalPresentationStyle = .fullScreen
         dvc.modalTransitionStyle = .crossDissolve
@@ -188,8 +188,12 @@ extension FollowerVC {
                     do {
                         self.follower = try result.map(FollowerDetailModel.self)
                         self.user = (self.follower?.data.user)!
+                        self.isFollowing = self.follower?.data.isFollowing ?? false
                         self.courses.append(contentsOf: self.follower?.data.course ?? [])
                         self.records.append(contentsOf: self.follower?.data.record ?? [])
+                        self.setUI()
+                        self.followerTableView.reloadData()
+                        print(self.isFollowing)
                     } catch(let err) {
                         print(err.localizedDescription)
                     }

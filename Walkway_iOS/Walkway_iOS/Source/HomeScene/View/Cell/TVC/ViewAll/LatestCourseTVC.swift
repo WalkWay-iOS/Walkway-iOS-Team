@@ -117,7 +117,7 @@ extension LatestCourseTVC {
                 button.layer.shadowRadius = 2
                 
                 button.backgroundColor = colors[index]
-                button.setTitle(btn.keyword, for: .normal)
+                button.setTitle("#\(btn.keyword)", for: .normal)
                 button.titleLabel?.font = .boldSystemFont(ofSize: 10)
                 button.setTitleColor(.white, for: .normal)
                 button.contentEdgeInsets = UIEdgeInsets(top: 2, left: 8, bottom: 2, right: 8)

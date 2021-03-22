@@ -43,13 +43,14 @@ extension FollowerLatestCourseTVC {
 // MARK: - Data
 extension FollowerLatestCourseTVC {
     func setTitle(data: Record) {
-        titleLabel.text = "남산 둘레길"
+        titleLabel.text = data.courseName
         infoLabel.text = "\(data.distance)km / \(data.time)"
         
-        let start = String.Index(encodedOffset: 2)
-        let end = String.Index(encodedOffset: 8)
-        let substring = String(data.createdAt[start..<end])
+        let removeDate = data.createdAt.split(separator: "-")
+        let yearString = removeDate[0].split(separator: "0")
+        let dayString = removeDate[2].split(separator: "T")
+        let dateString = "\(yearString[1])\(removeDate[1])\(dayString[0])"
         
-        dateLabel.text = substring
+        dateLabel.text = dateString
     }
 }
