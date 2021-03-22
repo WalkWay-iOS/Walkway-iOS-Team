@@ -226,6 +226,7 @@
 		EDF3716125BFAD680000A1F6 /* DetailExplanationTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF3715F25BFAD680000A1F6 /* DetailExplanationTVC.swift */; };
 		EDF3716225BFAD680000A1F6 /* DetailExplanationTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDF3716025BFAD680000A1F6 /* DetailExplanationTVC.xib */; };
 		EDFC90F0260829A0003DA2AB /* ReviewDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFC90EF260829A0003DA2AB /* ReviewDetailModel.swift */; };
+		EDFC90F326082BF7003DA2AB /* ReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFC90F226082BF7003DA2AB /* ReviewVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -452,6 +453,7 @@
 		EDF3715F25BFAD680000A1F6 /* DetailExplanationTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailExplanationTVC.swift; sourceTree = "<group>"; };
 		EDF3716025BFAD680000A1F6 /* DetailExplanationTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailExplanationTVC.xib; sourceTree = "<group>"; };
 		EDFC90EF260829A0003DA2AB /* ReviewDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetailModel.swift; sourceTree = "<group>"; };
+		EDFC90F226082BF7003DA2AB /* ReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -951,6 +953,7 @@
 				EDCC755225C2A68600EF435A /* MakeCreateCourseVC.swift */,
 				EDCC755525C2BA1900EF435A /* CompleteCourseVC.swift */,
 				EDCC755C25C2ECDA00EF435A /* HashtagPopUpVC.swift */,
+				EDFC90F226082BF7003DA2AB /* ReviewVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -1573,6 +1576,7 @@
 				740654AA25DCD64500249EC7 /* CourseWalkingMapCVC.swift in Sources */,
 				EDD9A53226046E3B00117E9E /* Extensions+Encodable.swift in Sources */,
 				740654D125DCF5ED00249EC7 /* CourseMemoTVC.swift in Sources */,
+				EDFC90F326082BF7003DA2AB /* ReviewVC.swift in Sources */,
 				740654B925DCE2AB00249EC7 /* CourseWalkingHotPlaceCVC.swift in Sources */,
 				EDDF9A7625CA897400F5F7FD /* FollowerCourseTVC.swift in Sources */,
 				ED01F4E625C02E4300B9AD43 /* Extensions+UIScrollView.swift in Sources */,

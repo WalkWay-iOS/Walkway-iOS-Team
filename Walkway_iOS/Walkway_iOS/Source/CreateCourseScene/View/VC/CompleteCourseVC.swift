@@ -306,6 +306,13 @@ extension CompleteCourseVC {
 extension CompleteCourseVC {
     @objc func touchUpSave() {
         print("다음")
+        // MARK: 넘기기 title, hashtag, distance, hashtag, position, placeName, time
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "ReviewVC") as? ReviewVC else {
+            return
+        }
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
     }
     
     @objc func touchUpCancel() {
