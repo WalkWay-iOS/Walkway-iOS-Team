@@ -9,7 +9,7 @@ import Foundation
 import Moya
 
 enum CourseService {
-    case create(param: CourseCreateRequest)
+    case create(param: ReviewRequest)
     case record(ID: String, param: RecordRequest)
     case detail(String)
     case commentDetail(String)

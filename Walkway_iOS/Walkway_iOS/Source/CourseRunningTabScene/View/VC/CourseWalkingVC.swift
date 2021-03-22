@@ -6,13 +6,21 @@
 //
 
 import UIKit
+import Moya
 
 class CourseWalkingVC: UIViewController {
+    private let authProvider = MoyaProvider<CourseService>(plugins: [NetworkLoggerPlugin(verbose: true)])
+    var courseData: RunningModel?
 
     @IBOutlet var pageController: UIPageControl!
     @IBOutlet var courseWalkingCollectionView: UICollectionView!
     
     var delegate: walkingCoursePresentDelegate?
+    var courseId: String?
+    var titleText: String?
+    var courseContent: String = ""
+    var coursePos: [[Double]] = [[]]
+    var landmark: [String] = []
     
     var onceOnly = false
     
@@ -26,7 +34,8 @@ class CourseWalkingVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUI()
+        view.backgroundColor = UIColor.lightGray.withAlphaComponent(0.1)
+        getCourse()
     }
 }
 
@@ -52,6 +61,7 @@ extension CourseWalkingVC: UICollectionViewDataSource {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CourseWalkingMapCVC.identifier, for: indexPath) as? CourseWalkingMapCVC else {
                 return UICollectionViewCell()
             }
+            cell.setData(pos: coursePos)
             cell.delegate = self
             return cell
         }
@@ -60,6 +70,7 @@ extension CourseWalkingVC: UICollectionViewDataSource {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CourseWalkingInfoCVC.identifier, for: indexPath) as? CourseWalkingInfoCVC else {
                 return UICollectionViewCell()
             }
+            cell.setData(title: titleText ?? "", content: courseContent, hashtags: landmark)
             return cell
         }
         return UICollectionViewCell()
@@ -87,10 +98,9 @@ extension CourseWalkingVC: UICollectionViewDelegateFlowLayout {
 // MARK: - UI
 extension CourseWalkingVC {
     func setUI() {
-        view.backgroundColor = UIColor.lightGray.withAlphaComponent(0.1)
         setCollectionView()
-        setCollectionViewNib()
         setPageControl()
+        setCollectionViewNib()
     }
     
     func setCollectionView() {
@@ -140,5 +150,28 @@ extension CourseWalkingVC: walkingCoursePresentDelegate {
     
     func buttonTappedStop() {
         
+    }
+}
+
+// MARK: Network
+extension CourseWalkingVC {
+    func getCourse() {
+        authProvider.request(.running(self.courseId ?? "")) { response in
+            switch response {
+                case .success(let result):
+                    do {
+                        let courseData = try result.map(RunningModel.self)
+                        self.courseContent = courseData.data.content
+                        self.coursePos = courseData.data.position
+                        self.landmark = courseData.data.landmark
+                        self.setUI()
+                        self.courseWalkingCollectionView.reloadData()
+                    } catch(let err) {
+                        print(err.localizedDescription)
+                    }
+                case .failure(let err):
+                    print(err.localizedDescription)
+            }
+        }
     }
 }

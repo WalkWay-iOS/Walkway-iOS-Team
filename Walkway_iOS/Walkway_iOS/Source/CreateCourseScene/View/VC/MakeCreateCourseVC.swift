@@ -28,6 +28,7 @@ class MakeCreateCourseVC: UIViewController {
         setMap()
         setMapMarkersRoute(vLoc: source[0], toLoc: destination[0])
         setUI()
+        setNotification()
     }
 }
 
@@ -175,5 +176,16 @@ extension MakeCreateCourseVC {
         dvc.isMakeCourse = false
         dvc.modalPresentationStyle = .fullScreen
         present(dvc, animated: true, completion: nil)
+    }
+}
+
+// MARK: Notification
+extension MakeCreateCourseVC {
+    private func setNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(saveAction), name: NSNotification.Name("Save"), object: nil)
+    }
+    
+    @objc func saveAction() {
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
 }

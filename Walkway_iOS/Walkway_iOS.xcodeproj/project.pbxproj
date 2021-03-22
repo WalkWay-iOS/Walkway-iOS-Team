@@ -227,6 +227,8 @@
 		EDF3716225BFAD680000A1F6 /* DetailExplanationTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDF3716025BFAD680000A1F6 /* DetailExplanationTVC.xib */; };
 		EDFC90F0260829A0003DA2AB /* ReviewDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFC90EF260829A0003DA2AB /* ReviewDetailModel.swift */; };
 		EDFC90F326082BF7003DA2AB /* ReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFC90F226082BF7003DA2AB /* ReviewVC.swift */; };
+		EDFC90F826085B58003DA2AB /* ReviewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFC90F726085B58003DA2AB /* ReviewRequest.swift */; };
+		EDFC90FB2608CAD6003DA2AB /* RunningModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFC90FA2608CAD6003DA2AB /* RunningModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -454,6 +456,8 @@
 		EDF3716025BFAD680000A1F6 /* DetailExplanationTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailExplanationTVC.xib; sourceTree = "<group>"; };
 		EDFC90EF260829A0003DA2AB /* ReviewDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetailModel.swift; sourceTree = "<group>"; };
 		EDFC90F226082BF7003DA2AB /* ReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVC.swift; sourceTree = "<group>"; };
+		EDFC90F726085B58003DA2AB /* ReviewRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRequest.swift; sourceTree = "<group>"; };
+		EDFC90FA2608CAD6003DA2AB /* RunningModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1240,6 +1244,7 @@
 				ED9B91892606258F00C024FF /* CourseDetailModel.swift */,
 				ED9B919226062B8100C024FF /* RecordModel.swift */,
 				EDFC90EF260829A0003DA2AB /* ReviewDetailModel.swift */,
+				EDFC90FA2608CAD6003DA2AB /* RunningModel.swift */,
 			);
 			path = ResponseModel;
 			sourceTree = "<group>";
@@ -1252,6 +1257,7 @@
 				EDD9A52E26046BC700117E9E /* LatestRequest.swift */,
 				ED9B918C260627F000C024FF /* CourseCreateRequest.swift */,
 				ED9B918F26062A7300C024FF /* RecordRequest.swift */,
+				EDFC90F726085B58003DA2AB /* ReviewRequest.swift */,
 			);
 			path = RequestModel;
 			sourceTree = "<group>";
@@ -1611,6 +1617,7 @@
 				7452E96425D2F29B0048DE2E /* MyCourseTVC.swift in Sources */,
 				ED9B919326062B8100C024FF /* RecordModel.swift in Sources */,
 				EDD2608B25C44D5A00619E8E /* SignInVC.swift in Sources */,
+				EDFC90FB2608CAD6003DA2AB /* RunningModel.swift in Sources */,
 				748E6B5325D99D2500374211 /* MyRecordListVC.swift in Sources */,
 				ED5630E125CD33A400A3A22C /* ReviewViewAllTVC.swift in Sources */,
 				EDDF9A5A25CA67C300F5F7FD /* FollowerHeaderTVC.swift in Sources */,
@@ -1656,6 +1663,7 @@
 				ED16C8A825BA9BB4003DD0F0 /* HomePopularCourseTVC.swift in Sources */,
 				EDDF9A8B25CA9AD300F5F7FD /* FollowerLatestCourseTVC.swift in Sources */,
 				ED16C8B225BAA4FD003DD0F0 /* HomeBookmarkCourseTVC.swift in Sources */,
+				EDFC90F826085B58003DA2AB /* ReviewRequest.swift in Sources */,
 				7463EF3925DC20FD0094F192 /* EditEmailVC.swift in Sources */,
 				7452E96925D2F2B10048DE2E /* MyRecordTVC.swift in Sources */,
 				ED16C8A325BA9478003DD0F0 /* HomeFollowerCVC.swift in Sources */,

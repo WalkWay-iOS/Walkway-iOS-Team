@@ -36,6 +36,7 @@ class MakeCourseVC: UIViewController {
         setMap()
         setLine()
         setUI()
+        setNotification()
     }
 }
 
@@ -255,5 +256,16 @@ extension MakeCourseVC {
         dvc.coordinates.append(contentsOf: coordinates)
         dvc.modalPresentationStyle = .fullScreen
         present(dvc, animated: true, completion: nil)
+    }
+}
+
+// MARK: Notification
+extension MakeCourseVC {
+    private func setNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(saveAction), name: NSNotification.Name("Save"), object: nil)
+    }
+    
+    @objc func saveAction() {
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
 }

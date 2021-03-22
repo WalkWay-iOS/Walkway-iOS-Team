@@ -238,6 +238,7 @@ extension CourseDetailVC {
         startButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
         startButton.centerYAnchor.constraint(equalTo: bottomView.centerYAnchor).isActive = true
         startButton.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        startButton.addTarget(self, action: #selector(touchUpStart), for: .touchUpInside)
     }
     
     private func setButtonColor() {
@@ -338,6 +339,27 @@ extension CourseDetailVC {
     
     @objc func scrollToPhoto() {
         detailTableView.scroll(to: .bottom)
+    }
+    
+    @objc func touchUpStart() {
+        print("시작하자")
+        let alert = UIAlertController(title: "함께 걸어보시겠어요?", message: "해당 ✨Walkway✨를 시작하면 반드시 후기를 적어야 합니다.\nWalkway와 함께 걸어보아요!", preferredStyle: UIAlertController.Style.alert)
+        let cancelAction = UIAlertAction(title: "나중에요", style: .cancel) { (Action) in
+            
+        }
+        let okAction = UIAlertAction(title: "출발해요", style: .default) { (Action) in
+            let dvc = UIStoryboard.init(name: "CourseRunningTab", bundle: nil)
+            guard let vc = dvc.instantiateViewController(identifier: "CourseWalkingVC") as? CourseWalkingVC else {
+                return
+            }
+            vc.titleText = self.courses.title
+            vc.courseId = self.courseId
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
+        }
+        alert.addAction(cancelAction)
+        alert.addAction(okAction)
+        present(alert, animated: true)
     }
 }
 

@@ -21,12 +21,12 @@ class HomeVC: UIViewController {
     var populars: [Course] = []
     
     override func viewWillAppear(_ animated: Bool) {
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setHome()
-        
     }
 }
 
