@@ -62,7 +62,9 @@ extension HomeLatestCourseCVC {
         let colors: [UIColor] = [.latestBurgundy, .latestBlue, .latestBrownRed]
         var index = 0
         
+        print("hashtag 들어와라 \(hashtag)")
         if !hashtag.isEmpty {
+            
             for btn in hashtagButtons {
                 btn.layer.cornerRadius = 11
                 btn.layer.shadowColor = UIColor.black.withAlphaComponent(0.5).cgColor
@@ -79,6 +81,7 @@ extension HomeLatestCourseCVC {
                 index += 1
             }
         }
+        index = 0
     }
     
     private func setStackView() {

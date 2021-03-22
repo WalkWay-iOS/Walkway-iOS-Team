@@ -184,7 +184,7 @@ extension CompleteCourseVC {
         timeLabel.font = .myBoldSystemFont(ofSize: 20)
         timeLabel.textColor = .bookmarkDarkBlue
         
-        hashtagLabel.text = "#해시태그 설정하기"
+        hashtagLabel.text = "#해시태그 설정하기(최소 3개)"
         hashtagLabel.font = .myMediumSystemFont(ofSize: 18)
         hashtagLabel.textColor = .black
         
