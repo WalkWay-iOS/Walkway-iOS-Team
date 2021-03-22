@@ -16,6 +16,8 @@ class HomeLatestCourseTVC: UITableViewCell {
     
     var delegate: cellPresentDelegate?
     
+    var latests: [Course] = []
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setUI()
@@ -29,13 +31,14 @@ class HomeLatestCourseTVC: UITableViewCell {
 // MARK: - CollectionViewDelegate
 extension HomeLatestCourseTVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        return latests.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeLatestCourseCVC.identifier, for: indexPath) as? HomeLatestCourseCVC else {
             return UICollectionViewCell()
         }
+        cell.getData(course: latests[indexPath.item])
         return cell
     }
 }
@@ -60,11 +63,13 @@ extension HomeLatestCourseTVC: UICollectionViewDelegateFlowLayout {
     }
 }
 
+// MARK: id 넣어주기
 extension HomeLatestCourseTVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let dvc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(identifier: "CourseDetailVC") as? CourseDetailVC else {
             return
         }
+        dvc.courseId = latests[indexPath.row].id
         delegate?.collectionViewCellTapedCourse(dvc: dvc)
     }
 }

@@ -6,18 +6,25 @@
 //
 
 import UIKit
+import Moya
 
 class DetailReviewVC: UIViewController {
+    private let authProvider = MoyaProvider<CourseService>(plugins: [NetworkLoggerPlugin(verbose: true)])
+    var review: ReviewDetailModel?
+    
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var navigationBarView: UIView!
     @IBOutlet weak var reviewTableView: UITableView!
     
-    var courseReviews: [Review] = []
+    var courseReviews: [Comments] = []
+    var courseId: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setReviewData()
-        setUI()
+        getReview()
+        setTableView()
+        setView()
+        setButton()
     }
 }
 
@@ -57,10 +64,9 @@ extension DetailReviewVC: UITableViewDelegate {
 // MARK: - UI
 extension DetailReviewVC {
     private func setUI() {
-        setTableView()
+        
         setTableViewNib()
-        setView()
-        setButton()
+ 
     }
     
     private func setTableView() {
@@ -95,22 +101,25 @@ extension DetailReviewVC {
     }
 }
 
-// MARK: - Data
+// MARK: Network
 extension DetailReviewVC {
-    private func setReviewData() {
-        courseReviews.append(contentsOf: [
-            Review(name: "tlsdbsdk0525", date: "20. 11. 12", rate: 4.3, content: "너무 좋습니다. 하나도 힘들지 않고 좋았습니다. 가족들이랑 같이 뛰었는데 정말 공기가 좋은 코스 더군요. 나중에 가족들 말고도 친구들하고도 함께 오고싶은 코스였습니다. 코스 한 바퀴 돌면서 좋은 생각도 들고 정말 좋은 코스였습니다. 코스 만들어주신 분 복 받으세요^^"),
-            Review(name: "goSeoul0913", date: "20. 12. 20", rate: 3.5, content: "좋은 길이었습니다. 사색에 잠겨 걸을 수 있는 길. 정말 바람이 좋더라구요. 바람이 진짜 좋아요. 최곱니다. 아주 최고예요"),
-            Review(name: "123087__", date: "21. 01. 15", rate: 4.5, content: "부모님이 좋아하셨습니다."),
-            Review(name: "tlsdbsdk0525", date: "20. 11. 12", rate: 4.3, content: "너무 좋습니다. 하나도 힘들지 않고 좋았습니다. 가족들이랑 같이 뛰었는데 정말 공기가 좋은 코스 더군요. 나중에 가족들 말고도 친구들하고도 함께 오고싶은 코스였습니다. 코스 한 바퀴 돌면서 좋은 생각도 들고 정말 좋은 코스였습니다. 코스 만들어주신 분 복 받으세요^^"),
-            Review(name: "goSeoul0913", date: "20. 12. 20", rate: 3.5, content: "좋은 길이었습니다. 사색에 잠겨 걸을 수 있는 길. 정말 바람이 좋더라구요. 바람이 진짜 좋아요. 최곱니다. 아주 최고예요"),
-            Review(name: "123087__", date: "21. 01. 15", rate: 4.5, content: "부모님이 좋아하셨습니다."),
-            Review(name: "tlsdbsdk0525", date: "20. 11. 12", rate: 4.3, content: "너무 좋습니다. 하나도 힘들지 않고 좋았습니다. 가족들이랑 같이 뛰었는데 정말 공기가 좋은 코스 더군요. 나중에 가족들 말고도 친구들하고도 함께 오고싶은 코스였습니다. 코스 한 바퀴 돌면서 좋은 생각도 들고 정말 좋은 코스였습니다. 코스 만들어주신 분 복 받으세요^^"),
-            Review(name: "goSeoul0913", date: "20. 12. 20", rate: 3.5, content: "좋은 길이었습니다. 사색에 잠겨 걸을 수 있는 길. 정말 바람이 좋더라구요. 바람이 진짜 좋아요. 최곱니다. 아주 최고예요"),
-            Review(name: "123087__", date: "21. 01. 15", rate: 4.5, content: "부모님이 좋아하셨습니다."),
-            Review(name: "tlsdbsdk0525", date: "20. 11. 12", rate: 4.3, content: "너무 좋습니다. 하나도 힘들지 않고 좋았습니다. 가족들이랑 같이 뛰었는데 정말 공기가 좋은 코스 더군요. 나중에 가족들 말고도 친구들하고도 함께 오고싶은 코스였습니다. 코스 한 바퀴 돌면서 좋은 생각도 들고 정말 좋은 코스였습니다. 코스 만들어주신 분 복 받으세요^^"),
-            Review(name: "goSeoul0913", date: "20. 12. 20", rate: 3.5, content: "좋은 길이었습니다. 사색에 잠겨 걸을 수 있는 길. 정말 바람이 좋더라구요. 바람이 진짜 좋아요. 최곱니다. 아주 최고예요"),
-            Review(name: "123087__", date: "21. 01. 15", rate: 4.5, content: "부모님이 좋아하셨습니다.")
-        ])
+    func getReview() {
+        guard let id = courseId else {return}
+        print(id)
+        authProvider.request( .commentDetail(id)) { response in
+            switch response {
+                case .success(let result):
+                    do {
+                        self.review = try result.map(ReviewDetailModel.self)
+                        self.courseReviews.append(contentsOf: self.review?.data.comment ?? [])
+                        self.setUI()
+                        self.reviewTableView.reloadData()
+                    } catch(let err) {
+                        print(err.localizedDescription)
+                    }
+                case .failure(let err):
+                    print(err.localizedDescription)
+            }
+        }
     }
 }

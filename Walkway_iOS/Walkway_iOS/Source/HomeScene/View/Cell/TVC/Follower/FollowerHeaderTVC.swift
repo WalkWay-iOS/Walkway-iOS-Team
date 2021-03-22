@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import Moya
 
 class FollowerHeaderTVC: UITableViewCell {
     static let identifier = "FollowerHeaderTVC"
+    
+    private let authProvider = MoyaProvider<FollowerServices>(plugins: [NetworkLoggerPlugin(verbose: true)])
     
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var profileImage: UIImageView!
@@ -21,7 +24,10 @@ class FollowerHeaderTVC: UITableViewCell {
     @IBOutlet weak var followerLabel: UILabel!
     @IBOutlet weak var followButton: UIButton!
     
-    var isFollowing =  false
+    var followerUserId: String?
+    
+    var isFollowing: Bool?
+    var followingNumber = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -62,19 +68,16 @@ extension FollowerHeaderTVC {
         followingTitleLabel.text = "팔로잉"
         followingTitleLabel.font = .myMediumSystemFont(ofSize: 13)
         
-        followingLabel.text = "17"
         followingLabel.font = .myBoldSystemFont(ofSize: 20)
         
         courseTitleLabel.text = "코스"
         courseTitleLabel.font = .myMediumSystemFont(ofSize: 13)
         
-        courseLabel.text = "9"
         courseLabel.font = .myBoldSystemFont(ofSize: 20)
         
         followerTitleLabel.text = "팔로워"
         followerTitleLabel.font = .myMediumSystemFont(ofSize: 13)
         
-        followerLabel.text = "132"
         followerLabel.font = .myBoldSystemFont(ofSize: 20)
     }
     
@@ -87,7 +90,7 @@ extension FollowerHeaderTVC {
     }
     
     private func followSetting() {
-        if isFollowing {
+        if isFollowing ?? false {
             followButton.setTitle("언팔로우", for: .normal)
             followButton.backgroundColor = .gray50
             followButton.setTitleColor(.bookmarkBlue, for: .normal)
@@ -102,19 +105,65 @@ extension FollowerHeaderTVC {
 // MARK: - Action
 extension FollowerHeaderTVC {
     @objc func touchUpFollow() {
-        if isFollowing {
+        if isFollowing ?? false {
             isFollowing = false
+            unfollow()
             followSetting()
+            followingNumber -= 1
+            followerLabel.text = "\(followingNumber)"
         } else {
             isFollowing = true
+            follow()
             followSetting()
+            followingNumber += 1
+            followerLabel.text = "\(followingNumber)"
         }
     }
 }
 
 // MARK: - Data
 extension FollowerHeaderTVC {
-    func setName(name: String) {
-        nameLabel.text = name
+    func setData(follower: Follower, courseNum: Int, isFollowing: Bool) {
+        nameLabel.text = follower.name
+        followingLabel.text = "\(follower.followingNumber)"
+        courseLabel.text = "\(courseNum)"
+        followerLabel.text = "\(follower.followerNumber)"
+        followingNumber = follower.followingNumber
+        
+        self.isFollowing = isFollowing
+        followSetting()
+    }
+}
+
+// MARK: Network
+extension FollowerHeaderTVC {
+    func follow() {
+        authProvider.request(.follow(self.followerUserId ?? "")) { response in
+            switch response {
+                case .success(let result):
+                    do {
+                        print(result)
+                    } catch(let err) {
+                        print(err.localizedDescription)
+                    }
+                case .failure(let err):
+                    print(err.localizedDescription)
+            }
+        }
+    }
+    
+    func unfollow() {
+        authProvider.request(.unfollow(self.followerUserId ?? "")) { response in
+            switch response {
+                case .success(let result):
+                    do {
+                        print(result)
+                    } catch(let err) {
+                        print(err.localizedDescription)
+                    }
+                case .failure(let err):
+                    print(err.localizedDescription)
+            }
+        }
     }
 }

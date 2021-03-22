@@ -84,17 +84,13 @@ extension BookmarkCourseTVC {
         titleLabel.text =  course.title
         distanceLabel.text = "\(course.distance)km"
         timeLabel.text = course.time
-        rateLabel.text = "\(course.rate)"
-        bookmarkLabel.text = "\(course.bookmark)"
+        rateLabel.text = "\(course.rateAverage)"
+        bookmarkLabel.text = "\(course.bookmarkCount)"
         
-        if course.isBookmark {
-            bookmarkEnable()
-        } else {
-            bookmarkDisable()
-        }
+        bookmarkDisable()
         
         if isHashtaged == false {
-            setHashtagButtons(buttons: course.hashtag ?? [])
+            setHashtagButtons(buttons: course.hashtag)
             isHashtaged = true
         }
     }
@@ -109,7 +105,7 @@ extension BookmarkCourseTVC {
         bookmarkButton.setImage(UIImage(systemName: "bookmark"), for: .normal)
     }
     
-    private func setHashtagButtons(buttons: [String]) {
+    private func setHashtagButtons(buttons: [Hashtag]) {
         let colors: [UIColor] = [.popularGreen, .popularBrown, .popularLightBrown, .bookmarkDarkBlue, .bookmarkLightBlue]
         var index = 0
         
@@ -136,7 +132,7 @@ extension BookmarkCourseTVC {
                 button.layer.shadowRadius = 2
                 
                 button.backgroundColor = colors[index]
-                button.setTitle(btn, for: .normal)
+                button.setTitle("#\(btn.keyword)", for: .normal)
                 button.titleLabel?.font = .boldSystemFont(ofSize: 10)
                 button.setTitleColor(.white, for: .normal)
                 button.contentEdgeInsets = UIEdgeInsets(top: 2, left: 8, bottom: 2, right: 8)

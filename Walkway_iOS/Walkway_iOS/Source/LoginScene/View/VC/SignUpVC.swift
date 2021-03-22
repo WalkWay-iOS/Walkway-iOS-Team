@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import Moya
 
 class SignUpVC: UIViewController {
+    private let authProvider = MoyaProvider<LoginServices>(plugins: [NetworkLoggerPlugin(verbose: true)])
+    var userData: SignupModel?
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var emailWarningLabel: UILabel!
     @IBOutlet weak var passwordWarningLabel: UILabel!
@@ -221,6 +225,7 @@ extension SignUpVC {
 // MARK: - Action
 extension SignUpVC {
     @objc func touchUpSignUp() {
+        signUp()
         let alert = UIAlertController(title: "가입을 축하합니다", message: "Walkway의 회원이 되신걸 축하합니다.\nWalkway와 함께 걸어봐요", preferredStyle: UIAlertController.Style.alert)
         let okAction = UIAlertAction(title: "확인했어요", style: .default) { (Action) in
             self.navigationController?.popViewController(animated: true)
@@ -230,17 +235,14 @@ extension SignUpVC {
     }
     
     @objc func changeIDTextFieldUI(){
-        print("??")
         checkValidateUI()
     }
     
     @objc func changeNameTextFieldUI(){
-        print("??")
         checkValidateUI()
     }
     
     @objc func changeEmailTextfiledUI(){
-        print("하고있ㄴㄴ겨?")
         if !(emailTextField.text!.validateEmail()) {
             emailWarningLabel.text = "사용 불가능한 이메일이에요!"
         }
@@ -251,7 +253,6 @@ extension SignUpVC {
     }
     
     @objc func changePWTextfiledUI(){
-        print("뭐야")
         if !(passwordTextField.text!.validatePassword()) {
             passwordWarningLabel.text = "영어와 숫자 조합으로 8자리 이상 입력해 주세요!"
         }
@@ -269,7 +270,6 @@ extension SignUpVC {
     }
     
     @objc func checkPWTextfiledUI(){
-        print("짜증나네")
         if !(passwordTextField.text == confirmPWTextField.text) {
             confirmWarningLabel.text = "비밀번호가 서로 맞지 않아요!"
         }
@@ -277,5 +277,25 @@ extension SignUpVC {
             confirmWarningLabel.text = ""
         }
         checkValidateUI()
+    }
+}
+
+// MARK: Network
+extension SignUpVC {
+    func signUp() {
+        let param = SignupRequest.init(self.nameTextField.text!, self.emailTextField.text!, self.idTextField.text!, self.passwordTextField.text!)
+        print(param)
+        authProvider.request(.signUp(param: param)) { response in
+            switch response {
+                case .success(let result):
+                    do {
+                        self.userData = try result.map(SignupModel.self)
+                    } catch(let err) {
+                        print(err.localizedDescription)
+                    }
+                case .failure(let err):
+                    print(err.localizedDescription)
+            }
+        }
     }
 }

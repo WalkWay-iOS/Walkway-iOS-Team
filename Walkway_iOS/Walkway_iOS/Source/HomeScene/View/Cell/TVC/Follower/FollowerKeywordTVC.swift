@@ -14,7 +14,7 @@ class FollowerKeywordTVC: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var keywordCollectionView: UICollectionView!
     
-    var keywords: [String] = ["남산", "서울대공원", "밤", "밤산책", "신나요"]
+    var keywords: [Hashtag] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,7 +36,7 @@ extension FollowerKeywordTVC: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FollowerKeywordCVC.identifier, for: indexPath) as? FollowerKeywordCVC else {
             return UICollectionViewCell()
         }
-        cell.setLabelText(text: keywords[indexPath.row])
+        cell.setLabelText(text: keywords[indexPath.row].keyword)
         return cell
     }
 }
@@ -89,7 +89,14 @@ extension FollowerKeywordTVC {
 
 // MARK: - Data
 extension FollowerKeywordTVC {
-    func setName(name: String) {
+    func setData(name: String,courses: [Course]) {
         titleLabel.text = "\(name) 님의 대표키워드"
+        
+        for course in courses {
+            var tags = course.hashtag
+            for tag in tags {
+                keywords.append(tag)
+            }
+        }
     }
 }

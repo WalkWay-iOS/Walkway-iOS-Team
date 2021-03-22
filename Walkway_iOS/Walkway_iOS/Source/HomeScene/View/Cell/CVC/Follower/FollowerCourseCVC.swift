@@ -43,12 +43,10 @@ extension FollowerCourseCVC {
     private func setLabel() {
         titleLabel.font = .myBoldSystemFont(ofSize: 15)
         titleLabel.textColor = .white
-        
-        distanceLabel.text = "1.3km"
+
         distanceLabel.font = .myRegularSystemFont(ofSize: 13)
         distanceLabel.textColor = .gray30
         
-        timeLabel.text = "1시간 35분"
         timeLabel.font = .myRegularSystemFont(ofSize: 13)
         timeLabel.textColor = .gray30
     }
@@ -56,7 +54,9 @@ extension FollowerCourseCVC {
 
 // MARK: - Data
 extension FollowerCourseCVC {
-    func setTitle(title: String) {
-        titleLabel.text = title
+    func setTitle(course: Course) {
+        titleLabel.text = course.title
+        distanceLabel.text = "\(course.distance)km"
+        timeLabel.text = course.time
     }
 }

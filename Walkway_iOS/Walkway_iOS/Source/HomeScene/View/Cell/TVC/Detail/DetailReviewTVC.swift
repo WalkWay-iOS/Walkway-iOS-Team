@@ -19,13 +19,13 @@ class DetailReviewTVC: UITableViewCell {
     
     var delegate: detailDelegate?
     
-    var courseReviews: [Review] = []
+    var courseReviews: [Comments] = []
     var reviewCounter = 0
+    var rate: Double = 0.0
+    var isFirst = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setReviewData()
-        setUI()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -36,7 +36,7 @@ class DetailReviewTVC: UITableViewCell {
 // MARK: - TableViewDelegate
 extension DetailReviewTVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return reviewCounter
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -110,8 +110,6 @@ extension DetailReviewTVC {
     }
     
     private func setLabel() {
-        reviewCounter = courseReviews.count
-        
         if reviewCounter > 99 {
             titleLabel.text = "코스 참가 후기(99+)"
         } else {
@@ -121,6 +119,7 @@ extension DetailReviewTVC {
         
         rateLabel.font = .myRegularSystemFont(ofSize: 15)
         rateLabel.textColor = .gray70
+        rateLabel.text = "⭐️\(rate)/5.0"
     }
     
     private func setButton() {
@@ -129,33 +128,18 @@ extension DetailReviewTVC {
         viewAllButton.setTitleColor(.gray70, for: .normal)
         viewAllButton.addTarget(self, action: #selector(touchUpViewAll), for: .touchUpInside)
     }
-}
-
-// MARK: - Data
-extension DetailReviewTVC {
-    func setRate(rate: Float, isHome: Bool) {
-        if isHome {
-            rateLabel.text = "⭐️4.8/5.0"
-        } else {
-            rateLabel.text = "⭐️\(rate)/5.0"
-        }
-    }
     
-    private func setReviewData() {
-        courseReviews.append(contentsOf: [
-            Review(name: "tlsdbsdk0525", date: "20. 11. 12", rate: 4.3, content: "너무 좋습니다. 하나도 힘들지 않고 좋았습니다. 가족들이랑 같이 뛰었는데 정말 공기가 좋은 코스 더군요. 나중에 가족들 말고도 친구들하고도 함께 오고싶은 코스였습니다. 코스 한 바퀴 돌면서 좋은 생각도 들고 정말 좋은 코스였습니다. 코스 만들어주신 분 복 받으세요^^"),
-            Review(name: "goSeoul0913", date: "20. 12. 20", rate: 3.5, content: "좋은 길이었습니다. 사색에 잠겨 걸을 수 있는 길. 정말 바람이 좋더라구요. 바람이 진짜 좋아요. 최곱니다. 아주 최고예요"),
-            Review(name: "123087__", date: "21. 01. 15", rate: 4.5, content: "부모님이 좋아하셨습니다."),
-            Review(name: "tlsdbsdk0525", date: "20. 11. 12", rate: 4.3, content: "너무 좋습니다. 하나도 힘들지 않고 좋았습니다. 가족들이랑 같이 뛰었는데 정말 공기가 좋은 코스 더군요. 나중에 가족들 말고도 친구들하고도 함께 오고싶은 코스였습니다. 코스 한 바퀴 돌면서 좋은 생각도 들고 정말 좋은 코스였습니다. 코스 만들어주신 분 복 받으세요^^"),
-            Review(name: "goSeoul0913", date: "20. 12. 20", rate: 3.5, content: "좋은 길이었습니다. 사색에 잠겨 걸을 수 있는 길. 정말 바람이 좋더라구요. 바람이 진짜 좋아요. 최곱니다. 아주 최고예요"),
-            Review(name: "123087__", date: "21. 01. 15", rate: 4.5, content: "부모님이 좋아하셨습니다."),
-            Review(name: "tlsdbsdk0525", date: "20. 11. 12", rate: 4.3, content: "너무 좋습니다. 하나도 힘들지 않고 좋았습니다. 가족들이랑 같이 뛰었는데 정말 공기가 좋은 코스 더군요. 나중에 가족들 말고도 친구들하고도 함께 오고싶은 코스였습니다. 코스 한 바퀴 돌면서 좋은 생각도 들고 정말 좋은 코스였습니다. 코스 만들어주신 분 복 받으세요^^"),
-            Review(name: "goSeoul0913", date: "20. 12. 20", rate: 3.5, content: "좋은 길이었습니다. 사색에 잠겨 걸을 수 있는 길. 정말 바람이 좋더라구요. 바람이 진짜 좋아요. 최곱니다. 아주 최고예요"),
-            Review(name: "123087__", date: "21. 01. 15", rate: 4.5, content: "부모님이 좋아하셨습니다."),
-            Review(name: "tlsdbsdk0525", date: "20. 11. 12", rate: 4.3, content: "너무 좋습니다. 하나도 힘들지 않고 좋았습니다. 가족들이랑 같이 뛰었는데 정말 공기가 좋은 코스 더군요. 나중에 가족들 말고도 친구들하고도 함께 오고싶은 코스였습니다. 코스 한 바퀴 돌면서 좋은 생각도 들고 정말 좋은 코스였습니다. 코스 만들어주신 분 복 받으세요^^"),
-            Review(name: "goSeoul0913", date: "20. 12. 20", rate: 3.5, content: "좋은 길이었습니다. 사색에 잠겨 걸을 수 있는 길. 정말 바람이 좋더라구요. 바람이 진짜 좋아요. 최곱니다. 아주 최고예요"),
-            Review(name: "123087__", date: "21. 01. 15", rate: 4.5, content: "부모님이 좋아하셨습니다.")
-        ])
+    func setData(comments: [Comments], rate: Double) {
+        courseReviews.removeAll()
+        courseReviews.append(contentsOf: comments)
+        if isFirst == false {
+            reviewCounter = courseReviews.count
+            isFirst = true
+        }
+        self.rate = rate
+        print(reviewCounter)
+        
+        setUI()
     }
 }
 

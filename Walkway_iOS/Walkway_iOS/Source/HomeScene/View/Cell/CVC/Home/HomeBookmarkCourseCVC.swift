@@ -18,6 +18,8 @@ class HomeBookmarkCourseCVC: UICollectionViewCell {
     @IBOutlet weak var buttonStackView: UIStackView!
     @IBOutlet var hashtagButtons: [UIButton]!
     
+    var hashtag: [Hashtag] = []
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setUI()
@@ -29,7 +31,6 @@ extension HomeBookmarkCourseCVC {
     private func setUI() {
         setBackground()
         setLabel()
-        setButtons()
         setStackView()
     }
     
@@ -46,43 +47,53 @@ extension HomeBookmarkCourseCVC {
     }
     
     private func setLabel() {
-        titleLabel.text = "광화문 걸어보기"
         titleLabel.font = .myBoldSystemFont(ofSize: 15)
         titleLabel.textColor = .white
         titleLabel.widthAnchor.constraint(lessThanOrEqualTo: self.widthAnchor, constant: -self.frame.size.width/6).isActive = true
         
-        timeLabel.text = "1시간"
         timeLabel.font = .myRegularSystemFont(ofSize: 11)
         timeLabel.textColor = .white
         
-        distanceLabel.text = "1km"
         distanceLabel.font = .myRegularSystemFont(ofSize: 11)
         distanceLabel.textColor = .white
     }
     
     private func setButtons() {
-        let title: [String] = ["#야경", "#경복궁", "#안동역"]
         let colors: [UIColor] = [.popularGreen, .popularBrown, .popularDarkBrown]
         var index = 0
         
-        for btn in hashtagButtons {
-            btn.layer.cornerRadius = 11
-            btn.layer.shadowColor = UIColor.black.withAlphaComponent(0.5).cgColor
-            btn.layer.shadowOpacity = 0.8
-            btn.layer.shadowOffset = CGSize(width: 1, height: 2)
-            btn.layer.shadowRadius = 2
-            
-            btn.setTitle(title[index], for: .normal)
-            btn.titleLabel?.font = .myMediumSystemFont(ofSize: 12)
-            btn.backgroundColor = colors[index]
-            btn.contentEdgeInsets = UIEdgeInsets(top: 2, left: 8, bottom: 2, right: 8)
-            btn.setTitleColor(.white, for: .normal)
-            btn.isUserInteractionEnabled = false
-            index += 1
+        if !hashtag.isEmpty {
+            for btn in hashtagButtons {
+                btn.layer.cornerRadius = 11
+                btn.layer.shadowColor = UIColor.black.withAlphaComponent(0.5).cgColor
+                btn.layer.shadowOpacity = 0.8
+                btn.layer.shadowOffset = CGSize(width: 1, height: 2)
+                btn.layer.shadowRadius = 2
+                
+                btn.setTitle("#\(hashtag[index].keyword)", for: .normal)
+                btn.titleLabel?.font = .myMediumSystemFont(ofSize: 12)
+                btn.backgroundColor = colors[index]
+                btn.contentEdgeInsets = UIEdgeInsets(top: 2, left: 8, bottom: 2, right: 8)
+                btn.setTitleColor(.white, for: .normal)
+                btn.isUserInteractionEnabled = false
+                index += 1
+            }
         }
     }
     
     private func setStackView() {
         buttonStackView.widthAnchor.constraint(lessThanOrEqualTo: self.widthAnchor, constant: -20).isActive = true
+    }
+}
+
+extension HomeBookmarkCourseCVC {
+    func getData(course: Course) {
+        titleLabel.text = course.title
+        timeLabel.text = course.time
+        distanceLabel.text = "\(course.distance)km"
+        
+        hashtag.append(contentsOf: course.hashtag)
+        print("안에 있는 hashtag: \(hashtag)")
+        setButtons()
     }
 }

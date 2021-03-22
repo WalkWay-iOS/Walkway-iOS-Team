@@ -61,14 +61,21 @@ extension ReviewViewAllTVC {
 
 // MARK: - Data
 extension ReviewViewAllTVC {
-    func setData(review: Review) {
-        nameLabel.text = review.name
-        dateLabel.text = review.date
-        rateLabel.text = "⭐️\(review.rate)"
+    func setData(review: Comments) {
+        nameLabel.text = review.userName
         contentLabel.text = review.content
+        rateLabel.text = "⭐️\(review.rate)"
         
-        let start = String.Index(encodedOffset: 0)
-        let capitalLetter = review.name[start].uppercased()
-        profileButton.setTitle("\(capitalLetter)", for: .normal)
+        let upper = review.userName.uppercased()
+        let index = String.Index(encodedOffset: 0)
+        let upperLetter = upper[index]
+        profileButton.setTitle("\(upperLetter)", for: .normal)
+        
+        let removeDate = review.createdAt.split(separator: "-")
+        let yearString = removeDate[0].split(separator: "0")
+        let dayString = removeDate[2].split(separator: "T")
+        let dateString = "\(yearString[1])\(removeDate[1])\(dayString[0])"
+        
+        dateLabel.text = dateString
     }
 }
