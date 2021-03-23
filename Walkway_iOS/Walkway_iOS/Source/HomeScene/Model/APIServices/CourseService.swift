@@ -9,7 +9,7 @@ import Foundation
 import Moya
 
 enum CourseService {
-    case create(param: CourseCreateRequest)
+    case create(param: ReviewRequest)
     case record(ID: String, param: RecordRequest)
     case detail(String)
     case commentDetail(String)
@@ -72,8 +72,7 @@ extension CourseService: TargetType {
     case .create(let param):
         return .requestJSONEncodable(param)
     case .record(let ID, let param):
-        let encoded = try! JSONEncoder().encode(param)
-        return .requestCompositeData(bodyData: encoded, urlParameters: ["courseId": ID])
+        return .requestJSONEncodable(param)
     }
   }
 

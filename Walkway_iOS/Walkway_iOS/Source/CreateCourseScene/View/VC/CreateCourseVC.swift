@@ -30,6 +30,7 @@ class CreateCourseVC: UIViewController {
     let anotherStartMarker = GMSMarker()
     let anotherDestinationMarker = GMSMarker()
     let geocoder = GMSGeocoder()
+    let locationManager = CLLocationManager()
     
     var zoomValue: Float = 17.0
     var isStart: Bool = true
@@ -48,7 +49,7 @@ class CreateCourseVC: UIViewController {
 }
 
 // MARK: - MAP
-extension CreateCourseVC: GMSMapViewDelegate {
+extension CreateCourseVC: GMSMapViewDelegate, CLLocationManagerDelegate {
     private func setMap() {
         camera = GMSCameraPosition.camera(withLatitude: 37.54643, longitude: 126.96482, zoom: zoomValue)
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
@@ -57,6 +58,7 @@ extension CreateCourseVC: GMSMapViewDelegate {
         mapView.settings.scrollGestures = true
         mapView.settings.zoomGestures = true
         mapView.delegate = self
+        mapView.isMyLocationEnabled = true
         
         view = mapView
                 

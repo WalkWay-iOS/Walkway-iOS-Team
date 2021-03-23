@@ -25,22 +25,21 @@ class CourseRecordInfoTVC: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
 }
 
 // MARK: - UI
 extension CourseRecordInfoTVC {
     func setUI() {
         setLabel()
+        getText()
     }
     
     func setLabel() {
         recordDateandTimeLabel.font = .myBoldSystemFont(ofSize: 13)
         recordDateandTimeLabel.textColor = .bookmarkDarkBlue
-        recordDateandTimeLabel.text = "2020/12/10 - 19:14"
+        recordDateandTimeLabel.text = ""
         
         recordCourseNameLabel.font = .myBoldSystemFont(ofSize: 17)
-        recordCourseNameLabel.text = "관악산 달빛 둘레길"
         
         recordCourseDistanceTitleLabel.font = .myBoldSystemFont(ofSize: 13)
         recordCourseDistanceTitleLabel.textColor = .bookmarkDarkBlue
@@ -54,6 +53,23 @@ extension CourseRecordInfoTVC {
         recordCourseDistanceLabel.text = "0.03"
         
         recordCourseTimeLabel.font = .myBoldSystemFont(ofSize: 40)
-        recordCourseTimeLabel.text = "02:09"
+    }
+    
+    func getText() {
+        let userDefault = UserDefaults.standard
+        
+        if let time = userDefault.string(forKey: "time") {
+            recordCourseTimeLabel.text = time
+        }
+        
+        if let title = userDefault.string(forKey: "title") {
+            recordCourseNameLabel.text = title
+        }
+        
+        if let distance = userDefault.object(forKey: "distance") {
+            let num = distance as! Double
+            print("disNum: \(num)")
+            recordCourseDistanceLabel.text = "\(num)"
+        }
     }
 }

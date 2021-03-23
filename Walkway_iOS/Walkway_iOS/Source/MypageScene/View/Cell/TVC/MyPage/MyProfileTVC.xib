@@ -60,7 +60,6 @@
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpk-rr-f5Q">
                         <rect key="frame" x="142.5" y="77.5" width="90" height="90"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="90" id="Cmc-O6-t6z"/>
                             <constraint firstAttribute="width" constant="90" id="nx6-aU-wwu"/>

@@ -40,10 +40,15 @@ class CompleteCourseVC: UIViewController {
     var coordinates: [CLLocationCoordinate2D] = []
     var isMakeCourse = false
     
+    var realTime: String?
+    var realDistance: Double?
+    var titles: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
         getDistanceAndTime()
+        setNotification()
     }
 }
 
@@ -122,6 +127,8 @@ extension CompleteCourseVC: UITextFieldDelegate {
         if textField.text!.count >= 15 && range.length == 0 && range.location < 15 {
             return false
         }
+        
+        titles = textField.text
         
         return newLength <= 15
     }
@@ -264,6 +271,7 @@ extension CompleteCourseVC {
                 index += 1
                 totalDistance += distance
             }
+            realDistance = totalDistance / 1000
             distanceLabel.text = String(format: "%.02fkm", totalDistance/1000)
             print("거리\(totalDistance)")
             let estimatedTime = (totalDistance / 1000) / min
@@ -272,17 +280,21 @@ extension CompleteCourseVC {
                 let realMin: Int = Int(estimatedTime.truncatingRemainder(dividingBy: min))
                 if realMin == 0 {
                     timeLabel.text = "\(hour)시간"
+                    realTime = "\(hour)시간"
                 } else {
                     timeLabel.text = "\(hour)시간 \(realMin)분"
+                    realTime = "\(hour)시간 \(realMin)분"
                 }
             } else {
                 timeLabel.text = "\(Int(estimatedTime))분"
+                realTime = "\(Int(estimatedTime))분"
             }
             print("시간\(estimatedTime)")
         } else {
             let myLocation = CLLocation(latitude: coordinates[0].latitude, longitude: coordinates[0].longitude)
             let myBuddysLocation = CLLocation(latitude: coordinates[1].latitude, longitude: coordinates[1].longitude)
             let distance = myLocation.distance(from: myBuddysLocation) / 1000
+            realDistance = distance
             distanceLabel.text = String(format: "%.02fkm", distance)
             
             let estimatedTime = distance / min
@@ -291,11 +303,14 @@ extension CompleteCourseVC {
                 let realMin: Int = Int(estimatedTime.truncatingRemainder(dividingBy: min))
                 if realMin == 0 {
                     timeLabel.text = "\(hour)시간"
+                    realTime = "\(hour)시간"
                 } else {
                     timeLabel.text = "\(hour)시간 \(realMin)분"
+                    realTime = "\(hour)시간 \(realMin)분"
                 }
             } else {
                 timeLabel.text = "\(Int(estimatedTime))분"
+                realTime = "\(Int(estimatedTime))분"
             }
             print("시간\(estimatedTime)")
         }
@@ -306,10 +321,10 @@ extension CompleteCourseVC {
 extension CompleteCourseVC {
     @objc func touchUpSave() {
         print("다음")
-        // MARK: 넘기기 title, hashtag, distance, hashtag, position, placeName, time
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "ReviewVC") as? ReviewVC else {
             return
         }
+        vc.setData(title: titleTextField.text!, hashtag: hashtags, distance: realDistance ?? 0.0, position: coordinates, time: realTime ?? "0시간")
         vc.modalTransitionStyle = .crossDissolve
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
@@ -351,5 +366,16 @@ extension CompleteCourseVC {
         alert.addAction(camera)
         alert.addAction(cancel)
         present(alert, animated: true, completion: nil)
+    }
+}
+
+// MARK: Notification
+extension CompleteCourseVC {
+    private func setNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(saveAction), name: NSNotification.Name("Save"), object: nil)
+    }
+    
+    @objc func saveAction() {
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
 }

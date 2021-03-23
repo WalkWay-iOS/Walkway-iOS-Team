@@ -32,20 +32,31 @@
                                 <color key="pageIndicatorTintColor" systemColor="systemOrangeColor"/>
                                 <color key="currentPageIndicatorTintColor" systemColor="systemIndigoColor"/>
                             </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9pv-qQ-MuE">
+                                <rect key="frame" x="308" y="492" width="55" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="9EX-cM-Spg"/>
+                                    <constraint firstAttribute="width" constant="55" id="BCJ-Zh-D1S"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ECD-3O-b48"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="x0c-Vo-9fy" firstAttribute="leading" secondItem="ECD-3O-b48" secondAttribute="leading" id="0kP-9L-2Zi"/>
                             <constraint firstItem="P0T-cf-brB" firstAttribute="centerX" secondItem="TOH-fY-vxT" secondAttribute="centerX" id="ASR-iD-EAH"/>
+                            <constraint firstItem="ECD-3O-b48" firstAttribute="bottom" secondItem="9pv-qQ-MuE" secondAttribute="bottom" constant="120" id="IuD-B1-NR5"/>
                             <constraint firstItem="ECD-3O-b48" firstAttribute="trailing" secondItem="x0c-Vo-9fy" secondAttribute="trailing" id="lWn-Lp-LgT"/>
                             <constraint firstAttribute="bottom" secondItem="x0c-Vo-9fy" secondAttribute="bottom" id="rAA-4I-dU8"/>
                             <constraint firstItem="x0c-Vo-9fy" firstAttribute="top" secondItem="TOH-fY-vxT" secondAttribute="top" id="smR-mn-v2c"/>
                             <constraint firstItem="ECD-3O-b48" firstAttribute="bottom" secondItem="P0T-cf-brB" secondAttribute="bottom" constant="20" id="xED-5r-Ul9"/>
+                            <constraint firstItem="ECD-3O-b48" firstAttribute="trailing" secondItem="9pv-qQ-MuE" secondAttribute="trailing" constant="12" id="xgf-VN-uxR"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="courseWalkingCollectionView" destination="x0c-Vo-9fy" id="L0v-oY-y0r"/>
+                        <outlet property="musicButton" destination="9pv-qQ-MuE" id="H2E-D6-y7z"/>
                         <outlet property="pageController" destination="P0T-cf-brB" id="emD-df-pWd"/>
                     </connections>
                 </viewController>
@@ -193,9 +204,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cl4-W9-CmE">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="walkway" translatesAutoresizingMaskIntoConstraints="NO" id="cl4-W9-CmE">
                                 <rect key="frame" x="37.5" y="96" width="300" height="150"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="8Vh-97-ERn"/>
                                     <constraint firstAttribute="width" constant="300" id="DEf-a5-BOL"/>
@@ -305,6 +315,7 @@
     <resources>
         <image name="introImage" width="194" height="43"/>
         <image name="introimage2" width="192" height="117"/>
+        <image name="walkway" width="444" height="367"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

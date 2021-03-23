@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eZi-lb-IfE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PDs-KY-dtL">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -239,6 +239,16 @@
                                 <rect key="frame" x="184" y="425" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxy-tq-oaL">
+                                <rect key="frame" x="335" y="206" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLY-ra-JbW">
+                                <rect key="frame" x="276" y="199.66666666666666" width="54" height="34"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fi6-bV-9Tc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -249,7 +259,11 @@
                             <constraint firstItem="qxl-an-PtP" firstAttribute="top" secondItem="dqp-Ip-GKy" secondAttribute="bottom" constant="63" id="8LY-jd-uBC"/>
                             <constraint firstItem="SMC-oK-wPW" firstAttribute="centerX" secondItem="kuf-mc-P5a" secondAttribute="centerX" id="Lqx-b3-b0T"/>
                             <constraint firstItem="VLi-g7-YeK" firstAttribute="top" secondItem="Fi6-bV-9Tc" secondAttribute="top" constant="26" id="Np2-um-Efd"/>
+                            <constraint firstItem="VLY-ra-JbW" firstAttribute="centerY" secondItem="lxy-tq-oaL" secondAttribute="centerY" id="OAu-I4-yPI"/>
+                            <constraint firstItem="lxy-tq-oaL" firstAttribute="leading" secondItem="VLY-ra-JbW" secondAttribute="trailing" constant="5" id="Oad-Ne-f38"/>
                             <constraint firstItem="qxl-an-PtP" firstAttribute="leading" secondItem="dqp-Ip-GKy" secondAttribute="leading" id="Ovl-U5-RJt"/>
+                            <constraint firstItem="2hW-7e-L2z" firstAttribute="top" secondItem="lxy-tq-oaL" secondAttribute="bottom" constant="10" id="ahH-ob-nf1"/>
+                            <constraint firstItem="Fi6-bV-9Tc" firstAttribute="trailing" secondItem="lxy-tq-oaL" secondAttribute="trailing" constant="37" id="f26-ZJ-5qD"/>
                             <constraint firstItem="dqp-Ip-GKy" firstAttribute="top" secondItem="Fi6-bV-9Tc" secondAttribute="top" constant="10" id="fcP-8N-lG2"/>
                             <constraint firstItem="2hW-7e-L2z" firstAttribute="top" secondItem="VLi-g7-YeK" secondAttribute="bottom" constant="50" id="hxn-IN-hJf"/>
                             <constraint firstItem="xwJ-kT-7OB" firstAttribute="leading" secondItem="Fi6-bV-9Tc" secondAttribute="leading" constant="50" id="idT-ty-OzR"/>
@@ -264,6 +278,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="fYi-XH-5MT"/>
                     <connections>
+                        <outlet property="autoLoginButton" destination="VLY-ra-JbW" id="Dx1-im-2gi"/>
+                        <outlet property="autoLoginLabel" destination="lxy-tq-oaL" id="XnL-XM-7Dz"/>
                         <outlet property="closeButton" destination="dqp-Ip-GKy" id="ts6-Rd-Om5"/>
                         <outlet property="findButton" destination="SMC-oK-wPW" id="cBY-Jh-Q1l"/>
                         <outlet property="idTextField" destination="2hW-7e-L2z" id="lNN-yN-jD9"/>
@@ -392,10 +408,38 @@
             </objects>
             <point key="canvasLocation" x="3780" y="148"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--StartVC-->
+        <scene sceneID="vXT-wc-EjQ">
+            <objects>
+                <viewController id="PDs-KY-dtL" customClass="StartVC" customModule="Walkway_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dPf-FM-eXh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="walkway" translatesAutoresizingMaskIntoConstraints="NO" id="ekt-E3-ZWS">
+                                <rect key="frame" x="65" y="152" width="310" height="228"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="228" id="M4W-js-XsD"/>
+                                    <constraint firstAttribute="width" constant="310" id="xIT-nZ-bBk"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="w9b-jx-Nb6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ekt-E3-ZWS" firstAttribute="leading" secondItem="w9b-jx-Nb6" secondAttribute="leading" constant="65" id="t8B-bM-OS2"/>
+                            <constraint firstItem="ekt-E3-ZWS" firstAttribute="top" secondItem="w9b-jx-Nb6" secondAttribute="top" constant="152" id="zPN-9K-5qz"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ox-Ob-ox1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-339.13043478260875" y="-677.44565217391312"/>
+        </scene>
+        <!--startNavi-->
         <scene sceneID="STY-Ih-TtL">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eZi-lb-IfE" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="startNavi" title="startNavi" automaticallyAdjustsScrollViewInsets="NO" id="eZi-lb-IfE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pcs-CR-PA9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -432,6 +476,7 @@
     <resources>
         <image name="helloPage" width="444" height="468"/>
         <image name="introimage2" width="192" height="117"/>
+        <image name="walkway" width="444" height="367"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

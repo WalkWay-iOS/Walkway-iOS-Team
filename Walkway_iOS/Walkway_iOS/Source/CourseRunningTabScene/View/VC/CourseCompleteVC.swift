@@ -6,14 +6,23 @@
 //
 
 import UIKit
+import Moya
 
 class CourseCompleteVC: UIViewController {
+    private let authProvider = MoyaProvider<CourseService>(plugins: [NetworkLoggerPlugin(verbose: true)])
 
     @IBOutlet var saveButton: UIButton!
     @IBOutlet var userNameLabel: UILabel!
     @IBOutlet var courseRecordTableView: UITableView!
     
     var delegate: walkingCourseMemoPresentDelegate?
+    var courseId: String?
+    
+    var time: String = ""
+    var distance: Double = 0.0
+    var strength: Double = 0.0
+    var rate: Double = 0.0
+    var content: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,13 +113,33 @@ extension CourseCompleteVC {
     func setLabel() {
         userNameLabel.font = .myBoldSystemFont(ofSize: 13)
         userNameLabel.textColor = .bookmarkDarkBlue
-        userNameLabel.text = "달려가자 님의 Walkway"
+        userNameLabel.text = "🌈 Walkway와 함께한 기록입니다"
     }
     
     func setButton() {
         saveButton.setTitle("저장", for: .normal)
         saveButton.setTitleColor(.bookmarkDarkBlue, for: .normal)
         saveButton.titleLabel?.font = .myBoldSystemFont(ofSize: 15)
+        saveButton.addTarget(self, action: #selector(touchUpSave), for: .touchUpInside)
+    }
+    
+    @objc func touchUpSave() {
+        print("저장하자")
+        let alert = UIAlertController(title: "기록을 저장하시겠어요?", message: "해당 ✨Walkway✨를 당신의 기록에 저장해둘게요.", preferredStyle: UIAlertController.Style.alert)
+        let cancelAction = UIAlertAction(title: "아니오", style: .cancel) { (Action) in
+            
+        }
+        let okAction = UIAlertAction(title: "네", style: .default) { (Action) in
+            self.sendRecord()
+            self.dismiss(animated: true, completion: nil)
+        }
+        alert.addAction(cancelAction)
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+    
+    private func setNotification() {
+        NotificationCenter.default.post(name: NSNotification.Name("recordSave"), object: nil)
     }
 }
 
@@ -118,5 +147,61 @@ extension CourseCompleteVC {
 extension CourseCompleteVC: walkingCourseMemoPresentDelegate {
     func buttonTappedMemo(dvc: CourseMemoVC) {
         present(dvc, animated: true, completion: nil)
+    }
+}
+
+// MARK: Network
+extension CourseCompleteVC {
+    func sendRecord() {
+        setNotification()
+        let userDefault = UserDefaults.standard
+        
+        if let time = userDefault.string(forKey: "time") {
+            let times = time.split(separator: ":")
+            var timeString = ""
+            if times[0] == "00" {
+                let min = Int(times[1])
+                print(min)
+                timeString = "\(min ?? 1)분"
+            } else {
+                let hour = Int(times[0])
+                let min = Int(times[1])
+                timeString = "\(hour ?? 1)시간 \(min ?? 1)분"
+            }
+            self.time = timeString
+        }
+        
+        if let distances = userDefault.object(forKey: "distance") {
+            let num = distances as! Double
+            self.distance = num
+        }
+        
+        if let strength = userDefault.object(forKey: "strength") {
+            let str = strength as! Double
+            self.strength = str
+        }
+        
+        if let getrate = userDefault.object(forKey: "rate") {
+            let rates = getrate as! Double
+            rate = rates
+        }
+        
+        if let review = userDefault.string(forKey: "content") {
+            content = review
+        }
+        
+        let param = RecordRequest.init(distance, time, content, rate, strength)
+        print(param)
+        authProvider.request(.record(ID: self.courseId ?? "", param: param)) { response in
+            switch response {
+            case .success(let result):
+                do {
+                } catch(let err) {
+                    print(err.localizedDescription)
+                }
+            case .failure(let err):
+                print(err.localizedDescription)
+            }
+        }
     }
 }

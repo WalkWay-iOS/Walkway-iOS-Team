@@ -36,7 +36,10 @@ class DetailReviewTVC: UITableViewCell {
 // MARK: - TableViewDelegate
 extension DetailReviewTVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return reviewCounter
+        if reviewCounter <= 3 {
+            return reviewCounter
+        }
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -119,6 +122,7 @@ extension DetailReviewTVC {
         
         rateLabel.font = .myRegularSystemFont(ofSize: 15)
         rateLabel.textColor = .gray70
+        
         rateLabel.text = "⭐️\(rate)/5.0"
     }
     
@@ -136,8 +140,8 @@ extension DetailReviewTVC {
             reviewCounter = courseReviews.count
             isFirst = true
         }
-        self.rate = rate
-        print(reviewCounter)
+        let rateA = round(rate * 100) / 100
+        self.rate = rateA
         
         setUI()
     }

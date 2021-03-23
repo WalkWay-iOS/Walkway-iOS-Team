@@ -8,11 +8,6 @@
 import UIKit
 import FSCalendar
 
-var recordDate = ["201210", "201217", "201224"]
-var recordName = ["관악산 초급 코스", "관악산 초급 코스", "관악산 초급 코스"]
-var recordDistance = ["5km", "5km", "5km"]
-var recordTime = ["1시간", "1시간", "1시간"]
-
 class MyRecordTVC: UITableViewCell {
     static let identifier = "MyRecordTVC"
     
@@ -22,6 +17,8 @@ class MyRecordTVC: UITableViewCell {
     @IBOutlet var myRecordCollectionView: UICollectionView!
     
     var delegate: myPagePresentDelegate?
+    
+    var courses: [Record] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,14 +33,14 @@ class MyRecordTVC: UITableViewCell {
 // MARK: - CollectionViewDelegate
 extension MyRecordTVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return courses.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyRecordListCVC.identifier, for: indexPath) as? MyRecordListCVC else {
             return UICollectionViewCell()
         }
-        cell.setData(record: recordDate[indexPath.row], name: recordName[indexPath.row],  distance: recordDistance[indexPath.row], time: recordTime[indexPath.row])
+        cell.setTitle(data: courses[indexPath.row])
         return cell
     }
 }
@@ -97,13 +94,21 @@ extension MyRecordTVC {
     }
     
     func setCalendar() {
-        calendarView.appearance.titleDefaultColor = .black
-        calendarView.appearance.titleWeekendColor = .red
-        calendarView.appearance.headerTitleColor = .systemIndigo
-        calendarView.appearance.weekdayTextColor = .systemIndigo
+        calendarView.appearance.titleDefaultColor = .gray80
+        calendarView.appearance.titleWeekendColor = .latestBurgundy
+        calendarView.appearance.headerTitleColor = .bookmarkDarkBlue
+        calendarView.appearance.weekdayTextColor = .bookmarkDarkBlue
         calendarView.appearance.headerDateFormat = "YYYY년 M월"
         calendarView.locale = Locale(identifier: "ko_KR")
         calendarView.appearance.headerMinimumDissolvedAlpha = 0
+        calendarView.appearance.titleFont = .boldSystemFont(ofSize: 13)
+        calendarView.appearance.weekdayFont = .boldSystemFont(ofSize: 13)
+        calendarView.appearance.headerTitleFont = .boldSystemFont(ofSize: 15)
+        calendarView.appearance.subtitleFont = .myRegularSystemFont(ofSize: 13)
+    }
+    
+    func setData(record: [Record]) {
+        courses.append(contentsOf: record)
     }
 }
 

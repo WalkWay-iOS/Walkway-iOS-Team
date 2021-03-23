@@ -15,9 +15,13 @@ class SignInVC: UIViewController {
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var findButton: UIButton!
+    @IBOutlet weak var autoLoginButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var autoLoginLabel: UILabel!
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    
+    var isAuto = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +47,9 @@ extension SignInVC {
     private func setLabel() {
         titleLabel.text = "로그인"
         titleLabel.font = .myBoldSystemFont(ofSize: 30)
+        
+        autoLoginLabel.text = "자동로그인"
+        autoLoginLabel.font = .myBoldSystemFont(ofSize: 13)
     }
     
     private func setButton() {
@@ -63,6 +70,10 @@ extension SignInVC {
         findButton.setTitleColor(.gray50, for: .normal)
         findButton.titleLabel?.font = .myMediumSystemFont(ofSize: 13)
         findButton.addTarget(self, action: #selector(touchUpFind), for: .touchUpInside)
+        
+        autoLoginButton.setTitle("", for: .normal)
+        setAutoButton()
+        autoLoginButton.addTarget(self, action: #selector(touchUpAuto), for: .touchUpInside)
     }
     
     private func setTextField() {
@@ -83,6 +94,16 @@ extension SignInVC {
         passwordTextField.borderStyle = .none
         passwordTextField.isSecureTextEntry = true
     }
+    
+    private func setAutoButton() {
+        if isAuto {
+            autoLoginButton.setImage(UIImage(systemName: "checkmark.circle"), for: .normal)
+            autoLoginButton.tintColor = .bookmarkDarkBlue
+        } else {
+            autoLoginButton.setImage(UIImage(systemName: "circle"), for: .normal)
+            autoLoginButton.tintColor = .gray70
+        }
+    }
 }
 
 //MARK: Keyboard
@@ -94,6 +115,15 @@ extension SignInVC {
     
     @objc func dismissGestureKeyboard() {
         view.endEditing(true)
+    }
+    
+    @objc func touchUpAuto() {
+        if isAuto {
+            isAuto = false
+        } else {
+            isAuto = true
+        }
+        setAutoButton()
     }
 }
 
@@ -125,22 +155,24 @@ extension SignInVC {
                 case .success(let result):
                     do {
                         self.user = try result.map(SigninModel.self)
-                        if self.user?.status == 200 {
-                            Login.shared.setLogin(name: "\(String(describing: self.user!.data.name))", token: "\(String(describing: self.user!.data.accessToken))")
-                            let dvc = UIStoryboard.init(name: "Tabbar", bundle: nil)
-                            let vc = dvc.instantiateViewController(identifier: "TabbarController")
-                            vc.modalPresentationStyle = .fullScreen
-                            self.present(vc, animated: true)
-                        } else if self.user?.status == 400 {
-                            let alert = UIAlertController(title: "로그인 실패", message: "아이디 혹은 비밀번호가 틀렸습니다.", preferredStyle: UIAlertController.Style.alert)
-                            let okAction = UIAlertAction(title: "확인", style: .default) { (Action) in
-                                self.navigationController?.popViewController(animated: true)
-                            }
-                            alert.addAction(okAction)
-                            self.present(alert, animated: true)
+                        
+                        if self.isAuto == true {
+                            UserDefaults.standard.setValue(self.user?.data.accessToken, forKey: "userToken")
+                            UserDefaults.standard.setValue(self.user?.data.name, forKey: "userName")
                         }
+                        Login.shared.setLogin(name: "\(String(describing: self.user!.data.name))", token: "\(String(describing: self.user!.data.accessToken))")
+                        let dvc = UIStoryboard.init(name: "Tabbar", bundle: nil)
+                        let vc = dvc.instantiateViewController(identifier: "TabbarController")
+                        vc.modalPresentationStyle = .fullScreen
+                        self.present(vc, animated: true)
                     } catch(let err) {
                         print(err.localizedDescription)
+                        let alert = UIAlertController(title: "로그인 실패", message: "아이디 혹은 비밀번호가 틀렸습니다.", preferredStyle: UIAlertController.Style.alert)
+                        let okAction = UIAlertAction(title: "확인", style: .default) { (Action) in
+                            self.navigationController?.popViewController(animated: true)
+                        }
+                        alert.addAction(okAction)
+                        self.present(alert, animated: true)
                     }
                 case .failure(let err):
                     print(err.localizedDescription)

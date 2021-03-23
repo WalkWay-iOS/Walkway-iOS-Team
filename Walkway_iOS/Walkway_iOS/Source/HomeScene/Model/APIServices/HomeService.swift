@@ -26,11 +26,11 @@ extension HomeServices: TargetType {
     switch self {
     case .main:
         return "/home"
-    case .populars( _):
+    case .populars(_):
         return "/home/populars"
-    case .bookmarks( _):
+    case .bookmarks(_):
         return "/home/bookmarks"
-    case .latests( _):
+    case .latests(_):
         return "/home/latest"
     case .seoulCourses:
         return "/home/seoulCourses"
