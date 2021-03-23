@@ -21,11 +21,17 @@ class MyRecordListCVC: UICollectionViewCell {
         setUI()
     }
     
-    func setData(record: String, name: String, distance: String, time: String) {
-        recordDateLabel.text = record
-        recordNameLabel.text = name
-        recordDistanceLabel.text = distance
-        recordTimeLabel.text = time
+    func setTitle(data: Record) {
+        recordNameLabel.text = data.courseName
+        recordDistanceLabel.text = "\(data.distance)km"
+        recordTimeLabel.text = "\(data.time)"
+        
+        let removeDate = data.createdAt.split(separator: "-")
+        let yearString = removeDate[0].split(separator: "0")
+        let dayString = removeDate[2].split(separator: "T")
+        let dateString = "\(yearString[1])\(removeDate[1])\(dayString[0])"
+        
+        recordDateLabel.text = dateString
     }
 }
 
@@ -36,11 +42,12 @@ extension MyRecordListCVC {
     }
     
     func setLabel() {
-        recordDateLabel.font = .systemFont(ofSize: 10, weight: .bold)
-        recordNameLabel.font = .systemFont(ofSize: 10, weight: .bold)
-        recordDistanceLabel.font = .systemFont(ofSize: 10, weight: .medium)
-        blankLabel.font = .systemFont(ofSize: 10, weight: .medium)
+        recordDateLabel.font = .myBoldSystemFont(ofSize: 13)
+        recordDateLabel.textColor = .bookmarkDarkBlue
+        recordNameLabel.font = .myBoldSystemFont(ofSize: 13)
+        recordDistanceLabel.font = .myRegularSystemFont(ofSize: 13)
+        blankLabel.font = .myRegularSystemFont(ofSize: 13)
         blankLabel.text = " / "
-        recordTimeLabel.font = .systemFont(ofSize: 10, weight: .medium)
+        recordTimeLabel.font = .myRegularSystemFont(ofSize: 13)
     }
 }

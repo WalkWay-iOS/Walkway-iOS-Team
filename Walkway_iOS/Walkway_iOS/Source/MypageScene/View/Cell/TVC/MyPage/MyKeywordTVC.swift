@@ -16,7 +16,7 @@ class MyKeywordTVC: UITableViewCell {
     
     var delegate: myPagePresentDelegate?
     
-    var keywords: [String] = ["남산", "서울대공원", "밤", "밤산책", "신나요"]
+    var keywords: [Hashtag] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,7 +42,7 @@ extension MyKeywordTVC: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FollowerKeywordCVC.identifier, for: indexPath) as? FollowerKeywordCVC else {
             return UICollectionViewCell()
         }
-        cell.setLabelText(text: keywords[indexPath.row])
+        cell.setLabelText(text: keywords[indexPath.row].keyword)
         return cell
     }
 }
@@ -88,5 +88,14 @@ extension MyKeywordTVC {
     func setButton() {
         keywordAllButton.tintColor = .black
         keywordAllButton.setTitle("전체보기", for: .normal)
+    }
+    
+    func setData(courses: [Course]) {
+        for course in courses {
+            var tags = course.hashtag
+            for tag in tags {
+                keywords.append(tag)
+            }
+        }
     }
 }

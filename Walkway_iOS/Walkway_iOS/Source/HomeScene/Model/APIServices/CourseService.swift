@@ -72,8 +72,7 @@ extension CourseService: TargetType {
     case .create(let param):
         return .requestJSONEncodable(param)
     case .record(let ID, let param):
-        let encoded = try! JSONEncoder().encode(param)
-        return .requestCompositeData(bodyData: encoded, urlParameters: ["courseId": ID])
+        return .requestJSONEncodable(param)
     }
   }
 

@@ -17,9 +17,13 @@ class CourseEstimateTVC: UITableViewCell {
     @IBOutlet weak var strengthLabel: UILabel!
     @IBOutlet weak var rateLabel: UILabel!
     
+    var currentS: Double = 2.5
+    var currentR: Double = 2.5
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setUI()
+        setNotification()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -27,15 +31,33 @@ class CourseEstimateTVC: UITableViewCell {
     }
     
     @IBAction func setUpStrengthValue(_ sender: UISlider) {
-        let currentValue = String(format: "%.1f", Float(sender.value))
-        strengthLabel.text = "\(currentValue)"
+        let currentValueS = String(format: "%.1f", Float(sender.value))
+        currentS = Double(sender.value)
+        strengthLabel.text = "\(currentValueS)"
     }
     
     @IBAction func setUpRateValue(_ sender: UISlider) {
-        let currentValue = String(format: "%.1f", Float(sender.value))
-        rateLabel.text = "\(currentValue)"
+        let currentValueR = String(format: "%.1f", Float(sender.value))
+        currentR = Double(sender.value)
+        rateLabel.text = "\(currentValueR)"
     }
     
+}
+
+// MARK: Notification
+extension CourseEstimateTVC {
+    private func setNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(saveAction), name: NSNotification.Name("recordSave"), object: nil)
+    }
+    
+    @objc func saveAction() {
+        let userDefault = UserDefaults.standard
+        let cs = round(currentS * 10) / 10
+        let cr = round(currentR * 10) / 10
+        
+        userDefault.set(cs, forKey: "strength")
+        userDefault.set(cr, forKey: "rate")
+    }
 }
 
 // MARK: - UI

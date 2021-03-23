@@ -63,7 +63,6 @@
 		748E6B5D25D99DBB00374211 /* MyKeywordListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748E6B5C25D99DBB00374211 /* MyKeywordListVC.swift */; };
 		74996CCB25DAE3C000A03218 /* myPagePresentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74996CCA25DAE3C000A03218 /* myPagePresentDelegate.swift */; };
 		74D9B4AE260855AD00DA7392 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D9B4AD260855AD00DA7392 /* SearchService.swift */; };
-		74D9B4BF2608602000DA7392 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 74D9B4BE2608602000DA7392 /* NotoSansKR-Regular.otf */; };
 		74D9B4C2260862FD00DA7392 /* HashtagRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D9B4C1260862FD00DA7392 /* HashtagRequest.swift */; };
 		74DDE8502609AF05007862B4 /* KeywordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDE84F2609AF05007862B4 /* KeywordModel.swift */; };
 		74DDE8532609B036007862B4 /* HashtagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDE8522609B036007862B4 /* HashtagModel.swift */; };
@@ -227,6 +226,10 @@
 		EDE0BDED25BD9B9500ADE8D1 /* Extensions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDEC25BD9B9500ADE8D1 /* Extensions+UIViewController.swift */; };
 		EDE0BDF225BD9E9900ADE8D1 /* DetailHeaderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0BDF025BD9E9900ADE8D1 /* DetailHeaderTVC.swift */; };
 		EDE0BDF325BD9E9900ADE8D1 /* DetailHeaderTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDE0BDF125BD9E9900ADE8D1 /* DetailHeaderTVC.xib */; };
+		EDE186792609BE2B00BB5A39 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDE186782609BE2B00BB5A39 /* NotoSansKR-Regular.otf */; };
+		EDE1867C260A057600BB5A39 /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE1867B260A057600BB5A39 /* StartVC.swift */; };
+		EDE18680260A102C00BB5A39 /* MypageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE1867F260A102C00BB5A39 /* MypageService.swift */; };
+		EDE18685260A110100BB5A39 /* UserDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE18684260A110100BB5A39 /* UserDetailModel.swift */; };
 		EDF3716125BFAD680000A1F6 /* DetailExplanationTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF3715F25BFAD680000A1F6 /* DetailExplanationTVC.swift */; };
 		EDF3716225BFAD680000A1F6 /* DetailExplanationTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDF3716025BFAD680000A1F6 /* DetailExplanationTVC.xib */; };
 		EDFC90F0260829A0003DA2AB /* ReviewDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFC90EF260829A0003DA2AB /* ReviewDetailModel.swift */; };
@@ -292,7 +295,6 @@
 		748E6B5C25D99DBB00374211 /* MyKeywordListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKeywordListVC.swift; sourceTree = "<group>"; };
 		74996CCA25DAE3C000A03218 /* myPagePresentDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myPagePresentDelegate.swift; sourceTree = "<group>"; };
 		74D9B4AD260855AD00DA7392 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
-		74D9B4BE2608602000DA7392 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Regular.otf"; path = "../../../../../../../Downloads/Noto_Sans_KR/NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
 		74D9B4C1260862FD00DA7392 /* HashtagRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashtagRequest.swift; sourceTree = "<group>"; };
 		74DDE84F2609AF05007862B4 /* KeywordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordModel.swift; sourceTree = "<group>"; };
 		74DDE8522609B036007862B4 /* HashtagModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashtagModel.swift; sourceTree = "<group>"; };
@@ -460,6 +462,10 @@
 		EDE0BDEC25BD9B9500ADE8D1 /* Extensions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIViewController.swift"; sourceTree = "<group>"; };
 		EDE0BDF025BD9E9900ADE8D1 /* DetailHeaderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderTVC.swift; sourceTree = "<group>"; };
 		EDE0BDF125BD9E9900ADE8D1 /* DetailHeaderTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailHeaderTVC.xib; sourceTree = "<group>"; };
+		EDE186782609BE2B00BB5A39 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Regular.otf"; path = "../../../../../../../1715606/2020-졸업작품/Noto_Sans_KR/NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
+		EDE1867B260A057600BB5A39 /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
+		EDE1867F260A102C00BB5A39 /* MypageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageService.swift; sourceTree = "<group>"; };
+		EDE18684260A110100BB5A39 /* UserDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailModel.swift; sourceTree = "<group>"; };
 		EDF3715F25BFAD680000A1F6 /* DetailExplanationTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailExplanationTVC.swift; sourceTree = "<group>"; };
 		EDF3716025BFAD680000A1F6 /* DetailExplanationTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailExplanationTVC.xib; sourceTree = "<group>"; };
 		EDFC90EF260829A0003DA2AB /* ReviewDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetailModel.swift; sourceTree = "<group>"; };
@@ -523,6 +529,8 @@
 		7408AEBD25DB73E700E1C55C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EDE18683260A10EF00BB5A39 /* ResponseModel */,
+				EDE1867E260A100500BB5A39 /* APIServices */,
 				7408AEBE25DB73F400E1C55C /* MyCourse.swift */,
 			);
 			path = Model;
@@ -1078,7 +1086,7 @@
 		ED4DCE6E25DCCA2C00BFBE85 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				74D9B4BE2608602000DA7392 /* NotoSansKR-Regular.otf */,
+				EDE186782609BE2B00BB5A39 /* NotoSansKR-Regular.otf */,
 				ED4DCE8525DCD33600BFBE85 /* NotoSansKR-Black.otf */,
 				ED4DCE8625DCD33700BFBE85 /* NotoSansKR-Bold.otf */,
 				ED4DCE8325DCD33600BFBE85 /* NotoSansKR-Light.otf */,
@@ -1265,6 +1273,7 @@
 				EDD2608425C3E9C200619E8E /* SignUpVC.swift */,
 				EDD2608A25C44D5A00619E8E /* SignInVC.swift */,
 				EDD2608D25C4546700619E8E /* FindIdVC.swift */,
+				EDE1867B260A057600BB5A39 /* StartVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -1362,6 +1371,22 @@
 				ED01F4DB25C0076B00B9AD43 /* DetailPhotoTVC.xib */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		EDE1867E260A100500BB5A39 /* APIServices */ = {
+			isa = PBXGroup;
+			children = (
+				EDE1867F260A102C00BB5A39 /* MypageService.swift */,
+			);
+			path = APIServices;
+			sourceTree = "<group>";
+		};
+		EDE18683260A10EF00BB5A39 /* ResponseModel */ = {
+			isa = PBXGroup;
+			children = (
+				EDE18684260A110100BB5A39 /* UserDetailModel.swift */,
+			);
+			path = ResponseModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1464,7 +1489,7 @@
 				741DC2FB25D67A1F0026F1D9 /* MycourseListCVC.xib in Resources */,
 				74E77DB525CE7EE700EBE83D /* LocationInfoAllowTVC.xib in Resources */,
 				EDD055BE25BBFB70009FA3FB /* BookmarkCourseTVC.xib in Resources */,
-				74D9B4BF2608602000DA7392 /* NotoSansKR-Regular.otf in Resources */,
+				EDE186792609BE2B00BB5A39 /* NotoSansKR-Regular.otf in Resources */,
 				74E77DC025CE7F3E00EBE83D /* ScopeOfMyPageTVC.xib in Resources */,
 				740654D225DCF5ED00249EC7 /* CourseMemoTVC.xib in Resources */,
 				ED16C8AE25BA9E1E003DD0F0 /* HomePopularCourseCVC.xib in Resources */,
@@ -1574,6 +1599,7 @@
 				EDD055BD25BBFB70009FA3FB /* BookmarkCourseTVC.swift in Sources */,
 				EDD2608225C3CB7D00619E8E /* WelcomeLoginVC.swift in Sources */,
 				740654C125DCF5B100249EC7 /* CourseRecordInfoTVC.swift in Sources */,
+				EDE18680260A102C00BB5A39 /* MypageService.swift in Sources */,
 				ED01F4DC25C0076B00B9AD43 /* DetailPhotoTVC.swift in Sources */,
 				ED4DCE7325DCCB4800BFBE85 /* Extensions+UIFont.swift in Sources */,
 				EDDF9A7B25CA8C2E00F5F7FD /* FollowerCourseCVC.swift in Sources */,
@@ -1598,6 +1624,7 @@
 				ED5630EF25CD7D6A00A3A22C /* DetailPhotoPopUpVC.swift in Sources */,
 				EDDF9A9E25CACD1600F5F7FD /* DetailReviewVC.swift in Sources */,
 				ED5630EB25CD5C7B00A3A22C /* PhotoViewAllCVC.swift in Sources */,
+				EDE1867C260A057600BB5A39 /* StartVC.swift in Sources */,
 				EDD055B925BBF402009FA3FB /* BookmarkCourseVC.swift in Sources */,
 				EDDF9A8025CA90EC00F5F7FD /* FollowerLatestTVC.swift in Sources */,
 				ED16C89E25BA8D05003DD0F0 /* HomeFollowerTVC.swift in Sources */,
@@ -1666,6 +1693,7 @@
 				EDFC90FB2608CAD6003DA2AB /* RunningModel.swift in Sources */,
 				748E6B5325D99D2500374211 /* MyRecordListVC.swift in Sources */,
 				ED5630E125CD33A400A3A22C /* ReviewViewAllTVC.swift in Sources */,
+				EDE18685260A110100BB5A39 /* UserDetailModel.swift in Sources */,
 				EDDF9A5A25CA67C300F5F7FD /* FollowerHeaderTVC.swift in Sources */,
 				ED16C84525B7FC1D003DD0F0 /* TabbarController.swift in Sources */,
 				ED9B918D260627F000C024FF /* CourseCreateRequest.swift in Sources */,

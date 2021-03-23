@@ -6,14 +6,25 @@
 //
 
 import UIKit
+import Moya
 
 class MypageVC: UIViewController {
+    private let authProvider = MoyaProvider<MypageService>(plugins: [NetworkLoggerPlugin(verbose: true)])
+    var mypageModel: UserDetailModel?
     
     @IBOutlet var myPageTableView: UITableView!
     
+    var user: Follower = Follower.init(followerNumber: 0, followingNumber: 0, courseNumber: 0, id: "", name: "", email: "", followerID: "", password: "", createdAt: "", updatedAt: "", v: 0, token: "", tokenExp: 0)
+    var courses: [Course] = []
+    var records: [Record] = []
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setPage()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUI()
+        //setPage()
     }
 }
 
@@ -41,6 +52,7 @@ extension MypageVC: UITableViewDataSource {
                 return UITableViewCell()
             }
             cell.delegate = self
+            cell.setData(user: user, courseNum: courses.count)
             cell.selectionStyle = .none
             return cell
         }
@@ -57,6 +69,7 @@ extension MypageVC: UITableViewDataSource {
                 return UITableViewCell()
             }
             cell.delegate = self
+            cell.setData(courses: courses)
             cell.selectionStyle = .none
             return cell
         }
@@ -65,6 +78,7 @@ extension MypageVC: UITableViewDataSource {
                 return UITableViewCell()
             }
             cell.delegate = self
+            cell.setName(course: courses)
             cell.selectionStyle = .none
             return cell
         }
@@ -73,6 +87,7 @@ extension MypageVC: UITableViewDataSource {
                 return UITableViewCell()
             }
             cell.delegate = self
+            cell.setData(record: records)
             cell.selectionStyle = .none
             return cell
         }
@@ -98,7 +113,7 @@ extension MypageVC: UITableViewDelegate {
             return 176
         }
         else if indexPath.section == 5 {
-            return 500
+            return 530
         }
         return 100
     }
@@ -195,5 +210,30 @@ extension MypageVC: myPagePresentDelegate {
         }
         dvc.modalPresentationStyle = .fullScreen
         present(dvc, animated: true, completion: nil)
+    }
+}
+
+// MARK: Network
+extension MypageVC {
+    func setPage() {
+        authProvider.request(.mypage) { response in
+            switch response {
+            case .success(let result):
+                do {
+                    self.courses.removeAll()
+                    self.records.removeAll()
+                    self.mypageModel = try result.map(UserDetailModel.self)
+                    self.user = (self.mypageModel?.data.user)!
+                    self.courses.append(contentsOf: self.mypageModel?.data.course ?? [])
+                    self.records.append(contentsOf: self.mypageModel?.data.record ?? [])
+                    self.setUI()
+                    self.myPageTableView.reloadData()
+                } catch(let err) {
+                    print(err.localizedDescription)
+                }
+            case .failure(let err):
+                print(err.localizedDescription)
+            }
+        }
     }
 }

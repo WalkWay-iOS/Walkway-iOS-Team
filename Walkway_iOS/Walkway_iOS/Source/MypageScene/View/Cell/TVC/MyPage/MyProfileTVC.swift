@@ -66,10 +66,10 @@ extension MyProfileTVC {
         hashTag4Label.layer.masksToBounds = true
         hashTag4Label.layer.cornerRadius = 12
         
-        hashTag1Label.text = "#스포츠"
-        hashTag2Label.text = "#야경"
-        hashTag3Label.text = "#등산"
-        hashTag4Label.text = "#데이트코스"
+        hashTag1Label.text = "#남산"
+        hashTag2Label.text = "#용산"
+        hashTag3Label.text = "#숙명여대"
+        hashTag4Label.text = "#즐거운여행"
         
         followerTitleLabel.font = .myMediumSystemFont(ofSize: 13)
         myCourseTitleLabel.font = .myMediumSystemFont(ofSize: 13)
@@ -82,20 +82,25 @@ extension MyProfileTVC {
         followingTitleLabel.text = "팔로잉"
         myCourseTitleLabel.text = "나의 코스"
         followerTitleLabel.text = "팔로워"
-        followingNumLabel.text = "10"
-        myCourseNumLabel.text = "5"
-        followerNumLabel.text = "10"
+        
     }
     
     func setButton() {
         myProfileButton.setTitle("나", for: .normal)
         myProfileButton.titleLabel?.font = .myBoldSystemFont(ofSize: 23)
+        myProfileButton.backgroundColor = .bookmarkBlue
         myProfileButton.layer.shadowColor = UIColor.black.withAlphaComponent(0.8).cgColor
         myProfileButton.layer.shadowOpacity = 1.0
         myProfileButton.layer.shadowOffset = CGSize(width: 2, height: 3)
         myProfileButton.layer.shadowRadius = 2
         myProfileButton.layer.cornerRadius = myProfileButton.layer.frame.size.width/2
         myProfileButton.addTarget(self, action: #selector(touchUpProfileSetting), for: .touchUpInside)
+    }
+    
+    func setData(user: Follower, courseNum: Int) {
+        followingNumLabel.text = "\(user.followingNumber)"
+        myCourseNumLabel.text = "\(courseNum)"
+        followerNumLabel.text = "\(user.followerNumber)"
     }
 }
 

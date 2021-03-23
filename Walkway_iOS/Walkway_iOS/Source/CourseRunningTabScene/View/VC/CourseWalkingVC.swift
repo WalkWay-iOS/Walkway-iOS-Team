@@ -7,6 +7,7 @@
 
 import UIKit
 import Moya
+import MediaPlayer
 
 class CourseWalkingVC: UIViewController {
     private let authProvider = MoyaProvider<CourseService>(plugins: [NetworkLoggerPlugin(verbose: true)])
@@ -14,6 +15,7 @@ class CourseWalkingVC: UIViewController {
 
     @IBOutlet var pageController: UIPageControl!
     @IBOutlet var courseWalkingCollectionView: UICollectionView!
+    @IBOutlet weak var musicButton: UIButton!
     
     var delegate: walkingCoursePresentDelegate?
     var courseId: String?
@@ -21,6 +23,10 @@ class CourseWalkingVC: UIViewController {
     var courseContent: String = ""
     var coursePos: [[Double]] = [[]]
     var landmark: [String] = []
+    
+    let musicPlayer = MPMusicPlayerController.applicationQueuePlayer
+    
+    let userDefault = UserDefaults.standard
     
     var onceOnly = false
     
@@ -36,6 +42,7 @@ class CourseWalkingVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.lightGray.withAlphaComponent(0.1)
         getCourse()
+        setNotification()
     }
 }
 
@@ -101,6 +108,7 @@ extension CourseWalkingVC {
         setCollectionView()
         setPageControl()
         setCollectionViewNib()
+        setButton()
     }
     
     func setCollectionView() {
@@ -125,6 +133,21 @@ extension CourseWalkingVC {
         pageController.pageIndicatorTintColor = .gray50
         pageController.tintColor = .blue
     }
+    
+    func setButton() {
+        musicButton.setTitle("", for: .normal)
+        musicButton.setImage(UIImage(systemName: "music.quarternote.3"), for: .normal)
+        musicButton.layer.cornerRadius = 29
+        musicButton.backgroundColor = .bookmarkDarkBlue
+        musicButton.tintColor = .white
+        musicButton.setPreferredSymbolConfiguration(.init(pointSize: 20, weight: .regular, scale: .large), forImageIn: .normal)
+        musicButton.addTarget(self, action: #selector(touchUpMusic), for: .touchUpInside)
+    }
+    
+    @objc func touchUpMusic() {
+        musicPlayer.setQueue(with: .songs())
+        musicPlayer.play()
+    }
 }
 
 // MARK: - PageControl
@@ -145,11 +168,24 @@ extension CourseWalkingVC: walkingCoursePresentDelegate {
     }
     
     func buttonTappedPause(dvc: CoursePauseVC) {
+        userDefault.setValue(titleText, forKey: "title")
+        dvc.courseId = courseId
         present(dvc, animated: true, completion: nil)
     }
     
     func buttonTappedStop() {
         
+    }
+}
+
+// MARK: Notification
+extension CourseWalkingVC {
+    private func setNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(saveAction), name: NSNotification.Name("recordSave"), object: nil)
+    }
+    
+    @objc func saveAction() {
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
 }
 

@@ -16,7 +16,7 @@ class MyCourseTVC: UITableViewCell {
     
     var delegate: myPagePresentDelegate?
     
-    var courses: [String] = ["남산 한바퀴", "남산 두바퀴", "룰루리랄라리 신나는북악산여행", "북악산가자", "집뒤에 숨어있는 보물"]
+    var courses: [Course] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,7 +42,7 @@ extension MyCourseTVC: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FollowerCourseCVC.identifier, for: indexPath) as? FollowerCourseCVC else {
             return UICollectionViewCell()
         }
-//        cell.setTitle(title: courses[indexPath.row]) MARK: 수정해야함!!!!!
+        cell.setTitle(course: courses[indexPath.row])
         return cell
     }
 }
@@ -102,5 +102,9 @@ extension MyCourseTVC {
     private func setButton() {
         courseAllButton.setTitleColor(.black, for: .normal)
         courseAllButton.setTitle("전체보기", for: .normal)
+    }
+    
+    func setName(course: [Course]) {
+        courses.append(contentsOf: course)
     }
 }

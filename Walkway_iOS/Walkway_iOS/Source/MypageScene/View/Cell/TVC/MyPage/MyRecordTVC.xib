@@ -31,6 +31,9 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="08V-1g-fka" customClass="FSCalendar">
                         <rect key="frame" x="25" y="64" width="325" height="216"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="216" id="Pfr-HY-0GL"/>
+                        </constraints>
                     </view>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="jMJ-8l-fbl">
                         <rect key="frame" x="25" y="300" width="325" height="200"/>
@@ -52,7 +55,6 @@
                     <constraint firstItem="zLG-yn-66b" firstAttribute="centerY" secondItem="8iR-MV-MqN" secondAttribute="centerY" id="VGZ-gR-92x"/>
                     <constraint firstItem="8iR-MV-MqN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="ZCD-h8-aSf"/>
                     <constraint firstAttribute="trailing" secondItem="zLG-yn-66b" secondAttribute="trailing" constant="25" id="dHs-cM-Xt9"/>
-                    <constraint firstAttribute="bottom" secondItem="jMJ-8l-fbl" secondAttribute="bottom" id="dN1-Zh-cZ4"/>
                     <constraint firstItem="08V-1g-fka" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="nLh-HH-93I"/>
                     <constraint firstItem="08V-1g-fka" firstAttribute="top" secondItem="zLG-yn-66b" secondAttribute="bottom" constant="20" id="pVh-xU-G1w"/>
                     <constraint firstItem="jMJ-8l-fbl" firstAttribute="top" secondItem="08V-1g-fka" secondAttribute="bottom" constant="20" id="rHR-8G-JM0"/>

@@ -24,7 +24,7 @@
                         <viewLayoutGuide key="safeArea" id="qZf-Bz-0Vi"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="XId-I9-CBg" firstAttribute="top" secondItem="qZf-Bz-0Vi" secondAttribute="top" id="dCO-hS-5L7"/>
+                            <constraint firstItem="XId-I9-CBg" firstAttribute="top" secondItem="JPS-Bg-4o3" secondAttribute="top" id="dCO-hS-5L7"/>
                             <constraint firstItem="qZf-Bz-0Vi" firstAttribute="bottom" secondItem="XId-I9-CBg" secondAttribute="bottom" id="f4F-FL-Glq"/>
                             <constraint firstItem="qZf-Bz-0Vi" firstAttribute="trailing" secondItem="XId-I9-CBg" secondAttribute="trailing" id="qvd-P7-qm5"/>
                             <constraint firstItem="XId-I9-CBg" firstAttribute="leading" secondItem="qZf-Bz-0Vi" secondAttribute="leading" id="vw8-t6-mNy"/>
@@ -373,6 +373,11 @@
                                 <rect key="frame" x="25" y="15" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNo-bJ-plr">
+                                <rect key="frame" x="291" y="10" width="74" height="22"/>
+                                <color key="tintColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button" image="moon.stars" catalog="system"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Lo3-hc-8ZZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -382,16 +387,19 @@
                             <constraint firstItem="TQE-cS-llc" firstAttribute="leading" secondItem="Lo3-hc-8ZZ" secondAttribute="leading" id="E23-S2-Zm4"/>
                             <constraint firstItem="n7o-KT-AiC" firstAttribute="leading" secondItem="kFG-1f-VLg" secondAttribute="leading" id="IuY-4h-yg3"/>
                             <constraint firstItem="TQE-cS-llc" firstAttribute="top" secondItem="kFG-1f-VLg" secondAttribute="bottom" id="Yxg-uq-rfJ"/>
+                            <constraint firstItem="Lo3-hc-8ZZ" firstAttribute="trailing" secondItem="qNo-bJ-plr" secondAttribute="trailing" constant="10" id="mEw-91-IbL"/>
                             <constraint firstItem="Le8-6H-Ifx" firstAttribute="top" secondItem="Lo3-hc-8ZZ" secondAttribute="top" constant="15" id="n7B-sN-Gqg"/>
                             <constraint firstAttribute="bottom" secondItem="TQE-cS-llc" secondAttribute="bottom" id="oYC-TG-xUE"/>
+                            <constraint firstItem="qNo-bJ-plr" firstAttribute="top" secondItem="Lo3-hc-8ZZ" secondAttribute="top" constant="10" id="txX-DB-w9t"/>
                             <constraint firstItem="Le8-6H-Ifx" firstAttribute="trailing" secondItem="Lo3-hc-8ZZ" secondAttribute="trailing" id="vh5-LR-8Ef"/>
                             <constraint firstItem="n7o-KT-AiC" firstAttribute="top" secondItem="Le8-6H-Ifx" secondAttribute="top" id="wLf-Bf-0xN"/>
                             <constraint firstItem="kFG-1f-VLg" firstAttribute="leading" secondItem="Lo3-hc-8ZZ" secondAttribute="leading" constant="25" id="ySr-hf-EWn"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="closeButton" destination="n7o-KT-AiC" id="FS2-7s-v9c"/>
+                        <outlet property="closeButton" destination="n7o-KT-AiC" id="GxL-I2-fw9"/>
                         <outlet property="logoImage" destination="Le8-6H-Ifx" id="X9N-u5-DEz"/>
+                        <outlet property="logoutButton" destination="qNo-bJ-plr" id="tgJ-XN-5C4"/>
                         <outlet property="settingTableView" destination="TQE-cS-llc" id="k22-lK-v8Y"/>
                         <outlet property="viewNameLabel" destination="kFG-1f-VLg" id="ymV-87-AyT"/>
                     </connections>
@@ -688,6 +696,7 @@
     <resources>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="introimage2" width="192" height="117"/>
+        <image name="moon.stars" catalog="system" width="128" height="124"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

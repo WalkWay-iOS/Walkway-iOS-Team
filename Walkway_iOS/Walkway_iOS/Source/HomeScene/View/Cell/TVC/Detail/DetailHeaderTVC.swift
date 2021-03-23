@@ -69,14 +69,12 @@ extension DetailHeaderTVC {
         courseRateLabel.font = .myMediumSystemFont(ofSize: 13)
         courseRateLabel.textColor = .gray50
         
-        strengthLabel.text = "🔥10/100"
         strengthLabel.font = .myMediumSystemFont(ofSize: 11)
         
         rateLabel.font = .myMediumSystemFont(ofSize: 11)
     }
     
     private func setProgressBar() {
-        strengthProgressBar.progress = 10/100
         strengthProgressBar.transform = strengthProgressBar.transform.scaledBy(x: 1, y: 2)
         strengthProgressBar.layer.masksToBounds = true
         strengthProgressBar.layer.cornerRadius = 3
@@ -98,11 +96,17 @@ extension DetailHeaderTVC {
 extension DetailHeaderTVC {
     func setData(course: DetailCourse) {
         titleLabel.text = course.title
-        rateLabel.text = "⭐️\(course.rateAverage)/5.0"
-        rateProgressBar.progress = Float(course.rateAverage)/5.0
+        
+        let rateA = round(course.rateAverage * 100) / 100
+        rateLabel.text = "⭐️\(rateA)/5.0"
+        rateProgressBar.progress = Float(rateA)/5.0
         
         timeLabel.text = "시간 \(course.time)"
         distanceLabel.text = "거리 \(course.distance)km"
+        
+        let strengthA = course.strengthAverage * 10
+        strengthLabel.text = "🔥\(strengthA)/100"
+        strengthProgressBar.progress = Float((strengthA)/100)
         
         if isHashtaged == false {
             setHashtagButtons(buttons: course.hashtag)

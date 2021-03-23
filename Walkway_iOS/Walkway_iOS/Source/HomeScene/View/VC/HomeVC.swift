@@ -21,12 +21,12 @@ class HomeVC: UIViewController {
     var populars: [Course] = []
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        setHome()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setHome()
+        setProfileButton()
     }
 }
 
@@ -103,7 +103,6 @@ extension HomeVC {
     private func setUI() {
         setTableView()
         setTableViewNib()
-        setProfileButton()
     }
     
     private func setTableView() {
@@ -212,6 +211,10 @@ extension HomeVC {
             switch response {
             case .success(let result):
                 do {
+                    self.followers.removeAll()
+                    self.populars.removeAll()
+                    self.bookmarks.removeAll()
+                    self.latests.removeAll()
                     self.homeModel = try result.map(HomeModel.self)
                     self.followers.append(contentsOf: self.homeModel?.data.follower ?? [])
                     self.populars.append(contentsOf: self.homeModel?.data.popularCourse ?? [])

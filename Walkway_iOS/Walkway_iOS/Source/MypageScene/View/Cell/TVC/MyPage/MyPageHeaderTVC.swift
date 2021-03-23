@@ -35,7 +35,7 @@ extension MyPageHeaderTVC {
     
     func setLabel() {
         myPageTitleLabel.text = "마이 페이지"
-        myPageTitleLabel.font = .myBoldSystemFont(ofSize: 35)
+        myPageTitleLabel.font = .myBoldSystemFont(ofSize: 28)
     }
     
     func setButton() {

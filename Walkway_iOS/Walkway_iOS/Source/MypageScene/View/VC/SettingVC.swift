@@ -10,6 +10,7 @@ import UIKit
 class SettingVC: UIViewController {
 
     @IBOutlet var closeButton: UIButton!
+    @IBOutlet var logoutButton: UIButton!
     @IBOutlet var viewNameLabel: UILabel!
     @IBOutlet var logoImage: UIImageView!
     @IBOutlet var settingTableView: UITableView!
@@ -123,6 +124,14 @@ extension SettingVC {
         closeButton.setImage(UIImage(systemName: "xmark"), for: .normal)
         closeButton.tintColor = .bookmarkDarkBlue
         closeButton.addTarget(self, action: #selector(touchUpClose), for: .touchUpInside)
+        
+        logoutButton.addTarget(self, action: #selector(logout), for: .touchUpInside)
+    }
+    
+    @objc func logout() {
+        Login.shared.setLoginOut()
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+        print("logout")
     }
 }
 

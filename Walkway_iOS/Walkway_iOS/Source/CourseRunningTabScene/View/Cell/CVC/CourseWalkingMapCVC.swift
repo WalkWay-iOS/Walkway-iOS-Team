@@ -11,28 +11,32 @@ import MapKit
 
 class CourseWalkingMapCVC: UICollectionViewCell, GMSMapViewDelegate {
     static let identifier = "CourseWalkingMapCVC"
-    
-    @IBOutlet var pauseButton: UIButton!
-    @IBOutlet var timerView: UIView!
-    @IBOutlet var timerTitleLabel: UILabel!
-    @IBOutlet var walkingTimeLabel: UILabel!
-    @IBOutlet var decimalTimeLabel: UILabel!
+
+    @IBOutlet weak var pauseButton: UIButton!
+    @IBOutlet weak var timerView: UIView!
+    @IBOutlet weak var timerTitleLabel: UILabel!
+    @IBOutlet weak var walkingTimeLabel: UILabel!
+    @IBOutlet weak var decimalTimeLabel: UILabel!
     
     var delegate: walkingCoursePresentDelegate?
     
     var mapView = GMSMapView()
     var camera = GMSCameraPosition()
+    var locationManager = CLLocationManager()
     
     var isStart: Bool = true
     var timer: Timer?
     var time = ""
     var currentTimeCount: Int = 0
+    var realDistance: Double = 0.0
     
     let timeSelector: Selector = #selector(CourseWalkingMapCVC.updateTime)
     
     let userDefault = UserDefaults.standard
     
     var coursePos: [[Double]] = [[]]
+    var globalPos: [CLLocationCoordinate2D] = []
+    var coordinates: [CLLocation] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,7 +46,7 @@ class CourseWalkingMapCVC: UICollectionViewCell, GMSMapViewDelegate {
 }
 
 // MARK: - UI
-extension CourseWalkingMapCVC {
+extension CourseWalkingMapCVC: CLLocationManagerDelegate {
     func setUI() {
         setBackground()
         setLabel()
@@ -51,7 +55,7 @@ extension CourseWalkingMapCVC {
     }
     
     func setBackground() {
-        timerView.backgroundColor = .bookmarkDarkBlue
+        timerView.backgroundColor = UIColor.bookmarkDarkBlue.withAlphaComponent(0.8)
         timerView.layer.cornerRadius = 20
     }
     
@@ -80,15 +84,38 @@ extension CourseWalkingMapCVC {
     func setMap() {
         camera = GMSCameraPosition.camera(withLatitude: 37.54643, longitude: 126.96482, zoom: 14)
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        mapView.settings.myLocationButton = true
         mapView.settings.scrollGestures = true
         mapView.settings.zoomGestures = true
         mapView.delegate = self
+        mapView.isMyLocationEnabled = true
         self.backgroundView = mapView
+        
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        locationManager.distanceFilter = 50
+        locationManager.startUpdatingLocation()
+        locationManager.delegate = self
     }
     
-    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
-        // MARK: TAP해도 줌인이 안된다!!!!
+    func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
+        if (gesture) {
+            print("dragged")
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location: CLLocation = locations.last!
+        coordinates.append(location)
+        print("Location: \(location)")
+
+        let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude, longitude: location.coordinate.longitude, zoom: 18.0)
+        
+        if mapView.isHidden {
+            mapView.isHidden = false
+            mapView.camera = camera
+        } else {
+            mapView.animate(to: camera)
+        }
     }
     
     private func drawMap() {
@@ -101,19 +128,42 @@ extension CourseWalkingMapCVC {
                 
                 pos.append(complainLoc)
             }
-            setCamera(vLoc: pos[0], toLoc: pos[1])
+            let location = GMSCameraPosition.camera(withLatitude: pos[0].latitude, longitude: pos[0].longitude, zoom: 17.0)
+            mapView.camera = location
+            mapView.animate(to: location)
             setMapMarkersRoute(vLoc: pos[0], toLoc: pos[1])
         } else {
             setLine()
         }
     }
     
-    func setCamera(vLoc: CLLocationCoordinate2D, toLoc: CLLocationCoordinate2D) {
-        var bounds = GMSCoordinateBounds()
-        bounds = bounds.includingCoordinate(vLoc)
-        bounds = bounds.includingCoordinate(toLoc)
-        self.mapView.moveCamera(GMSCameraUpdate.fit(bounds, with: UIEdgeInsets(top: 100, left: 100, bottom: 100, right: 100)))
+    func setDistance() {
+        var index = 0
+        let cnt = coordinates.count - 2
+        var totalDistance: CLLocationDistance = 0
+        print(coordinates)
+        for _ in coordinates[...cnt] {
+            let myLocation = coordinates[index]
+            let myBuddysLocation = coordinates[index+1]
+            let distance = myLocation.distance(from: myBuddysLocation)
+            index += 1
+            totalDistance += distance
+        }
+        realDistance = totalDistance/1000
+        print("거리: \(realDistance)")
     }
+    
+//    func setCamera(vLoc: CLLocationCoordinate2D, toLoc: CLLocationCoordinate2D) {
+//        var bounds = GMSCoordinateBounds()
+//        var midLat = CLLocationDegrees()
+//        var midLon = CLLocationDegrees()
+//        midLat = (vLoc.latitude + toLoc.latitude) / 2
+//        midLon = (vLoc.longitude + toLoc.longitude) / 2
+//        let midLoc = CLLocationCoordinate2D(latitude: midLat, longitude: midLon)
+//        bounds = bounds.includingCoordinate(vLoc)
+//        bounds = bounds.includingCoordinate(midLoc)
+//        self.mapView.moveCamera(GMSCameraUpdate.fit(bounds, with: UIEdgeInsets(top: 110, left: 110, bottom: 110, right: 110)))
+//    }
     
     func setMapMarkersRoute(vLoc: CLLocationCoordinate2D, toLoc: CLLocationCoordinate2D) {
         getRoute(from: vLoc, to: toLoc)
@@ -176,7 +226,9 @@ extension CourseWalkingMapCVC {
         line.strokeWidth = 3.0
         line.geodesic = true
         line.map = self.mapView
-        setCamera(vLoc: pos[0], toLoc: pos[pos.count-1])
+        let location = GMSCameraPosition.camera(withLatitude: pos[0].latitude, longitude: pos[0].longitude, zoom: 17.0)
+        mapView.camera = location
+        mapView.animate(to: location)
     }
     
     func startTimer() {
@@ -205,6 +257,11 @@ extension CourseWalkingMapCVC {
         
         dvc.modalPresentationStyle = .fullScreen
         userDefault.setValue(time, forKey: "time")
+        
+        setDistance()
+        let disNum = round(realDistance * 100) / 100
+        userDefault.set(disNum, forKey: "distance")
+        
         delegate?.buttonTappedPause(dvc: dvc)
     }
 }

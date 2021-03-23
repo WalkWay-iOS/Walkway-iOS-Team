@@ -22,6 +22,7 @@ class CourseMemoTVC: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setUI()
+        setNotification()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -63,18 +64,29 @@ extension CourseMemoTVC {
     }
 }
 
+// MARK: Notification
+extension CourseMemoTVC {
+    private func setNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(saveAction), name: NSNotification.Name("recordSave"), object: nil)
+    }
+    
+    @objc func saveAction() {
+        let userDefault = UserDefaults.standard
+        
+        userDefault.setValue(memoTextView.text!, forKey: "content")
+    }
+}
+
 // MARK: - Action
 extension CourseMemoTVC {
     @objc func touchUpMemo() {
         guard let dvc = UIStoryboard(name: "CourseRunningTab", bundle: nil).instantiateViewController(identifier: "CourseMemoVC") as? CourseMemoVC else {
             return
         }
-        
         dvc.sendText = { text in
             self.memoTextView.text = text
             self.tableView?.reloadData()
         }
-        
         if memoTextView.text == "" {
             dvc.getText(text: "")
         } else {

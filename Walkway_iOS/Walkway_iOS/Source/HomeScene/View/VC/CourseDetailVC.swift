@@ -366,9 +366,9 @@ extension CourseDetailVC {
 // MARK: - Header Control
 extension CourseDetailVC {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if Int(scrollView.contentOffset.y) > 1090 {
+        if Int(scrollView.contentOffset.y) > 1050 {
             currentPage = 3
-        } else if Int(scrollView.contentOffset.y) > 730 {
+        } else if Int(scrollView.contentOffset.y) > 700 {
             currentPage = 2
         } else if Int(scrollView.contentOffset.y) > 300 {
             currentPage = 1

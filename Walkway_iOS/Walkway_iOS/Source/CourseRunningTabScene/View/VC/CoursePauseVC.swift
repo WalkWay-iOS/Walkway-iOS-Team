@@ -21,8 +21,7 @@ class CoursePauseVC: UIViewController {
     @IBOutlet var stopButton: UIButton!
     
     var delegate: walkingCoursePresentDelegate?
-    
-    var walkingTime: String?
+    var courseId: String?
     
     var dismissView: (() -> ())?
     
@@ -30,6 +29,7 @@ class CoursePauseVC: UIViewController {
         super.viewDidLoad()
         setUI()
         getText()
+        setNotification()
     }
 }
 
@@ -43,21 +43,25 @@ extension CoursePauseVC {
     func setLabel() {
         courseNameLabel.font = .myBoldSystemFont(ofSize: 18)
         courseNameLabel.textColor = .gray70
-        courseNameLabel.text = "[관악산 달빛 둘레길]"
+        
         distanceTitleLabel.font = .myBoldSystemFont(ofSize: 13)
         distanceTitleLabel.textColor = .bookmarkDarkBlue
         distanceTitleLabel.text = "함께 산책한 거리"
+        
         timeTitleLabel.font = .myBoldSystemFont(ofSize: 13)
         timeTitleLabel.textColor = .bookmarkDarkBlue
         timeTitleLabel.text = "함께 산책한 시간"
+        
         distanceLabel.font = .myBoldSystemFont(ofSize: 30)
         distanceLabel.textColor = .black
-        distanceLabel.text = "0.00"
+        
         timeLabel.font = .myBoldSystemFont(ofSize: 30)
         timeLabel.textColor = .black
+        
         restartTitleLabel.font = .myBoldSystemFont(ofSize: 15)
         restartTitleLabel.textColor = .gray70
         restartTitleLabel.text = "다시 걷기"
+        
         stopTitleLabel.font = .myBoldSystemFont(ofSize: 15)
         stopTitleLabel.textColor = .latestBurgundy
         stopTitleLabel.text = "종료"
@@ -85,6 +89,16 @@ extension CoursePauseVC {
         if let time = userDefault.string(forKey: "time") {
             timeLabel.text = time
         }
+        
+        if let title = userDefault.string(forKey: "title") {
+            courseNameLabel.text = "[\(title)]"
+        }
+        
+        if let distance = userDefault.object(forKey: "distance") {
+            let num = distance as! Double
+            print("disNum: \(num)")
+            distanceLabel.text = "\(num)"
+        }
     }
 }
 
@@ -96,11 +110,24 @@ extension CoursePauseVC {
     }
     
     @objc func touchUpStop() {
-        guard let dvc = storyboard?.instantiateViewController(identifier: "CourseCompleteVC") as? CourseCompleteVC else {
+        print("끝내자")
+        guard let dvc = self.storyboard?.instantiateViewController(identifier: "CourseCompleteVC") as? CourseCompleteVC else {
             return
         }
+        dvc.courseId = courseId
         dvc.modalPresentationStyle = .fullScreen
         dvc.modalTransitionStyle = .crossDissolve
-        present(dvc, animated: true, completion: nil)
+        self.present(dvc, animated: true, completion: nil)
+    }
+}
+
+// MARK: Notification
+extension CoursePauseVC {
+    private func setNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(saveAction), name: NSNotification.Name("recordSave"), object: nil)
+    }
+    
+    @objc func saveAction() {
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
 }
