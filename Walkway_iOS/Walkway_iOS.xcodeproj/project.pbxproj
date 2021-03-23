@@ -62,6 +62,11 @@
 		748E6B5925D99DAA00374211 /* MyBadgeListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748E6B5825D99DAA00374211 /* MyBadgeListVC.swift */; };
 		748E6B5D25D99DBB00374211 /* MyKeywordListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748E6B5C25D99DBB00374211 /* MyKeywordListVC.swift */; };
 		74996CCB25DAE3C000A03218 /* myPagePresentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74996CCA25DAE3C000A03218 /* myPagePresentDelegate.swift */; };
+		74D9B4AE260855AD00DA7392 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D9B4AD260855AD00DA7392 /* SearchService.swift */; };
+		74D9B4BF2608602000DA7392 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 74D9B4BE2608602000DA7392 /* NotoSansKR-Regular.otf */; };
+		74D9B4C2260862FD00DA7392 /* HashtagRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D9B4C1260862FD00DA7392 /* HashtagRequest.swift */; };
+		74DDE8502609AF05007862B4 /* KeywordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDE84F2609AF05007862B4 /* KeywordModel.swift */; };
+		74DDE8532609B036007862B4 /* HashtagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDE8522609B036007862B4 /* HashtagModel.swift */; };
 		74E77DB425CE7EE700EBE83D /* LocationInfoAllowTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E77DB225CE7EE700EBE83D /* LocationInfoAllowTVC.swift */; };
 		74E77DB525CE7EE700EBE83D /* LocationInfoAllowTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74E77DB325CE7EE700EBE83D /* LocationInfoAllowTVC.xib */; };
 		74E77DBA25CE7F0400EBE83D /* CameraInfoAllowTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E77DB825CE7F0400EBE83D /* CameraInfoAllowTVC.swift */; };
@@ -128,7 +133,6 @@
 		ED2A8B2B2601B9E200456E4D /* GeneralAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2A8B2A2601B9E200456E4D /* GeneralAPI.swift */; };
 		ED2A8B2E2601BB4D00456E4D /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2A8B2D2601BB4D00456E4D /* UserData.swift */; };
 		ED2A8B312601BBFE00456E4D /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2A8B302601BBFE00456E4D /* Login.swift */; };
-		ED2A8B342601D11100456E4D /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED2A8B332601D11100456E4D /* NotoSansKR-Regular.otf */; };
 		ED2A8B3D2603865500456E4D /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2A8B3C2603865500456E4D /* LoginService.swift */; };
 		ED2A8B412603A02900456E4D /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2A8B402603A02900456E4D /* SignupModel.swift */; };
 		ED2A8B442603A4EE00456E4D /* SignupRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2A8B432603A4EE00456E4D /* SignupRequest.swift */; };
@@ -287,6 +291,11 @@
 		748E6B5825D99DAA00374211 /* MyBadgeListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBadgeListVC.swift; sourceTree = "<group>"; };
 		748E6B5C25D99DBB00374211 /* MyKeywordListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKeywordListVC.swift; sourceTree = "<group>"; };
 		74996CCA25DAE3C000A03218 /* myPagePresentDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myPagePresentDelegate.swift; sourceTree = "<group>"; };
+		74D9B4AD260855AD00DA7392 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		74D9B4BE2608602000DA7392 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Regular.otf"; path = "../../../../../../../Downloads/Noto_Sans_KR/NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
+		74D9B4C1260862FD00DA7392 /* HashtagRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashtagRequest.swift; sourceTree = "<group>"; };
+		74DDE84F2609AF05007862B4 /* KeywordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordModel.swift; sourceTree = "<group>"; };
+		74DDE8522609B036007862B4 /* HashtagModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashtagModel.swift; sourceTree = "<group>"; };
 		74E77DB225CE7EE700EBE83D /* LocationInfoAllowTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInfoAllowTVC.swift; sourceTree = "<group>"; };
 		74E77DB325CE7EE700EBE83D /* LocationInfoAllowTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationInfoAllowTVC.xib; sourceTree = "<group>"; };
 		74E77DB825CE7F0400EBE83D /* CameraInfoAllowTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraInfoAllowTVC.swift; sourceTree = "<group>"; };
@@ -357,7 +366,6 @@
 		ED2A8B2A2601B9E200456E4D /* GeneralAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralAPI.swift; sourceTree = "<group>"; };
 		ED2A8B2D2601BB4D00456E4D /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		ED2A8B302601BBFE00456E4D /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
-		ED2A8B332601D11100456E4D /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Regular.otf"; path = "../../../../../../../1715606/2020-졸업작품/Noto_Sans_KR/NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
 		ED2A8B3C2603865500456E4D /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		ED2A8B402603A02900456E4D /* SignupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
 		ED2A8B432603A4EE00456E4D /* SignupRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRequest.swift; sourceTree = "<group>"; };
@@ -620,6 +628,41 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		74D9B4AB260852D200DA7392 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				74DDE8492609ADD7007862B4 /* ResponseModel */,
+				74D9B4B02608587700DA7392 /* RequestModel */,
+				74D9B4AC2608549E00DA7392 /* APIService */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		74D9B4AC2608549E00DA7392 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				74D9B4AD260855AD00DA7392 /* SearchService.swift */,
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
+		74D9B4B02608587700DA7392 /* RequestModel */ = {
+			isa = PBXGroup;
+			children = (
+				74D9B4C1260862FD00DA7392 /* HashtagRequest.swift */,
+			);
+			path = RequestModel;
+			sourceTree = "<group>";
+		};
+		74DDE8492609ADD7007862B4 /* ResponseModel */ = {
+			isa = PBXGroup;
+			children = (
+				74DDE84F2609AF05007862B4 /* KeywordModel.swift */,
+				74DDE8522609B036007862B4 /* HashtagModel.swift */,
+			);
+			path = ResponseModel;
+			sourceTree = "<group>";
+		};
 		74E77DAF25CE7E6B00EBE83D /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -800,6 +843,7 @@
 		ED16C83725B7FA98003DD0F0 /* CourseSearchScene */ = {
 			isa = PBXGroup;
 			children = (
+				74D9B4AB260852D200DA7392 /* Model */,
 				ED16C85025B7FCB4003DD0F0 /* CourseSearch.storyboard */,
 				ED16C85F25B7FE35003DD0F0 /* View */,
 			);
@@ -1034,7 +1078,7 @@
 		ED4DCE6E25DCCA2C00BFBE85 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				ED2A8B332601D11100456E4D /* NotoSansKR-Regular.otf */,
+				74D9B4BE2608602000DA7392 /* NotoSansKR-Regular.otf */,
 				ED4DCE8525DCD33600BFBE85 /* NotoSansKR-Black.otf */,
 				ED4DCE8625DCD33700BFBE85 /* NotoSansKR-Bold.otf */,
 				ED4DCE8325DCD33600BFBE85 /* NotoSansKR-Light.otf */,
@@ -1420,7 +1464,7 @@
 				741DC2FB25D67A1F0026F1D9 /* MycourseListCVC.xib in Resources */,
 				74E77DB525CE7EE700EBE83D /* LocationInfoAllowTVC.xib in Resources */,
 				EDD055BE25BBFB70009FA3FB /* BookmarkCourseTVC.xib in Resources */,
-				ED2A8B342601D11100456E4D /* NotoSansKR-Regular.otf in Resources */,
+				74D9B4BF2608602000DA7392 /* NotoSansKR-Regular.otf in Resources */,
 				74E77DC025CE7F3E00EBE83D /* ScopeOfMyPageTVC.xib in Resources */,
 				740654D225DCF5ED00249EC7 /* CourseMemoTVC.xib in Resources */,
 				ED16C8AE25BA9E1E003DD0F0 /* HomePopularCourseCVC.xib in Resources */,
@@ -1580,6 +1624,7 @@
 				EDDF9A6025CA74F300F5F7FD /* FollowerBadgeTVC.swift in Sources */,
 				ED5630E625CD57B300A3A22C /* DetailPhotoVC.swift in Sources */,
 				740654AA25DCD64500249EC7 /* CourseWalkingMapCVC.swift in Sources */,
+				74D9B4AE260855AD00DA7392 /* SearchService.swift in Sources */,
 				EDD9A53226046E3B00117E9E /* Extensions+Encodable.swift in Sources */,
 				740654D125DCF5ED00249EC7 /* CourseMemoTVC.swift in Sources */,
 				EDFC90F326082BF7003DA2AB /* ReviewVC.swift in Sources */,
@@ -1614,6 +1659,7 @@
 				EDD9A53526046F7300117E9E /* HomeModel.swift in Sources */,
 				EDD2607125C3B9AE00619E8E /* HashtagTVC.swift in Sources */,
 				7406548625DCCB3100249EC7 /* walkingCoursePresentDelegate.swift in Sources */,
+				74D9B4C2260862FD00DA7392 /* HashtagRequest.swift in Sources */,
 				7452E96425D2F29B0048DE2E /* MyCourseTVC.swift in Sources */,
 				ED9B919326062B8100C024FF /* RecordModel.swift in Sources */,
 				EDD2608B25C44D5A00619E8E /* SignInVC.swift in Sources */,
@@ -1657,11 +1703,13 @@
 				7463EF4C25DC3A900094F192 /* MyBadgeCVC.swift in Sources */,
 				7452E94B25D2EFC00048DE2E /* SettingVC.swift in Sources */,
 				ED2A8B312601BBFE00456E4D /* Login.swift in Sources */,
+				74DDE8502609AF05007862B4 /* KeywordModel.swift in Sources */,
 				740654C725DCF5C300249EC7 /* CourseEstimateTVC.swift in Sources */,
 				ED16C86225B7FE50003DD0F0 /* CourseSearchVC.swift in Sources */,
 				EDD9A52F26046BC700117E9E /* LatestRequest.swift in Sources */,
 				ED16C8A825BA9BB4003DD0F0 /* HomePopularCourseTVC.swift in Sources */,
 				EDDF9A8B25CA9AD300F5F7FD /* FollowerLatestCourseTVC.swift in Sources */,
+				74DDE8532609B036007862B4 /* HashtagModel.swift in Sources */,
 				ED16C8B225BAA4FD003DD0F0 /* HomeBookmarkCourseTVC.swift in Sources */,
 				EDFC90F826085B58003DA2AB /* ReviewRequest.swift in Sources */,
 				7463EF3925DC20FD0094F192 /* EditEmailVC.swift in Sources */,
