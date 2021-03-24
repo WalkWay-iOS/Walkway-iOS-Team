@@ -145,7 +145,7 @@ extension BookmarkCourseTVC {
                     stackView.addArrangedSubview(button)
                 }
             } else {
-                for btn in buttons[0...4] {
+                for btn in buttons[0..<4] {
                     let button = UIButton()
                     
                     button.layer.cornerRadius = 8

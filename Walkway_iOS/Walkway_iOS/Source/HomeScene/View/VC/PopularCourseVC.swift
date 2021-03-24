@@ -23,7 +23,6 @@ class PopularCourseVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getCourse(isSeoul: true)
-        
     }
 }
 

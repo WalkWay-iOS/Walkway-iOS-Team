@@ -959,9 +959,9 @@
 		ED16C86525B7FE62003DD0F0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ED16C86625B7FE6E003DD0F0 /* VC */,
 				ED7622BF25BB13BA007E1C98 /* Protocol */,
 				ED16C88E25BA742F003DD0F0 /* Cell */,
-				ED16C86625B7FE6E003DD0F0 /* VC */,
 			);
 			path = View;
 			sourceTree = "<group>";
