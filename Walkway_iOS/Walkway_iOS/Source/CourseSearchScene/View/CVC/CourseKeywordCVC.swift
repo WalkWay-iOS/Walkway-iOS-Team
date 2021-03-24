@@ -29,6 +29,6 @@ extension CourseKeywordCVC {
     }
     
     func setData(keyword: String) {
-        keywordLabel.text = keyword
+        keywordLabel.text = "#\(keyword)"
     }
 }

@@ -11,8 +11,10 @@ import Moya
 class CourseSearchVC: UIViewController {
     private let authProvider = MoyaProvider<SearchServices>(plugins: [NetworkLoggerPlugin(verbose: true)])
     var keywordModel: KeywordModel?
+    var hashtagModel: HashtagModel?
     
     var keywordCourses: [Course] = []
+    var hashtag: [Hashtag] = []
     var keywordId: String?
     
     @IBOutlet var btnUser: UIButton!
@@ -39,25 +41,14 @@ class CourseSearchVC: UIViewController {
     }
     
     @IBAction func btnSearchTrend(_ sender: UIButton) {
-        courseListTableView.isHidden = false
-        addTrendData()
-//        setTrendData()
-        
-        keywordCollectionView.reloadData()
-        courseListTableView.reloadData()
-        
         btnTrend.backgroundColor = UIColor.gray40
         btnBookmark.backgroundColor = UIColor.white
         btnFollow.backgroundColor = UIColor.white
         
-        getKeyword()
+        getHashtag()
     }
     
     @IBAction func btnSearchBookmark(_ sender: UIButton) {
-        courseListTableView.isHidden = false
-        addBookmarkData()
-//        setBookmarkData()
-        
         keywordCollectionView.reloadData()
         courseListTableView.reloadData()
         
@@ -65,14 +56,10 @@ class CourseSearchVC: UIViewController {
         btnTrend.backgroundColor = UIColor.white
         btnFollow.backgroundColor = UIColor.white
         
-        getKeyword()
+        getHashtag()
     }
     
     @IBAction func btnSearchFollow(_ sender: UIButton) {
-        courseListTableView.isHidden = false
-        addFollowData()
-//        setFollowData()
-        
         keywordCollectionView.reloadData()
         courseListTableView.reloadData()
         
@@ -80,7 +67,7 @@ class CourseSearchVC: UIViewController {
         btnTrend.backgroundColor = UIColor.white
         btnBookmark.backgroundColor = UIColor.white
         
-        getKeyword()
+        getHashtag()
     }
 }
 
@@ -110,12 +97,13 @@ extension CourseSearchVC {
     }
     
     @objc func touchUpSearch() {
-        getHashtag(mode: 0)
+        getCourse(mode: 0)
     }
 }
 
 extension CourseSearchVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(keywordCourses.count)
         return keywordCourses.count
     }
     
@@ -124,13 +112,14 @@ extension CourseSearchVC: UITableViewDataSource {
             return UITableViewCell()
         }
         cell.setCellData(rank: indexPath.row+1, course: keywordCourses[indexPath.item])
+        print(keywordCourses[indexPath.item])
         return cell
     }
 }
 
 extension CourseSearchVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return keywordData.count
+        return hashtag.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -140,7 +129,7 @@ extension CourseSearchVC: UICollectionViewDataSource {
         cell.layer.borderWidth = 0.7
         cell.layer.borderColor = UIColor.gray50.cgColor
         cell.layer.cornerRadius = 10
-        cell.setData(keyword: keywordData[indexPath.item])
+        cell.setData(keyword: hashtag[indexPath.item].keyword)
         return cell
     }
 }
@@ -148,7 +137,7 @@ extension CourseSearchVC: UICollectionViewDataSource {
 extension CourseSearchVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let label = UILabel()
-        label.text = keywordData[indexPath.row]
+        label.text = hashtag[indexPath.item].keyword
         label.font = .myMediumSystemFont(ofSize: 11)
         label.sizeToFit()
         
@@ -169,6 +158,14 @@ extension CourseSearchVC: UICollectionViewDelegateFlowLayout {
     }
 }
 
+extension CourseSearchVC: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        keywordId = hashtag[indexPath.item].id
+        
+        getKeyword()
+    }
+}
+
 extension CourseSearchVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 98
@@ -185,6 +182,7 @@ extension CourseSearchVC {
         setCourseSearch()
         setNoSearching()
         setButton()
+        tableViewHidden()
     }
     
     private func setTextField() {
@@ -256,58 +254,19 @@ extension CourseSearchVC {
         courseSearchButton.setImage(UIImage(systemName: "magnifyingglass.circle"), for: .normal)
         courseSearchButton.addTarget(self, action: #selector(touchUpSearch), for: .touchUpInside)
     }
-}
-
-// MARK: - Keyword Action
-extension CourseSearchVC {
-    private func addTrendData() {
-        keywordData.removeAll()
-        keywordData.append("#남산")
-        keywordData.append("#남산야경")
-        keywordData.append("#서울숲")
-        keywordData.append("#작은나들이")
-    }
     
-    private func addFollowData() {
-        keywordData.removeAll()
-        keywordData.append("#인스타감성")
-        keywordData.append("#남산야경")
-        keywordData.append("#야경")
-        keywordData.append("#작은나들이")
-    }
-    
-    private func addBookmarkData() {
-        keywordData.removeAll()
-        keywordData.append("#둘레길")
-        keywordData.append("#서울")
-        keywordData.append("#서울숲")
-        keywordData.append("#성동구")
+    private func tableViewHidden() {
+        if keywordCourses.count == 0 {
+            courseListTableView.isHidden = true
+        }
+        else {
+            courseListTableView.isHidden = false
+        }
     }
 }
 
 // MARK: Network
 extension CourseSearchVC {
-    /*
-    func searchKeyword() {
-        let param = KeywordRequest.init(self.courseTextField.text!)
-        authProvider.request(.keywordSearch(param: param)) { response in
-            switch response {
-            case .success(let result):
-                do {
-                    let model = try result.map(KeywordModel.self)
-                    self.keywordCourses.removeAll()
-                    self.keywordCourses.append(contentsOf: model.data.courses)
-                    self.courseListTableView.reloadData()
-                    print("reload")
-                } catch(let err) {
-                    print(err.localizedDescription)
-                }
-            case .failure(let err):
-                print(err.localizedDescription)
-            }
-        }
-    }*/
-    
     func getKeyword() {
         guard let id = keywordId else { return }
         print("getKeyword성공")
@@ -316,9 +275,10 @@ extension CourseSearchVC {
             switch response {
             case .success(let result):
                 do {
-                    let model = try result.map(KeywordModel.self)
+                    let model = try result.map(HashtagModel.self)
                     self.keywordCourses.removeAll()
                     self.keywordCourses.append(contentsOf: model.data.courses)
+                    self.tableViewHidden()
                     self.courseListTableView.reloadData()
                     print("리로드")
                 } catch (let err) {
@@ -330,18 +290,40 @@ extension CourseSearchVC {
         }
     }
     
-    func getHashtag(mode: Int) {
+    func getCourse(mode: Int) {
         let param = HashtagRequest.init(self.courseTextField.text!, mode)
         print(param)
         authProvider.request(.hashtagSearch(param: param)) { response in
             switch response {
                 case .success(let result):
                     do {
-                        let model = try result.map(HashtagModel.self)
+                        self.hashtagModel = try result.map(HashtagModel.self)
                         self.keywordCourses.removeAll()
-                        self.keywordCourses.append(contentsOf: model.data.courses)
+                        self.keywordCourses.append(contentsOf: self.hashtagModel?.data.courses ?? [])
+                        self.tableViewHidden()
                         self.courseListTableView.reloadData()
                         print("리로드")
+                    } catch(let err) {
+                        print(err.localizedDescription)
+                    }
+                case .failure(let err):
+                    print(err.localizedDescription)
+            }
+        }
+    }
+    
+    func getHashtag() {
+        let param = HashtagRequest.init("북한산", 1)
+        print(param)
+        authProvider.request(.hashtagSearch(param: param)) { response in
+            switch response {
+                case .success(let result):
+                    do {
+                        self.keywordModel = try result.map(KeywordModel.self)
+                        self.hashtag.removeAll()
+                        self.hashtag.append(contentsOf: self.keywordModel?.data.hashtag ?? [])
+                        self.keywordCollectionView.reloadData()
+                        print("통신ok")
                     } catch(let err) {
                         print(err.localizedDescription)
                     }
