@@ -9,8 +9,7 @@ import UIKit
 
 class CourseWalkingHotPlaceCVC: UICollectionViewCell {
     static let identifier = "CourseWalkingHotPlaceCVC"
-    
-    @IBOutlet var hotplaceImageView: UIImageView!
+
     @IBOutlet var hotplaceLabel: UILabel!
     
     override func awakeFromNib() {
@@ -19,7 +18,7 @@ class CourseWalkingHotPlaceCVC: UICollectionViewCell {
     }
     
     func setData(hotplace: String) {
-        hotplaceLabel.text = hotplace
+        hotplaceLabel.text = "#\(hotplace)"
     }
 }
 
@@ -27,10 +26,16 @@ class CourseWalkingHotPlaceCVC: UICollectionViewCell {
 extension CourseWalkingHotPlaceCVC {
     func setUI() {
         setLabel()
+        setBack()
     }
     
     func setLabel() {
-        hotplaceLabel.font = .systemFont(ofSize: 10, weight: .bold)
-        hotplaceLabel.textColor = .black
+        hotplaceLabel.font = .myBoldSystemFont(ofSize: 13)
+        hotplaceLabel.textColor = .white
+    }
+    
+    func setBack() {
+        self.backgroundColor = .bookmarkBlue
+        self.layer.cornerRadius = 13
     }
 }

@@ -10,10 +10,15 @@ import UIKit
 class CourseWalkingInfoCVC: UICollectionViewCell {
     static let identifier = "CourseWalkingInfoCVC"
     
+    @IBOutlet weak var landMarkCollectionView: UICollectionView!
     @IBOutlet var walkingCourseInfoTitleLabel: UILabel!
     @IBOutlet var walkingCourseInfoLabel: UILabel!
     
     @IBOutlet var landmarkInfoLabel: UILabel!
+    
+    var isHashtaged = false
+    
+    var landMark: [String] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,10 +26,59 @@ class CourseWalkingInfoCVC: UICollectionViewCell {
     }
 }
 
+extension CourseWalkingInfoCVC: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return landMark.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CourseWalkingHotPlaceCVC.identifier, for: indexPath) as? CourseWalkingHotPlaceCVC else {
+            return UICollectionViewCell()
+        }
+        cell.setData(hotplace: landMark[indexPath.item])
+        return cell
+    }
+}
+
+extension CourseWalkingInfoCVC: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let label: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: CGFloat.greatestFiniteMagnitude, height: 25))
+        label.text = landMark[indexPath.item]
+        label.numberOfLines = 0
+        label.lineBreakMode = NSLineBreakMode.byWordWrapping
+        label.contentMode = .scaleToFill
+        label.font = .myBoldSystemFont(ofSize: 13)
+        label.sizeToFit()
+        
+        let calculateWidth = label.intrinsicContentSize.width + 26
+        return CGSize(width: calculateWidth, height: 25)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 25, bottom: 0, right: 25)
+    }
+}
+
 // MARK: - UI
 extension CourseWalkingInfoCVC {
     func setUI() {
         setLabel()
+    }
+    
+    func setCollectionView() {
+        landMarkCollectionView.delegate = self
+        landMarkCollectionView.dataSource = self
+        
+        let nib = UINib(nibName: "CourseWalkingHotPlaceCVC", bundle: nil)
+        landMarkCollectionView.register(nib, forCellWithReuseIdentifier: CourseWalkingHotPlaceCVC.identifier)
     }
     
     func setLabel() {
@@ -37,50 +91,12 @@ extension CourseWalkingInfoCVC {
         landmarkInfoLabel.textColor = .bookmarkDarkBlue
     }
     
-    func setButton(tags: [String]) {
-        let colors: [UIColor] = [.bookmarkBlue, .bookmarkDarkBlue, .bookmarkLightBlue, .bookmarkDarkBlue, .bookmarkLightBlue, .bookmarkBlue, .bookmarkDarkBlue]
-        var index = 0
-        
-        
-        if !tags.isEmpty {
-            let stackView = UIStackView()
-            
-            stackView.axis = .horizontal
-            stackView.alignment = .fill
-            stackView.spacing = 5
-            stackView.translatesAutoresizingMaskIntoConstraints = false
-            
-            self.addSubview(stackView)
-            stackView.topAnchor.constraint(equalTo: landmarkInfoLabel.bottomAnchor, constant: 10).isActive = true
-            stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 30).isActive = true
-            
-            for btn in tags {
-                let button = UIButton()
-                
-                button.layer.cornerRadius = 8
-                button.layer.shadowColor = UIColor.black.withAlphaComponent(0.5).cgColor
-                button.layer.shadowOpacity = 0.8
-                button.layer.shadowOffset = CGSize(width: 1, height: 2)
-                button.layer.shadowRadius = 2
-                
-                button.backgroundColor = colors[index]
-                button.setTitle("#\(btn)", for: .normal)
-                button.titleLabel?.font = .boldSystemFont(ofSize: 13)
-                button.setTitleColor(.white, for: .normal)
-                button.contentEdgeInsets = UIEdgeInsets(top: 3, left: 10, bottom: 3, right: 10)
-                button.isUserInteractionEnabled = false
-                index += 1
-                
-                stackView.addArrangedSubview(button)
-            }
-        }
-    }
-    
     func setData(title: String, content: String, hashtags: [String]) {
         walkingCourseInfoTitleLabel.text = "[\(title)] 소개"
         walkingCourseInfoLabel.text = content
         landmarkInfoLabel.text = "[\(title)]의 랜드마크"
         
-        setButton(tags: hashtags)
+        landMark = hashtags
+        setCollectionView()
     }
 }

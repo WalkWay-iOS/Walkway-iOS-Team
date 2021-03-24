@@ -101,7 +101,7 @@
                         <rect key="frame" x="20" y="85" width="280" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="XIo-rV-r47"/>
-                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="240" id="a8R-KR-HBx"/>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="400" id="a8R-KR-HBx"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>

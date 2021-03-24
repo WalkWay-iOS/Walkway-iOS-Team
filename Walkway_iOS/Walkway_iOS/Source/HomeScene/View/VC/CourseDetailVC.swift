@@ -91,7 +91,7 @@ extension CourseDetailVC: UITableViewDelegate {
         if indexPath.section == 0 {
             return 465
         } else if indexPath.section == 1 {
-            return 350
+            return 490
         } else if indexPath.section == 2 {
             return 430
         }
@@ -366,9 +366,9 @@ extension CourseDetailVC {
 // MARK: - Header Control
 extension CourseDetailVC {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if Int(scrollView.contentOffset.y) > 1050 {
+        if Int(scrollView.contentOffset.y) > 1100 {
             currentPage = 3
-        } else if Int(scrollView.contentOffset.y) > 700 {
+        } else if Int(scrollView.contentOffset.y) > 790 {
             currentPage = 2
         } else if Int(scrollView.contentOffset.y) > 300 {
             currentPage = 1

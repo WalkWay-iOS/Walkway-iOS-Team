@@ -38,12 +38,28 @@
                         <color key="textColor" systemColor="systemPurpleColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="mQb-sV-irb">
+                        <rect key="frame" x="0.0" y="179" width="375" height="200"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="200" id="SJi-1q-urK"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PcY-Af-hao">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="Oqr-Sj-Dsp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="25" id="7LL-b5-VsP"/>
+                <constraint firstAttribute="trailing" secondItem="mQb-sV-irb" secondAttribute="trailing" id="9kM-KE-WmU"/>
+                <constraint firstItem="mQb-sV-irb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="DhJ-bD-uA7"/>
                 <constraint firstAttribute="trailing" secondItem="Oqr-Sj-Dsp" secondAttribute="trailing" constant="15" id="LSD-1i-o0O"/>
+                <constraint firstItem="mQb-sV-irb" firstAttribute="top" secondItem="NOD-zX-aVt" secondAttribute="bottom" constant="10" id="OAq-N9-J6D"/>
                 <constraint firstItem="NOD-zX-aVt" firstAttribute="top" secondItem="Oqr-Sj-Dsp" secondAttribute="bottom" constant="30" id="XJg-nR-mXP"/>
                 <constraint firstItem="AeN-vE-rvc" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="90" id="i6N-yR-Ncm"/>
                 <constraint firstItem="AeN-vE-rvc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="25" id="nRr-Uc-AWh"/>
@@ -51,6 +67,7 @@
                 <constraint firstItem="Oqr-Sj-Dsp" firstAttribute="top" secondItem="AeN-vE-rvc" secondAttribute="bottom" constant="10" id="pI0-qS-oK1"/>
             </constraints>
             <connections>
+                <outlet property="landMarkCollectionView" destination="mQb-sV-irb" id="gwB-eg-ho2"/>
                 <outlet property="landmarkInfoLabel" destination="NOD-zX-aVt" id="kGg-EJ-hMK"/>
                 <outlet property="walkingCourseInfoLabel" destination="Oqr-Sj-Dsp" id="47d-xd-HtV"/>
                 <outlet property="walkingCourseInfoTitleLabel" destination="AeN-vE-rvc" id="qpK-cc-dUD"/>

@@ -104,7 +104,7 @@ extension DetailHeaderTVC {
         timeLabel.text = "시간 \(course.time)"
         distanceLabel.text = "거리 \(course.distance)km"
         
-        let strengthA = course.strengthAverage * 10
+        let strengthA = round(course.strengthAverage * 100) / 10
         strengthLabel.text = "🔥\(strengthA)/100"
         strengthProgressBar.progress = Float((strengthA)/100)
         
@@ -124,7 +124,7 @@ extension DetailHeaderTVC {
             
             if buttonTextCount > 23 {
                 setTwoLineHashtag(buttons: buttons, min: 4)
-            } else if buttonTextCount > 16 {
+            } else if buttonTextCount > 22 {
                 setTwoLineHashtag(buttons: buttons, min: 5)
             } else {
                 setOneLineHashtag(buttons: buttons)

@@ -84,7 +84,9 @@ extension BookmarkCourseTVC {
         titleLabel.text =  course.title
         distanceLabel.text = "\(course.distance)km"
         timeLabel.text = course.time
-        rateLabel.text = "\(course.rateAverage)"
+        
+        let rateA = round(course.rateAverage * 10) / 10
+        rateLabel.text = "\(rateA)"
         bookmarkLabel.text = "\(course.bookmarkCount)"
         
         bookmarkDisable()
@@ -122,24 +124,46 @@ extension BookmarkCourseTVC {
             stackView.leadingAnchor.constraint(equalTo: courseImage.trailingAnchor, constant: 14).isActive = true
             stackView.widthAnchor.constraint(lessThanOrEqualTo: self.widthAnchor, constant: -self.frame.size.width/3).isActive = true
             
-            for btn in buttons {
-                let button = UIButton()
-                
-                button.layer.cornerRadius = 8
-                button.layer.shadowColor = UIColor.black.withAlphaComponent(0.5).cgColor
-                button.layer.shadowOpacity = 0.8
-                button.layer.shadowOffset = CGSize(width: 1, height: 2)
-                button.layer.shadowRadius = 2
-                
-                button.backgroundColor = colors[index]
-                button.setTitle("#\(btn.keyword)", for: .normal)
-                button.titleLabel?.font = .boldSystemFont(ofSize: 10)
-                button.setTitleColor(.white, for: .normal)
-                button.contentEdgeInsets = UIEdgeInsets(top: 2, left: 8, bottom: 2, right: 8)
-                button.isUserInteractionEnabled = false
-                index += 1
-                
-                stackView.addArrangedSubview(button)
+            if buttons.count < 5 {
+                for btn in buttons {
+                    let button = UIButton()
+                    
+                    button.layer.cornerRadius = 8
+                    button.layer.shadowColor = UIColor.black.withAlphaComponent(0.5).cgColor
+                    button.layer.shadowOpacity = 0.8
+                    button.layer.shadowOffset = CGSize(width: 1, height: 2)
+                    button.layer.shadowRadius = 2
+                    
+                    button.backgroundColor = colors[index]
+                    button.setTitle("#\(btn.keyword)", for: .normal)
+                    button.titleLabel?.font = .boldSystemFont(ofSize: 10)
+                    button.setTitleColor(.white, for: .normal)
+                    button.contentEdgeInsets = UIEdgeInsets(top: 2, left: 8, bottom: 2, right: 8)
+                    button.isUserInteractionEnabled = false
+                    index += 1
+                    
+                    stackView.addArrangedSubview(button)
+                }
+            } else {
+                for btn in buttons[0...4] {
+                    let button = UIButton()
+                    
+                    button.layer.cornerRadius = 8
+                    button.layer.shadowColor = UIColor.black.withAlphaComponent(0.5).cgColor
+                    button.layer.shadowOpacity = 0.8
+                    button.layer.shadowOffset = CGSize(width: 1, height: 2)
+                    button.layer.shadowRadius = 2
+                    
+                    button.backgroundColor = colors[index]
+                    button.setTitle("#\(btn.keyword)", for: .normal)
+                    button.titleLabel?.font = .boldSystemFont(ofSize: 10)
+                    button.setTitleColor(.white, for: .normal)
+                    button.contentEdgeInsets = UIEdgeInsets(top: 2, left: 8, bottom: 2, right: 8)
+                    button.isUserInteractionEnabled = false
+                    index += 1
+                    
+                    stackView.addArrangedSubview(button)
+                }
             }
         }
     }

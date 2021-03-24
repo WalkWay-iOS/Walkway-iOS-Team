@@ -17,6 +17,9 @@ class CourseWalkingVC: UIViewController {
     @IBOutlet var courseWalkingCollectionView: UICollectionView!
     @IBOutlet weak var musicButton: UIButton!
     
+    var hiddenView = UIButton()
+    var hiddenLabel = UILabel()
+    
     var delegate: walkingCoursePresentDelegate?
     var courseId: String?
     var titleText: String?
@@ -105,10 +108,39 @@ extension CourseWalkingVC: UICollectionViewDelegateFlowLayout {
 // MARK: - UI
 extension CourseWalkingVC {
     func setUI() {
+        setView()
+        setLabel()
         setCollectionView()
         setPageControl()
         setCollectionViewNib()
         setButton()
+    }
+    
+    private func setView() {
+        hiddenView.backgroundColor = UIColor.bookmarkGray.withAlphaComponent(0.5)
+        hiddenView.setTitle("", for: .normal)
+        hiddenView.addTarget(self, action: #selector(touchUpHiddenView), for: .touchUpInside)
+        hiddenView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(hiddenView)
+        hiddenView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        hiddenView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        hiddenView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        hiddenView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    }
+    
+    @objc func touchUpHiddenView() {
+        hiddenView.isHidden = true
+    }
+    
+    func setLabel() {
+        hiddenLabel.text = "✨Walkway✨를 따라서\n          신나게 산책해보세요🎶"
+        hiddenLabel.numberOfLines = 2
+        hiddenLabel.font = .myBoldSystemFont(ofSize: 20)
+        hiddenLabel.textColor = .white
+        hiddenLabel.translatesAutoresizingMaskIntoConstraints = false
+        hiddenView.addSubview(hiddenLabel)
+        hiddenLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 220).isActive = true
+        hiddenLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15).isActive = true
     }
     
     func setCollectionView() {
