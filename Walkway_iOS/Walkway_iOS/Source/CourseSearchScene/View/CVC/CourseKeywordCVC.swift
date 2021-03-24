@@ -14,7 +14,6 @@ class CourseKeywordCVC: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         setUI()
     }
 }
