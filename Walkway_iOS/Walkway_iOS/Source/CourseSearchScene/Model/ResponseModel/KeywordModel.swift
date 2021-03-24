@@ -17,5 +17,5 @@ struct KeywordModel: Codable {
 
 // MARK: - KeywordResponse
 struct KeywordResponse: Codable {
-    let courses: [Course]
+    let hashtag: [Hashtag]
 }

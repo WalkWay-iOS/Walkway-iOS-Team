@@ -17,5 +17,5 @@ struct HashtagModel: Codable {
 
 // MARK: - HashtagResponse
 struct HashtagResponse: Codable {
-    let hashtag: [Hashtag]
+    let courses: [Course]
 }

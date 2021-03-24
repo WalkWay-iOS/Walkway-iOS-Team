@@ -14,7 +14,6 @@ class CourseKeywordCVC: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         setUI()
     }
 }
@@ -30,6 +29,6 @@ extension CourseKeywordCVC {
     }
     
     func setData(keyword: String) {
-        keywordLabel.text = keyword
+        keywordLabel.text = "#\(keyword)"
     }
 }
