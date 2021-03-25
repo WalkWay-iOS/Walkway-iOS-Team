@@ -170,6 +170,18 @@ extension CourseSearchVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 98
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let dvc = UIStoryboard.init(name: "Home", bundle: nil)
+        guard let vc = dvc.instantiateViewController(identifier: "CourseDetailVC") as? CourseDetailVC else {
+            return
+        }
+        vc.courseId = keywordCourses[indexPath.row].id
+        vc.isHomeCell = false
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        present(vc, animated: true, completion: nil)
+    }
 }
 
 // MARK: - UI
@@ -253,6 +265,8 @@ extension CourseSearchVC {
         courseSearchButton.setTitle("", for: .normal)
         courseSearchButton.setImage(UIImage(systemName: "magnifyingglass.circle"), for: .normal)
         courseSearchButton.addTarget(self, action: #selector(touchUpSearch), for: .touchUpInside)
+        courseSearchButton.tintColor = .bookmarkBlue
+        courseSearchButton.setPreferredSymbolConfiguration(.init(pointSize: 20, weight: .regular, scale: .large), forImageIn: .normal)
     }
     
     private func tableViewHidden() {

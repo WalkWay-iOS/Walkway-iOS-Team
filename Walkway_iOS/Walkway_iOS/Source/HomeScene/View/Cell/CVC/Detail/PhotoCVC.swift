@@ -10,7 +10,14 @@ import UIKit
 class PhotoCVC: UICollectionViewCell {
     static let identifier = "PhotoCVC"
 
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    
+    func setImage(image: String) {
+        imageView.image = UIImage(named: image)
+    }
 }
+

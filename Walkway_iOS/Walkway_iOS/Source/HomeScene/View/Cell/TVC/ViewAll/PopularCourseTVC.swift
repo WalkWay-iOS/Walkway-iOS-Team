@@ -18,6 +18,8 @@ class PopularCourseTVC: UITableViewCell {
     @IBOutlet weak var courseImage: UIImageView!
     @IBOutlet weak var bookmarkButton: UIButton!
     
+    let stackView = UIStackView()
+    
     var isBookmarked = false
     var isHashtaged = false
     
@@ -55,6 +57,7 @@ extension PopularCourseTVC {
         bookmarkButton.setTitle("", for: .normal)
         bookmarkButton.tintColor = .latestBlue
         bookmarkButton.addTarget(self, action: #selector(touchUpBookmark), for: .touchUpInside)
+        bookmarkDisable()
     }
 }
 
@@ -90,6 +93,8 @@ extension PopularCourseTVC {
             setHashtagButtons(buttons: course.hashtag)
             isHashtaged = true
         }
+        
+        
     }
     
     private func bookmarkEnable() {
@@ -107,8 +112,6 @@ extension PopularCourseTVC {
         var index = 0
         
         if !(buttons.isEmpty) {
-            let stackView = UIStackView()
-            
             stackView.axis = .horizontal
             stackView.alignment = .fill
             stackView.spacing = 5

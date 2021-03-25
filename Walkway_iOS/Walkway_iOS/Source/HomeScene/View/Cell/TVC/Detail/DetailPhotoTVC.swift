@@ -17,7 +17,7 @@ class DetailPhotoTVC: UITableViewCell {
     
     var delegate: detailDelegate?
     
-    var photos: [Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    var photos: [String] = ["mainView", "seoulStreer", "hangang", "gong", "week", "won"]
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,6 +42,7 @@ extension DetailPhotoTVC: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCVC.identifier, for: indexPath) as? PhotoCVC else {
             return UICollectionViewCell()
         }
+        cell.setImage(image: photos[indexPath.row])
         return cell
     }
 }

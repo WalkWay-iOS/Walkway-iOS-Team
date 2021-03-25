@@ -16,9 +16,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="445" height="116"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u8o-MO-7XH">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="introimage2" translatesAutoresizingMaskIntoConstraints="NO" id="u8o-MO-7XH">
                         <rect key="frame" x="22" y="19" width="60" height="60"/>
-                        <color key="backgroundColor" red="0.92549019610000005" green="0.40784313729999999" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="60" id="Ugw-Tx-u52"/>
                             <constraint firstAttribute="height" constant="60" id="yRh-4b-7eK"/>
@@ -71,4 +71,7 @@
             <point key="canvasLocation" x="-71.739130434782609" y="63.616071428571423"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="introimage2" width="192" height="117"/>
+    </resources>
 </document>
